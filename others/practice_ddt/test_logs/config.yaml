@@ -1,0 +1,5 @@
+#日志器名称、日志器等级及格式化
+logger:
+  name: ITester
+  level: DEBUG
+  format: '%(filename)s-%(lineno)d-%(asctime)s-%(levelname)s-%(message)s'

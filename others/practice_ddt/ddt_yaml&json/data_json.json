@@ -1,0 +1,14 @@
+{
+  "stu1":
+      {
+        "name": "peter",
+        "age": 12,
+        "addr": "beijing"
+      },
+  "stu2":
+      {
+    "name": "tom",
+        "age": 1,
+        "addr": "henan"
+  }
+}

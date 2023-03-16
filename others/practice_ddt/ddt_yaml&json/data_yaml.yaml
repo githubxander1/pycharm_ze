@@ -1,0 +1,25 @@
+#data_yaml.yaml
+#使用-分割用例，则yaml读取到的数据类型为列表
+-
+  model: 登录模块
+  title: 登录成功
+  url: http://127.0.0.1/mgr/sign.html
+  method: POST
+  data:
+    username: byhy
+    password: 88888888
+  check:
+    ret: 0
+#    msg:注册成功
+
+#-
+#  model: 注册模块
+#  title: 用户名长度小于6位，注册失败
+#  url: http://api.nnzhp.cn/api/user/user_reg
+#  method: POST
+#  data:
+#    username: yingc
+#    pwd: Ace123456
+#    cpwd: Ace123456
+#  check:
+#    error_code: 3002

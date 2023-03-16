@@ -1,0 +1,6 @@
+import requests
+
+token='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFZHJhd1NvZnQiLCJhdWQiOjIzOTI4NTE2LCJpYXQiOjE2NjY1MTg4OTYsImV4cCI6MTY2OTExMDg5NiwiZnJvbSI6IndlYiIsImFtciI6InJkcyJ9.enLVnN8JvMzpEN9Rw7e6eo20-AWnr_aaj0eveFnVUlk'
+p="token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFZHJhd1NvZnQiLCJhdWQiOjIzOTI4NTE2LCJpYXQiOjE2NjY1MTg4OTYsImV4cCI6MTY2OTExMDg5NiwiZnJvbSI6IndlYiIsImFtciI6InJkcyJ9.enLVnN8JvMzpEN9Rw7e6eo20-AWnr_aaj0eveFnVUlk"
+r=requests.get(url='https://masterapi.edrawsoft.cn/api/oss/23928516?token=https://masterapi.edrawsoft.cn/api/oss/23928516',params=p)
+print(r.text)

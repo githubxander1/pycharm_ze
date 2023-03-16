@@ -1,0 +1,20 @@
+import yaml
+
+def seve_session(sid,executor):
+    service=dict(remote_executor=executor,
+                  session_id=sid)
+    with open('session.yaml','w',encoding='utf-8') as f:
+      yaml.save_dump(service,f)
+    return service
+  
+  import yaml
+
+    def seve_session(sid,executor):
+      service=dict(remote_executor=executor,
+      session_id=sid)
+      with open('session.yaml','w',encoding='utf-8') as f:
+        yaml.save_dump(service,f)
+      return service
+
+  remote_executor,session_id=login()
+  # save_session(remote_executor,session_id)
