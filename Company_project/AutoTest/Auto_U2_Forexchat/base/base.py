@@ -6,35 +6,50 @@ import time
 import uiautomator2 as u2
 
 # 连接模拟器或手机
-from Company_project.AutoTest.Auto_U2_Forexchat.page.u2_Forexchat import manage_groups
+d=u2.connect('127.0.0.1:21513')
 
 class Base:
+    # 初始化方法
+    def __init__(self,d):
+        d=u2.connect('127.0.0.1:21513')
+
+
+class ChatWindow:
+
+    GroupSet=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]')
+    Add=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    Input=d(text="输入消息...")
+    emoji=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[2]')
+    send=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]')
+    back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+
+class ManageGroupsPage:
     # 初始化
     def __init__(self,d):
         self.d=u2.connect('127.0.0.1:21513')
 
-    def base_find_element(self, loc, timeout=30, poll_frequency=0.5):
-        return WebDriverWait(driver=self.d, timeout=timeout, poll_frequency=poll_frequency).until(
-            lambda x: x.find_element(*loc))
+    EditGroupProfile=d(description="编辑群资料")
+    AddAdmins=d.xpath('//*[contains(@content-desc,"管理员"]')
+    RestrictSendingMessage=d.xpath('//*[contains(@content-desc,"设置群内禁言"]')
+    RestrictSendingFriendsRequest=d(description="禁止群内成员互加好友")
+    AddGroupMethod=d(description="加群方式")
+    GroupBlacklist=d(description="群黑名单")
+    TransferOwenership=d(description="转让群")
 
-    # 点击方法
-    def base_click(self, loc):
-        self.base_find_element(loc).click()
+class EditProfile:
+    Avatar=d(description="群头像")
+    Name=d.xpath('//*[contains(@content-desc,"群名称")]')
+    InputGroupName = d(text='请输入群名称')
 
-    # 输入方法
-    def base_input(self, loc, value):
-        element = self.base_find_element(loc)
-        element.clear()
-        element.send_keys(value)
+    Description = d.xpath('//*[contains(@content-desc,"群介绍")]')
+    InputGroupDescription = d(text='请输入群介绍')
 
-    # 获取文本方法
-    def base_get_text(self, loc):
-        msg = self.base_find_element(loc).text
-        return msg
+    Cancel = d.xpath('//*[contains(@content-desc,"编辑群介绍")]/android.widget.ImageView[1]')
+    Sure = d.xpath('//*[@content-desc="确定"]')
 
     # 截图
-    def base_get_image(self, ):
-        self.d.screenshot("./{}.png".format(time.strftime("%Y_%m_%d_%H_%M_%S")))
+    # def base_get_image(self, ):
+    #     self.d.screenshot("./{}.png".format(time.strftime("%Y_%m_%d_%H_%M_%S")))
 
 
 # 启动app
@@ -52,61 +67,4 @@ class Base:
 #     else:
 #         pass
 
-# 点击聊天室
-# d.xpath('//android.widget.ScrollView/android.view.View[1]').click()
 
-def send_text():
-    # 点击输入框
-    time.sleep(2)
-    d(text="输入消息...").send_keys('dsfds')
-    time.sleep(3)
-    # 点击发送按钮
-    d.xpath(
-        '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]').click()
-
-# 发送emoji表情
-# def send_emoji():
-#     # 点击表情按钮
-#     time.sleep(2)
-#     d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]').click()
-#     scrollTo=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.widget.ImageView[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[27]')
-#     # d(scrollable=True).scroll.to(scrollTo)
-#     d(scrollable=True).scroll.toEnd()
-#     d.xpath(
-#         '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.widget.ImageView[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[27]').click()
-#     # 点击发送
-#     d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[5]').click()
-
-# d.app_stop('com.sy.fxchat')
-def mark_read():
-    # 先定位元素，再滑动
-    hh=d.xpath('//android.widget.ScrollView/android.view.View[2]')
-    # hh.swipe('left')
-    hh.swipe('left')
-    time.sleep(2)
-    d.xpath('//android.widget.ScrollView/android.view.View[2]/android.widget.ImageView[1]').click()
-    # d.xpath('//android.widget.ScrollView/android.view.View[3]/android.widget.ImageView[1]')
-
-# 点击进入会话聊天窗口
-def session1():
-    # d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]').click()
-    d.xpath('//android.widget.ScrollView/android.view.View[2]').click()
-
-    # 进入群设置
-def groupSet():
-    d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]').click()
-
-def group_editGroupProfiles():
-    manage_groups()
-    d(description="编辑群资料").click()
-    d.xpath('//*[contains(@content-desc,"群介绍")]').click()
-    d(text="请输入群介绍").send_keys('群介绍：打扫房间独守空闺季拉开')
-    d.xpath('//*[@content-desc="完成"]').click()
-
-def group_editGroupProfiles_cancel():
-    manage_groups()
-    d(description="编辑群资料").click()
-    d.xpath('//*[contains(@content-desc,"群介绍")]').click()
-    d(text="请输入群介绍").send_keys('群介绍：打扫房间独守空闺季拉开')
-    d.xpath('//*[contains(@content-desc,"编辑群介绍")]/android.widget.ImageView[1]').click()
-    d.xpath('//*[@content-desc="确定"]').click()
