@@ -1,0 +1,2 @@
+class EditProfile:
+    pass

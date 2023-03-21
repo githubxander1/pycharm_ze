@@ -2,8 +2,15 @@
 # coding: utf-8
 import time
 import uiautomator2 as u2
+
+from Company_project.AutoTest.Auto_U2_Forexchat.base import EditProfile
 from Company_project.AutoTest.Auto_U2_Forexchat.base.operate import manage_groups
-from Company_project.AutoTest.Auto_U2_Forexchat.page import EditGroupProfile, Description, Input, Cancel, Sure
+from Company_project.AutoTest.Auto_U2_Forexchat.page import EditGroupProfile, Description, Cancel, Sure, \
+    InputGroupDescription
+
+# from Company_project.AutoTest.Auto_U2_Forexchat.base.EditProfile
+# from Company_project.AutoTest.Auto_U2_Forexchat.base import EditGroupProfile, Description, Input, Cancel, Sure
+EditProfile()
 
 d=u2.connect('127.0.0.1:21513')
 # 获取设备基本信息
@@ -25,8 +32,8 @@ class EditDescription:
         Description.click()
 
     # 输入群介绍文案
-    def Text_input(self,editGropDescription_textInput):
-        Input.send_keys(editGropDescription_textInput)
+    def InputGroupDescription(self,editGropDescription_textInput):
+        InputGroupDescription.send_keys(editGropDescription_textInput)
 
     def Cancel_click(self):
         Cancel.click()
@@ -38,7 +45,7 @@ class EditDescription:
         manage_groups()
         self.EditGroupProfile_click()
         self.Description_click()
-        self.Text_input(editGropDescription_textInput)
+        self.InputGroupDescription(editGropDescription_textInput)
         self.Cancel_click()
         self.Sure_click()
 

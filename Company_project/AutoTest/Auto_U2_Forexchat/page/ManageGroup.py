@@ -1,6 +1,8 @@
 import time
 import uiautomator2 as u2
 
+from Company_project.AutoTest.Auto_U2_Forexchat.base.operate import session1, groupSet
+
 d=u2.connect('127.0.0.1:21513')
 
 def manage_groups():
