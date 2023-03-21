@@ -1,0 +1,10 @@
+{
+  "cal_001":{"a":1,"b":2,"expect_result":3},
+  "cal_004":{"a":1,"b":22,"expect_result":23},
+  "cal_005":{"a":1,"b":23,"expect_result":24},
+  "cal_006":{"a":1,"b":42,"expect_result":43},
+  "cal_008":{"a":1,"b":52,"expect_result":53},
+  "cal_007":{"a":1,"b":522,"expect_result":523},
+  "cal_002":{"a":123445,"b":223265,"expect_result":32626},
+  "cal_003":{"a":1234,"b":1234,"expect_result":2468}
+}

@@ -1,6 +1,6 @@
 import requests
 from pprint import  pprint
-# from hyrobot.common import *
+# from hyrobot.base import *
 
 class APIMgr:
 
