@@ -14,7 +14,7 @@ d=webdriver.Remote('127.0.0.1:4723/wd/hub',device)
 time.sleep(2)
 
 # d.close_app()
-# d.install_app(r'C:\Users\Admin\Desktop\base(4).apk')
+# d.install_app(r'C:\Users\Admin\Desktop\1base(4).apk')
 # 同意
 d.find_element(By.ID,'com.lemon.lv:id/privacy_ok').click()
 time.sleep(3)

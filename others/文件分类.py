@@ -29,7 +29,7 @@ def files_select():
 # print(path)
 #
 # def main():
-#     # base = './base/'
+#     # 1base = './1base/'
 #     for i in findAllFile(base1):
 #         print(i)
 #
