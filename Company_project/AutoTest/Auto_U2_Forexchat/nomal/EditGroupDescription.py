@@ -35,7 +35,7 @@ def manage_groups():
     d(scrollable=True).scroll.to(description="管理群")
     d(description="管理群").click()
 # 取消编辑群介绍
-def editGroupProfiles_cancel(editGropDescription_textInput):
+def editGroupDescription_cancel(editGropDescription_textInput):
     manage_groups()
     EditGroupProfile.click()
     Description.click()
@@ -44,7 +44,7 @@ def editGroupProfiles_cancel(editGropDescription_textInput):
     Sure.click()
 
 # 编辑成功
-def editGroupProfiles_set(editGropDescription_textInput):
+def editGroupDescription_set(editGropDescription_textInput):
     manage_groups()
     EditGroupProfile.click()
     Description.click()
@@ -52,7 +52,7 @@ def editGroupProfiles_set(editGropDescription_textInput):
     complete.click()
 
 # 清空输入框
-def editGroupProfiles_clear():
+def editGroupDescription_clear():
     manage_groups()
     EditGroupProfile.click()
     Description.click()
@@ -61,14 +61,14 @@ def editGroupProfiles_clear():
 
 #
 if __name__ == '__main__':
-    # editGroupProfiles_cancel('群介绍：取消')
+    # editGroupDescription_cancel('群介绍：取消')
     # d.app_stop('com.sy.fxchat')
     # time.sleep(3)
-    # editGroupProfiles_set('群介绍：感受到丰田供热')
+    # editGroupDescription_set('群介绍：感受到丰田供热')
     # time.sleep(3)
     # d.app_stop('com.sy.fxchat')
     # time.sleep(3)
-    editGroupProfiles_clear()
+    editGroupDescription_clear()
     toasts = d.toast.get_message()
     # toasts2 = d.toast.show()
     print(toasts)
