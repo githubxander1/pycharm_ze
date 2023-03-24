@@ -3,8 +3,8 @@
 import time
 import uiautomator2 as u2
 
-from Company_project.AutoTest.Auto_U2_Forexchat.nomal import EditGroupProfile, Description, Cancel, \
-    InputGroupDescription, Sure, complete
+# from Company_project.AutoTest.Auto_U2_Forexchat.nomal import EditGroupProfile, Description, Cancel, \
+#     InputGroupDescription, Sure, complete, InputGroupName, Name
 
 d=u2.connect('127.0.0.1:21513')
 # 获取设备基本信息
@@ -34,41 +34,42 @@ def manage_groups():
     # 点击管理群
     d(scrollable=True).scroll.to(description="管理群")
     d(description="管理群").click()
-# 取消编辑群介绍
-def editGroupDescription_cancel(DescriptionInput):
+
+# 取消编辑群名称
+def editGroupName_cancel(NameInput):
     manage_groups()
     EditGroupProfile.click()
-    Description.click()
-    InputGroupDescription.send_keys(DescriptionInput)
+    Name.click()
+    InputGroupName.send_keys(NameInput)
     Cancel.click()
     Sure.click()
 
-# 编辑成功
-def editGroupDescription_set(editGropDescription_textInput):
+# 编辑群名称成功
+def editGroupName_set(NameInput):
     manage_groups()
     EditGroupProfile.click()
-    Description.click()
-    InputGroupDescription.send_keys(editGropDescription_textInput)
+    Name.click()
+    InputGroupName.send_keys(NameInput)
     complete.click()
 
 # 清空输入框
-def editGroupDescription_clear():
+def editGroupName_clear():
     manage_groups()
     EditGroupProfile.click()
-    Description.click()
+    Name.click()
     InputGroupDescription.clear_text()
     complete.click()
 
 #
 if __name__ == '__main__':
-    # editGroupDescription_cancel('群介绍：取消')
+    # editGroupName_cancel('群介绍：取消')
     # d.app_stop('com.sy.fxchat')
     # time.sleep(3)
-    # editGroupDescription_set('群介绍：感受到丰田供热')
+    editGroupName_set('群主-1314修改')
     # time.sleep(3)
     # d.app_stop('com.sy.fxchat')
     # time.sleep(3)
-    editGroupDescription_clear()
+    # editGroupName_clear()
     toasts = d.toast.get_message()
     # toasts2 = d.toast.show()
     print(toasts)

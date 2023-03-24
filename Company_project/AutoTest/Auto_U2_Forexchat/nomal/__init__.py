@@ -6,11 +6,13 @@ d=u2.connect('127.0.0.1:21513')
 
 
 EditGroupProfile=d(description="编辑群资料")
-Description=d.xpath('//*[contains(@content-desc,"群头像")]')
 
-Description=d.xpath('//*[contains(@content-desc,"群名称")]')
+# 群头像
+Avatar=d.xpath('//*[contains(@content-desc,"群头像")]')
+# 群名称
+Name=d.xpath('//*[contains(@content-desc,"群名称")]')
 InputGroupName=d(className="android.widget.EditText")
-
+# 群介绍
 Description=d.xpath('//*[contains(@content-desc,"群介绍")]')
 InputGroupDescription=d(className="android.widget.EditText")
 
