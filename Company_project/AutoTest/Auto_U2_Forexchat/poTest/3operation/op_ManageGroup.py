@@ -15,13 +15,12 @@ d=u2.connect('127.0.0.1:21503')
 # 编辑群资料
 # class GroupProfile():
 editgroupprofile=d(description="编辑群资料")
-editgroupprofile=d.xpath('//*[@content-desc="编辑群资料"]')
+# editgroupprofile=d.xpath('//*[@content-desc="编辑群资料"]')
 
 # 群头像
 avatar=d.xpath('//*[contains(@content-desc,"群头像")]')
 defaultavatar=d(description="默认头像选择")
-avatar1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.framelayout[1]/android.view.view[1]/android.view.view[1]/android.view.view[1]/android.view.view[1]/android.view.view[2]/android.view.view[1]/android.widget.imageview[1]')
-
+avatar1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.widget.ImageView[2]')
 # 群名称
 name=d.xpath('//*[contains(@content-desc,"群名称")]')
 inputgroupname=d(className="android.widget.edNittext")
@@ -41,7 +40,7 @@ adminset=d.xpath('//*[contains(@content-desc,"设置管理员")]')
 
 # adminadd=d.xpath('//*[contains(@content-desc,"添加管理员")]/')
 adminadd=d(description="添加管理员")
-
+# d.xpath('//*[@content-desc="添加管理员"]')
 groupMute=d(description="设置群内禁言")
 switch=d.xpath('//android.widget.Switch')
 
@@ -65,6 +64,7 @@ def manage_groups():
     group_set.click()
     # 点击管理群
     d(scrollable=True).scroll.to(description="管理群")
+    time.sleep(3)
     d(description="管理群").click()
 
 

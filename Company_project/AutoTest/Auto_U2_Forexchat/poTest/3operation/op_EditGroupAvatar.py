@@ -25,7 +25,9 @@ def editGroupAvatar_set():
     editgroupprofile.click()
     avatar.click()
     defaultavatar.click()
+    time.sleep(5)
     avatar1.click()
+    # d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.widget.ImageView[2]').click()
 
 
 

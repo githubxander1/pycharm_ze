@@ -24,6 +24,13 @@ def friendAdd_set():
     manage_groups()
     transferGroup.click()
 
+# 编辑群头像成功
+def nickname_set(name):
+    manage_groups()
+    mynickname.click()
+    nameinput.send_keys(name)
+    complete.click()
+
 
 
 #

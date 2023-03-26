@@ -23,10 +23,13 @@ d.app_start('com.sy.fxchat')
 def admin_set():
     manage_groups()
     adminset.click()
-    time.sleep(3)
-    adminadd.click()
-    time.sleep(3)
-    d.click(0.081, 0.267)
+    time.sleep(10)
+    d.xpath('//*[contains(@content-desc="移除")]').click()
+    # adminadd.click()
+    # time.sleep(5)
+
+    # d.xpath('//*[@content-desc="CC​钉​邮​"]/android.widget.ImageView[1]').click()
+    # d.click(0.081, 0.267)
     # sure.click()
 
 
