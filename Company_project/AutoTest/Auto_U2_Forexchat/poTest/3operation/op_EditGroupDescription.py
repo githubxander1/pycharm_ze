@@ -2,16 +2,17 @@
 # coding: utf-8
 import time
 import uiautomator2 as u2
-from op_ManageGroup import manage_groups
-from ele import editgroupprofile,description,inputgroupdescription,cancel,sure,complete
+from op_ManageGroup import manage_groups,d,editgroupprofile,description,inputgroupdescription,cancel,sure,complete
+# from ele import d,editgroupprofile,description,inputgroupdescription,cancel,sure,complete
 
-d=u2.connect('127.0.0.1:21513')
+# d=u2.connect('127.0.0.1:21513')
+# d=u2.connect('127.0.0.1:21503')
 
 d.implicitly_wait(10)
 d.app_start('com.sy.fxchat')
 
 # 取消更新
-d(description="取消").click()
+# d(description="取消").click()
 
 # 取消编辑群介绍
 def editgroupdescription_cancel(descriptioninput):

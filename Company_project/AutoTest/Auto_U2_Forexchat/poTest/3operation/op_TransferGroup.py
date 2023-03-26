@@ -4,12 +4,12 @@ import time
 import uiautomator2 as u2
 
 
-from ele import transferGroup
+from pg_groupSet import d
 
-from op_ManageGroup import  manage_groups
+from op_ManageGroup import  manage_groups,transferGroup
 
 
-d=u2.connect('127.0.0.1:21513')
+# d=u2.connect('127.0.0.1:21513')
 # 获取设备基本信息
 # print(d.info)
 d.implicitly_wait(10)

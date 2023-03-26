@@ -3,17 +3,28 @@
 import time
 import uiautomator2 as u2
 
-from op_ManageGroup import  manage_groups
-from ele import editgroupprofile,name,inputgroupname,cancel,sure,complete
+from op_ManageGroup import  d,manage_groups,editgroupprofile,name,inputgroupname,cancel,sure,complete
+# from ele import d,manage_groups,editgroupprofile,name,inputgroupname,cancel,sure,complete
 
-d=u2.connect('127.0.0.1:21513')
+# d=u2.connect('127.0..1:21513')
 # 获取设备基本信息
 # print(d.info)
 d.implicitly_wait(10)
 d.app_start('com.sy.fxchat')
 
 # 取消更新
-d(description="取消").click()
+
+if d(description="取消").exists:
+    d(description="取消").click()
+else:
+    pass
+# 取消更新
+# def update():
+#     if d(description="取消").exists:
+#         d(description="取消").click()
+#     else:
+#         pass
+
 # 取消编辑群名称
 def editgroupname_cancel(nameinput):
     manage_groups()
@@ -41,16 +52,9 @@ def editgroupname_clear():
 
 #
 if __name__ == '__main__':
-    # editgroupname_cancel('群介绍：取消')
+    editgroupname_cancel('群主-269')
     # d.app_stop('com.sy.fxchat')
     # time.sleep(3)
-    editgroupname_set('群主-1314')
-    # time.sleep(3)
-    # d.app_stop('com.sy.fxchat')
-    # time.sleep(3)
-    # editgroupname_clear()
-    toasts = d.toast.get_message()
-    # toasts2 = d.toast.show()
-    print(toasts)
+    # editgroupname_set('群主-1314')
 
 

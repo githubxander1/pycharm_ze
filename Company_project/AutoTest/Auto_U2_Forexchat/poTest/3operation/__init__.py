@@ -1,5 +1,5 @@
 import uiautomator2 as u2
-d=u2.connect('127.0.0.1:21513')
+d=u2.connect('127.0.0.1:21503')
 
 EditGroupProfile=d(description="编辑群资料")
 

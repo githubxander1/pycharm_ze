@@ -4,19 +4,19 @@ import time
 import uiautomator2 as u2
 
 
-from ele import addFriend,switch
+# from ele import d,addFriend,switch
 
-from op_ManageGroup import  manage_groups
+from op_ManageGroup import  manage_groups,d,addFriend,switch
 
 
-d=u2.connect('127.0.0.1:21513')
+# d=u2.connect('127.0.0.1:21513')
 # 获取设备基本信息
 # print(d.info)
 d.implicitly_wait(10)
 d.app_start('com.sy.fxchat')
 
 # 取消更新
-d(description="取消").click()
+# d(description="取消").click()
 
 
 # 编辑群头像成功
