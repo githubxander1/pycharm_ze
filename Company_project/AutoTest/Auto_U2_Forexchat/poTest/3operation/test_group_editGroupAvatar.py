@@ -3,6 +3,7 @@
 import time
 import uiautomator2 as u2
 import pytest
+import allure_pytest
 
 
 
@@ -39,7 +40,8 @@ class Test_editGroupAvatar:
     #   assert d.toast.get_message() == toast
 
 if __name__ == '__main__':
-    pytest.main()
+     pytest.main(["-s","-v","--html=Outputs/reports/pytest.html",
+                  "--alluredir=Outputs/allure"])   # allure文件生成的目录
 
 
 

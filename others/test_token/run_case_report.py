@@ -13,7 +13,7 @@ report = os.path.join(report_path, "report.html")
 
 def all_case():
     discover = unittest.defaultTestLoader.discover(case_path,
-                                                   pattern='test*.py')
+                                                   pattern='ztest*.py')
     print(discover)
     return discover
 

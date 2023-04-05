@@ -6,6 +6,6 @@ import xlutils  # 向已存在的excel文件中追加内容的库。
 
 
 def get_excel_data():
-    wb = xlrd.open_workbook("D:\1test\PycharmProject\数据库\file\bv-app.xlsx")
+    wb = xlrd.open_workbook("D:\1ztest\PycharmProject\数据库\file\bv-app.xlsx")
     sheet1 = wb.sheet_by_name("login")
     num = sheet1.nrows

@@ -59,7 +59,7 @@
 # # #
 # # testda=(("byhy",88888888),(23,45),(1,2))
 # # @ddt
-# # class test(unittest.TestCase):
+# # class ztest(unittest.TestCase):
 # #     @data(*testda)
 # #     @unpack
 # #     def test_data1(self,user,pass1):
