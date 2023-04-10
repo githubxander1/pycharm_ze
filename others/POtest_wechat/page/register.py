@@ -9,7 +9,6 @@ class Register(BasePage):
         self._driver.find_element(By.ID, "corp_name").send_keys(corpname)
         self._driver.find_element(By.ID, "submit_btn").click()
         # 填写完毕，停留在注册页，可继续调用Register内的方法 
-        return self
 
     #填写错误时，返回错误信息
     def get_error_message(self):

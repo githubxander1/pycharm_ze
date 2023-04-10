@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 
 from others.POtest_wechat.page.base_page import BasePage
@@ -5,7 +7,7 @@ from others.POtest_wechat.page.register import Register
 from others.POtest_wechat.page.login import Login
 
 class Index(BasePage):
-    _base_url = "https://work.weixin.qq.com/"
+    # _base_url = "https://work.weixin.qq.com/"
     # 进入注册页面
     def goto_register(self):
         self._driver.find_element(By.LINK_TEXT, "立即注册").click()
@@ -16,4 +18,8 @@ class Index(BasePage):
     def goto_login(self):
         self._driver.find_element(By.LINK_TEXT, "企业登录").click()
         # 创建Login实例后，可调用Login中的方法
-        return Login(self._driver)
+        # return Login(self._driver)
+
+Index().goto_login()
+# time.sleep(5)
+# Index().goto_register()

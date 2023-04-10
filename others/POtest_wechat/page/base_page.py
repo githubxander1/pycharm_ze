@@ -6,6 +6,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 class BasePage:
     def __init__(self, driver: WebDriver = None):
         #此处对driver进行复用，如果不存在driver,就构造一个新的
+        self._base_url='https://work.weixin.qq.com'
         if driver is None:
             # Index页面需要用，首次使用时构造新driver
             self._driver = webdriver.Chrome()
@@ -17,6 +18,6 @@ class BasePage:
             # Login与Register等页面需要用这个方法，避免重复构造driver
             self._driver = driver
 
-    def close(self):
-        sleep(20)
-        self._driver.quit()
+    # def close(self):
+    #     sleep(20)
+    #     self._driver.quit()
