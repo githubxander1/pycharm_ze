@@ -1,4 +1,4 @@
-from others.POtest_wechat.page.index import Index
+from others.PO_test.POtest_wechat.page.index import Index
 
 
 class TestIndex:

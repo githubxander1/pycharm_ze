@@ -1,12 +1,9 @@
 import time
 
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-import os
+from others.PO_test.POtest_wechat.ztest.base import BasePage
 
-from others.POtest_wechat.ztest.base import BasePage
-from others.POtest_wechat.ztest.page.login import Login
 
 # os.path
 # d=webdriver.Edge()

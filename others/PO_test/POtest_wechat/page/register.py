@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from others.POtest_wechat.page.base_page import BasePage
+from others.PO_test.POtest_wechat.page.base_page import BasePage
 
 
 class Register(BasePage):

@@ -1,8 +1,6 @@
-import time
-
 from selenium.webdriver.common.by import By
-from others.POtest_wechat.page.base_page import BasePage
-from others.POtest_wechat.page.register import Register
+from others.PO_test.POtest_wechat.page.base_page import BasePage
+from others.PO_test.POtest_wechat.page.register import Register
 
 
 class Login(BasePage):

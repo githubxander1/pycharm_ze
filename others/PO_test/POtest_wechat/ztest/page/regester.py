@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
 
-from others.POtest_wechat.ztest.base import BasePage
+from others.PO_test.POtest_wechat.ztest.base import BasePage
 
 d=webdriver.Edge()
 
