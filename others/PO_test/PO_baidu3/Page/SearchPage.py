@@ -13,7 +13,6 @@ from others.PO_test.PO_baidu3.Common.BasePage import BasePage
 
 class SearchPage(BasePage):
 
-
     # 定位元素
     search_loc = (By.ID, "kw")  # 搜索框
     btn_loc = (By.ID, "su")  # 搜索按钮
