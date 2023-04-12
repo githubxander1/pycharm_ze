@@ -1,18 +1,22 @@
 import time
 import webbrowser
+# from telnetlib import EC
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 import pyperclip#剪贴板复制粘贴
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
-
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 d=webdriver.Chrome()
 
+
 d.get('https://tradinglive-testwebpc.tostar.top/cn/user/setting/personalData?type=0')
-# d.maximize_window()
-#
+# # d.maximize_window()
+# #
 d.implicitly_wait(5)
-# 跳过引导蒙层
+# # 跳过引导蒙层
 d.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/a[1]/span').click()
 # 悬停在活动icon上
 icon=d.find_element_by_xpath('//*[@id="app"]/div[6]/ul/li[1]/div/span/span/div/img')
@@ -22,20 +26,40 @@ time.sleep(2)
 # 用完整的xpath定位
 d.find_element_by_xpath('/html/body/div[2]/div[1]/div').click()
 
-# 点击登录
+# 进入邀请弹窗，点击登录
 iframe=d.find_element_by_xpath('/html/body/div[3]/div/div[2]/iframe')
 d.switch_to.frame(iframe)
 d.find_element_by_xpath('//*[@id="invitation"]/div[2]/div[1]/div').click()
-time.sleep(2)
-# 登录
-# select1=d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/form/div/div[1]/div/div/input')
-# select1=d.find_element_by_xpath('/html/body/div[1]/div/div/div[1]/div[2]/div/div/form/div[1]/form/div/div[1]/div/div/input')
-d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/form/div/div[1]/div/div[1]/input').click()
-# select1=d.find_element_by_css_selector('#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.region-layer.isolate.text-left.el-col.el-col-8 > div > div.el-input.el-input--suffix > input')
-
+time.sleep(3)
+# 手机号登录
+d.switch_to.window(d.window_handles[0])
+WebDriverWait(driver=d,timeout=30, ignored_exceptions=None).until(EC.presence_of_all_elements_located(
+  (By.XPATH, '//div[contains(@class,"region-select")]//input')))
+number = "+852"
+d.find_element_by_xpath('//div[contains(@class,"region-select")]//input').send_keys(number)
+time.sleep(1)
+d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
+time.sleep(1)
+d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111111')
+d.find_element_by_css_selector('#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.el-col.el-col-10 > button > span').click()
+d.find_element_by_css_selector('[placeholder="请输入验证码"]').send_keys(1234)
+d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]/i')
+d.find_element_by_css_selector('#app > div.container-layer.app-view.bg > div.container_content > div > div > form > p:nth-child(3) > button > span').click()
+# d.find_element_by_xpath('//div[contains(@class,"region-select")]//input').send_keys("+852")
+# d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111111')
+#
+# d.find_element_by_css_selector('input').click()
+# d.find_element_by_xpath('/html/body/div[2]/div[1]/div[1]/ul/li[3]/span[1]').click()
+# d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111111')
 # select1=d.find_element_by_css_selector('#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.region-layer.isolate.text-left.el-col.el-col-8 > div > div.el-input.el-input--suffix')
 # Select(select1).select_by_visible_text('香港')
+# d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/div[1]/span[2]').click()
+# d.find_element_by_css_selector('#app > div.container-layer.app-view.bg > div.container_content > div > div > div.type_list.isolate > span.login_type.email').click()
 
+# 邮箱登录
+# d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/div[2]/form/div[1]/div/div/div/div/input').send_keys('1@qq.com')
+# d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/div[2]/form/div[2]/div/div/div/div/input').send_keys('a1234567')
+# d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/div[2]/form/div[4]/button/span').click()
 
 
 
