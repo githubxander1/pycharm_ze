@@ -28,9 +28,9 @@ while True:
     res_b = requests.get(url_b, headers=headers)
     data_b = res_b.content
     # 保存图片
-    with open('pic_s.png', 'wb') as f:
+    with open('../Company_project/fastbull自动化/pic_s.png', 'wb') as f:
         f.write(data_s)
-    with open('pic_b.png', 'wb') as f:
+    with open('../Company_project/fastbull自动化/pic_b.png', 'wb') as f:
         f.write(data_b)
 
     # 使用opencv读取两张图片
