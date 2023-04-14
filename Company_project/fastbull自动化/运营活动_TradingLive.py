@@ -1,6 +1,4 @@
 import time
-import webbrowser
-# from telnetlib import EC
 
 from selenium import webdriver
 from selenium.common.exceptions import UnexpectedAlertPresentException
@@ -25,7 +23,7 @@ time.sleep(1)
 # 选择区号
 d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
 time.sleep(1)
-d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111111')
+d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111122')
 # 点击获取验证码
 d.find_element_by_css_selector(
 '#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.el-col.el-col-10 > button > span').click()
@@ -35,28 +33,24 @@ time.sleep(2)
 iframe = d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
 d.switch_to.frame(iframe)
 # 定位滑块元素
-# 获取滑块背景的大小
-span_background = d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]')
-span_background_size = span_background.size
-print('滑块背景大小：',span_background_size)
-# 获取滑块的位置
-button = d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]/i')
-button_location = button.location
-print('滑块位置：',button_location)
-# 拖动操作：drag_and_drop_by_offset
-# 将滑块的位置由初始位置，右移一个滑动条长度（即为x坐标在滑块位置基础上，加上滑动条的长度，y坐标保持滑块的坐标位置）
-x_location = span_background_size["width"]
-y_location = button_location["y"]
-button_end_location = button_location['x']+x_location
-print(button_end_location)
-print('滑块移动的位置：',button_end_location, y_location)
+# 获取滑块及滑块背景图元素
+slider = d.find_element(By.XPATH, '//*[@id="app"]/main/div/div/div[2]/i')
+slider_bg = d.find_element(By.XPATH, '//*[@id="app"]/main/div/div/div[2]')
 
-source = WebDriverWait(d, 30).until(EC.presence_of_element_located(
-    (By.XPATH, '//*[@id="app"]/main/div/div/div[2]/i')))
-ActionChains(d).click_and_hold(on_element=source).perform()
-ActionChains(d).move_to_element_with_offset(source, xoffset=x_location, yoffset=y_location).perform()
-time.sleep(0.3)
-ActionChains(d).pause(1).release().perform()
+# 鼠标按住滑块并拖动至背景图完全覆盖
+ActionChains(d).click_and_hold(slider).perform()
+# 循环拖动滑块，直到解锁成功
+while True:
+    try:
+        # 拖动滑块
+        ActionChains(d).move_by_offset(10, 0).perform()
+    except:
+        # 拖动异常则跳出循环
+        break
+
+# 等待滑块验证通过
+WebDriverWait(d, 10).until(EC.url_matches('https://tradinglive-testwebpc.tostar.top/cn/homepage'))
+
 
 
 
