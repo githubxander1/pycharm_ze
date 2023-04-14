@@ -17,7 +17,7 @@ def get_track(x):
   :return:
   '''
   v = 0
-  t = 0.1
+  t = 0.5
   tracks = []
   current = 0
   # mid = x*5/8#到达mid值开始减速
@@ -44,15 +44,16 @@ def get_track(x):
 
 
 def main3():
-  d = webdriver.Chrome()
-
+  d = webdriver.Edge()
   d.get('https://tradinglive-testwebpc.tostar.top/cn/login')
 
   WebDriverWait(driver=d, timeout=30, ignored_exceptions=None).until(EC.presence_of_all_elements_located(
     (By.XPATH, '//div[contains(@class,"region-select")]//input')))
   number = "+852"
+  # 输入区号
   d.find_element_by_xpath('//div[contains(@class,"region-select")]//input').send_keys(number)
   time.sleep(1)
+  # 选择区号
   d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
   time.sleep(1)
   d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111111')
@@ -64,22 +65,24 @@ def main3():
   iframe = d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
   d.switch_to.frame(iframe)
 
-  # 获取滑块的大小
+  # 获取滑块背景的大小
   span_background = d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]')
   span_background_size = span_background.size
-  print(span_background_size)
-  # 获取滑块的位置
+  print('滑块背景大小:',span_background_size)
+  # 获取滑块的大小
   button = d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]/i')
   button_size = button.size
-  print(button_size)
+  print('滑块大小:',button_size)
   # 拖动操作：drag_and_drop_by_offset
   # 将滑块的位置由初始位置，右移一个滑动条长度（即为x坐标在滑块位置基础上，加上滑动条的长度，y坐标保持滑块的坐标位置）
 
+  # 滑动距离
   span_width = span_background_size["width"]
   button_width = button_size["width"]
   print(span_width, button_width)
   tracks = get_track(span_width - button_width)
   print(tracks)
+
   source = d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]/i')
   ActionChains(d).click_and_hold(on_element=source).perform()
   move_offset = 0
@@ -92,7 +95,13 @@ def main3():
       pass
   time.sleep(0.3)
   ActionChains(d).pause(1).release().perform()
+  print(move_offset)
   print('滑动结束.')
   time.sleep(3)
+
+  d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/form/div/div[3]/div/div/div/input').send_keys(1234)
+  time.sleep(3)
+  d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/p[1]/button').click()
+  time.sleep(2)
 
 main3()
