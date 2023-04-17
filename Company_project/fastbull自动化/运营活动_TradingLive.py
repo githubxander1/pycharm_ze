@@ -23,33 +23,33 @@ time.sleep(1)
 # 选择区号
 d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
 time.sleep(1)
-d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111122')
+d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111123')
 # 点击获取验证码
 d.find_element_by_css_selector(
 '#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.el-col.el-col-10 > button > span').click()
 
-time.sleep(2)
-#切换到弹窗
-iframe = d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
-d.switch_to.frame(iframe)
-# 定位滑块元素
-# 获取滑块及滑块背景图元素
-slider = d.find_element(By.XPATH, '//*[@id="app"]/main/div/div/div[2]/i')
-slider_bg = d.find_element(By.XPATH, '//*[@id="app"]/main/div/div/div[2]')
+# time.sleep(2)
+# #切换到弹窗
+# iframe = d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
+# d.switch_to.frame(iframe)
+# # 定位滑块元素
+# # 获取滑块及滑块背景图元素
+# slider = d.find_element(By.XPATH, '//*[@id="app"]/main/div/div/div[2]/i')
+# slider_bg = d.find_element(By.XPATH, '//*[@id="app"]/main/div/div/div[2]')
 
 # 鼠标按住滑块并拖动至背景图完全覆盖
-ActionChains(d).click_and_hold(slider).perform()
-# 循环拖动滑块，直到解锁成功
-while True:
-    try:
-        # 拖动滑块
-        ActionChains(d).move_by_offset(10, 0).perform()
-    except:
-        # 拖动异常则跳出循环
-        break
-
-# 等待滑块验证通过
-WebDriverWait(d, 10).until(EC.url_matches('https://tradinglive-testwebpc.tostar.top/cn/homepage'))
+# ActionChains(d).click_and_hold(slider).perform()
+# # 循环拖动滑块，直到解锁成功
+# while True:
+#     try:
+#         # 拖动滑块
+#         ActionChains(d).move_by_offset(10, 0).perform()
+#     except:
+#         # 拖动异常则跳出循环
+#         break
+#
+# # 等待滑块验证通过
+# WebDriverWait(d, 10).until(EC.url_matches('https://tradinglive-testwebpc.tostar.top/cn/homepage'))
 
 
 
