@@ -1,8 +1,9 @@
 import uiautomator2 as u2
 
 
-d=u2.connect('127.0.0.1:21503')
-app ='com.sy.fxchat'
+# d=u2.connect('127.0.0.1:21503')
+d=u2.connect('127.0.0.1:21513')
+app ='com.bv.forexchat'
 
 # def findelement(self,*loc):
 #     self.ele=ele1(loc)

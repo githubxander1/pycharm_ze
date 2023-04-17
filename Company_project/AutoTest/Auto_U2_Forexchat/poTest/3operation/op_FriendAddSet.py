@@ -13,7 +13,7 @@ from op_ManageGroup import  manage_groups,d,addFriend,switch
 # 获取设备基本信息
 # print(d.info)
 d.implicitly_wait(10)
-d.app_start('com.sy.fxchat')
+d.app_start('com.bv.forexchat')
 
 # 取消更新
 # d(description="取消").click()

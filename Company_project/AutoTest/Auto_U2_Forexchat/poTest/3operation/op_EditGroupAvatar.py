@@ -10,6 +10,7 @@ from op_ManageGroup import d,manage_groups,editgroupprofile,name,inputgroupname,
 
 
 # d=u2.connect('127.0.0.1:21513')
+d=u2.connect_wifi('192.168.31.119')
 # 获取设备基本信息
 # print(d.info)
 d.implicitly_wait(10)

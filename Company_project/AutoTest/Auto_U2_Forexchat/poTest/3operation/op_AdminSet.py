@@ -10,10 +10,11 @@ from op_ManageGroup import d,adminadd,adminset,sure,manage_groups
 
 
 # d=u2.connect('127.0.0.1:21513')
+d=u2.connect('127.0.0.1:21513')
 # 获取设备基本信息
-# print(d.info)
+print(d.info)
 d.implicitly_wait(10)
-d.app_start('com.sy.fxchat')
+d.app_start('com.bv.forexchat')
 
 # 取消更新
 # d(description="取消").click()
