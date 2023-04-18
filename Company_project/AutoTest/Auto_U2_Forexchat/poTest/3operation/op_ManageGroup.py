@@ -6,8 +6,8 @@ from Company_project.AutoTest.Auto_U2_Forexchat.nomal import EditGroupProfile
 # try:
 #     d=u2.connect('127.0.0.1:21513')
 # except:
-d=u2.connect('127.0.0.1:21503')
-
+d=u2.connect('127.0.0.1:21513')
+d.implicitly_wait(10)
 # from ele import d,editgroupprofile
 # from op_Home import session1
 # from op_Windows import groupSet
@@ -63,7 +63,10 @@ def manage_groups():
     # 点击群设置
     group_set.click()
     # 点击管理群
-    d(scrollable=True).scroll.to(description="管理群")
+    # 垂直向前滚动到指定位置（横向同理）
+    d(scrollable=True).scroll.forward.to(description="管理群")
+    # d(scrollable=True).scroll.horiz.to(description="管理群")
+    # d(scrollable=True).scroll.to(description="管理群")
     time.sleep(3)
     d(description="管理群").click()
 
