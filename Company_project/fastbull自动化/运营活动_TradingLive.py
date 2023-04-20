@@ -23,7 +23,7 @@ time.sleep(1)
 # 选择区号
 d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
 time.sleep(1)
-d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111123')
+d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111130')
 # 点击获取验证码
 d.find_element_by_css_selector(
 '#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.el-col.el-col-10 > button > span').click()

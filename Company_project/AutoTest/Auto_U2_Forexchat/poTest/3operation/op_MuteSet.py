@@ -6,9 +6,8 @@ import uiautomator2 as u2
 
 # from ele import d,groupMute,switch
 
-from op_ManageGroup import  manage_groups,d,groupMute,switch
-
-
+from op_ManageGroup import  ManageGroup
+from basePage import Base1, d
 # d=u2.connect('127.0.0.1:21513')
 # 获取设备基本信息
 # print(d.info)
