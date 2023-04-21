@@ -1,8 +1,9 @@
 # 2page(页面对象)：封装对元素的操作，一个页面封装成一个对象
 # coding: utf-8
-
+import sys
+sys.path.append("..") #相对路径或绝对路径
 # from op_ManageGroup import ManageGroup
-from GroupMagema.op_ManageGroup import ManageGroup
+from ../GroupManage/op_ManageGroup import ManageGroup
 from basePage import Base1, d
 
 
