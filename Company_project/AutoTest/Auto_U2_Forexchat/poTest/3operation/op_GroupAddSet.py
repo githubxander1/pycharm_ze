@@ -6,28 +6,29 @@ import uiautomator2 as u2
 
 # from ele import d,groupadditionMethod,everyone
 
-from op_ManageGroup import  manage_groups,d,groupadditionMethod,everyone
+from op_ManageGroup import  ManageGroup
 
 
 # d=u2.connect('127.0.0.1:21513')
 # 获取设备基本信息
 # print(d.info)
-d.implicitly_wait(10)
-d.app_start('com.sy.fxchat')
+from op_ManageGroup import  ManageGroup
+from basePage import Base1, d
 
-# 取消更新
-# d(description="取消").click()
-
-
-# 编辑群头像成功
-def groupAdd_set():
-    manage_groups()
-    groupadditionMethod.click()
-    everyone.click()
+class GroupAdd(Base1):
+    groupadditionMethod = d(description="加群方式")
+    everyone = d(description="允许任何人加群")
+    needVerify = d(description="需要发送验证消息")
+    forbid = d(description="不允许任何人加群")
+    # 加群方式
+    def groupAdd_set(self):
+        ManageGroup().manage_groups()
+        ManageGroup().groupadditionMethod.click()
+        GroupAdd().everyone.click()
 
 
 
 #
 if __name__ == '__main__':
-    groupAdd_set()
+    GroupAdd().groupAdd_set()
 

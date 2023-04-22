@@ -6,12 +6,14 @@ import time
 import uiautomator2 as u2
 
 # 连接模拟器或手机
+# d=u2.connect('127.0.0.1:21513')
 d=u2.connect('127.0.0.1:21513')
 
 class Base:
     # 初始化方法
-    def __init__(self,d):
+    def __init__(self,d,app):
         d=u2.connect('127.0.0.1:21513')
+        app=d.app_start('com.bv.forexchat')
 
 
 class ChatWindow:

@@ -9,7 +9,7 @@ import allure_pytest
 
 from op_ManageGroup import manage_groups, editgroupprofile, avatar, defaultavatar, avatar1
 
-from op_groupWindow import send_text
+from op_GroupWindow import send_text
 
 # from basePage import BasePage
 

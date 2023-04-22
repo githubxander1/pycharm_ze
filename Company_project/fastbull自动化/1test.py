@@ -5,7 +5,8 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+d = webdriver.Edge()
+d.implicitly_wait(10)
 def get_track(x):
   '''
   滑块移动轨迹
@@ -44,7 +45,6 @@ def get_track(x):
 
 
 def main3():
-  d = webdriver.Edge()
   d.get('https://tradinglive-testwebpc.tostar.top/cn/login')
 
   WebDriverWait(driver=d, timeout=30, ignored_exceptions=None).until(EC.presence_of_all_elements_located(
@@ -56,7 +56,7 @@ def main3():
   # 选择区号
   d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
   time.sleep(1)
-  d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111111')
+  d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111110')
   d.find_element_by_css_selector(
     '#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.el-col.el-col-10 > button > span').click()
 
@@ -97,11 +97,24 @@ def main3():
   ActionChains(d).pause(1).release().perform()
   print(move_offset)
   print('滑动结束.')
-  time.sleep(3)
-
-  d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/form/div/div[3]/div/div/div/input').send_keys(1234)
-  time.sleep(3)
-  d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/p[1]/button').click()
   time.sleep(2)
 
+  d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/form/div/div[3]/div/div/div/input').send_keys(1234)
+  time.sleep(2)
+  d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/p[1]/button').click()
+  time.sleep(2)
 main3()
+
+# 跳过引导层
+d.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/a[1]/span').click()
+# 跳过感兴趣语言
+d.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/button[1]/span').click()
+
+# 移动到邀请icon上
+icon=d.find_element_by_xpath('//*[@id="app"]/div[5]/ul/li[1]/div/span/span/div/img')
+ActionChains(d).move_to_element(icon).perform()
+time.sleep(4)
+# d.find_element_by_css_selector('#el-popover-6913 > div.activity-popover > div').click()
+# 复制完整xpath
+d.find_element_by_xpath('/html/body/div[4]/div[1]/div').click()
+# d.find_element_by_id('邀请好友').click()

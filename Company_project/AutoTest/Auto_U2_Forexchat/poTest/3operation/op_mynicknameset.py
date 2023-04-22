@@ -13,9 +13,8 @@ from op_ManageGroup import manage_groups
 # d=u2.connect('127.0.0.1:21513')
 # 获取设备基本信息
 # print(d.info)
-d.implicitly_wait(10)
-d.app_start('com.sy.fxchat')
-
+from op_ManageGroup import  ManageGroup
+from basePage import Base1, d
 # 取消更新
 # d(description="取消").click()
 

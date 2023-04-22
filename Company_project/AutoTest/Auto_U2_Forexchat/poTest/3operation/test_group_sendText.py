@@ -7,7 +7,7 @@ import uiautomator2 as u2
 
 from op_ManageGroup import  manage_groups
 
-from op_groupWindow import send_text
+from op_GroupWindow import send_text
 
 d.implicitly_wait(10)
 from basePage import BasePage

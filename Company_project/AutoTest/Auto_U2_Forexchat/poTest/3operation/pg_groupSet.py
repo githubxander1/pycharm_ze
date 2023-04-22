@@ -1,9 +1,7 @@
 import sys
 sys.path.append('basePage.py')
-from basePage import BasePage
-import uiautomator2 as u2
-d=u2.connect('127.0.0.1:21503')
-
+from op_ManageGroup import  ManageGroup
+from basePage import Base1, d
 # class groupPage(BasePage):
 scroll=d(scrollable=True).scroll.to(description="管理群")
 # 返回聊天窗口
