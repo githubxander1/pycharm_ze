@@ -3,9 +3,8 @@
 # import sys
 # sys.path.append("..") #相对路径或绝对路径
 
-from Company_project.UI_U2_Forexchat.operation.GroupSet import ManageGroup
-from Company_project.UI_U2_Forexchat import Base1, d
-
+from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 
 # 取消更新
 # d(description="取消").click()

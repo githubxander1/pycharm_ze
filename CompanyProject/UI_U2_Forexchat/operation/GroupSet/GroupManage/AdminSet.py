@@ -2,8 +2,8 @@
 # coding: utf-8
 import time
 
-from Company_project.UI_U2_Forexchat.operation.GroupSet import ManageGroup
-from Company_project.UI_U2_Forexchat import Base1, d
+from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 
 
 class Admin(Base1):

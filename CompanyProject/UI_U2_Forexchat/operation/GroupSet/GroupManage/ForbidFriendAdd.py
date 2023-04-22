@@ -1,5 +1,5 @@
-from Company_project.UI_U2_Forexchat.operation.GroupSet import ManageGroup
-from Company_project.UI_U2_Forexchat import Base1, d
+from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 
 class ForbidFriendAdd(Base1):
     addFriend = d(description="禁止群内成员互加好友")

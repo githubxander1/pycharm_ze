@@ -1,13 +1,6 @@
-# from pg_home import homePage
-# from pg_groupWindow import groupPage
-# from basePage import BasePage
-# try:
-#     d=u2.connect('127.0.0.1:21513')
-# except:
-# d=u2.connect('127.0.0.1:21503')
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
+from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
-from Company_project.UI_U2_Forexchat import Home
-from Company_project.UI_U2_Forexchat import Base1, d
 
 class GroupWindow(Base1):
     # 返回首页
@@ -24,14 +17,13 @@ class GroupWindow(Base1):
     group_set=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.ImageView[3]')
     # 点击进入会话聊天窗口
     def click_conversation(self):
-        Home().openHome()
+        # Home().openHome()
         Home().conversation.click()
 
     def send_text(msg):
         GroupWindow().click_conversation()
         # 点击输入框
-        # input_msg.send_keys(msg)
-        d(className='android.widget.EditText').send_keys(msg)
+        GroupWindow().input_msg.send_keys(msg)
         # 点击发送按钮
         d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[6]').click()
         # send.click()
@@ -52,4 +44,5 @@ class GroupWindow(Base1):
         GroupWindow().group_set.click()
 
 if __name__ == '__main__':
-    GroupWindow().send_text('文本')
+    msg='xinxi'
+    GroupWindow().send_text()
