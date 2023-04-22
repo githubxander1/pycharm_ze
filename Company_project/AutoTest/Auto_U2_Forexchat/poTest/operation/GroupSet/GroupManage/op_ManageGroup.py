@@ -1,8 +1,6 @@
 import time
 import uiautomator2 as u2
 
-from Company_project.AutoTest.Auto_U2_Forexchat.nomal import EditGroupProfile
-
 # try:
 #     d=u2.connect('127.0.0.1:21513')
 # except:
@@ -14,9 +12,9 @@ d.implicitly_wait(10)
 
 
 
-from op_Home import Home
-from op_GroupWindow import GroupWindow
-from basePage import Base1
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.op_Home import Home
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.ChatWindows.op_GroupWindow import GroupWindow
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.base.basePage import Base1, d
 
 class ManageGroup(Base1):
     # 编辑群资料

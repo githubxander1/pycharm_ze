@@ -3,13 +3,8 @@
 import time
 import uiautomator2 as u2
 import pytest
-import allure_pytest
 
-
-
-from op_ManageGroup import manage_groups, editgroupprofile, avatar, defaultavatar, avatar1
-
-from op_GroupWindow import send_text
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.GroupSet.GroupManage.op_ManageGroup import manage_groups, editgroupprofile, avatar, defaultavatar, avatar1
 
 # from basePage import BasePage
 

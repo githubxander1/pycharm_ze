@@ -1,15 +1,5 @@
-
-# coding: utf-8
-import time
-from op_ManageGroup import  ManageGroup
-from basePage import Base1, d
-# 获取设备基本信息
-# print(d.info)
-d.implicitly_wait(10)
-d.app_start('com.bv.forexchat')
-
-# 取消更新
-# d(description="取消").click()
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.GroupSet.GroupManage.op_ManageGroup import ManageGroup
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.base.basePage import Base1, d
 
 class ForbidFriendAdd(Base1):
     addFriend = d(description="禁止群内成员互加好友")

@@ -1,20 +1,6 @@
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.GroupSet.GroupManage.op_ManageGroup import ManageGroup
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.base.basePage import Base1, d
 
-# coding: utf-8
-import time
-from op_ManageGroup import  ManageGroup
-from basePage import Base1, d
-# 取消更新
-
-# if d(description="取消").exists:
-#     d(description="取消").click()
-# else:
-#     pass
-# 取消更新
-# def update():
-#     if d(description="取消").exists:
-#         d(description="取消").click()
-#     else:
-#         pass
 class GroupName(Base1):
     # 群名称
     name = d.xpath('//*[contains(@content-desc,"群名称")]')

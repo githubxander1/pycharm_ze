@@ -1,19 +1,5 @@
-
-# coding: utf-8
-import time
-import uiautomator2 as u2
-
-
-# from ele import d,groupadditionMethod,everyone
-
-from op_ManageGroup import  ManageGroup
-
-
-# d=u2.connect('127.0.0.1:21513')
-# 获取设备基本信息
-# print(d.info)
-from op_ManageGroup import  ManageGroup
-from basePage import Base1, d
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.GroupSet.GroupManage.op_ManageGroup import ManageGroup
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.base.basePage import Base1, d
 
 class GroupAdd(Base1):
     groupadditionMethod = d(description="加群方式")

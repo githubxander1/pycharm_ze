@@ -1,12 +1,10 @@
 
 # coding: utf-8
-import time
-import uiautomator2 as u2
 
 
 from pg_groupSet import d,mynickname,nameinput,complete
 
-from op_ManageGroup import  manage_groups
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.GroupSet.GroupManage.op_ManageGroup import  manage_groups
 
 
 

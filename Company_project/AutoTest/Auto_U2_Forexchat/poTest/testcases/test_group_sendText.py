@@ -1,13 +1,8 @@
 
 # coding: utf-8
-import time
 import uiautomator2 as u2
 
-
-
-from op_ManageGroup import  manage_groups
-
-from op_GroupWindow import send_text
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.ChatWindows.op_GroupWindow import send_text
 
 d.implicitly_wait(10)
 from basePage import BasePage

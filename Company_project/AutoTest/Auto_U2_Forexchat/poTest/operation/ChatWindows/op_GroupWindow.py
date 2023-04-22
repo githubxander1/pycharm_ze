@@ -1,5 +1,3 @@
-import time
-import uiautomator2 as u2
 # from pg_home import homePage
 # from pg_groupWindow import groupPage
 # from basePage import BasePage
@@ -7,13 +5,9 @@ import uiautomator2 as u2
 #     d=u2.connect('127.0.0.1:21513')
 # except:
 # d=u2.connect('127.0.0.1:21503')
-from basePage import d
-from op_Home import Home
 
-
-d.implicitly_wait(10)
-# from op_ManageGroup import  ManageGroup
-from basePage import Base1, d
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.op_Home import Home
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.base.basePage import Base1, d
 
 class GroupWindow(Base1):
     # 返回首页

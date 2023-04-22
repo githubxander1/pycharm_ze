@@ -2,9 +2,8 @@
 # coding: utf-8
 import time
 
-from basePage import Base1, d
-from op_ManageGroup import ManageGroup
-from basePage import Base1
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.GroupSet.GroupManage.op_ManageGroup import ManageGroup
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.base.basePage import Base1, d
 
 
 class Admin(Base1):

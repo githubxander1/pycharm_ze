@@ -1,7 +1,6 @@
 import sys
-sys.path.append('basePage.py')
-from op_ManageGroup import  ManageGroup
-from basePage import Base1, d
+sys.path.append('../base/basePage.py')
+from basePage import d
 # class groupPage(BasePage):
 scroll=d(scrollable=True).scroll.to(description="管理群")
 # 返回聊天窗口

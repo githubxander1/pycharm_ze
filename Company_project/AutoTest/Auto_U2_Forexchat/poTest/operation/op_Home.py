@@ -1,10 +1,6 @@
-import time
-import uiautomator2 as u2
 
 
-from basePage import d
-# from basePage import d,app
-from basePage import Base1
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.base.basePage import Base1, d
 
 class Home(Base1):
     conversation=d.xpath('//android.widget.ScrollView/android.view.View[2]')

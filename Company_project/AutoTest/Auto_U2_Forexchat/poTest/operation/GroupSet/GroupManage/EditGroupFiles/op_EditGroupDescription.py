@@ -1,10 +1,10 @@
 # 2page(页面对象)：封装对元素的操作，一个页面封装成一个对象
 # coding: utf-8
-import sys
-sys.path.append("..") #相对路径或绝对路径
-# from op_ManageGroup import ManageGroup
-from ../GroupManage/op_ManageGroup import ManageGroup
-from basePage import Base1, d
+# import sys
+# sys.path.append("..") #相对路径或绝对路径
+
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.operation.GroupSet.GroupManage.op_ManageGroup import ManageGroup
+from Company_project.AutoTest.Auto_U2_Forexchat.poTest.base.basePage import Base1, d
 
 
 # 取消更新
@@ -46,17 +46,6 @@ class GroupDescription(Base1):
 
 #
 if __name__ == '__main__':
-    # editgroupdescription_cancel('群介绍：取消')
-    # d.app_stop('com.sy.fxchat')
-    # time.sleep(3)
-    # editgroupdescription_set('群介绍：感受到丰田供热')
-    # time.sleep(3)
-    # d.app_stop('com.sy.fxchat')
-    # time.sleep(3)
-    # editgroupdescription_clear()
-    # d.app_stop('com.bv.forexchat')
     editgropdescription_textinput = '这是群介绍'
     GroupDescription().editgroupdescription_set()
-    # toasts = d.toast.get_message()
-    # toasts2 = d.toast.show()
-    # print(toasts)
+
