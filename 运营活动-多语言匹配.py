@@ -13,4 +13,3 @@ d.find_element_by_xpath('//*[@id="share"]/div[1]/div[2]/button').click()
 t = d.find_element_by_css_selector('/html/body/div[3]/div').text
 print(t)
 
-from ..\python_sys\web_Flask\flask1 import os
