@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 
-d=webdriver.Chrome()
+d=webdriver.Edge()
 url = "https://login.taobao.com/member/login.jhtml"
 d.get(url)
 d.maximize_window() # 最大化
