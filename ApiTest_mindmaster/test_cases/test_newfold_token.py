@@ -3,7 +3,7 @@ import unittest
 from pprint import pprint
 
 from ApiTest_mindmaster.common.requests_handler import RequestsHandler
-from ApiTest_mindmaster.mid.helper_token import save_token, Context
+from ApiTest_mindmaster.middleware.helper import save_token, Context
 
 
 class LoginTest(unittest.TestCase):

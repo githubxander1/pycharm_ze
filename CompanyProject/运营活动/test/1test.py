@@ -21,10 +21,10 @@ def get_track(x):
   t = 0.5
   tracks = []
   current = 0
-  # mid = x*5/8#到达mid值开始减速
+  # middleware = x*5/8#到达mid值开始减速
   # x = x+10
   while current < x:
-    # if current < mid:
+    # if current < middleware:
     #     a = random.randint(1,3)
     # else:
     #     a = -random.randint(2,4)
