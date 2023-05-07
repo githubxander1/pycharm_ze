@@ -3,7 +3,7 @@ import openpyxl
 class getExcelData:
     def getdata(self):
         # 加载工作簿
-        self.wb=openpyxl.load_workbook('testcases-api.xlsx')
+        self.wb=openpyxl.load_workbook('test_cases-api.xlsx')
         # 获取存储数据的工作表
         selfsheet1=self.wb['登录']
         # 获取某个单元格的数据

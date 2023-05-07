@@ -22,7 +22,7 @@ headers={
 # print(token1)
 xinjian = requests.post(url='https://masterapi.edrawsoft.cn/api/oss/23928516/obj', headers=headers,
                     data={
-                        'id': 23928516,
-                        'prefix': 'test_logs'
+                        # 'id': 23928516,
+                        'prefix': 'test_'
                     })
 print(xinjian.json())
