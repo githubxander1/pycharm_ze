@@ -43,9 +43,9 @@ class TestLogin(unittest.TestCase):
             raise e
         finally:
             # 将响应的状态码，写到excel的第9列，即写入返回的状态码
-            TestLogin.excel.write_excel("../data/cases.xlsx", 'login', items['case_id'] + 1, 9, res['code'])
+            TestLogin.excel.write_excel("../data/openpyxl_mindmaster2.xlsx", 'login', items['case_id'] + 1, 9, res['code'])
             # 如果断言成功，则在第10行(测试结果)写入Pass,否则，写入Fail
-            TestLogin.excel.write_excel("../data/cases.xlsx", 'login', items['case_id'] + 1, 10, result)
+            TestLogin.excel.write_excel("../data/openpyxl_mindmaster2.xlsx", 'login', items['case_id'] + 1, 10, result)
         pprint(res['data'])
         self.assertEqual('success', res['status'])
 
