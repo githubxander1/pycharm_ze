@@ -1,3 +1,6 @@
+from pprint import pprint
+import requests
+import ddt
 import openpyxl
 class ExcelHandler:
     def __init__(self, file):
@@ -40,7 +43,23 @@ class ExcelHandler:
         sheet.cell(row, cloumn).value = data
         wb.save(file)
         wb.close()
+
+
+
 if __name__ == "__main__":
     # 以下为测试代码
-    excel = ExcelHandler('../data/cases.xlsx')
+    excel = ExcelHandler('../data/openpyxl_mindmaster2.xlsx')
     data = excel.read_excel('login')
+    pprint(data)
+
+    # @ddt.data(data)
+    #
+    #
+    # login_url = 'https://userapi.edrawsoft.cn/api/user/login'
+    # payload={
+    #       'email': "2695418206@qq.com",
+    #       'from': "web",
+    #       'product': "master-online",
+    #       'pw': "f2d8ddfc169a0ee6f8b0ecd924b1d300"
+    #       }
+    # r=requests(method=data['method'], url,)
