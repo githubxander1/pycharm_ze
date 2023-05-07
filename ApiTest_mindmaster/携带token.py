@@ -1,6 +1,6 @@
 # /api/user/23928516/subscription/mindmaster
 import unittest
-from mid.helper import save_token
+from mid.helper_token import save_token
 class TestRecharge(unittest.TestCase):
     def setUp(self):
         pass

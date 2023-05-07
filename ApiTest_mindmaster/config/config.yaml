@@ -4,3 +4,8 @@ email: "2695418206@qq.com"
 from: "web"
 product: "master-online"
 pw: "f2d8ddfc169a0ee6f8b0ecd924b1d300"
+
+logger:
+  name: ITester
+  level: DEBUG
+  format: '%(filename)s-%(lineno)d-%(asctime)s-%(levelname)s-%(message)s'

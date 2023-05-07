@@ -51,17 +51,3 @@ if __name__ == "__main__":
     excel = ExcelHandler('../data/openpyxl_mindmaster2.xlsx')
     data = excel.read_excel('login')
     pprint(data)
-
-    # @ddt.data(data)
-    # def login(data):
-    # #
-    #     # login_url = 'https://userapi.edrawsoft.cn/api/user/login'
-    #     # payload={
-    #     #       'email': "2695418206@qq.com",
-    #     #       'from': "web",
-    #     #       'product': "master-online",
-    #     #       'pw': "f2d8ddfc169a0ee6f8b0ecd924b1d300"
-    #     #       }
-    #     r=requests.request(method=data['method'], url=data['url'],data=data['payload'])
-    #     pprint(r)
-    # login()

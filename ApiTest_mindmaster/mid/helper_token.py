@@ -1,3 +1,5 @@
+# 用于处理token
+
 import jsonpath as jsonpath
 from jsonpath import jsonpath
 import requests
@@ -19,11 +21,16 @@ def login():
 def save_token():
     """保存token信息"""
     res = login()
+    # print(res.json())
     token = jsonpath(res.json(), '$..token')[0]
     # print(token)
     # token_type = jsonpath(res.json(),'$..token_type')
     # print(token_type)
     # token = " ".join([token_type, token])
+
+    # token = r.json()['data']['token']
+    token = 'Bearer' + ' ' + token
+    # print(token)
     return token
 
 
