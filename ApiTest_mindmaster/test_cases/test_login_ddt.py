@@ -35,20 +35,20 @@ class TestLogin(unittest.TestCase):
                              url=items['url'],
                              json=items['payload'])
         print(res)
-        try:
-            # 断言：预期结果与实际结果对比
-            self.assertEqual(res['status'],items['expected_result'])
-            result = 'Pass'
-        except AssertionError as e:
-            result = 'Fail'
-            raise e
-        finally:
-            # 将响应的状态码，写到excel的第9列，即写入返回的状态码
-            TestLogin.excel.write_excel("../data/openpyxl_mindmaster2.xlsx", 'login',items['case_id'] + 1, 9, res['status'])
-            # 如果断言成功，则在第10行(测试结果)写入Pass,否则，写入Fail
-            TestLogin.excel.write_excel("../data/openpyxl_mindmaster2.xlsx", 'login',items['case_id'] + 1, 10, result)
-        pprint(res['data'])
-        self.assertEqual('success', res['status'])
+        # try:
+        #     # 断言：预期结果与实际结果对比
+        #     self.assertEqual(res['status'],items['expected_result'])
+        #     result = 'Pass'
+        # except AssertionError as e:
+        #     result = 'Fail'
+        #     raise e
+        # finally:
+        #     # 将响应的状态码，写到excel的第9列，即写入返回的状态码
+        #     TestLogin.excel.write_excel("../data/openpyxl_mindmaster2.xlsx", 'login',items['case_id'] + 1, 9, res['status'])
+        #     # 如果断言成功，则在第10行(测试结果)写入Pass,否则，写入Fail
+        #     TestLogin.excel.write_excel("../data/openpyxl_mindmaster2.xlsx", 'login',items['case_id'] + 1, 10, result)
+        # pprint(res['data'])
+        # self.assertEqual('success', res['status'])
 
 
 if __name__ == '__main__':

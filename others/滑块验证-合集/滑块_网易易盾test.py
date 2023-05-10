@@ -25,21 +25,21 @@ driver.find_element_by_xpath('//*[@id="captcha"]/div[2]/div[1]/div[1]').click()
 while True:
     # 获取两张图片
     # 滑动图
-    url_s = driver.find_element_by_class_name('geetest_slice_783fef70 geetest_slice').get_attribute('src')
+    url_s = driver.find_element_by_xpath('//*[@id="captcha"]/div[2]/div[1]/div[4]/div[1]/div[2]/div/div/div[1]/div[1]/div[1]').get_attribute('src')
     # 背景图
-    url_b = driver.find_element_by_class_name('geetest_bg_783fef70 geetest_bg').get_attribute('src')
+    url_b = driver.find_element_by_xpath('//*[@id="captcha"]/div[2]/div[1]/div[4]/div[1]/div[2]/div/div/div[1]/div[2]').get_attribute('src')
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36'
     }
-    res_s = requests.get(url_s, headers=headers)
-    data_s = res_s.content
-    res_b = requests.get(url_b, headers=headers)
-    data_b = res_b.content
+    # res_s = requests.get(url_s, headers=headers)
+    # data_s = res_s.content
+    # res_b = requests.get(url_b, headers=headers)
+    # data_b = res_b.content
     # 保存图片
     with open('pic_s.png', 'wb') as f:
-        f.write(data_s)
+        f.write(url_s)
     with open('pic_b.png', 'wb') as f:
-        f.write(data_b)
+        f.write(url_b)
 
     # 使用opencv读取两张图片
     simg = cv2.imread('pic_s.png')
