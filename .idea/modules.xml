@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PycharmProject.iml" filepath="$PROJECT_DIR$/.idea/PycharmProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/PycharmProject/.idea/汇聊接口自动化.iml" filepath="$PROJECT_DIR$/PycharmProject/.idea/汇聊接口自动化.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../测试/项目/汇聊/自动化/.idea/自动化.iml" filepath="$PROJECT_DIR$/../测试/项目/汇聊/自动化/.idea/自动化.iml" />
+      <module fileurl="file://$PROJECT_DIR$/自动化/.idea/自动化.iml" filepath="$PROJECT_DIR$/自动化/.idea/自动化.iml" />
     </modules>
   </component>
 </project>
