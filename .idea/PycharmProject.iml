@@ -5,6 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="汇聊接口自动化" />
+    <orderEntry type="module" module-name="自动化" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />
