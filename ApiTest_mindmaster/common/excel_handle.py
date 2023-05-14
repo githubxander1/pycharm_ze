@@ -36,7 +36,7 @@ class ExcelHandler:
             data.append(data_dict)
         return data
     @staticmethod
-    def write_excel(file, sheet_name, row, cloumn,data):
+    def write_excel(file, sheet_name, row, cloumn, data):
         """Excel写入数据"""
         wb = openpyxl.load_workbook(file)
         sheet = wb[sheet_name]
@@ -46,8 +46,9 @@ class ExcelHandler:
 
 
 
-if __name__ == "__main__":
-    # 以下为测试代码
-    excel = ExcelHandler('../data/openpyxl_mindmaster2.xlsx')
-    data = excel.read_excel('login')
-    pprint(data)
+# if __name__ == "__main__":
+# 以下为测试代码
+    # excel = ExcelHandler('../data/openpyxl_mindmaster2.xlsx')
+    # data = excel.read_excel('login')
+    # excel.write_excel('../data/openpyxl_mindmaster2.xlsx', 'login',4, 9, 200)
+    # pprint(data)
