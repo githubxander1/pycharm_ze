@@ -1,0 +1,6 @@
+test_login_log.py-26-2023-05-14 19:25:26,086-INFO-****************************************************************************************
+test_login_log.py-27-2023-05-14 19:25:26,086-INFO-当前是第1条用例：login_suss
+test_login_log.py-28-2023-05-14 19:25:26,087-INFO-当前用例的测试数据：{'case_id': 1, 'model_name': '登录', 'url': 'https://userapi.edrawsoft.cn/api/user/login', 'case_title': 'login_suss', 'method': 'post', 'payload': '{\'email\': "695418206@qq.com",\'from\': "web",\'product\': "master-online",\'pw\': "f2d8ddfc169a0ee6f8b0ecd924b1d300"}', 'expected_result': 'success', 'actual_result': None, 'test_result': None}
+test_login_log.py-26-2023-05-14 19:25:26,096-INFO-****************************************************************************************
+test_login_log.py-27-2023-05-14 19:25:26,096-INFO-当前是第2条用例：login_nameF
+test_login_log.py-28-2023-05-14 19:25:26,097-INFO-当前用例的测试数据：{'case_id': 2, 'model_name': '登录', 'url': 'https://userapi.edrawsoft.cn/api/user/login', 'case_title': 'login_nameF', 'method': 'post', 'payload': '{\'email\': "2695418206@qq.com",\'from\': "web",\'product\': "master-online",\'pw\': "f2d8ddfc169a0ee6f8b0ecd924b1d300"}', 'expected_result': 'fault', 'actual_result': None, 'test_result': None}

@@ -1,0 +1,14 @@
+{
+  "name": "无涯",
+  "product_type": "WEB",
+  "version": "1",
+  "master": "1",
+  "description": "1",
+  "modifyname": "小明",
+  "modifyproduct_type": "APP",
+  "modifyversion": "1.0.1",
+  "modifymaster": "化",
+  "modifydescription": "这个是测试",
+  "login": {"username":"13xxxxxxxxx","password":"xxxxxx"}
+
+}
