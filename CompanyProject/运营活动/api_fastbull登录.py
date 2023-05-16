@@ -1,0 +1,6 @@
+import requests
+
+url='https://testfbapi.tostar.top/fastbull-user-service/api/postLoginByAccount'
+requestData='ugosxR6nWxqMIq5KTCmN4VETK8TDoKhxXbZ7tsh6ZDuZmzffbL0dPSineUc3DstxvBMqX3RW9fkRmzyw6CMxP8wWlMLbTLUJEvErAhGthKFs7R5/zurD232XkXPjcjvVPaSuv1jiA5zco4L71jpdSugHTEvxKtYO9XixlRjVa6h2Y1DrjmDIs7B7RqYWlzXVUr6AYTKmr9W4+Vq63+pAXoR/sAJ+nzeOVdUCrYnEUjY='
+
+r=requests.post(url,data=requestData)
