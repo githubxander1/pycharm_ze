@@ -36,6 +36,7 @@ class ExcelHandler:
             data.append(data_dict)
         return data
     @staticmethod
+    # 使用静态方法的主要优点是可以在不创建类实例的情况下调用该方法，从而提高代码的灵活性和可重用性。
     def write_excel(file, sheet_name, row, cloumn, data):
         """Excel写入数据"""
         wb = openpyxl.load_workbook(file)

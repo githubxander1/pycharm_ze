@@ -1,12 +1,9 @@
 import unittest
-# from MyTestCase1 import TestMyCase1
-# from MyTestCase2 import TestMyCase2
-# import MyTestCase3_Module
 import os
 from HTMLTestRunner import HTMLTestRunner
 
 report_dir = "reports/"
-report_file = report_dir + "html_report.html"
+report_file = report_dir + "mindmaster_html_report.html"
 
 # 判断reports目录是否存在，如果不存在就创建目录
 if not os.path.exists(report_dir):

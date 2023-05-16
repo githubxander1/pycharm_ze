@@ -10,11 +10,8 @@ class LoginTest(unittest.TestCase):
         # 请求类实例化
         self.req = RequestsHandler()
 
-        # pass
-
     def tearDown(self):
         self.req.close_session()
-    # pass
 
     def test_newfold_success(self):
         login_url = 'https://userapi.edrawsoft.cn/api/user/login'
