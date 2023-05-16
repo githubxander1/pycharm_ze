@@ -1,0 +1,48 @@
+test_login_success_1 (test_cases.test_login_ddt.TestLogin) ... ok
+test_login_success_2 (test_cases.test_login_ddt.TestLogin) ... ok
+test_login_success_1 (test_cases.test_login_log.TestLogin) ... ERROR
+test_login_success_2 (test_cases.test_login_log.TestLogin) ... ERROR
+test_newfold_success (test_cases.test_newfold.LoginTest) ... ok
+test_newfold_success (test_cases.test_newfold_token.LoginTest) ... ok
+test_cases.test_register (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_login_success_1 (test_cases.test_login_log.TestLogin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\ddt.py", line 220, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Program Files\1test\pycharm_ze\ApiTest_mindmaster\test_cases\test_login_log.py", line 30, in test_login_success
+    res = self.req.visit(method=items['method'],url=items['url'],json=json.loads(items['payload']),
+KeyError: 'payload'
+
+======================================================================
+ERROR: test_login_success_2 (test_cases.test_login_log.TestLogin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\ddt.py", line 220, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Program Files\1test\pycharm_ze\ApiTest_mindmaster\test_cases\test_login_log.py", line 30, in test_login_success
+    res = self.req.visit(method=items['method'],url=items['url'],json=json.loads(items['payload']),
+KeyError: 'payload'
+
+======================================================================
+ERROR: test_cases.test_register (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_cases.test_register
+Traceback (most recent call last):
+  File "C:\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "C:\Program Files\1test\pycharm_ze\ApiTest_mindmaster\test_cases\test_register.py", line 3, in <module>
+    from common.db_handler import DBHandler
+  File "C:\Program Files\1test\pycharm_ze\ApiTest_mindmaster\common\db_handler.py", line 1, in <module>
+    import pymysql
+ModuleNotFoundError: No module named 'pymysql'
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.769s
+
+FAILED (errors=3)
