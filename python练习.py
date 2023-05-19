@@ -48,10 +48,31 @@
 #     sum+=i
 # print(sum)
 # 编写一个程序，找出列表中的最大值并输出。
-lst=[1,2,3,4]
-max=lst[0]
+# lst=[1,2,3,4]
+# max=lst[0]
+# for i in lst:
+#     if i > max:
+#         max = i
+# print(max)
+# 编写一个程序，要求用户输入一个字符串，并将字符串反转后输出。
+# str=str(input())
+# print(str.)
+# 编写一个程序，要求用户输入两个字符串，分别将其首位拼接在一起并输出。
+# str1=str(input('str1:'))
+# str2=str(input('str2:'))
+# print(str1[0]+str2[0])
+# 编写一个程序，要求用户输入一个字符串和一个子字符串，如果字符串中包含子字符串则将其替换为另一个字符串并输出，否则输出原字符串。
+# 编写一个程序，创建一个包含10个整数的列表，要求分别求出列表中的最大值、最小值、和以及平均值。
+lst=[i for i in range(10) ]
+print(lst)
+lst.sort()
+newlst=[]
 for i in lst:
-    if i > max:
-        max = i
-print(max)
-
+    if i % 2 ==0:
+        newlst.append(i)
+print('max:',max(lst))
+print('min:',min(lst))
+print('average:',sum(lst)/len(lst))
+# 编写一个程序，创建一个包含10个整数的列表，要求对列表进行排序并输出排序后的结果。
+#
+# 编写一个程序，创建一个包含10个整数的列表，要求将列表中的偶数提取出来并存放在一个新的列表中
