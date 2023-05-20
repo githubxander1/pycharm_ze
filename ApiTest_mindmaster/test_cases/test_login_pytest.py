@@ -1,4 +1,5 @@
 import unittest
+import pytest
 from pprint import pprint
 
 from ddt import ddt,data
@@ -6,17 +7,17 @@ from ApiTest_mindmaster.common.excel_handle import ExcelHandler
 from ApiTest_mindmaster.common.requests_handler import RequestsHandler
 
 @ddt
-class TestLogin(unittest.TestCase):
+class TestLogin():
+    @pytest.fixture()
     # 读取excel中的数据
     excel = ExcelHandler('../data/openpyxl_mindmaster2.xlsx')
     case_data = excel.read_excel('login')
     # 将字符串中的反斜杠替换为空
     # payload_str = case_data['data'].replace('\\', '')
-    def setUp(self):
+    def set_init(self):
         # 请求类实例化
         self.req = RequestsHandler()
-
-    def tearDown(self):
+        yield self.req
         self.req.close_session()
 
     @data(*case_data)
@@ -27,14 +28,6 @@ class TestLogin(unittest.TestCase):
                              data=items['data'])
         # print(res)
         print(res['status'])
-        # 验证接口返回值
-        # res_dict = json.dumps(res)  # 将字典字符串转换成json字符串
-        # res_dict = json.loads(res)  # 将 JSON 字符串转换成字典
-        # self.assertIsInstance(res_dict, dict)  # 判断 res 是否为字典
-        # self.assertIn('status', res_dict)  # 判断 res 是否包含 'status' 键
-        #
-        # # 确认预期结果是否与实际结果一致
-        # self.assertEqual(str(res['status']), items['expected_result'])
 
         try:
             # 断言：预期结果与实际结果对比:第一个是预期，第二个是实际
@@ -51,7 +44,7 @@ class TestLogin(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()
 
 # 1.excel里面字符串要用双引号
 # 2.ddt(*data):* 表示对 case_data1 进行序列解包，将其作为独立的参数进行传递。也就是说，如果 case_data1 是一个列表或元组，这两种写法的效果一样。但是，如果 case_data1 是一个字典，则不能使用 @data(case_data1,) 这种写法。

@@ -15,7 +15,7 @@ unittest.TestLoader().discover("../", "test*.py")
 
 # 定义报告存放路径和文件名
 report_path = './'
-report_name = 'login_report.html'
+report_name = '1login_report.html'
 
 # 创建 HTMLTestRunner 实例对象
 with open('{}/{}'.format(report_path, report_name), 'wb') as fp:

@@ -42,6 +42,7 @@ class TestLogin(unittest.TestCase):
     @data(*case_data1)
     # data方法只能以列表或元组形式接收待测数据，而由于您将待测数据封装在字典中，因此需要先将它转换成列表或元组形式。
     def test_login_success(self,items):
+        print(items)
         res = self.req.visit(url=items['url'],
                              method=items['method'],
                              data=items['data'])

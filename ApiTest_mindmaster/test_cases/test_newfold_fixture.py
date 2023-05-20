@@ -6,11 +6,20 @@ from ApiTest_mindmaster.common.requests_handler import RequestsHandler
 
 
 class TestNewFold(unittest.TestCase):
+
+    def setupClass(self):
+        '''整个测试过程中只执行一次'''
+        pass
+    def teardownClass(self):
+        pass
+
     def setUp(self):
+        '''每个测试方法执行之前都会先调用的方法'''
         # 请求类实例化
         self.req = RequestsHandler()
 
     def tearDown(self):
+        '''每个测试方法执行后都会调用的方法'''
         self.req.close_session()
 
     def test_newfold_success(self):
