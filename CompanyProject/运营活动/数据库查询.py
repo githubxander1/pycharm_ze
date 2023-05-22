@@ -6,6 +6,7 @@ db = pymysql.connect(host='192.168.7.84', port=3306, user='product_statistics', 
 
 # 测试连接是否成功
 is_connected = db.ping(reconnect=True)
+print(is_connected)
 
 # 打印测试结果
 if is_connected:
