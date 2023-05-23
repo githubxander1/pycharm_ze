@@ -46,14 +46,14 @@ total = len(df)
 # 阶梯1：
 area1=int(total * 0.2)
 # 阶梯1人数
-jie1_ren=1/(1+4)
+jie1_ren=round(10/(10+20+30),2)
+jie1_ren_z=round(jie1_ren*total,2)
 # print(f'阶梯1人数占比：{jie1_ren}')
 # 阶梯1奖金
-jie1_jiang=1/(1+4)
-jie1_jiang1=1/(1+4)
-jie1_jiang2=decimal.Decimal(jie1_jiang1)
-print(type(jie1_jiang2))
-print(f'阶梯1人数占比：{jie1_ren},共{jie1_ren*total}人，阶梯1奖金占比：{jie1_jiang1},共{jie1_jiang2*money_sum}')
+jie1_jiang=round(decimal.Decimal(10/(10+40+50)),2)
+jie1_jiang_z=round(jie1_jiang*money_sum,2)
+# print(type(jie1_jiang2))
+print(f'阶梯1人数占比：{jie1_ren},共{jie1_ren_z}人，阶梯1奖金占比：{jie1_jiang},共{jie1_jiang_z}')
 
 # print(f'阶梯1用户数：{area1}')
 # money_area=money_sum * decimal.Decimal('0.1')
