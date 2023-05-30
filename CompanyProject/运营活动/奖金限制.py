@@ -10,7 +10,6 @@ headers={'swagger':'1',
          'token':'0a4b697b631e4de6ab32692f8acd0cd0'}
 
 r=requests.get(url,headers=headers)
-print('奖金为：{}'.format(r.json()))
 
 # 查询数据库
 db_conn=pymysql.Connect(host='192.168.7.84', port=3306, user='product_statistics', password='OwDXEIs*8eIeED23s', database='product_statistics')
@@ -19,23 +18,20 @@ cursor=db_conn.cursor()
 # 执行sql语句
 
 sql = "select * from t_user_money where activity_id = 180 and uid = 17141"
-# sql2 = "select count(*) from t_user_money where activity_id = 180 and uid = 17141"
 cursor.execute(sql)
 # 获取所有数据
 result = cursor.fetchall()
 df = pd.DataFrame(result, columns=[i[0] for i in cursor.description])
 print(df.to_string(index=False, header=True))
+print('用户获得的奖金为：{}'.format(r.json()))
 print(f"做任务人数：{len(df)}")
 # 统计money这一列的和
 money_sum = df['money'].sum()
-# money_sum = decimal.Decimal(money_sum)
-print(type(money_sum))
-
-# money_area = money_sum * decimal.Decimal('0.1')
 print('一轮奖金总额：', money_sum)
 
-
-# 统计money列值在某区间的占比
+max_money = df['money'].max()
+order_with_max_money = df.loc[df['money'] == max_money, 'order'].values[0]
+print(f'奖金最大值为：{max_money}，在第{order_with_max_money}')
 # 统计money列值在5-9区间的占比
 mask = (df['money'] >= 10) & (df['money'] <= 40)
 count = len(df[mask])
@@ -46,14 +42,12 @@ total = len(df)
 # 阶梯1：
 area1=int(total * 0.2)
 # 阶梯1人数
-jie1_ren=round(10/(10+20+30),2)
+jie1_ren=round(30/(10+20+30+40+50+60+70+80),2)
 jie1_ren_z=round(jie1_ren*total,2)
-# print(f'阶梯1人数占比：{jie1_ren}')
 # 阶梯1奖金
-jie1_jiang=round(decimal.Decimal(10/(10+40+50)),2)
+jie1_jiang=round(decimal.Decimal(30/(10+20+30+40+50+60+70+90)),2)
 jie1_jiang_z=round(jie1_jiang*money_sum,2)
-# print(type(jie1_jiang2))
-print(f'阶梯1人数占比：{jie1_ren},共{jie1_ren_z}人，阶梯1奖金占比：{jie1_jiang},共{jie1_jiang_z}')
+print(f'阶梯1：人数占比：{jie1_ren},共{jie1_ren_z}人；奖金占比：{jie1_jiang},共{jie1_jiang_z}')
 
 # print(f'阶梯1用户数：{area1}')
 # money_area=money_sum * decimal.Decimal('0.1')
