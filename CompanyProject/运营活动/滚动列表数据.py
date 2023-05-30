@@ -8,8 +8,8 @@ import pandas as pd
 #     'MEMBER_STATUS': '0',
 #     'murmur': 'f9b107a69041a5d3995117fedd8af55d'
 # }
-
-url = 'https://qrpromotionapitest.tostar.top/invite/rewardRecordListTest?activityId=186'
+activityid=180
+url = f'https://qrpromotionapitest.tostar.top/invite/rewardRecordListTest?activityId={activityid}'
 headers = {
     "accept": "*/*",
     "productId": '32',
@@ -27,12 +27,12 @@ for item in data:
         'reward': item['reward'],
         'time': item['time'],
         'prize': item['prize'],
+        'user': item['user']
     }
     results.append(result)
-print(result)
 # Convert list of dictionaries to a pandas dataframe
-# df = pd.DataFrame(results)
+df = pd.DataFrame(results)
 # print(df)
 
 # Export dataframe to Excel file
-# df.to_excel('output186.xlsx', index=False)
+df.to_excel(f'output{activityid}.xlsx', index=False)
