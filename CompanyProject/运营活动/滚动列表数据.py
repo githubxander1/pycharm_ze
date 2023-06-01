@@ -60,4 +60,5 @@ print(f'[0,1)的比例: {ratio1:.2%},共{len(interval1)}个')
 print(f'[1,2)的比例: {ratio2:.2%},共{len(interval2)}个')
 print(f'[2,+)的比例: {ratio3:.2%},共{len(interval3)}个')
 # Export dataframe to Excel file
-# df.to_excel(f'output{activityid}.xlsx', index=False)
+# if f'output{activityid}.xlsx' not ex
+df.to_excel(f'output{activityid}.xlsx', index=False)

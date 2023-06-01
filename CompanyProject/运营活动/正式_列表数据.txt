@@ -1,0 +1,3607 @@
+{
+  "code": 0,
+  "subCode": "D000000",
+  "message": null,
+  "bodyMessage": [
+    {
+      "userName": "小琳",
+      "reward": "17.56",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "探吉郎",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "LEK3D4X9ZO",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "محمد الفلاحي",
+      "reward": "23.35",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "P6NY785XZW",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "رعد صباح",
+      "reward": "7.63",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "เมธัส สันตติวงศ์",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "العنود",
+      "reward": "8.52",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "เมธัส สันตติวงศ์",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "小宇",
+      "reward": "8.10",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "Cunning",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "Elijah",
+      "reward": "15.42",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "Hạnh Khôi",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "Jack888",
+      "reward": "6.87",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "Declan hna",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "الفارس الملثم .",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-31 10:33:31"
+    },
+    {
+      "userName": "กฤต สันตติวงศ์",
+      "reward": "21.01",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "Sơn Đức",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "عبد الكريم العنزي",
+      "reward": "6.56",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "Hạnh Yên",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "Egil",
+      "reward": "24.73",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "أنور محمد_الأصل",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "ام عبدالرحمن عبدالرحمن",
+      "reward": "22.45",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "Kimball",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "W3XK5VKVD5",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "Levis Huy",
+      "reward": "1.36",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:36:53"
+    },
+    {
+      "userName": "محمد بدوى",
+      "reward": "13.78",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "Loyal T",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "Alin黃",
+      "reward": "21.13",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "Interpreter",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "Ibrahim",
+      "reward": "18.04",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "Dorian dinas",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "สุบรรณ สัมพันธ์พงษ์",
+      "reward": "4.96",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "อานนท์ เทพทัต",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "5QXD3GM06Y",
+      "reward": "7.87",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "ดนุเดช ปืนครก",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 08:30:19"
+    },
+    {
+      "userName": "汪少涵",
+      "reward": "29.52",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:20:20"
+    },
+    {
+      "userName": "Hạnh Khôi",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:20:20"
+    },
+    {
+      "userName": "Mohamad Adel",
+      "reward": "7.68",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:20:20"
+    },
+    {
+      "userName": "Travers",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:20:20"
+    },
+    {
+      "userName": "นรวุฒิ สมุทรเทวา",
+      "reward": "12.30",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:20:20"
+    },
+    {
+      "userName": "Hạnh Khôi",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:20:20"
+    },
+    {
+      "userName": "Tristan queen",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "حمزة حوت محمد",
+      "reward": "21.40",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Cunning",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Katyy",
+      "reward": "3.28",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "คมสันต์ รุจิอาภรณ์",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "怡萱顏",
+      "reward": "28.91",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Maddox",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Bassel Ashraf",
+      "reward": "11.32",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Dương Hiệp Hào",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Emrul Ahammed",
+      "reward": "29.74",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Shaimaa Osman",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "เกริกไกร สัมพันธ์พงษ์",
+      "reward": "7.69",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Interpreter",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "VMRX5DXD7O",
+      "reward": "2.52",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Kitty Wang",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "ملذات الروح و العقل",
+      "reward": "2.71",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Garth Holly",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "金星交易",
+      "reward": "25.41",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "ภาณุภัทร พิทักษ์ไทย",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "VGYO5JO6QR",
+      "reward": "14.04",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "探吉郎",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Russell",
+      "reward": "26.94",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Gift-Brave",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Ebtihaj Abass",
+      "reward": "4.76",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "GDJP3GV21R",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Sherlock",
+      "reward": "15.86",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "روح سماويه",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "茶茶",
+      "reward": "20.44",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "蒸四蟹囉",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "471O5GOK3E",
+      "reward": "26.46",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Giang Trường Chinh",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "9V7MDVMWYG",
+      "reward": "22.18",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "ตรีภพ วรเลิศรัตน์",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "Phạm Khôi",
+      "reward": "1.72",
+      "prize": "USD",
+      "finishTime": "2023-05-31 07:18:37"
+    },
+    {
+      "userName": "0MWY5GY7OL",
+      "reward": "18.47",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:42:03"
+    },
+    {
+      "userName": "Declan hna",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:42:03"
+    },
+    {
+      "userName": "Giang Trường Chinh",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:42:03"
+    },
+    {
+      "userName": "Yuki醬",
+      "reward": "1.97",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:42:03"
+    },
+    {
+      "userName": "P6NY785XZW",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "Igor",
+      "reward": "13.09",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "Interpreter",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "Đặng Vĩ Khôi",
+      "reward": "3.09",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "P6NY785XZW",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "Nguyen Ngoc Huu Phuoc",
+      "reward": "7.62",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "GDJP3GV21R",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "6ZK53DYMJG",
+      "reward": "16.48",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "Shaimaa Osman",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "صلي على محمد شفيعنا",
+      "reward": "23.98",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "W3XK5VKVD5",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "Montague",
+      "reward": "1.71",
+      "prize": "USD",
+      "finishTime": "2023-05-31 05:09:28"
+    },
+    {
+      "userName": "enjoylife1314",
+      "reward": "12.46",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Hạnh Yên",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "عبدالرحمن محمد",
+      "reward": "16.91",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "أبو يحيئ الشميري",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "الحربي احمد",
+      "reward": "15.10",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Dorian dinas",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "MYLX36XO9V",
+      "reward": "9.76",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "محمد الشيخ حسن",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "東方朔",
+      "reward": "17.19",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Đinh Ðình Trung",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Emrick",
+      "reward": "2.91",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "ประชา ยอดยาใจ",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "أحمد",
+      "reward": "11.72",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "محمد الشيخ حسن",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "69R5D4KNG2",
+      "reward": "10.81",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Kitty Wang",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Edward Hoo",
+      "reward": "10.75",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Hardy",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "mohamed sadeq",
+      "reward": "29.34",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Roland",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "yasin",
+      "reward": "16.63",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "P6NY785XZW",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "W213YXKPRZ",
+      "reward": "7.00",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "supercold",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "hams",
+      "reward": "9.98",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Kimball",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Hưng Phạm",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Om Omar",
+      "reward": "29.02",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "Quade Swift",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "يامن خالد",
+      "reward": "1.10",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:45:56"
+    },
+    {
+      "userName": "الاستاذه رهف🎀",
+      "reward": "2.62",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "محمد الشيخ حسن",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "20LM79Y4VZ",
+      "reward": "7.27",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Hạnh Khôi",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Phạm Lê Hùng Cường",
+      "reward": "27.57",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "วิกรม เก่งระดมยิง",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Hadwin",
+      "reward": "25.58",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Võ Hải Giang",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Hoda",
+      "reward": "13.09",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Roland",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "محب الخير",
+      "reward": "2.95",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Võ Hải Giang",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "طارق شديد",
+      "reward": "18.69",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "qaz123456",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "RGVD3JM05J",
+      "reward": "7.86",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "蒸四蟹囉",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "อัครชัย ดำรงลาวรรณ",
+      "reward": "13.27",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "supercold",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "我宇哥啦",
+      "reward": "29.81",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Nhân Mai",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "陳詩涵",
+      "reward": "24.48",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "P6NY785XZW",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "أحسن",
+      "reward": "21.47",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Luther",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "طيرالمهاجر\"",
+      "reward": "18.93",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Halden",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Ngô Chí Kiên",
+      "reward": "5.43",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "qaz123456",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "حمودى خالد",
+      "reward": "23.09",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Cunning",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Alibi Hmio",
+      "reward": "5.47",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Luther",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "ZDQXDMXLGW",
+      "reward": "16.57",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Shaimaa Osman",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "عبد العزيز",
+      "reward": "11.49",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Travers",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "هادي العجمي",
+      "reward": "25.17",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Halden",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 04:16:14"
+    },
+    {
+      "userName": "Magdy Mahmoud",
+      "reward": "15.05",
+      "prize": "USD",
+      "finishTime": "2023-05-31 02:51:49"
+    },
+    {
+      "userName": "Rahma Rahma",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 02:51:49"
+    },
+    {
+      "userName": "JE3XD4KL64",
+      "reward": "8.82",
+      "prize": "USD",
+      "finishTime": "2023-05-31 02:51:49"
+    },
+    {
+      "userName": "Gift-Brave",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 02:51:49"
+    },
+    {
+      "userName": "Zachary",
+      "reward": "20.76",
+      "prize": "USD",
+      "finishTime": "2023-05-31 02:51:49"
+    },
+    {
+      "userName": "ราเชน กติยา",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 02:51:49"
+    },
+    {
+      "userName": "กิตติศักดิ์ รุจิอาภรณ์",
+      "reward": "19.01",
+      "prize": "USD",
+      "finishTime": "2023-05-31 02:51:49"
+    },
+    {
+      "userName": "بثينة نصار",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 02:51:49"
+    },
+    {
+      "userName": "عظيمة يامصر",
+      "reward": "7.84",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "Thủy Minh Anh",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "小肖",
+      "reward": "16.82",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "Thresher",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "E20K5PK59O",
+      "reward": "11.58",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "ภาณุภัทร พิทักษ์ไทย",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "emma lim",
+      "reward": "13.92",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "Thresher",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "Kilian",
+      "reward": "19.59",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "بثينة نصار",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "Anh Quân Trader",
+      "reward": "26.41",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "酒醉企鵝",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "Wayne",
+      "reward": "22.48",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "Đinh Ðình Trung",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-31 01:09:35"
+    },
+    {
+      "userName": "Abdullah",
+      "reward": "3.66",
+      "prize": "USD",
+      "finishTime": "2023-05-30 23:42:59"
+    },
+    {
+      "userName": "ตรีภพ วรเลิศรัตน์",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 23:42:59"
+    },
+    {
+      "userName": "西呱呱",
+      "reward": "15.02",
+      "prize": "USD",
+      "finishTime": "2023-05-30 23:42:59"
+    },
+    {
+      "userName": "ชาญรบ หนึ่งในยุทธจักร",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 23:42:59"
+    },
+    {
+      "userName": "سيوفي الدايم",
+      "reward": "24.86",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Cunning",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Luke",
+      "reward": "29.15",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "0GVYDXPE52",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Elliott",
+      "reward": "26.45",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "روح سماويه",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "0LMK5NYDX3",
+      "reward": "29.40",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Hạnh Khôi",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Theobold",
+      "reward": "13.09",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Shaimaa Osman",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "سالي ابراهيم",
+      "reward": "24.17",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "qaz123456",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Valley Green",
+      "reward": "6.31",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Somia Abdellah",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "程咬金",
+      "reward": "14.53",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "酒醉企鵝",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "寶哥",
+      "reward": "11.19",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Kimball",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:46:20"
+    },
+    {
+      "userName": "Denley",
+      "reward": "3.89",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Hạnh Yên",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Meadow",
+      "reward": "29.95",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Quade Swift",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "احمد عبد القادر",
+      "reward": "3.03",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Kitty Wang",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "احمد احمد",
+      "reward": "19.41",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Võ Hải Giang",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "علي محمد",
+      "reward": "22.91",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "ราเชน กติยา",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "forex lover",
+      "reward": "26.15",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Ellery",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Shreef",
+      "reward": "19.22",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "นรสิงห์ ทวิพักตร์",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "نور",
+      "reward": "2.05",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "qaz123456",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "الصلاه والقرآن والاذكار",
+      "reward": "21.48",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "喬大叔",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Reginald",
+      "reward": "12.74",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Thủy Minh Anh",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Võ Hải Giang",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "7D3MD4PG9Q",
+      "reward": "1.77",
+      "prize": "USD",
+      "finishTime": "2023-05-30 22:13:43"
+    },
+    {
+      "userName": "Robin Chris",
+      "reward": "24.95",
+      "prize": "USD",
+      "finishTime": "2023-05-30 21:26:11"
+    },
+    {
+      "userName": "Travers",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 21:26:11"
+    },
+    {
+      "userName": "KNRX74X4O0",
+      "reward": "12.73",
+      "prize": "USD",
+      "finishTime": "2023-05-30 21:26:11"
+    },
+    {
+      "userName": "เมธัส สันตติวงศ์",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 21:26:11"
+    },
+    {
+      "userName": "أميرة ألاحلام🇰🇼",
+      "reward": "10.86",
+      "prize": "USD",
+      "finishTime": "2023-05-30 20:07:21"
+    },
+    {
+      "userName": "Travers",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 20:07:21"
+    },
+    {
+      "userName": "Hal",
+      "reward": "2.74",
+      "prize": "USD",
+      "finishTime": "2023-05-30 19:29:16"
+    },
+    {
+      "userName": "Ellery",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 19:29:16"
+    },
+    {
+      "userName": "8NOD76MLE1",
+      "reward": "25.01",
+      "prize": "USD",
+      "finishTime": "2023-05-30 19:29:16"
+    },
+    {
+      "userName": "Stan",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 19:29:16"
+    },
+    {
+      "userName": "Zeynep Aydın",
+      "reward": "18.17",
+      "prize": "USD",
+      "finishTime": "2023-05-30 19:29:16"
+    },
+    {
+      "userName": "Dorian dinas",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 19:29:16"
+    },
+    {
+      "userName": "Ward",
+      "reward": "20.78",
+      "prize": "USD",
+      "finishTime": "2023-05-30 19:29:16"
+    },
+    {
+      "userName": "Thresher",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 19:29:16"
+    },
+    {
+      "userName": "琪琪cc",
+      "reward": "28.15",
+      "prize": "USD",
+      "finishTime": "2023-05-30 17:36:41"
+    },
+    {
+      "userName": "W3XK5VKVD5",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 17:36:41"
+    },
+    {
+      "userName": "Justin",
+      "reward": "10.92",
+      "prize": "USD",
+      "finishTime": "2023-05-30 17:36:41"
+    },
+    {
+      "userName": "supercold",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 17:36:41"
+    },
+    {
+      "userName": "جمال قائد",
+      "reward": "9.01",
+      "prize": "USD",
+      "finishTime": "2023-05-30 17:36:41"
+    },
+    {
+      "userName": "Shaimaa Osman",
+      "reward": "2",
+      "prize": "USD",
+      "finishTime": "2023-05-30 17:36:41"
+    },
+    {
+      "userName": "Anh Dũng Đỗ",
+      "reward": "25.87",
+      "prize": "USD",
+      "finishTime": "2023-05-30 17:36:41"
+    },
+    {
+      "userName": "GYVD39DJ6X",
+      "reward": "1.03",
+      "prize": "USD",
+      "finishTime": "2023-05-30 16:45:21"
+    },
+    {
+      "userName": "王平",
+      "reward": "1.34",
+      "prize": "USD",
+      "finishTime": "2023-05-30 10:34:33"
+    },
+    {
+      "userName": "Pierce",
+      "reward": "1.61",
+      "prize": "USD",
+      "finishTime": "2023-05-30 10:27:30"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "1.19",
+      "prize": "USD",
+      "finishTime": "2023-05-29 23:10:25"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "1.44",
+      "prize": "USD",
+      "finishTime": "2023-05-29 23:09:19"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.08",
+      "prize": "USD",
+      "finishTime": "2023-05-29 19:39:26"
+    },
+    {
+      "userName": "Ahmed Elashry",
+      "reward": "1.87",
+      "prize": "USD",
+      "finishTime": "2023-05-29 18:34:44"
+    },
+    {
+      "userName": "محمد ابوغنيم",
+      "reward": "1.05",
+      "prize": "USD",
+      "finishTime": "2023-05-29 17:08:16"
+    },
+    {
+      "userName": "مهم جدا",
+      "reward": "1.89",
+      "prize": "USD",
+      "finishTime": "2023-05-29 17:08:16"
+    },
+    {
+      "userName": "oU19465639",
+      "reward": "1.16",
+      "prize": "USD",
+      "finishTime": "2023-05-28 22:51:50"
+    },
+    {
+      "userName": "SpC1381834",
+      "reward": "1.35",
+      "prize": "USD",
+      "finishTime": "2023-05-28 08:03:28"
+    },
+    {
+      "userName": "EvFsvXx914",
+      "reward": "1.07",
+      "prize": "USD",
+      "finishTime": "2023-05-28 00:21:57"
+    },
+    {
+      "userName": "stasia",
+      "reward": "1.31",
+      "prize": "USD",
+      "finishTime": "2023-05-28 00:11:18"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.49",
+      "prize": "USD",
+      "finishTime": "2023-05-27 07:51:45"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.48",
+      "prize": "USD",
+      "finishTime": "2023-05-26 23:36:52"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.33",
+      "prize": "USD",
+      "finishTime": "2023-05-26 23:19:58"
+    },
+    {
+      "userName": "IPy6549138",
+      "reward": "1.15",
+      "prize": "USD",
+      "finishTime": "2023-05-26 23:14:45"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.42",
+      "prize": "USD",
+      "finishTime": "2023-05-26 22:26:04"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.15",
+      "prize": "USD",
+      "finishTime": "2023-05-26 20:04:54"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.41",
+      "prize": "USD",
+      "finishTime": "2023-05-26 19:31:08"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-26 19:22:53"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.33",
+      "prize": "USD",
+      "finishTime": "2023-05-26 19:03:36"
+    },
+    {
+      "userName": "huzaiii",
+      "reward": "0.94",
+      "prize": "USD",
+      "finishTime": "2023-05-26 17:35:22"
+    },
+    {
+      "userName": "kxxcTmNTt1",
+      "reward": "0.81",
+      "prize": "USD",
+      "finishTime": "2023-05-25 23:23:58"
+    },
+    {
+      "userName": "leslie",
+      "reward": "1.16",
+      "prize": "USD",
+      "finishTime": "2023-05-25 17:44:55"
+    },
+    {
+      "userName": "leslie",
+      "reward": "1.17",
+      "prize": "USD",
+      "finishTime": "2023-05-25 17:37:27"
+    },
+    {
+      "userName": "nia309",
+      "reward": "1.43",
+      "prize": "USD",
+      "finishTime": "2023-05-25 13:01:25"
+    },
+    {
+      "userName": "KHwcgUi884",
+      "reward": "1.17",
+      "prize": "USD",
+      "finishTime": "2023-05-24 18:26:42"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.31",
+      "prize": "USD",
+      "finishTime": "2023-05-23 14:41:25"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "0.80",
+      "prize": "USD",
+      "finishTime": "2023-05-22 22:30:00"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.14",
+      "prize": "USD",
+      "finishTime": "2023-05-22 15:23:56"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.78",
+      "prize": "USD",
+      "finishTime": "2023-05-22 10:43:30"
+    },
+    {
+      "userName": "Jjmu251333",
+      "reward": "0.87",
+      "prize": "USD",
+      "finishTime": "2023-05-22 08:40:31"
+    },
+    {
+      "userName": "UlGbRS4788",
+      "reward": "1.21",
+      "prize": "USD",
+      "finishTime": "2023-05-22 04:03:33"
+    },
+    {
+      "userName": "QhzLl37158",
+      "reward": "1.48",
+      "prize": "USD",
+      "finishTime": "2023-05-21 07:17:11"
+    },
+    {
+      "userName": "kwarren97",
+      "reward": "0.80",
+      "prize": "USD",
+      "finishTime": "2023-05-20 12:58:08"
+    },
+    {
+      "userName": "kwarren97",
+      "reward": "1.22",
+      "prize": "USD",
+      "finishTime": "2023-05-20 12:53:01"
+    },
+    {
+      "userName": "kwarren97",
+      "reward": "1.03",
+      "prize": "USD",
+      "finishTime": "2023-05-20 12:34:21"
+    },
+    {
+      "userName": "ladyadonis",
+      "reward": "1.38",
+      "prize": "USD",
+      "finishTime": "2023-05-20 05:49:13"
+    },
+    {
+      "userName": "ACc4435843",
+      "reward": "1.86",
+      "prize": "USD",
+      "finishTime": "2023-05-20 03:10:15"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.16",
+      "prize": "USD",
+      "finishTime": "2023-05-20 02:26:04"
+    },
+    {
+      "userName": "OvZIEyrVB3",
+      "reward": "1.24",
+      "prize": "USD",
+      "finishTime": "2023-05-19 23:07:43"
+    },
+    {
+      "userName": "XauiMid839",
+      "reward": "1.46",
+      "prize": "USD",
+      "finishTime": "2023-05-19 17:28:58"
+    },
+    {
+      "userName": "eygXqDo822",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-19 10:54:48"
+    },
+    {
+      "userName": "eQm8765385",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-18 21:56:17"
+    },
+    {
+      "userName": "nia309",
+      "reward": "1.13",
+      "prize": "USD",
+      "finishTime": "2023-05-18 14:59:29"
+    },
+    {
+      "userName": "R618181967",
+      "reward": "1.08",
+      "prize": "USD",
+      "finishTime": "2023-05-17 14:39:25"
+    },
+    {
+      "userName": "R618181967",
+      "reward": "1.23",
+      "prize": "USD",
+      "finishTime": "2023-05-17 11:25:15"
+    },
+    {
+      "userName": "sZmLhWj366",
+      "reward": "1.49",
+      "prize": "USD",
+      "finishTime": "2023-05-17 07:39:36"
+    },
+    {
+      "userName": "sZmLhWj366",
+      "reward": "1.43",
+      "prize": "USD",
+      "finishTime": "2023-05-16 10:56:02"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.18",
+      "prize": "USD",
+      "finishTime": "2023-05-16 10:10:44"
+    },
+    {
+      "userName": "jBzJXuUM94",
+      "reward": "1.45",
+      "prize": "USD",
+      "finishTime": "2023-05-15 14:00:25"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.18",
+      "prize": "USD",
+      "finishTime": "2023-05-15 04:05:18"
+    },
+    {
+      "userName": "edward",
+      "reward": "0.98",
+      "prize": "USD",
+      "finishTime": "2023-05-15 02:37:48"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.35",
+      "prize": "USD",
+      "finishTime": "2023-05-14 09:41:48"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.28",
+      "prize": "USD",
+      "finishTime": "2023-05-14 02:17:39"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.37",
+      "prize": "USD",
+      "finishTime": "2023-05-14 02:14:45"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.29",
+      "prize": "USD",
+      "finishTime": "2023-05-14 02:12:24"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-14 02:08:32"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.49",
+      "prize": "USD",
+      "finishTime": "2023-05-14 02:06:16"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.28",
+      "prize": "USD",
+      "finishTime": "2023-05-14 02:00:52"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.29",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:57:51"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.02",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:54:50"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.10",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:49:59"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:44:58"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.38",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:41:41"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.45",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:39:14"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:36:31"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.97",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:33:04"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.32",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:30:42"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.88",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:27:37"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.26",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:24:51"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.48",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:22:09"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:19:10"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.23",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:16:43"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.80",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:14:17"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.44",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:11:51"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.12",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:09:09"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.89",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:06:16"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:03:26"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-14 01:00:03"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-14 00:56:52"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.18",
+      "prize": "USD",
+      "finishTime": "2023-05-14 00:53:58"
+    },
+    {
+      "userName": "TekYf85962",
+      "reward": "1.09",
+      "prize": "USD",
+      "finishTime": "2023-05-14 00:47:50"
+    },
+    {
+      "userName": "IR98939793",
+      "reward": "1.49",
+      "prize": "USD",
+      "finishTime": "2023-05-14 00:32:09"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.00",
+      "prize": "USD",
+      "finishTime": "2023-05-13 22:05:49"
+    },
+    {
+      "userName": "taharper1",
+      "reward": "0.87",
+      "prize": "USD",
+      "finishTime": "2023-05-13 21:17:45"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.24",
+      "prize": "USD",
+      "finishTime": "2023-05-13 20:18:04"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.88",
+      "prize": "USD",
+      "finishTime": "2023-05-13 09:13:53"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-13 06:07:51"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.43",
+      "prize": "USD",
+      "finishTime": "2023-05-12 12:19:41"
+    },
+    {
+      "userName": "uFHYwQX795",
+      "reward": "1.50",
+      "prize": "USD",
+      "finishTime": "2023-05-12 09:49:11"
+    },
+    {
+      "userName": "R618181967",
+      "reward": "1.09",
+      "prize": "USD",
+      "finishTime": "2023-05-12 09:43:31"
+    },
+    {
+      "userName": "eygXqDo822",
+      "reward": "1.42",
+      "prize": "USD",
+      "finishTime": "2023-05-12 06:45:52"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.15",
+      "prize": "USD",
+      "finishTime": "2023-05-12 01:45:48"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-12 01:42:23"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.13",
+      "prize": "USD",
+      "finishTime": "2023-05-12 01:05:37"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.73",
+      "prize": "USD",
+      "finishTime": "2023-05-12 00:07:26"
+    },
+    {
+      "userName": "xOVeThK519",
+      "reward": "1.02",
+      "prize": "USD",
+      "finishTime": "2023-05-11 22:36:46"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.85",
+      "prize": "USD",
+      "finishTime": "2023-05-11 20:05:07"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.49",
+      "prize": "USD",
+      "finishTime": "2023-05-11 19:52:10"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-11 19:50:21"
+    },
+    {
+      "userName": "amardyz",
+      "reward": "1.09",
+      "prize": "USD",
+      "finishTime": "2023-05-11 17:34:05"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.39",
+      "prize": "USD",
+      "finishTime": "2023-05-11 17:21:46"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.34",
+      "prize": "USD",
+      "finishTime": "2023-05-11 17:15:16"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.87",
+      "prize": "USD",
+      "finishTime": "2023-05-11 17:13:30"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.50",
+      "prize": "USD",
+      "finishTime": "2023-05-11 17:10:52"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.14",
+      "prize": "USD",
+      "finishTime": "2023-05-11 17:07:59"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.89",
+      "prize": "USD",
+      "finishTime": "2023-05-11 17:01:25"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-11 16:06:53"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.30",
+      "prize": "USD",
+      "finishTime": "2023-05-11 16:05:33"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-11 16:02:48"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-11 16:02:27"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.27",
+      "prize": "USD",
+      "finishTime": "2023-05-11 15:35:35"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.40",
+      "prize": "USD",
+      "finishTime": "2023-05-11 15:35:07"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.04",
+      "prize": "USD",
+      "finishTime": "2023-05-11 15:33:53"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.82",
+      "prize": "USD",
+      "finishTime": "2023-05-11 15:33:48"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.46",
+      "prize": "USD",
+      "finishTime": "2023-05-11 15:31:49"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.17",
+      "prize": "USD",
+      "finishTime": "2023-05-11 15:28:35"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.10",
+      "prize": "USD",
+      "finishTime": "2023-05-11 04:24:47"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.39",
+      "prize": "USD",
+      "finishTime": "2023-05-10 23:29:18"
+    },
+    {
+      "userName": "aladeensiteko",
+      "reward": "1.11",
+      "prize": "USD",
+      "finishTime": "2023-05-10 22:07:02"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.29",
+      "prize": "USD",
+      "finishTime": "2023-05-10 21:59:14"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.30",
+      "prize": "USD",
+      "finishTime": "2023-05-10 21:59:06"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.26",
+      "prize": "USD",
+      "finishTime": "2023-05-10 21:58:35"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.45",
+      "prize": "USD",
+      "finishTime": "2023-05-10 21:55:18"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.32",
+      "prize": "USD",
+      "finishTime": "2023-05-10 20:25:43"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.35",
+      "prize": "USD",
+      "finishTime": "2023-05-10 19:33:42"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-10 19:08:01"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.41",
+      "prize": "USD",
+      "finishTime": "2023-05-10 19:01:41"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-10 18:58:52"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.06",
+      "prize": "USD",
+      "finishTime": "2023-05-10 18:52:10"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.04",
+      "prize": "USD",
+      "finishTime": "2023-05-10 18:51:08"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-10 17:35:01"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.36",
+      "prize": "USD",
+      "finishTime": "2023-05-10 17:33:57"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.07",
+      "prize": "USD",
+      "finishTime": "2023-05-10 17:32:33"
+    },
+    {
+      "userName": "bangsawanfx",
+      "reward": "1.06",
+      "prize": "USD",
+      "finishTime": "2023-05-10 17:27:10"
+    },
+    {
+      "userName": "aiman",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-10 16:42:15"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.48",
+      "prize": "USD",
+      "finishTime": "2023-05-10 11:44:30"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-10 10:43:39"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "1.22",
+      "prize": "USD",
+      "finishTime": "2023-05-10 04:09:54"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-10 02:58:23"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.23",
+      "prize": "USD",
+      "finishTime": "2023-05-10 02:11:06"
+    },
+    {
+      "userName": "x558789829",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-09 23:16:08"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "1.10",
+      "prize": "USD",
+      "finishTime": "2023-05-09 23:05:09"
+    },
+    {
+      "userName": "x558789829",
+      "reward": "1.35",
+      "prize": "USD",
+      "finishTime": "2023-05-09 21:33:53"
+    },
+    {
+      "userName": "x558789829",
+      "reward": "1.34",
+      "prize": "USD",
+      "finishTime": "2023-05-09 21:00:39"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "0.90",
+      "prize": "USD",
+      "finishTime": "2023-05-09 19:06:50"
+    },
+    {
+      "userName": "pspaceadams",
+      "reward": "0.89",
+      "prize": "USD",
+      "finishTime": "2023-05-09 13:31:14"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "1.35",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:43:53"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:39:05"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:19:30"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.38",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:14:58"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:11:42"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.30",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:09:08"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.18",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:06:46"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.22",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:04:13"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.42",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:01:42"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "1.43",
+      "prize": "USD",
+      "finishTime": "2023-05-09 12:01:23"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:59:06"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.26",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:56:48"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.18",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:54:21"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:51:52"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.97",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:49:18"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.37",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:46:00"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "1.31",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:40:22"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "1.35",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:36:22"
+    },
+    {
+      "userName": "Madilyn",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:28:59"
+    },
+    {
+      "userName": "qui",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:23:57"
+    },
+    {
+      "userName": "uFHYwQX795",
+      "reward": "1.26",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:20:19"
+    },
+    {
+      "userName": "qui",
+      "reward": "1.49",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:16:43"
+    },
+    {
+      "userName": "qui",
+      "reward": "1.05",
+      "prize": "USD",
+      "finishTime": "2023-05-09 11:07:20"
+    },
+    {
+      "userName": "avTVjvHrw4",
+      "reward": "1.42",
+      "prize": "USD",
+      "finishTime": "2023-05-09 10:53:40"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.85",
+      "prize": "USD",
+      "finishTime": "2023-05-09 08:18:47"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.42",
+      "prize": "USD",
+      "finishTime": "2023-05-09 08:16:07"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-09 08:13:29"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.44",
+      "prize": "USD",
+      "finishTime": "2023-05-09 08:10:43"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-09 08:07:33"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.87",
+      "prize": "USD",
+      "finishTime": "2023-05-09 08:04:34"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.47",
+      "prize": "USD",
+      "finishTime": "2023-05-09 08:01:31"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.35",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:58:49"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.85",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:55:26"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.85",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:51:12"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:48:13"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.05",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:44:59"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:41:56"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.22",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:38:01"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.88",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:34:42"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.16",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:31:29"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-09 07:27:01"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-09 03:39:58"
+    },
+    {
+      "userName": "IR98939793",
+      "reward": "1.01",
+      "prize": "USD",
+      "finishTime": "2023-05-09 03:38:46"
+    },
+    {
+      "userName": "IR98939793",
+      "reward": "1.49",
+      "prize": "USD",
+      "finishTime": "2023-05-09 03:36:00"
+    },
+    {
+      "userName": "IR98939793",
+      "reward": "1.15",
+      "prize": "USD",
+      "finishTime": "2023-05-09 03:33:39"
+    },
+    {
+      "userName": "IR98939793",
+      "reward": "0.87",
+      "prize": "USD",
+      "finishTime": "2023-05-09 03:26:48"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "0.88",
+      "prize": "USD",
+      "finishTime": "2023-05-09 02:30:13"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "1.04",
+      "prize": "USD",
+      "finishTime": "2023-05-08 23:38:48"
+    },
+    {
+      "userName": "fQNuss9741",
+      "reward": "1.12",
+      "prize": "USD",
+      "finishTime": "2023-05-08 20:18:35"
+    },
+    {
+      "userName": "sTc4892833",
+      "reward": "1.22",
+      "prize": "USD",
+      "finishTime": "2023-05-08 19:12:54"
+    },
+    {
+      "userName": "trading7",
+      "reward": "1.31",
+      "prize": "USD",
+      "finishTime": "2023-05-08 19:11:11"
+    },
+    {
+      "userName": "ln28865967",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-08 15:42:02"
+    },
+    {
+      "userName": "uFHYwQX795",
+      "reward": "1.42",
+      "prize": "USD",
+      "finishTime": "2023-05-08 12:53:25"
+    },
+    {
+      "userName": "qui",
+      "reward": "1.21",
+      "prize": "USD",
+      "finishTime": "2023-05-08 11:04:38"
+    },
+    {
+      "userName": "kAZrka8711",
+      "reward": "1.11",
+      "prize": "USD",
+      "finishTime": "2023-05-08 09:49:32"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-08 07:03:31"
+    },
+    {
+      "userName": "mekoriad",
+      "reward": "1.39",
+      "prize": "USD",
+      "finishTime": "2023-05-08 05:37:21"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.15",
+      "prize": "USD",
+      "finishTime": "2023-05-08 05:08:41"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-08 05:01:17"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.24",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:56:52"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.08",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:51:51"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.01",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:48:46"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.06",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:45:26"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.30",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:42:05"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.50",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:38:02"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.31",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:33:04"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "0.81",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:28:22"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:22:22"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "0.85",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:19:12"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.44",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:11:43"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.42",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:08:05"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.49",
+      "prize": "USD",
+      "finishTime": "2023-05-08 04:02:37"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "1.31",
+      "prize": "USD",
+      "finishTime": "2023-05-08 03:57:17"
+    },
+    {
+      "userName": "ladyadonis",
+      "reward": "1.25",
+      "prize": "USD",
+      "finishTime": "2023-05-07 23:13:35"
+    },
+    {
+      "userName": "nPI7328177",
+      "reward": "1.18",
+      "prize": "USD",
+      "finishTime": "2023-05-07 22:20:06"
+    },
+    {
+      "userName": "TFpoK72464",
+      "reward": "1.20",
+      "prize": "USD",
+      "finishTime": "2023-05-07 16:53:30"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.95",
+      "prize": "USD",
+      "finishTime": "2023-05-07 15:44:20"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "1.17",
+      "prize": "USD",
+      "finishTime": "2023-05-07 15:41:21"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "1.22",
+      "prize": "USD",
+      "finishTime": "2023-05-07 15:38:13"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "1.30",
+      "prize": "USD",
+      "finishTime": "2023-05-07 15:34:41"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "1.22",
+      "prize": "USD",
+      "finishTime": "2023-05-07 15:31:36"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-07 15:28:42"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.17",
+      "prize": "USD",
+      "finishTime": "2023-05-07 14:21:04"
+    },
+    {
+      "userName": "jennybug34",
+      "reward": "1.00",
+      "prize": "USD",
+      "finishTime": "2023-05-07 14:16:54"
+    },
+    {
+      "userName": "uFHYwQX795",
+      "reward": "1.22",
+      "prize": "USD",
+      "finishTime": "2023-05-07 13:27:56"
+    },
+    {
+      "userName": "uFHYwQX795",
+      "reward": "1.20",
+      "prize": "USD",
+      "finishTime": "2023-05-07 11:37:54"
+    },
+    {
+      "userName": "p727376853",
+      "reward": "1.30",
+      "prize": "USD",
+      "finishTime": "2023-05-07 11:16:32"
+    },
+    {
+      "userName": "uFHYwQX795",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-07 10:34:06"
+    },
+    {
+      "userName": "UlGbRS4788",
+      "reward": "1.35",
+      "prize": "USD",
+      "finishTime": "2023-05-07 09:56:32"
+    },
+    {
+      "userName": "GvIBPVY214",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-07 08:27:04"
+    },
+    {
+      "userName": "uFHYwQX795",
+      "reward": "1.45",
+      "prize": "USD",
+      "finishTime": "2023-05-07 07:57:41"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "1.18",
+      "prize": "USD",
+      "finishTime": "2023-05-07 06:15:33"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "1.96",
+      "prize": "USD",
+      "finishTime": "2023-05-07 06:11:19"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "1.40",
+      "prize": "USD",
+      "finishTime": "2023-05-07 06:10:22"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "1.17",
+      "prize": "USD",
+      "finishTime": "2023-05-07 06:08:04"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.87",
+      "prize": "USD",
+      "finishTime": "2023-05-07 06:03:14"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.88",
+      "prize": "USD",
+      "finishTime": "2023-05-07 05:55:22"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-07 05:45:20"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-07 03:58:09"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-07 03:27:50"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-07 03:04:25"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-07 02:47:33"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.80",
+      "prize": "USD",
+      "finishTime": "2023-05-07 02:44:57"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-07 02:36:40"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-07 01:08:34"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.81",
+      "prize": "USD",
+      "finishTime": "2023-05-07 00:20:32"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.89",
+      "prize": "USD",
+      "finishTime": "2023-05-07 00:10:58"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.87",
+      "prize": "USD",
+      "finishTime": "2023-05-07 00:08:13"
+    },
+    {
+      "userName": "TFpoK72464",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-06 23:49:47"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.94",
+      "prize": "USD",
+      "finishTime": "2023-05-06 23:46:06"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-06 23:38:05"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.81",
+      "prize": "USD",
+      "finishTime": "2023-05-06 23:34:29"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-06 23:23:46"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.90",
+      "prize": "USD",
+      "finishTime": "2023-05-06 23:15:17"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-06 23:13:20"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-06 21:57:19"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-06 21:48:55"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-06 21:44:00"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-06 21:38:52"
+    },
+    {
+      "userName": "TFpoK72464",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-06 20:30:27"
+    },
+    {
+      "userName": "qui",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-06 18:37:51"
+    },
+    {
+      "userName": "leRgRKAV16",
+      "reward": "0.88",
+      "prize": "USD",
+      "finishTime": "2023-05-06 18:36:44"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-06 18:32:07"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-06 18:28:36"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-06 18:22:42"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.90",
+      "prize": "USD",
+      "finishTime": "2023-05-06 18:19:09"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-06 18:11:16"
+    },
+    {
+      "userName": "GH66467796",
+      "reward": "0.80",
+      "prize": "USD",
+      "finishTime": "2023-05-06 16:20:22"
+    },
+    {
+      "userName": "GH66467796",
+      "reward": "0.81",
+      "prize": "USD",
+      "finishTime": "2023-05-06 16:14:34"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-06 15:45:48"
+    },
+    {
+      "userName": "sTc4892833",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-06 14:20:42"
+    },
+    {
+      "userName": "CNkCSFQf14",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-06 11:33:37"
+    },
+    {
+      "userName": "iK92474376",
+      "reward": "0.80",
+      "prize": "USD",
+      "finishTime": "2023-05-06 10:48:19"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-06 06:42:40"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "0.82",
+      "prize": "USD",
+      "finishTime": "2023-05-06 06:37:48"
+    },
+    {
+      "userName": "vGflshNbm3",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-06 06:30:51"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.84",
+      "prize": "USD",
+      "finishTime": "2023-05-06 05:32:10"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-06 01:20:10"
+    },
+    {
+      "userName": "veebee",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-06 00:48:42"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-05 22:57:43"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.89",
+      "prize": "USD",
+      "finishTime": "2023-05-05 22:52:20"
+    },
+    {
+      "userName": "TFpoK72464",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-05 22:21:54"
+    },
+    {
+      "userName": "veebee",
+      "reward": "0.81",
+      "prize": "USD",
+      "finishTime": "2023-05-05 21:56:24"
+    },
+    {
+      "userName": "veebee",
+      "reward": "0.88",
+      "prize": "USD",
+      "finishTime": "2023-05-05 21:45:16"
+    },
+    {
+      "userName": "veebee",
+      "reward": "0.83",
+      "prize": "USD",
+      "finishTime": "2023-05-05 21:36:58"
+    },
+    {
+      "userName": "veebee",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-05 20:54:03"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-05 20:52:19"
+    },
+    {
+      "userName": "veebee",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-05 20:49:19"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-05 19:56:29"
+    },
+    {
+      "userName": "pTVLHaRul4",
+      "reward": "0.89",
+      "prize": "USD",
+      "finishTime": "2023-05-05 19:04:11"
+    },
+    {
+      "userName": "henrietta",
+      "reward": "0.85",
+      "prize": "USD",
+      "finishTime": "2023-05-05 19:01:51"
+    },
+    {
+      "userName": "henrietta",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-05 18:58:45"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-05 18:55:38"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.85",
+      "prize": "USD",
+      "finishTime": "2023-05-05 18:48:46"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-05 18:45:22"
+    },
+    {
+      "userName": "FvOL559469",
+      "reward": "0.82",
+      "prize": "USD",
+      "finishTime": "2023-05-05 18:09:06"
+    },
+    {
+      "userName": "taoman",
+      "reward": "0.95",
+      "prize": "USD",
+      "finishTime": "2023-05-05 16:39:36"
+    },
+    {
+      "userName": "ETPjb33794",
+      "reward": "0.82",
+      "prize": "USD",
+      "finishTime": "2023-05-05 12:15:31"
+    },
+    {
+      "userName": "Jjmu251333",
+      "reward": "0.88",
+      "prize": "USD",
+      "finishTime": "2023-05-05 12:03:26"
+    },
+    {
+      "userName": "ETPjb33794",
+      "reward": "0.81",
+      "prize": "USD",
+      "finishTime": "2023-05-05 11:51:57"
+    },
+    {
+      "userName": "ETPjb33794",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-05 11:47:33"
+    },
+    {
+      "userName": "ETPjb33794",
+      "reward": "0.85",
+      "prize": "USD",
+      "finishTime": "2023-05-05 11:41:24"
+    },
+    {
+      "userName": "ETPjb33794",
+      "reward": "0.86",
+      "prize": "USD",
+      "finishTime": "2023-05-05 11:18:09"
+    },
+    {
+      "userName": "fJuUXUyRZ5",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-05 11:13:00"
+    },
+    {
+      "userName": "TFpoK72464",
+      "reward": "0.90",
+      "prize": "USD",
+      "finishTime": "2023-05-04 20:46:23"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-04 18:42:38"
+    },
+    {
+      "userName": "pqCIsTWwB4",
+      "reward": "0.87",
+      "prize": "USD",
+      "finishTime": "2023-05-04 18:35:21"
+    },
+    {
+      "userName": "kwarren97",
+      "reward": "0.98",
+      "prize": "USD",
+      "finishTime": "2023-05-04 17:33:27"
+    },
+    {
+      "userName": "sirdan",
+      "reward": "0.89",
+      "prize": "USD",
+      "finishTime": "2023-05-04 16:59:44"
+    },
+    {
+      "userName": "TFpoK72464",
+      "reward": "0.89",
+      "prize": "USD",
+      "finishTime": "2023-05-04 16:22:49"
+    },
+    {
+      "userName": "taoman",
+      "reward": "0.80",
+      "prize": "USD",
+      "finishTime": "2023-05-04 15:56:19"
+    },
+    {
+      "userName": "TFpoK72464",
+      "reward": "0.80",
+      "prize": "USD",
+      "finishTime": "2023-05-04 15:45:56"
+    },
+    {
+      "userName": "wDhU276411",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-04 15:44:27"
+    },
+    {
+      "userName": "Aa89323857",
+      "reward": "0.94",
+      "prize": "USD",
+      "finishTime": "2023-05-04 05:06:51"
+    },
+    {
+      "userName": "Aa89323857",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-04 04:47:48"
+    },
+    {
+      "userName": "vbBa145998",
+      "reward": "0.90",
+      "prize": "USD",
+      "finishTime": "2023-05-04 04:33:42"
+    },
+    {
+      "userName": "V237638264",
+      "reward": "0.93",
+      "prize": "USD",
+      "finishTime": "2023-05-04 04:33:00"
+    },
+    {
+      "userName": "Rb55792431",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-04 02:59:58"
+    },
+    {
+      "userName": "NBKk947396",
+      "reward": "0.98",
+      "prize": "USD",
+      "finishTime": "2023-05-04 00:16:47"
+    },
+    {
+      "userName": "X956489175",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-03 22:39:00"
+    },
+    {
+      "userName": "QOTTvUHu83",
+      "reward": "0.98",
+      "prize": "USD",
+      "finishTime": "2023-05-03 22:13:55"
+    },
+    {
+      "userName": "garethin",
+      "reward": "0.98",
+      "prize": "USD",
+      "finishTime": "2023-05-03 20:01:24"
+    },
+    {
+      "userName": "garethin",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-03 20:00:06"
+    },
+    {
+      "userName": "garethin",
+      "reward": "0.97",
+      "prize": "USD",
+      "finishTime": "2023-05-03 19:58:33"
+    },
+    {
+      "userName": "garethin",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-03 19:47:14"
+    },
+    {
+      "userName": "VGfXPJ9247",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-03 07:09:09"
+    },
+    {
+      "userName": "p727376853",
+      "reward": "0.92",
+      "prize": "USD",
+      "finishTime": "2023-05-03 03:07:15"
+    },
+    {
+      "userName": "NDJtZA5978",
+      "reward": "0.94",
+      "prize": "USD",
+      "finishTime": "2023-05-02 22:57:52"
+    },
+    {
+      "userName": "Jjmu251333",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-02 22:04:57"
+    },
+    {
+      "userName": "RFyn325899",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-02 19:49:54"
+    },
+    {
+      "userName": "Nguta Mola",
+      "reward": "0.98",
+      "prize": "USD",
+      "finishTime": "2023-05-02 18:13:43"
+    },
+    {
+      "userName": "WIKGWHE245",
+      "reward": "0.98",
+      "prize": "USD",
+      "finishTime": "2023-05-02 07:40:24"
+    },
+    {
+      "userName": "tI32391348",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-02 03:48:30"
+    },
+    {
+      "userName": "chpWMv6868",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-02 03:30:08"
+    },
+    {
+      "userName": "tI32391348",
+      "reward": "0.94",
+      "prize": "USD",
+      "finishTime": "2023-05-02 01:33:20"
+    },
+    {
+      "userName": "Yogd137723",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-01 20:51:24"
+    },
+    {
+      "userName": "Nguta Mola",
+      "reward": "0.91",
+      "prize": "USD",
+      "finishTime": "2023-05-01 20:01:10"
+    },
+    {
+      "userName": "Yogd137723",
+      "reward": "0.95",
+      "prize": "USD",
+      "finishTime": "2023-05-01 17:12:48"
+    },
+    {
+      "userName": "Yogd137723",
+      "reward": "0.95",
+      "prize": "USD",
+      "finishTime": "2023-05-01 17:08:07"
+    },
+    {
+      "userName": "eTuP321416",
+      "reward": "0.94",
+      "prize": "USD",
+      "finishTime": "2023-05-01 14:28:43"
+    },
+    {
+      "userName": "VGfXPJ9247",
+      "reward": "0.99",
+      "prize": "USD",
+      "finishTime": "2023-05-01 12:08:26"
+    },
+    {
+      "userName": "kwarren97",
+      "reward": "0.96",
+      "prize": "USD",
+      "finishTime": "2023-05-01 07:45:14"
+    },
+    {
+      "userName": "GctSuZtK97",
+      "reward": "0.95",
+      "prize": "USD",
+      "finishTime": "2023-05-01 04:52:00"
+    },
+    {
+      "userName": "VGfXPJ9247",
+      "reward": "0.94",
+      "prize": "USD",
+      "finishTime": "2023-05-01 04:48:28"
+    }
+  ]
+}
