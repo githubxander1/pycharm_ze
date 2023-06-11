@@ -1,11 +1,12 @@
 import requests
 from pprint import  pprint
 # from hyrobot.common import *
-
+host = 'http://127.0.0.1:8047'
 class APIMgr:
 
-    # def __init__(self):
-    #     self.s = APIMgr().mgr_login()
+    def __init__(self):
+        self.cookies = self.mgr_login('byhy',88888888)
+        print(self.cookies)
 
     def _printResponse(self,response):
         print('\n\n-------- HTTP response * begin -------')
@@ -14,47 +15,42 @@ class APIMgr:
         for k,v in response.headers.items():
             print(f'{k}: {v}')
 
-        print('')
-
         print(response.content.decode('utf8'))
         print('-------- HTTP response * end -------\n\n')
 
     def mgr_login(self,username,password):
-
-        # if useProxy:
-        #     self.s.proxies.update({'http': 'http://127.0.0.1:8888'})
-
-        response=requests.post("http://127.0.0.1/api/mgr/signin",
+        response=requests.post(url=host+"/api/mgr/signin",
                                  data={
                                      'username': username,
                                      'password': password
                                  }
                                  )
 
-        self._printResponse(response)
-        self.s = response.cookies
-        # global s
-        return response
+        # self._printResponse(response)
+        self.cookies = response.cookies
+        return self.cookies
 
 
-    # 客户操作
-    def customer_list(self,pagesize=10,pagenumber=1,keywords=''):
+# 客户操作
+    def customer_list(self,pagesize=100,pagenum=1):
         print('列出客户')
-        response = self.requests.get("http://127.0.0.1/api/mgr/customers",headers=self.s,
-              params={
-                  'action' :'list_customer',
-                  'pagesize' :pagesize,
-                  'pagenum' :pagenumber,
-                  'keywords' :keywords,
-              })
+        response = requests.get(url=host + "/api/mgr/customers",cookies=self.cookies,
+                              params={
+                                    'action': 'list_customer',
+                                    'pagesize': pagesize,
+                                    'pagenum': pagenum,
+                                    'keywords': '',
+        })
 
-        self._printResponse(response)
-        return response
+        # self._printResponse(response)
+        return response.json()
 
 
+#
+#
     def customer_add(self,name,phonenumber,address):
         print('添加客户')
-        response = self.r.post("http://127.0.0.1/api/mgr/customers",
+        response = requests.post(url=host+"/api/mgr/customers",cookies=self.cookies,
               json={
                     "action":"add_customer",
                     "data":{
@@ -66,10 +62,11 @@ class APIMgr:
 
         self._printResponse(response)
         return response
+#
 
     def customer_add2(self,data):
         print('添加客户')
-        response = self.s.post("http://127.0.0.1/api/mgr/customers",
+        response = requests.post(url=host+"/api/mgr/customers",
               json={
                     "action":"add_customer",
                     "data":data
@@ -77,10 +74,9 @@ class APIMgr:
 
         self._printResponse(response)
         return response
-
     def customer_del(self,cid):
         print('删除客户')
-        response = self.s.delete("http://127.0.0.1/api/mgr/customers",
+        response = requests.delete(url=host+"/api/mgr/customers",cookies=self.cookies,
               json={
                     "action":"del_customer",
                     "id": cid
@@ -88,38 +84,33 @@ class APIMgr:
 
         self._printResponse(response)
         return response
-
+#
+#
     def customer_del_all(self):
-        response = self.customer_list(100,1)
+        response = self.customer_list()
 
-        theList = response.json()["retlist"]
+        theList = response["retlist"]
         for one in theList:
             self.customer_del(one["id"])
 
-
-
-
-
     # 药品操作
 
-    def medicine_list(self,pagesize=10,pagenumber=1,keywords=''):
+    def medicine_list(self):
         print('列出药品')
-        response = self.s.get("http://127.0.0.1/api/mgr/medicines",
+        response = requests.get(url=host+"/api/mgr/medicines",cookies=self.cookies,
               params={
                   'action' :'list_medicine',
-                  'pagesize' :pagesize,
-                  'pagenum' :pagenumber,
-                  'keywords' :keywords,
+                  'pagesize':100,
+                  'pagenum' :1,
+                  'keywords' :'',
               })
 
         self._printResponse(response)
         return response
 
-
-
     def medicine_del(self,mid):
         print('删除药品')
-        response = self.s.delete("http://127.0.0.1/api/mgr/medicines",
+        response = requests.delete(url=host+"/api/mgr/medicines",cookies=self.cookies,
               json={
                     "action":"del_medicine",
                     "id": mid
@@ -130,19 +121,17 @@ class APIMgr:
 
 
     def medicine_del_all(self):
-        response = self.medicine_list(100,1)
+        response = self.medicine_list()
 
-        theList = response.json()["retlist"]
+        theList = response["retlist"]
         for one in theList:
             self.medicine_del(one["id"])
 
 
     # 药品操作
-
-
     def order_list(self,pagesize=10,pagenumber=1,keywords=''):
         print('列出订单')
-        response = self.s.get("http://127.0.0.1/api/mgr/orders",
+        response = requests.get(url=host+"/api/mgr/orders",cookies=self.cookies,
               params={
                   'action' :'list_order',
                   'pagesize' :pagesize,
@@ -153,11 +142,9 @@ class APIMgr:
         self._printResponse(response)
         return response
 
-
-
     def order_del(self,oid):
         print('删除订单')
-        response = self.s.delete("http://127.0.0.1/api/mgr/orders",
+        response = requests.delete(url=host+"/api/mgr/orders",cookies=self.cookies,
               json={
                     "action":"delete_order",
                     "id": oid
@@ -166,15 +153,19 @@ class APIMgr:
         self._printResponse(response)
         return response
 
-
     def order_del_all(self):
         response = self.order_list(100,1)
 
-        theList = response.json()["retlist"]
+        theList = response["retlist"]
         for one in theList:
             self.order_del(one["id"])
 
+#
 # apimgr = APIMgr()
-# log=apimgr.mgr_login('byhy--cookies未传',88888888)
-# print(log)
-
+# # print(apimgr.customer_add('name','13256478908','地址'))
+# # print(apimgr.mgr_login('byhy',88888888))
+# # print(apimgr.customer_list())
+# # print(apimgr.customer_del_all())
+# # print(apimgr.order_list())
+# # print(apimgr.order_del(15))
+# print(apimgr.medicine_list())

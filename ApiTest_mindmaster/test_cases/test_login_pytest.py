@@ -1,14 +1,13 @@
 import unittest
 import pytest
 from pprint import pprint
+import allure
 
-from ddt import ddt,data
-from ApiTest_mindmaster.common.excel_handle import ExcelHandler
 from ApiTest_mindmaster.common.read_yaml import readYaml
 from ApiTest_mindmaster.common.requests_handler import RequestsHandler
 
-
-class TestLogin():
+@allure.feature('登录')
+class TestLogin:
     @pytest.fixture()
     def set_init(self):
         # 请求类实例化
@@ -17,6 +16,7 @@ class TestLogin():
         self.req.close_session()
 
     @pytest.mark.parametrize('items',readYaml())
+    @allure.story('登录用例')
     def test_login_success(self,set_init,items):
         res = self.req.visit(url=items['url'],
                              method=items['method'],
@@ -38,7 +38,8 @@ class TestLogin():
 
 
 if __name__ == '__main__':
-    pytest.main(['test_login_pytest.py'])
+    # pytest.main(['test_login_pytest.py'])
+    pytest.main(["-sq", 'test_login_pytest.py', '--alluredir=report'])
 
 # 1.excel里面字符串要用双引号
 # 2.ddt(*data):* 表示对 case_data1 进行序列解包，将其作为独立的参数进行传递。也就是说，如果 case_data1 是一个列表或元组，这两种写法的效果一样。但是，如果 case_data1 是一个字典，则不能使用 @data(case_data1,) 这种写法。

@@ -14,4 +14,4 @@
 # 运行指定用例
 # 模块、类、函数及方法之间用::进行分割。
 # 比如想运行TestLogin类下的测试用例。
-# 使用命令：pytest -v login/test_login.py::TestLogin
+# 使用命令：pytest -v login/test_login_unittest.py::TestLogin
