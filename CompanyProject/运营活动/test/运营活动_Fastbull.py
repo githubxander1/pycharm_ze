@@ -4,7 +4,7 @@ import webbrowser
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 import pyperclip#剪贴板复制粘贴
-d=webdriver.Chrome()
+d=webdriver.Edge()
 
 d.get('https://tradinglive-testwebpc.tostar.top/cn/user/setting/personalData?type=0')
 d.maximize_window()
