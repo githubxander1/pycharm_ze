@@ -8,7 +8,7 @@ def get_menu():
         print('''
                   ---欢迎来到ATM系统---
                     ---请选择操作---
-    --1.注册 2.登录 3.查询余额 4.存款 5.取款 6.转账 7.退出--
+    --1.注册 2.登录 3.查询余额 4.存款 5.取款 6.转账 7.退出 8.查询所有用户--
     
     ''')
         op=input('请输入操作：')
@@ -35,7 +35,7 @@ def reg():
         un = input('请输入用户名：')
         for user in username:
             if user ==  un:
-                print('用户已存在，请重新输入')
+                print(input('用户已存在，请重新输入:'))
 
             else:
                 username.append(un)

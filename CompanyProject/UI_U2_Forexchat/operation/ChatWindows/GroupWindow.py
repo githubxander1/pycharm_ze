@@ -1,4 +1,4 @@
-from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
 
@@ -16,9 +16,9 @@ class GroupWindow(Base1):
     # 群设置
     group_set=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.ImageView[3]')
     # 点击进入会话聊天窗口
-    def click_conversation(self):
-        # Home().openHome()
-        Home().conversation.click()
+    # def click_conversation(self):
+    #     # Home().openHome()
+    #     Home().conversation.click()
 
     def send_text(msg):
         GroupWindow().click_conversation()

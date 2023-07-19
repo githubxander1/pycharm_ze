@@ -1,8 +1,8 @@
 import sqlite3
 import easygui
 import copy
-students = sqlite3.connect("../students.db")
-plus = sqlite3.connect("../createdPlus.db")
+students = sqlite3.connect("students.db")
+plus = sqlite3.connect("createdPlus.db")
 students.execute("""CREATE TABLE IF NOT EXISTS students(ID INT UNIQUE,NAME TEXT,SCORE INT)""")
 plus.execute("""CREATE TABLE IF NOT EXISTS created(NAME TEXT,SCORE INT)""")
 def addStudents():

@@ -2,16 +2,6 @@ import uiautomator2 as u2
 
 
 d=u2.connect('127.0.0.1:21503')
-# print(d.info)
-# 模拟器
-# try:
-#     d = u2.connect('190.0.0.1:21513')
-# except Exception as e:
-#     print("Erro:",e)
-#     d=u2.connect('127.0.0.1:21503')
-#     print(d.info())
-# # 真机
-# d=u2.connect('5ENDU18C21003487')
 
 class Base1:
     def __init__(self):
