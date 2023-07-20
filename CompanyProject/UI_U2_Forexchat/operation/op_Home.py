@@ -1,17 +1,19 @@
 #
 import time
+
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1,d
 from CompanyProject.UI_U2_Forexchat.base.basePage1 import BasePage
 
 class Home(BasePage):
-    edittext={'xpath':'//android.widget.EditText'}
-    search={'xpath':'//android.widget.ScrollView/android.widget.ImageView[1]'}
-    conversation1={'xpath':'//android.widget.ScrollView/android.view.View[3]'}
-    # conversation2={'xpath':'//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]'}
-    cancel={'description':"取消"}
+    edittext=d.xpath('//android.widget.EditText')
+    search=d.xpath('//android.widget.ScrollView/android.widget.ImageView[1]')
+    conversation1=d.xpath('//android.widget.ScrollView/android.view.View[3]')
+    # conversation2=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]')
+    cancel=d(description="取消")
 
 #     # 点击进入会话聊天窗口
     def click_conversation(self):
-        self.click(self.conversation1)
+        self.conversation1.click()
 #     def click_conversation(self):
 #         try:
 #             self.click(self.conversation1)
@@ -37,16 +39,4 @@ class Home(BasePage):
 #     #     self.input(self.conversation1, msg)
 #
 if __name__ == '__main__':
-    Home().launch_app()
-    # 搜索
-    # Home().click_search()
-    # Home().send_text(1)
-    # 点击会话
-    time.sleep(10)
     Home().click_conversation()
-    # 左滑会话列表
-    # Home().swipe_left_conversation()
-    # time.sleep(5)
-    # 关闭app
-    time.sleep(3)
-    Home().close_app()

@@ -1,4 +1,4 @@
-from CompanyProject.UI_U2_Forexchat.base.basePage import Base1
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1,d
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
 
@@ -20,29 +20,30 @@ class GroupWindow(Base1):
     #     # Home().openHome()
     #     Home().conversation.click()
 
-    def send_text(msg):
-        GroupWindow().click_conversation()
-        # 点击输入框
-        GroupWindow().input_msg.send_keys(msg)
-        # 点击发送按钮
-        d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[6]').click()
-        # send.click()
-
-    # 发送emoji表情
-    def send_emoji(self):
-        GroupWindow().click_conversation()
-        # 点击表情按钮
-        GroupWindow().emoji.click()
-        d(scrollable=True).scroll.toEnd()
-        d.xpath(
-            '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.widget.ImageView[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[27]').click()
-        # 点击发送
-        GroupWindow().send()
+    # def send_text(msg):
+    #     GroupWindow().conversation.
+    #     # 点击输入框
+    #     GroupWindow().input_msg.send_keys(msg)
+    #     # 点击发送按钮
+    #     d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[6]').click()
+    #     # send.click()
+    #
+    # # 发送emoji表情
+    # def send_emoji(self):
+    #     GroupWindow().click_conversation()
+    #     # 点击表情按钮
+    #     GroupWindow().emoji.click()
+    #     d(scrollable=True).scroll.toEnd()
+    #     d.xpath(
+    #         '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.widget.ImageView[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[27]').click()
+    #     # 点击发送
+    #     GroupWindow().send()
 
         # 进入群设置
     def groupSet(self):
+        Home.click_conversation()
         GroupWindow().group_set.click()
 
 if __name__ == '__main__':
     msg='xinxi'
-    GroupWindow().send_text()
+    GroupWindow().groupSet()
