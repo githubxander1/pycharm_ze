@@ -6,10 +6,16 @@ class GroupMute(Base1):
     group_mute = d(description="设置群内禁言")
     switch = d.xpath('//android.widget.Switch')
 
+    def click_group_mute(self):
+        self.group_mute.click()
+
+    def click_switch(self):
+        self.switch.click()
+
     def mute_set(self):
         ManageGroup().manage_groups()
-        GroupMute().group_mute.click()
-        GroupMute().switch.click()
+        self.click_group_mute()
+        self.click_switch()
 
 
 

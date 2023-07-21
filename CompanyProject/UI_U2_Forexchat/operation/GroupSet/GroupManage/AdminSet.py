@@ -8,17 +8,33 @@ from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 
 class Admin(Base1):
     adminset = d.xpath('//*[contains(@content-desc,"设置管理员")]')
+    adminadd = d.xpath('//*[contains(@content-desc,"添加管理员")]')
+    admin1=(0.083, 0.265)
+    confirm=d.xpath('//*[contains(@content-desc,"确定")]')
+
+    # 点击设置管理员
+    def click_adminset(self):
+        self.adminset.click()
+
+    def click_adminAdd(self):
+        self.adminadd.click()
+
+    def click_admin1(self):
+        self.d.click(0.083, 0.265)
+
+    def click_comfirm(self):
+        self.confirm.click()
+
 
     # 添加管理员
     def admin_add(self):
         ManageGroup().manage_groups()
-        Admin().adminset.click()
+        Admin().click_adminset()
         time.sleep(3)
-        # adminadd.click()
-        d.xpath('//*[contains(@content-desc="添加管理员")]').click()
-        # d.click(0.857, 0.379)
+        self.click_adminAdd()
         time.sleep(1)
-        # d(description="确认").click()
+        self.click_admin1()
+        self.click_comfirm()
 
     # 移除管理员
     def admin_remove(self):
@@ -39,6 +55,6 @@ class Admin(Base1):
 
 #
 if __name__ == '__main__':
-    # Admin().admin_add()
-    Admin().admin_remove()
+    Admin().admin_add()
+    # Admin().admin_remove()
 # 添加管理员定位错误

@@ -2,14 +2,20 @@ from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup i
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 
 class ForbidFriendAdd(Base1):
-    addFriend = d(description="禁止群内成员互加好友")
+    forbidAddFriend = d(description="禁止群内成员互加好友")
     switch = d.xpath('//android.widget.Switch')
+
+    def click_forbidAddFriend(self):
+        self.forbidAddFriend.click()
+
+    def click_switch(self):
+        self.switch.click()
 
     # 修改群内加好友设置
     def friendAdd_set(self):
         ManageGroup().manage_groups()
-        ForbidFriendAdd().addFriend.click()
-        ForbidFriendAdd().switch.click()
+        self.click_forbidAddFriend()
+        self.click_switch()
 
 
 

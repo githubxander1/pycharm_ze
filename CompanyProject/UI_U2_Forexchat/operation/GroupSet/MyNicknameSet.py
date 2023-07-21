@@ -49,12 +49,12 @@ class Mynickname(Base1):
         # 进入会话
         Home().click_conversation()
         # 点击群设置
-        GroupWindow().group_set.click()
+        GroupWindow().click_groupSet()
         # 下滑
         d(scrollable=True).scroll.forward.to(description="管理群")
         # d(scrollable=True).scroll.forward.to('contains(@content-desc,"我的群昵称")')
         Mynickname().nickname.click()
-        Mynickname().nameinput.send_keys('群')
+        Mynickname().nameinput.set_text('1314群昵称1')
         Mynickname().complete.click()
 
 if __name__ == '__main__':
