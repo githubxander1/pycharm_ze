@@ -6,30 +6,86 @@ from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
 
-class GroupNotice(Base1):
+class GroupFile(Base1):
     groupNotice=d(description="公告")
     groupFile=d(description="文件")
     groupAlbum=d(description="相册")
 
-    # 创建群公告
-    createNoticeImmediately=d(description="立即创建")
-    createNotice=d(description="创建")
-    editNotice=d.xpath('//android.widget.EditText')
-    addPicture=d.xpath('//android.widget.ScrollView/android.view.View[1]')
-    picture1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]')
-    publish=d(description="发布")
+    addfile=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    def click_addfile(self):
+        self.addfile.click()
+    filelist=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[2]')
+    def click_filelist(self):
+        self.filelist.click()
+    filemanage=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]')
+    def click_filemanage(self):
+        self.filemanage.click()
+    filesearch=d.xpath('//android.widget.EditText')
+    cancelsearch=d(description="取消")
+    def click_filesearch(self,text):
+        self.filesearch.set_text(text)
+        self.d.press('enter')
+
+    def click_cancelsearch(self):
+        self.cancelsearch.click()
+
+
+    addnewfolder=d(description="新建文件夹")
+    inputtext=d.xpath('//android.widget.EditText')
+    canceladdnewfolder=d.xpath('//*[contains(@content-desc,"新建文件夹")]/android.widget.ImageView[1]')
+
+    def click_cancel(self):
+        self.canceladdnewfolder.click()
+
+    def click_addnewfolder(self):
+        self.addnewfolder.click()
+
+    def click_inputtext(self):
+        self.inputtext.click()
+
+    uploadfile=d(description="上传文件")
+    def click_uploadfile(self):
+        self.uploadfile.click()
+
+    chat=d.xpath('//*[contains(@content-desc,"聊天")]')
+    collection=d.xpath('//*[contains(@content-desc,"收藏")]')
+    local=d.xpath('//*[contains(@content-desc,"本地")]')
+    upload=d(description="上传")
+    selectlocalfile=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]')
+    local1=d.xpath('//*[@resource-id="com.android.documentsui:id/dir_list"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[2]')
+    back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    def click_back(self):
+        self.back.click()
+    def click_selectlocal(self):
+        self.selectlocalfile.click()
+
+    def click_chat(self):
+        self.chat.click()
+
+    def click_collection(self):
+        self.collection.click()
+
+    def click_local(self):
+        self.local.click()
+
+    def click_upload(self):
+        self.upload.click()
+
+    def click_local1(self):
+        self.local1.click()
+
+    uploadphoto = d(description="上传照片")
+    def click_uploadphoto(self):
+        self.uploadphoto.click()
+
+
 
     usePop=d.xpath('//android.widget.ScrollView/android.widget.Switch[1]')
     setTop=d.xpath('//android.widget.ScrollView/android.widget.Switch[2]')
+
+
     forNewComers=d.xpath('//android.widget.ScrollView/android.widget.Switch[3]')
-
-    def click_usePop(self):
-        self.usePop.click()
-
-    def click_setTop(self):
-        self.setTop.click()
-
-    cancel=d(description="取消")
+    # cancel=d(description="取消")
     confirm=d(description="确定")
 
     # 更多
@@ -70,11 +126,17 @@ class GroupNotice(Base1):
     def click_modifyNotice(self):
         self.modifynotice.click()
 
+    def click_setTop(self):
+        self.setTop.click()
+
     def click_delNotice(self):
         self.delNotice.click()
 
     def click_noticeMore(self):
         self.noticeMore.click()
+
+    def click_usePop(self):
+        self.usePop.click()
 
     def click_groupNotice(self):
         self.groupNotice.click()
@@ -109,7 +171,7 @@ class GroupNotice(Base1):
     def choosePicture(self):
         self.picture1.click()
 
-    # 创建纯文本群公告并使用弹窗
+    # 创建纯文本群公告
     def create_gropNotice_text(self,text):
         Home().click_conversation()
         GroupWindow().click_groupSet()
@@ -121,7 +183,6 @@ class GroupNotice(Base1):
         else:
             self.click_createNotice()
         self.click_editNotice(str(text))
-        self.click_usePop()
         self.click_publish()
 
     # 创建群公告_文本+图片
@@ -179,6 +240,6 @@ class GroupNotice(Base1):
 if __name__ == '__main__':
     # GroupNotice().create_gropNotice_textandpicture('Hello,Notice:图+文-替12112122换')
     # GroupNotice().deleteNotice()
-    GroupNotice().setNoticeTop()
+    GroupFile().setNoticeTop()
     time.sleep(3)
     Base1().closeApp()
