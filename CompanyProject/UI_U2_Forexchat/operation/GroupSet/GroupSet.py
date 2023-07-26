@@ -210,11 +210,11 @@ class GroupSet(Base1):
     # 编辑群昵称
     def nickname_set(self, text):
         # 进入会话
-        Home().click_conversation()
-        # 点击群设置
-        GroupWindow().click_groupSet()
+        # Home().click_conversation()
+        # # 点击群设置
+        # GroupWindow().click_groupSet()
         # 下滑
-        self.slide_down()
+        # self.slide_down()
         # d(scrollable=True).scroll.forward.to('contains(@content-desc,"我的群昵称")')
         # 点击我的群名称
         time.sleep(2)
