@@ -6,6 +6,19 @@ from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
 class GroupSet(Base1):
+    groupNotice = d(description="公告")
+    groupFile = d(description="文件")
+    groupAlbum = d(description="相册")
+
+    def click_groupNotice(self):
+        self.groupNotice.click()
+
+    def click_groupFile(self):
+        self.groupFile.click()
+
+    def click_groupAlbum(self):
+        self.groupAlbum.click()
+
 
     shownickname = d.xpath('//*[contains(@content-desc,"显示群成员的昵称")]')
     # 群成员
@@ -157,7 +170,7 @@ class GroupSet(Base1):
         # 模拟鼠标下拉操作
         d.swipe(start_x, start_y, end_x, end_y, duration=0.5)
 
-    # 编辑群介绍
+    # 保存群二维码
     def saveGroupQRcode(self):
         # 进入会话
         Home().click_conversation()
@@ -171,19 +184,28 @@ class GroupSet(Base1):
         # self.click_share()
 
 
-        # 编辑群介绍
-        def saveQRcode(self, text):
-            # 进入会话
-            Home().click_conversation()
-            # 点击群设置
-            GroupWindow().click_groupSet()
-            # 点击群介绍
-            time.sleep(2)
-            self.click_mygroupintroduction()
-            # 输入群名称
-            self.edit_mygroupnickname(text)
-            # 点击完成
-            self.click_complete()
+    # 编辑群介绍
+    # def editgroupintroduction(self, text):
+    #     # 进入会话
+    #     Home().click_conversation()
+    #     # 点击群设置
+    #     GroupWindow().click_groupSet()
+    #     # 点击群介绍
+    #     time.sleep(2)
+    #     self.click_mygroupintroduction()
+    #     # 输入群名称
+    #     self.edit_mygroupnickname(text)
+    #     # 点击完成
+    #     self.click_complete()
+    def editgroupintroduction(self,text):
+        # text = '第二次'
+        # 点击群介绍
+        time.sleep(2)
+        GroupSet().click_mygroupintroduction()
+        # 输入群名称
+        GroupSet().edit_mygroupnickname(text)
+        # 点击完成
+        GroupSet().click_complete()
 
     # 编辑群昵称
     def nickname_set(self, text):
@@ -233,6 +255,7 @@ class GroupSet(Base1):
 
     # 解散群
     def disbandGroup(self):
+        Base1().startApp()
         # 进入会话
         Home().click_conversation()
         # 点击群设置
@@ -283,8 +306,8 @@ if __name__ == '__main__':
     # GroupSet().shownicknames()
     # GroupSet().settop()
     # GroupSet().notdisturb()
-    # GroupSet().groupintroduction_set('群介绍')
+    GroupSet().editgroupintroduction('群介绍')
     # GroupSet().saveGroupQRcode()
-    GroupSet().addgroupmembers()
+    # GroupSet().addgroupmembers()
     time.sleep(3)
     Base1().closeApp()

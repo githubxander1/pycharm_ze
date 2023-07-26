@@ -6,7 +6,8 @@ Ctrl + Shift + F # 或者连续2次敲击shift
 
 Ctrl + Shift + R  # 全局替换
 
-
 Ctrl+Shift+J 要将两行合并为一行并移除不必要的空格
+
+Ctrl + Shift + Alt + J 可以实现相同名称同时修改
 
 Shift+Alt+Ctrl 要选择多段文本
