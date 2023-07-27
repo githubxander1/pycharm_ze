@@ -37,6 +37,7 @@ class ManageGroup(Base1):
 
     # 进入管理群
     def manage_groups(self):
+        time.sleep(5)
         # 进入会话
         Home().click_conversation()
         # 点击群设置

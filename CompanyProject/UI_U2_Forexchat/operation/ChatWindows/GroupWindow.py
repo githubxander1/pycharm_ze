@@ -25,6 +25,66 @@ class GroupWindow(Base1):
     namecard=d(description="名片")
     # 文件
     file=d(description="文件")
+
+    # 转发
+    selectfriend=d(description="选择好友")
+    # select_friend1=d.xpath('//*[contains(@content-desc,"A1311-马保国")]/android.widget.ImageView[1]')
+    # select_friend1=d(description="A1311-马保国~的VBB回发废话话费发发广告病好爸爸gvv加")
+    slelct_group1=d(description="1313群主")
+    selectgroup=d(description="选择群聊")
+    select_multiple=d(description="多选")
+    cancel=d(description="取消")
+    select_send=d.xpath('//*[contains(@content-desc,"发送")]')
+
+    send_cancel=d(description="取消")
+    send_comfirm=d(description="发送")
+
+    def click_select_multiple(self):
+        self.select_multiple.click()
+
+    def click_send_cancel(self):
+        self.send_cancel.click()
+
+    def click_send_comfirm(self):
+        self.send_comfirm.click()
+
+    def click_back(self):
+        self.back.click()
+
+    def click_input_msg(self):
+        self.input_msg.click()
+
+    def click_selectfriend(self):
+        self.selectfriend.click()
+
+    def click_select_friend1(self):
+        self.select_friend1.click()
+
+    def click_selectgroup(self):
+        self.selectgroup.click()
+
+    def click_slelct_group1(self):
+        self.slelct_group1.click()
+
+    def click_cancel(self):
+        self.cancel.click()
+
+    def click_select_send(self):
+        self.select_send.click()
+
+    def forward_tofriendandgroup(self):
+        self.click_select_multiple()
+        self.click_selectfriend()
+        # self.click_select_friend1()
+        time.sleep(2)
+        self.d.click(0.396, 0.281)
+        self.click_back()
+        self.click_selectgroup()
+        self.click_slelct_group1()
+        self.click_select_send()
+        self.click_send_comfirm()
+
+
     # d_text(msg):
     #     GroupWindow().conversation.
     #     # 点击输入框

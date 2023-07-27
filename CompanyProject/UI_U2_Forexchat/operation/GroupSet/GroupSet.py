@@ -192,7 +192,8 @@ class GroupSet(Base1):
     #     GroupWindow().click_groupSet()
     #     # 点击群介绍
     #     time.sleep(2)
-    #     self.click_mygroupintroduction()
+    #     # self.click_mygroupintroduction()
+    #     self.d.click(0.436, 0.809)
     #     # 输入群名称
     #     self.edit_mygroupnickname(text)
     #     # 点击完成
@@ -201,11 +202,12 @@ class GroupSet(Base1):
         # text = '第二次'
         # 点击群介绍
         time.sleep(2)
-        GroupSet().click_mygroupintroduction()
+        # self.click_mygroupintroduction()
+        self.d.click(0.436, 0.809)
         # 输入群名称
-        GroupSet().edit_mygroupnickname(text)
+        self.edit_mygroupnickname(text)
         # 点击完成
-        GroupSet().click_complete()
+        self.click_complete()
 
     # 编辑群昵称
     def nickname_set(self, text):
@@ -223,6 +225,8 @@ class GroupSet(Base1):
         self.edit_mygroupnickname(text)
         # 点击完成
         self.click_complete()
+
+
     # 聊天记录漫游
     def chathistoryroaming(self):
         # 进入会话
@@ -307,6 +311,14 @@ if __name__ == '__main__':
     # GroupSet().settop()
     # GroupSet().notdisturb()
     GroupSet().editgroupintroduction('群介绍')
+    # 点击群介绍
+    time.sleep(2)
+    GroupSet().click_mygroupintroduction()
+    # 输入群名称
+    GroupSet().edit_mygroupnickname('text')
+    # 点击完成
+    GroupSet().click_complete()
+    # GroupSet().editgroupintroduction('群介绍1')
     # GroupSet().saveGroupQRcode()
     # GroupSet().addgroupmembers()
     time.sleep(3)
