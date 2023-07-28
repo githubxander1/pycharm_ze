@@ -28,8 +28,11 @@ class GroupAlbum(Base1):
     def uploadgroupphoto(self):
         self.uploadphoto.click()
 
+    addbutton=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
     uploadlocal=d(description="本地上传")
     importgroup=d(description="导入群聊")
+    def click_addbutton(self):
+        self.addbutton.click()
 
     def click_uploadlocal(self):
         self.uploadlocal.click()
@@ -46,6 +49,10 @@ class GroupAlbum(Base1):
         self.localphoto1.click()
 
     usephoto = d.xpath('//*[contains(@content-desc,"使用(")]')
+    upload=d(description="上传")
+
+    def click_upload(self):
+        self.upload.click()
 
     def click_usephoto(self):
         self.usephoto.click()
@@ -87,14 +94,14 @@ class GroupAlbum(Base1):
         while retry_count < max_retry:
             print(f"重试第 {retry_count} 次")
             try:
-                Home().startApp()
-                time.sleep(5)
-                Home().click_conversation()
-                logging.info("进入对话列表")
-                GroupWindow().click_groupSet()
-                logging.info("点击群设置")
-                GroupSet().click_groupAlbum()
-                logging.info("进入群相册")
+                # Home().startApp()
+                # time.sleep(5)
+                # Home().click_conversation()
+                # logging.info("进入对话列表")
+                # GroupWindow().click_groupSet()
+                # logging.info("点击群设置")
+                # GroupSet().click_groupAlbum()
+                # logging.info("进入群相册")
 
                 self.click_createnewalbum()
                 logging.info("点击创建新相册")
@@ -149,8 +156,25 @@ class GroupAlbum(Base1):
     def click_edit_comfirm(self):
         self.edit_comfirm.click()
 
+    # 本地上传
+    def upload_local(self):
+        self.click_addbutton()
+        self.click_uploadlocal()
+        self.click_localphoto1()
+        self.click_usephoto()
+        self.click_upload()
+
+    # 本地上传
+    def upload_local(self):
+        self.click_addbutton()
+        self.click_uploadlocal()
+        self.click_localphoto1()
+        self.click_usephoto()
+        self.click_upload()
+
 if __name__ == '__main__':
     # GroupFile().uploadgroupfile()
-    GroupAlbum().createnewalbum('description', 'de')
+    # GroupAlbum().createnewalbum('description', 'de')
+    GroupAlbum().upload_local()
     time.sleep(3)
-    Base1().closeApp()
+    # Base1().closeApp()

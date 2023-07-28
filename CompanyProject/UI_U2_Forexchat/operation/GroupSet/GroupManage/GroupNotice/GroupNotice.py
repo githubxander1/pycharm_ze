@@ -17,11 +17,28 @@ class GroupNotice(Base1):
     editNotice=d.xpath('//android.widget.EditText')
     addPicture=d.xpath('//android.widget.ScrollView/android.view.View[1]')
     picture1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]')
+    picture_gif=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]')
+
     publish=d(description="发布")
 
     usePop=d.xpath('//android.widget.ScrollView/android.widget.Switch[1]')
     setTop=d.xpath('//android.widget.ScrollView/android.widget.Switch[2]')
     forNewComers=d.xpath('//android.widget.ScrollView/android.widget.Switch[3]')
+
+    viewdetails=d(description="查看详情")
+    close=d.xpath('//*[contains(@content-desc,"群公告")]/android.widget.ImageView[2]')
+
+    def click_viewdetails(self):
+        self.viewdetails.click()
+
+    def click_close(self):
+        self.close.click()
+
+    def closenoticepop(self):
+        if self.viewdetails.exists:
+            self.click_close()
+
+
 
     def click_usePop(self):
         self.usePop.click()
@@ -88,7 +105,7 @@ class GroupNotice(Base1):
     def click_createNoticeImmediately(self):
         self.createNoticeImmediately.click()
 
-    def click_editNotice(self,text):
+    def input_editNotice(self,text):
         self.editNotice.set_text(text)
 
     def click_addPicture(self):
@@ -109,64 +126,73 @@ class GroupNotice(Base1):
     def choosePicture(self):
         self.picture1.click()
 
-    # 创建纯文本群公告并使用弹窗
-    def create_gropNotice_text(self,text):
-        Home().click_conversation()
-        GroupWindow().click_groupSet()
-        self.click_groupNotice()
-        # 检查是否存在"立即创建"按钮
+    def click_create(self):
         time.sleep(2)
-        if self.createNoticeImmediately().exists():
+        if self.createNoticeImmediately.exists:
             self.click_createNoticeImmediately()
         else:
             self.click_createNotice()
-        self.click_editNotice(str(text))
+
+    # 创建纯文本群公告并使用弹窗
+    def create_gropNotice_text_popup(self,text):
+        self.closenoticepop()
+        # self.click_groupNotice()
+        time.sleep(2)
+        self.click_create()
+        self.input_editNotice(str(text))
         self.click_usePop()
+        self.click_publish()
+
+    # 创建纯文本群公告并设置置顶
+    def create_gropNotice_text_top(self,text):
+        self.closenoticepop()
+        # self.click_groupNotice()
+        time.sleep(2)
+        self.click_create()
+        self.input_editNotice(str(text))
+        self.click_setTop()
+        self.click_publish()
+
+    # 新人必看
+    def create_gropNotice_text_fornewcommer(self,text):
+        self.closenoticepop()
+        # self.click_groupNotice()
+        time.sleep(2)
+        self.click_create()
+        self.input_editNotice(str(text))
+        self.click_forNewComers()
         self.click_publish()
 
     # 创建群公告_文本+图片
     def create_gropNotice_textandpicture(self,text):
-        Home().click_conversation()
-        GroupWindow().click_groupSet()
-        # # 输出一些调试信息
-        # print("当前界面:", d.info)
-        # print("是否存在公告按钮:", d(description="公告").exists())
-        self.click_groupNotice()
-        # 检查是否存在"立即创建"按钮
-        time.sleep(2)
-        if self.createNoticeImmediately.exists():
-            self.click_createNoticeImmediately()
-        else:
-            self.click_createNotice()
-        self.click_editNotice(str(text))
+        self.closenoticepop()
+        # self.click_groupNotice()
+        self.click_create()
+        self.input_editNotice(str(text))
         self.click_addPicture()
         self.choosePicture()
-        self.click_forNewComers()
+        # # 设置新人必看
+        # self.click_forNewComers()
         self.click_publish()
 
     # 删除群公告
     def deleteNotice(self):
-        Home().click_conversation()
-        GroupWindow().click_groupSet()
-        self.click_groupNotice()
+        # Home().click_conversation()
+        # GroupWindow().click_groupSet()
+        # self.click_groupNotice()
         self.click_noticeMore()
         self.click_delNotice()
         self.click_confirm()
 
     # 修改群公告
-    def modifyNotice(self):
-        Home().click_conversation()
-        GroupWindow().click_groupSet()
-        self.click_groupNotice()
+    def modifyNotice(self,text):
         self.click_noticeMore()
         self.click_modifyNotice()
-        # self.click_confirm()
+        self.input_editNotice(text)
+        self.click_publish()
 
-    # 设置置顶
-    def setNoticeTop(self):
-        Home().click_conversation()
-        GroupWindow().click_groupSet()
-        self.click_groupNotice()
+    # 置顶群公告
+    def topNotice(self):
         self.click_noticeMore()
         self.click_more_setTop()
 
@@ -178,7 +204,25 @@ class GroupNotice(Base1):
 
 if __name__ == '__main__':
     # GroupNotice().create_gropNotice_textandpicture('Hello,Notice:图+文-替12112122换')
-    # GroupNotice().deleteNotice()
-    GroupNotice().setNoticeTop()
-    time.sleep(3)
-    Base1().closeApp()
+    GroupNotice().deleteNotice()
+    # 等待Toast消息的出现
+    timeout = 10  # 设置超时时间（秒）
+    start_time = time.time()
+    while time.time() - start_time < timeout:
+        toast_message = d.toast.get_message()
+        if toast_message is not None:
+            break
+        time.sleep(1)
+        print(toast_message)
+    # 断言Toast消息是否包含'删除成功'
+    # assert '删除成功' in toast_message, "Toast消息不包含'删除成功'"
+    # time.sleep(2)
+    # GroupNotice().topNotice()
+    # time.sleep(2)
+    # GroupNotice().modifyNotice('修改')
+    #
+    # GroupNotice().create_gropNotice_text_popup('弹窗')
+    # GroupNotice().create_gropNotice_text_top('置顶')
+    # GroupNotice().create_gropNotice_text_fornewcommer('新人必看')
+    # time.sleep(3)
+    # Base1().closeApp()

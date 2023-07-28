@@ -60,7 +60,7 @@ class GroupAvatar(Base1):
                 sleep(2)
                 self.click_back()
                 # self.d.click(0.072, 0.044)
-                print('jies')
+                print('运行结束')
             except Exception as e:
                 sleep(3)
                 print(f"程序运行出现异常：{e}")

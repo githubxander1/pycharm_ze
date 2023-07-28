@@ -39,11 +39,17 @@ class Test_editGroupAvatar(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    # unittest.main(testRunner=HTMLTestRunner.HTMLTestRunner(stream='test_reports', title='Test Report'))
-    unittest.main()
-    # Open the test report file
-    with open('report_path', "w") as f:
+    # # HTMLTestRunner.main()
+    # # unittest.main(testRunner=HTMLTestRunner.HTMLTestRunner(stream='test_reports', title='Test Report'))
+    # # unittest.main()
+    with open('reports', "w") as f:
         # Create an HTMLTestRunner instance
-        runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='Test Report', description='')
+        runner = HTMLTestRunner.HTMLTestRunner(
+            stream=f,
+            title='Test Report',
+            description=''
+        )
         # Run the tests and generate the test report
+        print('kais')
         runner.run(unittest.makeSuite(Test_editGroupAvatar))
+        print('jies')
