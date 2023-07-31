@@ -46,9 +46,6 @@ class GroupNotice(Base1):
     def click_setTop(self):
         self.setTop.click()
 
-    cancel=d(description="取消")
-    confirm=d(description="确定")
-
     # 更多
     noticeMore=d.xpath('//*[contains(@content-desc,"更新于")]/android.widget.ImageView[2]')
     modifynotice=d(description="修改群公告")
@@ -204,7 +201,8 @@ class GroupNotice(Base1):
 
 if __name__ == '__main__':
     # GroupNotice().create_gropNotice_textandpicture('Hello,Notice:图+文-替12112122换')
-    GroupNotice().deleteNotice()
+    GroupNotice().topNotice()
+    # GroupNotice().deleteNotice()
     # 等待Toast消息的出现
     timeout = 10  # 设置超时时间（秒）
     start_time = time.time()

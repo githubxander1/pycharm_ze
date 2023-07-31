@@ -1,5 +1,8 @@
 import logging
 import time
+
+from faker import Faker
+
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1,d
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupSet import GroupSet
@@ -23,28 +26,29 @@ class GroupAlbum(Base1):
     def click_groupAlbum(self):
         self.groupAlbum.click()
 
-    uploadphoto=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
-
-    def uploadgroupphoto(self):
-        self.uploadphoto.click()
 
     addbutton=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
     uploadlocal=d(description="本地上传")
     importgroup=d(description="导入群聊")
+
     def click_addbutton(self):
         self.addbutton.click()
-
     def click_uploadlocal(self):
         self.uploadlocal.click()
-
     def click_importgroup(self):
         self.importgroup.click()
+    def uploadgroupphoto(self):
+        self.uploadphoto.click()
 
     localfile1 = d.xpath(
         '//*[@resource-id="com.android.documentsui:id/dir_list"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[2]')
     localphoto1 = d.xpath(
         '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    groupphoto1=d.xpath('//*[@content-desc="本月"]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[2]')
 
+    uploadphoto=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    def click_groupphoto1(self):
+        self.groupphoto1.click()
     def click_localphoto1(self):
         self.localphoto1.click()
 
@@ -64,21 +68,31 @@ class GroupAlbum(Base1):
 
     creatNewalbum=d(description="新建相册")
     # imputalbumname=d.xpath('//android.widget.FrameLayout[3]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[1]')
-    imputalbumname=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[1]')
+    inputalbumname=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[1]')
     # imputalbumdescription=d.xpath('//android.widget.FrameLayout[3]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
     # imputalbumdescription=d.xpath('//android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
-    imputalbumdescription=d.xpath('//android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
-
+    # imputalbumdescription=d.xpath('//android.widget.FrameLayout[4]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
+    inputalbumdescription=d.xpath(
+        '//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
+    inputalbumdescription2=d.xpath(
+        '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
     create=d(description="新建")
 
     def click_create(self):
         self.create.click()
 
-    def imput_albumname(self,name):
-        self.imputalbumname.set_text(name)
+    def input_albumname(self,name):
+        self.inputalbumname.set_text(name)
 
-    def imput_albumdescription(self,description):
-        self.imputalbumdescription.set_text(description)
+    def input_albumdescription(self,description):
+        try:
+            if self.inputalbumdescription.exists:
+                self.inputalbumdescription.set_text(description)
+            else:
+                self.inputalbumdescription2.set_text(description)
+        except Exception as e:
+            logging.info(e)
+
 
     def click_createnewalbum(self):
         self.creatNewalbum.click()
@@ -106,10 +120,10 @@ class GroupAlbum(Base1):
                 self.click_createnewalbum()
                 logging.info("点击创建新相册")
                 time.sleep(2)
-                self.imput_albumname(name)
+                self.input_albumname(name)
                 logging.info("输入相册名")
                 time.sleep(3)
-                self.imput_albumdescription(description)
+                self.input_albumdescription(description)
                 logging.info("输入描述")
                 self.click_create()
 
@@ -156,6 +170,9 @@ class GroupAlbum(Base1):
     def click_edit_comfirm(self):
         self.edit_comfirm.click()
 
+
+
+
     # 本地上传
     def upload_local(self):
         self.click_addbutton()
@@ -164,17 +181,22 @@ class GroupAlbum(Base1):
         self.click_usephoto()
         self.click_upload()
 
-    # 本地上传
-    def upload_local(self):
+    # 导入群聊
+    def importfromGroup(self):
         self.click_addbutton()
-        self.click_uploadlocal()
-        self.click_localphoto1()
+        self.click_importgroup()
+        self.click_groupphoto1()
         self.click_usephoto()
         self.click_upload()
 
 if __name__ == '__main__':
     # GroupFile().uploadgroupfile()
-    # GroupAlbum().createnewalbum('description', 'de')
-    GroupAlbum().upload_local()
+    fake=Faker(['zh_CN','en_US'])
+    name=fake.name()
+    number=fake.random_number()
+    description=fake.text()
+    GroupAlbum().createnewalbum(str(number)+name,description)
+    # GroupAlbum().upload_local()
+    # GroupAlbum().importfromGroup()
     time.sleep(3)
     # Base1().closeApp()
