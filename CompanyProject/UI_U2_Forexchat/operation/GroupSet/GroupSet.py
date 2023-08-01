@@ -3,6 +3,7 @@ import time
 
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
+from CompanyProject.UI_U2_Forexchat.operation.common import Common
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
 class GroupSet(Base1):
@@ -27,7 +28,7 @@ class GroupSet(Base1):
     groupmemberAdd=d(description="添加群成员")
     groupmemberDel=d(description="删除群成员")
     member1=(0.083, 0.348)
-    memberdel=d.xpath('//*[contains(@content-desc,"删除")]')
+    memberdel=d.xpath('//*[contains(@content-desc,"删除(")]')
 
     # 修改群昵称
     nickname = d.xpath('//*[contains(@content-desc,"我的群昵称")]')
@@ -45,11 +46,27 @@ class GroupSet(Base1):
     # complete = d(description="完成")
 
     chatHistoryroaming = d.xpath('//*[contains(@content-desc,"聊天记录漫游")]')
+    clearlocalchathistory = d.xpath('//*[contains(@content-desc,"清空本地聊天记录")]')
+    clearchathistory = d.xpath('//*[contains(@content-desc,"清空聊天记录")]')
+
+    def click_clearlocalchathistory(self):
+        self.clearlocalchathistory.click()
+
+    def click_clearchathistory(self):
+        self.clearchathistory.click()
+
+    def clearHistory(self):
+        self.slide_down()
+        self.click_clearlocalchathistory()
+        self.click_clearchathistory()
+        time.sleep(1)
+        self.click_back()
 
     # 解散群
     disbandgroup = d.xpath('//*[contains(@content-desc,"解散该群")]')
     cancel = d.xpath('//*[contains(@content-desc,"取消")]')
-    confirm = d.xpath('//*[contains(@content-desc,"确定")]')
+    # confirm = d.xpath('//*[contains(@content-desc,"确定")]')
+    confirm=d(description="确定")
     # 举报
     report = d.xpath('//*[contains(@content-desc,"举报")]')
     sexual=d(description="发布色情/违法等低俗")
@@ -87,16 +104,30 @@ class GroupSet(Base1):
         self.memberdel.click()
 
 
-    def addgroupmembers(self):
+    def groupmembersadd(self):
         # 进入会话
-        Home().click_conversation()
-        # 点击群设置
-        GroupWindow().click_groupSet()
+        # Home().click_conversation()
+        # # 点击群设置
+        # GroupWindow().click_groupSet()
         # 点击群二维码
-        time.sleep(2)
+        # time.sleep(2)
         self.click_groupmembers()
+        self.click_groupmemberMore()
+        self.click_groupmemberAdd()
 
-
+    def groupmembersdel(self):
+        self.click_groupmembers()
+        self.click_groupmemberMore()
+        self.click_groupmemberDel()
+        time.sleep(1)
+        self.d.click(0.092, 0.306)
+        time.sleep(2)
+        self.click_memberdel()
+        self.click_cancel()
+        time.sleep(1)
+        self.click_memberdel()
+        time.sleep(1)
+        self.click_confirm()
 
     def click_mygroupintroduction(self):
         self.groupintroduction.click()
@@ -171,11 +202,11 @@ class GroupSet(Base1):
         d.swipe(start_x, start_y, end_x, end_y, duration=0.5)
 
     # 保存群二维码
-    def saveGroupQRcode(self):
+    def GroupQRcodesave(self):
         # 进入会话
-        Home().click_conversation()
-        # 点击群设置
-        GroupWindow().click_groupSet()
+        # Home().click_conversation()
+        # # 点击群设置
+        # GroupWindow().click_groupSet()
         # 点击群二维码
         time.sleep(2)
         # 点击保存
@@ -183,23 +214,22 @@ class GroupSet(Base1):
         self.click_save()
         # self.click_share()
 
+    # 分享群二维码
+    def GroupQRcodeshare(self):
+        # 进入会话
+        # Home().click_conversation()
+        # # 点击群设置
+        # GroupWindow().click_groupSet()
+        # 点击群二维码
+        time.sleep(2)
+        # 点击保存
+        self.d.click(0.918, 0.664)
+        self.click_share()
+        Common().forward_tofriendandgroup()
+
 
     # 编辑群介绍
-    # def editgroupintroduction(self, text):
-    #     # 进入会话
-    #     Home().click_conversation()
-    #     # 点击群设置
-    #     GroupWindow().click_groupSet()
-    #     # 点击群介绍
-    #     time.sleep(2)
-    #     # self.click_mygroupintroduction()
-    #     self.d.click(0.436, 0.809)
-    #     # 输入群名称
-    #     self.edit_mygroupnickname(text)
-    #     # 点击完成
-    #     self.click_complete()
     def editgroupintroduction(self,text):
-        # text = '第二次'
         # 点击群介绍
         time.sleep(2)
         # self.click_mygroupintroduction()
@@ -216,7 +246,7 @@ class GroupSet(Base1):
         # # 点击群设置
         # GroupWindow().click_groupSet()
         # 下滑
-        # self.slide_down()
+        self.slide_down()
         # d(scrollable=True).scroll.forward.to('contains(@content-desc,"我的群昵称")')
         # 点击我的群名称
         time.sleep(2)
@@ -230,15 +260,17 @@ class GroupSet(Base1):
     # 聊天记录漫游
     def chathistoryroaming(self):
         # 进入会话
-        Home().click_conversation()
-        # 点击群设置
-        GroupWindow().click_groupSet()
+        # Home().click_conversation()
+        # # 点击群设置
+        # GroupWindow().click_groupSet()
         # 下滑
         self.slide_down()
         # d(scrollable=True).scroll.forward.to('contains(@content-desc,"我的群昵称")')
         # 点击我的群名称
-        time.sleep(2)
+        # time.sleep(2)
         self.click_chathistoryroaming()
+        time.sleep(1)
+        self.click_back()
         # 开始下滑
         # self.slide_up()
         # self.d.swipe(0.505, 0.177,0.483, 0.85)
@@ -246,9 +278,9 @@ class GroupSet(Base1):
     # 举报
     def Report(self):
         # 进入会话
-        Home().click_conversation()
-        # 点击群设置
-        GroupWindow().click_groupSet()
+        # Home().click_conversation()
+        # # 点击群设置
+        # GroupWindow().click_groupSet()
         # 下滑
         self.slide_down()
         # d(scrollable=True).scroll.forward.to('contains(@content-desc,"我的群昵称")')
@@ -283,43 +315,68 @@ class GroupSet(Base1):
 
     # 设置置顶
     def settop(self):
-        # 进入会话
-        Home().click_conversation()
-        # 点击群设置
-        GroupWindow().click_groupSet()
         # 下滑
         self.slide_down()
         self.d.click(0.873, 0.189)
+        self.click_back()
+        time.sleep(1)
+        self.click_back()
+        time.sleep(3)
+        # 进入会话
+        # Home().click_conversation()
+        # # 点击群设置
+        # GroupWindow().click_groupSet()
 
     # 设置消息免打扰
     def notdisturb(self):
-        # 进入会话
-        Home().click_conversation()
-        # 点击群设置
-        GroupWindow().click_groupSet()
         # 下滑
         self.slide_down()
         self.d.click(0.88, 0.274)
+        time.sleep(1)
+        self.click_back()
+        time.sleep(1)
+        self.click_back()
+        time.sleep(3)
 
+    def click_managegroup(self):
+        # time.sleep(5)
+        # # 进入会话
+        # Home().click_conversation()
+        # # 点击群设置
+        # GroupWindow().click_groupSet()
+        # 点击管理群
+        # 垂直向前滚动到指定位置（横向同理）
+        while not d(description="管理群").exists():
+            d(scrollable=True).scroll.forward()
+            time.sleep(1)
+        d(description="管理群").click()
 
 if __name__ == '__main__':
-    # GroupSet().nickname_set('1314群昵称123')
-    # GroupSet().chathistoryroaming()
-    # GroupSet().Report()
-    # GroupSet().disbandGroup()
-    # GroupSet().shownicknames()
-    # GroupSet().settop()
-    # GroupSet().notdisturb()
-    GroupSet().editgroupintroduction('群介绍')
-    # 点击群介绍
-    time.sleep(2)
-    GroupSet().click_mygroupintroduction()
-    # 输入群名称
-    GroupSet().edit_mygroupnickname('text')
-    # 点击完成
-    GroupSet().click_complete()
+    # 群二维码
+    GroupSet().GroupQRcodesave()
+    # GroupSet().GroupQRcodeshare()
+    # 群介绍
     # GroupSet().editgroupintroduction('群介绍1')
-    # GroupSet().saveGroupQRcode()
-    # GroupSet().addgroupmembers()
-    time.sleep(3)
-    Base1().closeApp()
+    # 设置置顶
+    # GroupSet().settop()
+    # 消息免打扰
+    # GroupSet().notdisturb()
+    # 群昵称
+    # GroupSet().nickname_set('1314群昵称123')
+    # 显示群昵称
+    # GroupSet().shownicknames()
+    # 消息漫游
+    # GroupSet().chathistoryroaming()
+    # 清空本地聊天记录
+    # GroupSet().clearHistory()
+    # 群成员
+    # GroupSet().groupmembersadd()
+    # GroupSet().groupmembersdel()
+
+    # 举报
+    # GroupSet().Report()
+    # 解散群
+    # GroupSet().disbandGroup()
+
+    # time.sleep(3)
+    # Base1().closeApp()

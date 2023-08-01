@@ -13,7 +13,7 @@ class ForbidFriendAdd(Base1):
 
     # 修改群内加好友设置
     def friendAdd_set(self):
-        ManageGroup().manage_groups()
+        # ManageGroup().manage_groups()
         self.click_forbidAddFriend()
         self.click_switch()
 

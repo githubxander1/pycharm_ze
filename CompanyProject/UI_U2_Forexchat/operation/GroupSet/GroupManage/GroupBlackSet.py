@@ -1,24 +1,28 @@
+import time
+
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 
 class GroupBlack(Base1):
-    groupBlacklist = d(description="群黑名单")
-    back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
-
+    groupblacklist = d(description="群黑名单")
+    # back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    back=d.xpath(
+        '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
     def click_groupBlacklist(self):
-        self.groupBlacklist.click()
+        self.groupblacklist.click()
 
     def click_back(self):
         self.back.click()
 
-    # 编辑群头像成功
-    def friendAdd_set(self):
-        ManageGroup().manage_groups()
+    # 群黑名单
+    def groupBlacklist(self):
         self.click_groupBlacklist()
+        time.sleep(2)
+        self.click_back()
 
 
 
 #
 if __name__ == '__main__':
-    GroupBlack().friendAdd_set()
+    GroupBlack().groupBlacklist()
 

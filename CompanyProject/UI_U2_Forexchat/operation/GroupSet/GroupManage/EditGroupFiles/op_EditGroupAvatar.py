@@ -1,3 +1,4 @@
+import time
 from time import sleep
 
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
@@ -11,10 +12,17 @@ class GroupAvatar(Base1):
     confirm=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]')
     avatar1 = d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]')
 
-    back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    back1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    viewback=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    def click_viewback(self):
+        self.viewback.click()
 
     def click_back(self):
         self.back.click()
+
+    def click_back1(self):
+        self.back1.click()
 
     def click_avatar(self):
         self.avatar.click()
@@ -39,12 +47,14 @@ class GroupAvatar(Base1):
     # 编辑群头像成功
     def editGroupAvatar_set_sus(self):
         # ManageGroup().manage_groups()
-        # ManageGroup().click_editGroupProfile()
+        ManageGroup().click_editGroupProfile()
         self.click_avatar()
         self.click_selectfromalbum()
         sleep(2)
         self.click_avatar1()
         self.click_comfirm()
+        sleep(1)
+        self.click_back1()
         # d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.widget.ImageView[2]').click()
 
     def editGroupAvatar_view(self):
@@ -54,12 +64,14 @@ class GroupAvatar(Base1):
             print(f"重试第 {retry_count} 次")
             try:
                 # ManageGroup().manage_groups()
-                # ManageGroup().click_editGroupProfile()
+                ManageGroup().click_editGroupProfile()
                 self.click_avatar()
                 self.click_viewavatar()
                 sleep(2)
-                self.click_back()
+                self.click_viewback()
                 # self.d.click(0.072, 0.044)
+                sleep(1)
+                self.click_back()
                 print('运行结束')
             except Exception as e:
                 sleep(3)
@@ -74,5 +86,6 @@ class GroupAvatar(Base1):
 
 #
 if __name__ == '__main__':
-    # GroupAvatar().editGroupAvatar_set_sus()
+    GroupAvatar().editGroupAvatar_set_sus()
+    time.sleep(3)
     GroupAvatar().editGroupAvatar_view()

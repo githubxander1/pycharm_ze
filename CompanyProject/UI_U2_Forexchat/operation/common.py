@@ -3,11 +3,11 @@ import time
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
-from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupSet import GroupSet
+# from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupSet import GroupSet
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
 
-class Global(Base1):
+class Common(Base1):
     back = d.xpath(
         '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
     # 输入框
@@ -55,7 +55,14 @@ class Global(Base1):
         self.selectgroup.click()
 
     def click_slelct_group1(self):
+        while not d(description="1313群主").exists:
+            d(scrollable=True).scroll.forward()
+            time.sleep(1)
         self.slelct_group1.click()
+        # while not d(description="管理群").exists():
+        #     d(scrollable=True).scroll.forward()
+        #     time.sleep(1)
+        # d(description="管理群").click()
 
     def click_select_send(self):
         self.select_send.click()

@@ -2,6 +2,7 @@
 # coding: utf-8
 # import sys
 # sys.path.append("..") #相对路径或绝对路径
+import time
 
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
@@ -11,40 +12,51 @@ from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 class GroupDescription(Base1):
     # 群介绍
     description = d.xpath('//*[contains(@content-desc,"群介绍")]')
-    inputgroupdescription = d(className="android.widget.edittext")
+    inputgroupdescription = d.xpath('//android.widget.EditText')
+
+    def input_groupdescription(self,text):
+        self.inputgroupdescription.clear_text()
+        self.inputgroupdescription.set_text(text)
+
+    # 完成
+    # complete = d.xpath('//*[@content-desc="完成"]')
 
     cancel = d.xpath('//*[contains(@content-desc,"编辑群介绍")]/android.widget.imageview[1]')
     complete = d(description="完成")
-    sure = d.xpath('//*[@content-desc="确定"]')
+
+    def click_complete(self):
+        self.complete.click()
+
+    # sure = d.xpath('//*[@content-desc="确定"]')
 
 
     # 取消编辑群介绍
-    def editgroupdescription_cancel(descriptioninput):
-        ManageGroup().manage_groups()
-        ManageGroup().editgroupprofile.click()
+    def editgroupdescription_cancel(text):
+        # ManageGroup().manage_groups()
+        ManageGroup().click_editGroupProfile()
         GroupDescription().description.click()
-        GroupDescription().inputgroupdescription.send_keys(descriptioninput)
-        GroupDescription().cancel.click()
-        GroupDescription().sure.click()
+        GroupDescription().input_groupdescription(text)
+        # GroupDescription().cancel.click()
+        GroupDescription().click_complete()
 
     # 编辑成功
-    def editgroupdescription_set(editgropdescription_textinput):
-        ManageGroup().manage_groups()
-        ManageGroup().editgroupprofile.click()
+    def editgroupdescription_set(text):
+        # ManageGroup().manage_groups()
+        ManageGroup().click_editGroupProfile()
         GroupDescription().description.click()
-        GroupDescription().inputgroupdescription.send_keys(editgropdescription_textinput)
+        GroupDescription().inputgroupdescription.set_text(text)
         GroupDescription().complete.click()
 
     # 清空输入框
     def editgroupdescription_clear(self):
-        ManageGroup().manage_groups()
-        ManageGroup().editgroupprofile.click()
+        # ManageGroup().manage_groups()
+        ManageGroup().click_editGroupProfile()
         GroupDescription().description.click()
         GroupDescription().inputgroupdescription.clear_text()
         GroupDescription().complete.click()
 
-#
+
 if __name__ == '__main__':
-    editgropdescription_textinput = '这是群介绍'
-    GroupDescription().editgroupdescription_set()
+    text = '这是群介绍'
+    GroupDescription().editgroupdescription_set(text)
 
