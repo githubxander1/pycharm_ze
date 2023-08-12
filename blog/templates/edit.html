@@ -1,0 +1,24 @@
+<!--编辑博客文章-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>编辑文章</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>编辑文章</h1>
+
+    <form action="/admin/edit/{{ index }}" method="post" enctype="multipart/form-data">
+        <label for="title">标题：</label>
+        <input type="text" name="title" value="{{ post.title }}" required><br>
+        <label for="content">内容：</label><br>
+        <textarea name="content" id="content" rows="4" cols="50" required>{{ post.content }}</textarea><br>
+        {% if post.filename %}
+            <img src="{{ url_for('uploaded_file', filename=post.filename) }}">
+        {% endif %}
+        <input type="file" name="file"><br>
+        <button type="submit">保存</button>
+    </form>
+
+</body>
+</html>

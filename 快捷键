@@ -11,3 +11,5 @@ Ctrl+Shift+J 要将两行合并为一行并移除不必要的空格
 Ctrl + Shift + Alt + J 可以实现相同名称同时修改
 
 Shift+Alt+Ctrl 要选择多段文本
+
+edge驱动更新：https://developer.microsoft.com/zh-cn/microsoft-edge/tools/webdriver/

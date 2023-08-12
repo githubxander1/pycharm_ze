@@ -1,0 +1,37 @@
+<!--后台管理页面-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>后台管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>后台管理</h1>
+
+    <h2>文章列表</h2>
+
+    <h2>发布新博客文章</h2>
+    <form action="/post" method="post">
+        <label for="title">标题：</label>
+        <input type="text" name="title" id="title" required><br>
+        <label for="content">内容：</label><br>
+        <textarea name="content" id="content" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="发布">
+    </form>
+
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+                {% if post.filename %}
+                    <img src="{{ url_for('uploaded_file', filename=post.filename) }}">
+                {% endif %}
+                <a href="/admin/edit/{{ loop.index0 }}">编辑</a>
+                <a href="/admin/delete/{{ loop.index0 }}">删除</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
