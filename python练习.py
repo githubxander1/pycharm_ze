@@ -85,18 +85,124 @@
 #
 #
 # print(num_is_hui(132))
-def jia(product_type,type,n):
-    if product_type=='指定单日门票':
-        if type=='标准票':
-            return 638*n
-        elif type in ('儿童票,老年票') :
-            return 480*n
-    elif product_type=='指定1.5日门票':
-        if type=='标准票':
-            return 1020*n
-        elif type in ('儿童票,老年票'):
-            return 765*n
-shuru=input()
-shuru2=input()
-shuru3=eval(input())
-print(jia(shuru,shuru2,shuru3))
+# def jia(product_type,type,n):
+#     if product_type=='指定单日门票':
+#         if type=='标准票':
+#             return 638*n
+#         elif type in ('儿童票,老年票') :
+#             return 480*n
+#     elif product_type=='指定1.5日门票':
+#         if type=='标准票':
+#             return 1020*n
+#         elif type in ('儿童票,老年票'):
+#             return 765*n
+# shuru=input()
+# shuru2=input()
+# shuru3=eval(input())
+# print(jia(shuru,shuru2,shuru3))
+
+# 迭代
+# 迭代是循环的一种，迭代是指在可迭代对象上实现for循环
+# 迭代器是实现了__next__()方法的对象
+# 迭代器对象可以被next()函数调用并不断返回下一个值
+# mystr=iter('banner')
+# print(next(mystr))
+# print(next(mystr))
+#
+# print('使用for循环迭代')
+# for i in mystr:
+#     print(i)
+#
+# print('使用while循环迭代')
+# mystr=iter('banner')
+# while True:
+#     try:
+#         print(next(mystr))
+#     except StopIteration:#为了防止迭代永远进行，我们可以使用 StopIteration 语句
+#         break
+#
+# print('使用enumerate()函数迭代')
+# mylist=[1,2,3,4,5]
+# for i,j in enumerate(mylist):
+#     print(i,j)
+#
+# print('使用zip()函数迭代')
+# mylist=[1,2,3,4,5]
+# mylist2=['a','b','c','d','e']
+# for i,j in zip(mylist,mylist2):
+#     print(i,j)
+#
+# print('使用reversed()函数迭代')
+# mylist=[1,2,3,4,5]
+# for i in reversed(mylist):
+#     print(i)
+#
+# print('使用sorted()函数迭代')
+# mylist=[1,2,3,4,5]
+# for i in sorted(mylist):
+#     print(i)
+#
+# print('使用filter()函数迭代')
+# def is_odd(n):
+#     return n%2==1
+#
+# mylist=[1,2,3,4,5]
+# for i in filter(is_odd,mylist):
+#     print(i)
+#
+# print('使用map()函数迭代')
+# def power(x):
+#     return x**2
+#
+# mylist=[1,2,3,4,5]
+# for i in map(power,mylist):
+#     print(i)
+#
+# print('使用reduce()函数迭代')
+# from functools import reduce
+# def add(x,y):
+#     return x+y
+#
+# mylist=[1,2,3,4,5]
+# for i in reduce(add,mylist):
+#     print(i)
+#
+# print('创建迭代器')
+# class myiter:
+#     def __iter__(self):
+#         self.a=1
+#         return self
+#     def __next__(self):
+#         x=self.a
+#         self.a+=1
+#         return x
+# myiter=iter(myiter())
+# print(next(myiter))
+
+# 生成器
+# 生成器是一种迭代器，生成器只能用于迭代操作，不能用于索引
+# 生成器是迭代器，迭代器是生成器
+
+# 生成器函数
+# 生成器函数是返回生成器对象，生成器函数的返回值是生成器对象
+# 生成器函数的返回值是生成器对象
+# def mygenerator():
+
+# 列表生成式
+# 列表生成式是一种生成列表的简单方法，它以一种简洁的语法生成列表
+# 列表生成式可以写成for循环的形式
+# 列表生成式中，for前面的部分称为生成器，它产生待处理的对象，
+# for后面的部分称为过滤器，它对产生的对象进行筛选，最终产生我们想要的结果
+
+# 生成器
+# 生成器是一种迭代器，生成器只能用于迭代操作，不能用于索引
+# 生成器是迭代器，迭代器是生成器
+
+# 日期
+import datetime
+
+x= datetime.datetime.now()
+print('当前时间是：',x)
+print('当前时间：',x.year,'年',x.month,'月',x.day,'日',x.strftime('%H:%M:%S'))
+
+# 日期格式化
