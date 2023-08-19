@@ -199,10 +199,107 @@
 # 生成器是迭代器，迭代器是生成器
 
 # 日期
-import datetime
+# import datetime
+#
+# # x= datetime.datetime.now()
+# # print('当前时间是：',x)
+# # print('当前时间：',x.year,'年',x.month,'月',x.day,'日',x.strftime('%H:%M:%S'))
+# # 创建日期对象
+# x=datetime.datetime(2023,8,18)
+# print('创建日期对象：',x)
+import json
+# x= '{"name":"张三","age":20,"name":"李四"}'
+# # 解析x
+# y=json.loads(x)
+# print(y['name'])
+# x1={'name':'张三','age':20}
+# y1=json.dumps(x1)
+# print(y1)
+# print(json.dumps({"name": "Bill", "age": 63}))
+# print(json.dumps(["apple", "bananas"]))
+# print(json.dumps(("apple", "bananas")))
+# print(json.dumps("hello"))
+# print(json.dumps(42))
+# print(json.dumps(31.76))
+# print(json.dumps(True))
+# print(json.dumps(False))
+# print(json.dumps(None))
+from pprint import pprint
 
-x= datetime.datetime.now()
-print('当前时间是：',x)
-print('当前时间：',x.year,'年',x.month,'月',x.day,'日',x.strftime('%H:%M:%S'))
+# x = {
+#   "name": "Bill",
+#   "age": 63,
+#   "married": True,
+#   "divorced": False,
+#   "children": ("Jennifer","Rory","Phoebe"),
+#   "pets": None,
+#   "cars": [
+#     {"model": "Porsche", "mpg": 38.2},
+#     {"model": "BMW M5", "mpg": 26.9}
+#   ]
+# }
+# # 使用 indent 参数定义缩进数：使用 separators 参数来更改默认分隔符：使用 sort_keys 参数来指定是否应对结果进行排序：
+# print(json.dumps(x,indent=4, sort_keys=True,separators=(',', ': ')))
 
-# 日期格式化
+# RegEx正则表达式
+# import re
+# text='Hello 123 4567 World_This is a Regex Demo'
+# # findall:查找所有匹配并返回一个列表：
+# # search:如果字符串中的任意位置存在匹配，则返回match对象
+# print(re.search('\s',text))
+# print('split:拆分')
+# print(re.split('\s+',text))
+# print('通过指定 maxsplit 参数来控制出现次数：')
+# print(re.split('\s*',text,5))
+# print('sub:替换')
+# print(re.sub('\s*','替换',text))
+# print('通过指定 count 参数来控制替换次数：')
+# print(re.sub('\s*','替换',text,3))
+
+# 字符串格式化
+# 字符串 format()
+# 索引号
+# print('{0},{1},{2}'.format('a','b','c'))
+# # 关键字
+# print('{name},{age},{sex}'.format(name='a',age='b',sex='c'))
+# # 格式化 f
+# a=1
+# b=2
+# print(f'{1},{2}')
+# # 格式化字典
+# print(f'{a},{b}')
+# # 格式化列表
+# print(f'{[a,b]}')
+# # 格式化元组
+# print(f'{(a,b)}')
+
+# 文件处理
+# 读取文件
+# f=open('test.txt','r')
+# print(f.read(5))#读取前五个字符
+# print(f.readline())#读一行
+# for x in f:#遍历文件
+#     print(x)
+# f.close()
+# 追加
+# f=open('test.txt','a')
+# f.write('hello world')
+# f.close()
+# f=open('test.txt','r')
+# print(f.read())
+# 覆盖
+# f=open('test.txt','w')
+# f.write('hello world')
+# f.close()
+# f=open('test.txt','r')
+# print(f.read())
+# 创建
+# f=open('test.txt','x')
+# f.close()
+# 删除
+# import os
+# if os.path.exists('test.txt'):
+#         os.remove('test.txt')
+#         os.rmdir('testfolder')
+# else:
+#     print('文件不存在')
