@@ -20,10 +20,27 @@
 # print(f'{num:#_x}')#十六进制
 
 # 自定义日期格式
-import datetime
+# import datetime
+#
+# t=datetime.time(20,14,25)
+# t1=datetime.date(2023,11,11)
+# print(f'{t1:%Y-%m-%d}')
+# print(f'{t1:%Y}年{t1:%m}月{t1:%d}日')
+# print(t)
 
-t=datetime.time(20,14,25)
-t1=datetime.date(2023,11,11)
-print(f'{t1:%Y-%m-%d}')
-print(f'{t1:%Y}年{t1:%m}月{t1:%d}日')
-print(t)
+# # 字符串编解码
+# str='测试字符串'
+# str1=str.encode('utf-8')
+# print(str1)
+#
+# str2=str1.decode('utf-8')
+# print(str2)
+
+# 获取字符编码
+str='一二三四五'
+for i in str:
+    print(f'{i} --> {ord(i)}')
+
+codes=[19968,20108,19978]
+for i in codes:
+    print(f'{i} --> {chr(i)}')
