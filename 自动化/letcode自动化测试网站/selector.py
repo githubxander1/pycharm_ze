@@ -18,4 +18,10 @@ d.get('https://letcode.in/dropdowns')
 sleep(2)
 # 滚动条
 slide = d.find_element_by_css_selector('#superheros > option:nth-child(21)')
-d.execute_script("arguments[0].scrollIntoView();", slide)
+# 第一种：js
+# d.execute_script("arguments[0].scrollIntoView();", slide)
+# 第二种
+# slide.location_once_scrolled_into_view()
+# 第三种
+js='window.scrollIntoView()'
+d.execute_script(js, slide)
