@@ -5,8 +5,8 @@
 # 数据格式是json,如果要用data参数,就需要对请求参数进行序列化处理
 import requests
 
-from api_暴风影音.common.public import writeID, getID
-from api_暴风影音.utils.operationJson import readYaml, readJson
+from api_baofyy.common.public import writeID, getID
+from api_baofyy.utils.operationJson import readYaml, readJson
 
 
 def login():

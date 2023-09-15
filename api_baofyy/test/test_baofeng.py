@@ -9,9 +9,9 @@ import json
 # from page.baofeng import *
 import unittest
 
-from api_暴风影音.page.baofeng import addProduct, delProduct, modifyProduct, queryProduct
-from api_暴风影音.test.test_login import LoginTest
-from api_暴风影音.utils.operationJson import readJson
+from api_baofyy.page.baofeng import addProduct, delProduct, modifyProduct, queryProduct
+from api_baofyy.test.test_login import LoginTest
+from api_baofyy.utils.operationJson import readJson
 
 
 class Fengbao(LoginTest):

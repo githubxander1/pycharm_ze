@@ -1,0 +1,12 @@
+#logger_name
+#logger level
+#logger file
+
+database:
+  host: '192.168.1.58'
+  port: 3306
+  user: 'root'
+  password: '123456w'
+  charset: 'utf8'
+  database: 'test_db'
+
