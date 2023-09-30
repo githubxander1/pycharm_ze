@@ -11,8 +11,8 @@ def main():
         # option_int=input('请选择菜单：')
         option_int = int(input('请选择菜单：'))
         if option_int == 1:
-            insert1()
             print('录入学生信息')
+            insert1()
         elif option_int == 2:
             search2()
         elif option_int == 3:
@@ -55,9 +55,9 @@ def save(student):
         student_txt = open('students.txt', 'a')  # 追加模式打开
     except Exception as e:
         student_txt = open('students.txt', 'w')  # 文件不存在，创建文件并打开
-        for info in student:
-            student_txt.write(str(info) + '\n')  # 按行存储，添加换行符
-    student_txt.close()  # 关闭文件
+    for info in student:
+        student_txt.write(str(info) + '\n')  # 按行存储，添加换行符
+        student_txt.close()  # 关闭文件
 
 
 def insert1():
@@ -73,11 +73,12 @@ def insert1():
         try:
             english = int(input('请输入英语成绩:'))
             python = int(input('请输入python成绩:'))
+            c = int(input('请输入c语言成绩:'))
         except:
             print('输入无效，不是整数，请重新输入')
             continue
         # 将输入的信息存到字典
-        student = {'id': id, 'name': name, 'english': english, 'python': python}
+        student = {'id': id, 'name': name, 'english': english, 'python': python, 'c': c}
         # 将学生信息添加到列表中
         student_list.append(student)
         inputMark = input('是否继续添加？y/n\n')
@@ -92,32 +93,36 @@ def insert1():
 def delete3():
     mark = True  # 标记是否循环
     while mark:
-        studentID = input('请输入要删除的学生ID：')
-        if not studentID:  # 判断学生id是否存在
-            print('无效的输入，请输入有效的学生ID')
-            continue
-
-        if os.path.exists('students.txt'):
-            with open('students.txt', 'r') as rfile:
-                students = {line.strip(): dict(eval(line)) for line in rfile}
-        else:
-            students = {}
-
-        if studentID in students:
-            with open('students.txt', 'w') as wfile:
-                for id, info in students.items():
-                    if id != studentID:
-                        wfile.write(str(info) + '\n')
-            print(f'ID {studentID} 的学生已被删除。。。')
-        else:
-            print(f'没有找到ID为 {studentID} 的学生')
-
-        show()  # 显示所有学生信息
-        inputmark = input('是否继续删除？y/n:')
-        if inputmark == 'y':
-            mark = True
-        else:
-            mark = False
+        studentId = input("请输入要删除的学生ID：")
+        if studentId != '':  # 判断是否输入要删除的学生
+            if os.path.exists('students.txt'):  # 关 判断文件是否存在
+                with open('students.txt', 'r') as rfile:  # 打开文件
+                    student_old = rfile.readlines()  # 读取全部内容
+            else:
+                student_old = []
+            ifdel = False  # 标记是否删除
+            if student_old:  # 如果存在学生信息
+                with open('students.txt', 'w') as wfile:  # 以写方式打开文件
+                    d = {}  # 定义空字典
+                    for list in student_old:
+                        d = dict(eval(list))  # 字符串转字典
+                        if d['id'] != studentId:
+                            wfile.write(str(d) + '\n')  # 将一条学生信息写入文件
+                        else:
+                            ifdel = True  # 标记已经删除
+                    if ifdel:
+                        print("ID为%s的学生信息已经被删除。。" % studentId)
+                    else:
+                        print("没有找到ID为%s的学生信总，，。" % studentId)
+            else:  # 不存在学生信息
+                print('无学生信息...')
+                break  # 退出循环
+            show7()  # 显示全部学生信息
+            inputMark = input('是否继续删除？（y / n):')
+            if inputMark == "y":
+                mark = True  # 继续删除
+            else:
+                mark = False  # 退出删除学生信息功能
 
 
 def search2():
@@ -128,9 +133,9 @@ def search2():
         name = ''
         if os.path.exists('students.txt'):
             mode = input('按ID查询请输入1，按名字查询请输入2：')
-            if mode == 1:
+            if mode == '1':
                 input('请输入学生ID：')
-            elif mode == 2:
+            elif mode == '2':
                 input('请输入学生姓名：')
             else:
                 print('未查询到，请重新输入')
@@ -139,16 +144,53 @@ def search2():
                 student = f.readlines()
                 for list in student:
                     d = dict(eval(list))
+                    if id != '':  # 判断是否按ID查询
+                        if d['id'] == id:
+                            student_query.append(d)  # 将找到的ID保存到列表中
+                    elif name != '':
+                        if d['name'] == name:
+                            student_query.append(d)
+                show_student(student_query)  # 显示查询结果
+                student_query.clear()
+                inputMark = input('是否继续查询：y/n:')
+                if inputMark == 'y':
+                    mark = True
+                else:
+                    mark = False
+        else:
+            print('暂未保存数据信息')
+            return
+
+
+def show_student(studentList):
+    if not studentList:  # 如果没有学生数据
+        print('无数据信息')
+        return
+    format_title = '{:^6}{:^12}\t{:^8}\t{:^10}\t{:^10}\t{:^10}'  # 定义标题显示格式
+    print(format_title.format('ID', '名字', '英语成绩', 'python成绩', 'c语言成绩', '总成绩'))
+
+    format_data = '{:^6}{:^12}\t{:^8}\t{:^10}\t{:^12}\t{:^12}'
+    for info in studentList:
+        print(format_data.format(info.get('id'),
+                                 info.get('name'),
+                                 str(info.get('english')),
+                                 str(info.get('python')),
+                                 str(info.get('C')),
+                                 str(info.get('english') + info.get('python') + info.get('c')).center(12)))
 
 
 def show7():
     """显示所有学生信息"""
-    with open('students.txt', 'r') as file:
-        # print(file.readlines())
-        students = {line.strip(): dict(eval(line)) for line in file}
-        print(students)
-    # for id, info in students.items():
-    #     print(f'ID: {id}, 信息: {info}')
+    student_new = []
+    if os.path.exists('students.txt'):
+        with open('students.txt', 'r') as rfile:
+            student_old = rfile.readlines()
+        for list in student_old:
+            student_new.append(eval(list))
+        if student_new:
+            show_student(student_new)
+    else:
+        print('暂未保存数据信息')
 
 
 def sort():
