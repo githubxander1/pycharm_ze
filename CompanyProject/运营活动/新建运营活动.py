@@ -14,19 +14,19 @@ driver.find_element(By.NAME,'password').send_keys('a1234567')
 driver.find_element(By.CSS_SELECTOR,'#app > div > form > button').click()
 
 driver.find_element(By.CSS_SELECTOR,'#app > div > div.main-container > section > div > div.project-list.el-row > div:nth-child(6) > img').click()
-# # # 点击新建活动
-driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.status-container > div > div.create-plan.search-btn > button > span').click()
-# # 选择bv
-driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__body > div > div:nth-child(4) > div > img').click()
-# # 点击下一步
-driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__footer > span > span > button.el-button.el-button--primary.el-button--mini > span').click()
-# # 选择新用户注册
-driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__body > div > div.template-wrap > div:nth-child(1) > div > img').click()
-# # 点击确定
-sleep(2)
-driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__footer > span > span > button.el-button.el-button--primary.el-button--mini > span').click()
-# driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[3]/span/span/button[2]/span').click()
-sleep(2)
+# # # # 点击新建活动
+# driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.status-container > div > div.create-plan.search-btn > button > span').click()
+# # # 选择bv
+# driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__body > div > div:nth-child(4) > div > img').click()
+# # # 点击下一步
+# driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__footer > span > span > button.el-button.el-button--primary.el-button--mini > span').click()
+# # # 选择新用户注册
+# driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__body > div > div.template-wrap > div:nth-child(1) > div > img').click()
+# # # 点击确定
+# sleep(2)
+# driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__footer > span > span > button.el-button.el-button--primary.el-button--mini > span').click()
+# # driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[3]/span/span/button[2]/span').click()
+# sleep(2)
 # 点击编辑活动
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[4]/div[1]/div[3]/table/tbody/tr[1]/td[10]/div/button[1]/span').click()
 # sleep(2)
