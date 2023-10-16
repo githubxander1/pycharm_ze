@@ -48,20 +48,20 @@ wait = WebDriverWait(driver, 10)
 anquan=driver.find_element(By.XPATH,'//*[@id="share"]/div[2]/div/iframe')
 driver.switch_to.frame(anquan)
 
-import seleniumwire
+# import seleniumwire
 # from selenium.webdriver.common.action_chains import ActionChains
 # from selenium.webdriver.common.by import By
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
 
 # 设置Chrome驱动的路径
-driver_path = "path_to_chromedriver"
-
-# 创建Chrome浏览器实例
-options = {
-    'ignore_http_errors': True,  # 忽略HTTP错误，以便捕获滑动验证的网络请求
-}
-driver = webdriver.Chrome(executable_path=driver_path, seleniumwire_options=options)
+# driver_path = "path_to_chromedriver"
+#
+# # 创建Chrome浏览器实例
+# options = {
+#     'ignore_http_errors': True,  # 忽略HTTP错误，以便捕获滑动验证的网络请求
+# }
+# driver = webdriver.Chrome(executable_path=driver_path, seleniumwire_options=options)
 
 # 启用selenium-wire的请求捕获功能
 driver.scopes = [{'path': '/cn/slider'}]  # 指定要捕获的URL
