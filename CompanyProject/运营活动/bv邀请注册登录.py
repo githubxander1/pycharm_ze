@@ -6,9 +6,11 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-driver=webdriver.Chrome()
+# driver=webdriver.Chrome()
+driver=webdriver.Edge()
 driver.implicitly_wait(10)
 driver.get("https://bvwebtest.tostar.top/cn")
+driver.maximize_window()
 
 driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[1]/div[2]/div[3]').click()
 driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[1]/form/div[1]/div/div/input').send_keys('3@qq.com')
@@ -25,20 +27,23 @@ driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[3]/div/div/div[2]').cl
 sleep(2)
 iframe=driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[3]/div[2]/div/iframe')
 driver.switch_to.frame(iframe)
+sleep(2)
 # driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[1]/div').click()
 # 点击复制
-driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[2]/div[2]').click()
-
+# driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[2]/div[2]').click()
+# link=driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[2]/div[1]/span').text
+# link=driver.find_element(By.XPATH,'/html/body/div[1]/div/div/div/div[2]/div[2]/div[1]/span').text
+link='https://bvwebtestevent.tostar.top/en/share/244?ump=3768_1qqcomTHB'
+# print(link)
 # 执行JavaScript脚本，在当前标签页外打开新标签页
-driver.execute_script('window.open("");')
+driver.execute_script('window.open("'+link+'","_blank");')
 
 # 切换到新打开的标签页
 driver.switch_to.window(driver.window_handles[-1])
 
 # 在新标签页中打开链接
-driver.get("https://bvwebtestevent.tostar.top/cn/share/217?ump=3694_Hazel Tao")
-
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[1]/input').send_keys('88@qq.com')
+# driver.get(link.text)
+driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[1]/input').send_keys('1@qq.com')
 driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[2]/input').send_keys('a1234567')
 driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/button/span').click()
 driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/input').send_keys(1234)
@@ -47,29 +52,30 @@ driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/input').send
 wait = WebDriverWait(driver, 10)
 anquan=driver.find_element(By.XPATH,'//*[@id="share"]/div[2]/div/iframe')
 driver.switch_to.frame(anquan)
-
+sleep(3)
 # 等待滑块弹窗出现
 # wait = WebDriverWait(driver, 10)
 # slider_iframe = wait.until(EC.presence_of_element_located((By.XPATH,'//*[@id="share"]/div[2]/div/iframe')))
 # driver.switch_to.frame(slider_iframe.find_element(By.XPATH,'//*[@id="share"]/div[2]/div/iframe')
 
 # 定位滑块
-slider = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='app']/main/div/div/div[2]/i")))
-slider_width = slider.size['width']
+# slider = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='app']/main/div/div/div[2]/i")))
+# slider_width = slider.size['width']
+#
+# # 模拟拖动滑块
+# action = ActionChains(driver)
+# action.click_and_hold(slider).perform()
+# sleep(0.5)
+# # action.move_by_offset(slider_width, 0).perform()
+# action.move_by_offset(slider_width * 2, 0).perform()
+# action.release().perform()
 
-# 模拟拖动滑块
-action = ActionChains(driver)
-action.click_and_hold(slider).perform()
-sleep(0.5)
-# action.move_by_offset(slider_width, 0).perform()
-action.move_by_offset(slider_width * 2, 0).perform()
-action.release().perform()
-
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/button').click()
 
 # 切换回默认的frame
 driver.switch_to.default_content()
-
+driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/input').clear()
+driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/input').send_keys('1234')
+driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/button').click()
 
 # # 获取当前窗
 # 口句柄

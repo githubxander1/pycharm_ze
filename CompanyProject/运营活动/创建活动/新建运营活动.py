@@ -1,5 +1,4 @@
 from time import sleep
-
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
@@ -11,6 +10,8 @@ driver=webdriver.Edge()
 driver.get('https://cc-test.tostar.top/login')
 driver.implicitly_wait(10)
 
+project='bv'
+
 def login():
     driver.find_element(By.NAME,'username').send_keys('xiaozehua')
     driver.find_element(By.NAME,'password').send_keys('a1234567')
@@ -18,11 +19,30 @@ def login():
 
     driver.find_element(By.CSS_SELECTOR,'#app > div > div.main-container > section > div > div.project-list.el-row > div:nth-child(6) > img').click()
 login()
-def new():
+def new(project):
      # 点击新建活动
     driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.status-container > div > div.create-plan.search-btn > button > span').click()
-    # 选择bv
-    driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[5]/span').click()
+    # 选择项目
+    if project=='HuiChaCha':
+        driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[1]/span').click()
+    elif project == 'Fazzaco':
+        driver.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[2]/span').click()
+    elif project == 'BrokersShow':
+        driver.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[3]/span').click()
+    elif project=='fb':
+        driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[4]/span').click()
+    elif project=='bv':
+        driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[5]/span').click()
+    elif project=='FX110':
+        driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[6]/span').click()
+    elif project=='tl':
+        driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[7]/span').click()
+    elif project == 'FX110_OVERSEAS':
+        driver.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[8]/span').click()
+    elif project == '法布':
+        driver.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[2]/div/div[9]/span').click()
+    else:
+        print('项目名称错误')
     # 点击下一步
     driver.find_element(By.CSS_SELECTOR,'#app > div > div.right > div.inner > div > div.el-dialog__wrapper > div > div.el-dialog__footer > span > span > button.el-button.el-button--primary.el-button--mini > span').click()
     # # # 选择新用户注册
@@ -33,41 +53,29 @@ def new():
     # driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[6]/div/div[3]/span/span/button[2]/span').click()
     sleep(2)
 new()
+
 # 点击编辑活动
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[4]/div[1]/div[3]/table/tbody/tr[1]/td[10]/div/button[1]/span').click()
-# sleep(2)
 #活动地址
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[1]/div[2]/div/div[2]/div/label[1]/span[1]/span').click()
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[1]/div[3]/div/div/div/input').send_keys('https://bvwebtestevent.tostar.top')
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[1]/div[4]/div/div[1]/div/input').send_keys('https://bvh5testevent.tostar.top')
 # 奖品类型
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[3]/div/div/div/input').click()
-# driver.find_element(By.XPATH,'/html/body/div[7]/div[1]/div[1]/ul/li/span').click()
 driver.find_element(By.XPATH,'/html/body/div[6]/div[1]/div[1]/ul/li').click()
 
-# 废弃下面的
-# elm = driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[3]/div/div/div/input')
-# js = 'arguments[0].removeAttribute("readonly");'
-# driver.execute_script(js, elm)
-# sleep(0.5)
-# elm.clear()
-# elm.send_keys('USD')
 # 日期
 sleep(1)
-# driver.find_element(By.XPATH,'/html/body/div[7]/div[1]/div/div[2]/table/tbody/tr[4]/td[3]/div/span').click()
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[1]/div[6]/div/div/input[1]').send_keys('2023-10-04 00:00:00')
 sleep(1)
-# driver.find_element(By.XPATH,'/html/body/div[8]/div[1]/div/div[2]/table/tbody/tr[6]/td[4]/div/span').click()
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[1]/div[6]/div/div/input[2]').send_keys('2023-11-16 23:59:59')
-# driver.find_element(By.XPATH,'/html/body/div[7]/div[2]/button[2]/span').click()
-# driver.find_element(By.XPATH,'/html/body/div[8]/div[2]/button[2]').click()
 # 提现网络
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[4]/div/div/input').clear()
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[4]/div/div/input').send_keys("TRC20")
-# 奖金参数
-# 系统审核
-# driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[5]/div/div/div[1]/label/span[1]/span').click()
-# driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[5]/div/div/div[1]/label/span[2]/span/div/input').send_keys(3)
+# 邀请人奖金参数
+driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[5]/div/div/div[1]/label/span[1]/span').click()
+driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[5]/div/div/div[1]/label/span[2]/span/div/input').clear()
+driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[5]/div/div/div[1]/label/span[2]/span/div/input').send_keys(50)
 # 特殊国家
 def special():
     driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[6]/div/div/div[3]/table/tbody/tr[1]/td[2]/div/div/input').send_keys(40)
@@ -89,26 +97,12 @@ def special():
 
     driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[6]/div/div/div[3]/table/tbody/tr[2]/td[2]/div/div/input').send_keys(2)
     driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[6]/div/div/div[3]/table/tbody/tr[2]/td[3]/div/div/input').send_keys(50)
-# 关联奖金配置
+# 被邀请人关联奖金配置
 sleep(2)
 fixed_button = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/div[3]/form/div/div/div/div[1]/label/span[1]')
-
-# 邀请人做任务系统审核标准
-# driver.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[8]/div/div/p[2]/span[1]/input').send_keys(10)
-# driver.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/form[2]/div[9]/div/div/p[2]/span[1]/input').send_keys(10)
-
-
-# 将鼠标移动到目标元素上方
-actions = ActionChains(driver)
-actions.move_to_element(fixed_button).perform()
-
-# 等待一段时间，确保目标元素可点击
-driver.implicitly_wait(5)
-
-# 点击目标元素
+ActionChains(driver).move_to_element(fixed_button).perform()
 fixed_button.click()
-# driver.find_element(By.XPATH,'/html/body/div[1]/div/div[2]/div[2]/div/div[3]/div/div[3]/form/div/div/div/div[1]/label/span[1]/span').click()
-driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/div[3]/form/div/div/div/div[1]/label/span[2]/span/div/input').send_keys(1)
+driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/div[3]/form/div/div/div/div[1]/label/span[2]/span/div/input').send_keys(20)
 
 # 客户端展示信息
 def language():
@@ -373,7 +367,6 @@ def language():
 
 language()
 
-# driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/div[6]/div[1]/div/label[1]/span[1]/span').click()
 # 点击保存
 driver.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/div[6]/div[2]/button/span').click()
 sleep(2)
