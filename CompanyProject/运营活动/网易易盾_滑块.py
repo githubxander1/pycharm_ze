@@ -25,22 +25,17 @@ driver.switch_to.frame(slider_iframe)
 # driver.request_interceptor = lambda request: request  # 捕获所有请求
 
 # 定位滑块
-# slider = wait.until(EC.presence_of_element_located((By.XPATH,'/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')))
-# slider_width = slider.size['width']
-#
-# # 获取滑块验证的网络请求
-# for request in driver.requests:
-#     if request.path == '/cn/slider' and request.response.status_code == 200:
-#         slider_info = request.response.body  # 获取滑块验证的信息，可以根据需要处理
-#
+slider = wait.until(EC.presence_of_element_located((By.XPATH,'/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')))
+slider_width = slider.size['width']
+
 # # 模拟拖动滑块
-# action = ActionChains(driver)
-# action.click_and_hold(slider).perform()
-# action.move_by_offset(slider_width, 0).perform()
-# action.release().perform()
-#
-# # 切换回默认的frame
-# driver.switch_to.default_content()
+action = ActionChains(driver)
+action.click_and_hold(slider).perform()
+action.move_by_offset(slider_width, 0).perform()
+action.release().perform()
+
+# 切换回默认的frame
+driver.switch_to.default_content()
 
 # 关闭浏览器
 # driver.quit()

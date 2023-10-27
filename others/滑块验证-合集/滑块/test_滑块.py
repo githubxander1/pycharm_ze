@@ -19,18 +19,29 @@ class CrackSlider():
 
     def __init__(self):
         super(CrackSlider, self).__init__()
-        self.opts = webdriver.ChromeOptions()
+        self.opts = webdriver.EdgeOptions()
         self.opts.add_experimental_option('excludeSwitches', ['enable-logging'])
         # self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=self.opts)
-        chrome_path = r"C:\Users\11248\AppData\Local\Google\Chrome\Application\chromedriver.exe"
-        self.driver = webdriver.Chrome()
+        # chrome_path = r"C:\Users\11248\AppData\Local\Google\Chrome\Application\chromedriver.exe"
+        self.driver = webdriver.Edge()
 
-        self.url = 'https://tradinglive-testwebpc.tostar.top/cn/login'
+        self.url = 'https://dun.163.com/trial/jigsaw'
+        # self.url = 'https://dun.163.com/trial/sense'
+        # self.url = 'https://tradinglive-testwebpc.tostar.top/cn/login'
         self.wait = WebDriverWait(self.driver, 10)
+        # self.driver.find_element(By.XPATH, '/html/body/main/div[1]/div/div[2]/div[2]/ul/li[2]').click()
+        # driver.find_element(By.XPATH,'(By.XPATH,"/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[1]/span")').click()
+        # anquan = self.wait.until(EC.presence_of_element_located((By.XPATH,
+        #                                                     "/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[1]/span")))
+        # anquan.click()
+
+        # 切换到安全验证弹窗的iframe
+        slider_iframe = self.driver.find_element(By.XPATH,'/html/body/iframe[1]')
+        self.driver.switch_to.frame(slider_iframe)
 
     def get_pic(self):
-        self.driver.get(self.url)
-        time.sleep(5)
+        # self.driver.get(self.url)
+        # time.sleep(5)
         target_link = self.driver.find_element(By.CLASS_NAME, "yidun_bg-img").get_attribute('src')
         template_link = self.driver.find_element(By.CLASS_NAME, "yidun_jigsaw").get_attribute('src')
 
