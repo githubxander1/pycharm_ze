@@ -47,6 +47,26 @@ class Win_Main:
     def __init__(self):
         self.ui = uic.loadUi('main.ui')
 
+        self.ui.act_exit.traggered.connect(self.onSigOut)
+
+    def onSigOut(self):
+        SI.mainwin.ui.hide()
+        SI.loginwin.ui.show()
+        
+        s = requests.Session()
+        url = 'https://192.168.1.105/api/sign'
+        res = s.post(url, json={
+            "action": "signin",
+            "username": "xxxx",
+            "password": "yyyy"
+        })
+        resObj = res.json()
+        if resObj['ret'] != 0:
+            QMessageBox.warning(self.ui,
+                                '登录失败',
+                                resObj['msg'])
+            return
+
 
 app = QApplication([])
 SI.loginwin = Win_Login()
