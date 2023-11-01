@@ -4,4 +4,7 @@
     <orderEntry type="jdk" jdkName="Python 3.10 (PyCharmLearningProject)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="6ae71b05-f57e-4ab9-b37b-55296e941c22" />
+  </component>
 </module>
