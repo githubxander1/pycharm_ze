@@ -1,6 +1,7 @@
 import os
 import urllib
 
+import requests
 import sys
 
 import time
@@ -9,6 +10,7 @@ from PyQt5 import uic, QtGui
 from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QApplication, QFileDialog, QMessageBox, QTableWidgetItem
 from PyQt5.uic.properties import QtCore
+from bs4 import BeautifulSoup
 from pyqt5_plugins.examplebutton import QtWidgets
 
 
@@ -16,16 +18,11 @@ class  RCQ:
     def  __init__(self):
         self.ui=uic.loadUi('读者书库.ui')
         self.lineEdit=self.ui.edt_savePath
-        self.lineEdit_2=self.ui.edt_qishu
-        # # 获取当前日期并设置到QLineEdit中
-        # current_date = QDate.currentDate()
-        # year = current_date.year()
-        # month = current_date.month()
-        # self.ui.edt_qishu.setText(f"{year}-{month}")
+        # self.lineEdit_2=self.ui.edt_qishu
 
         # 获取当前年份和月份
-        strDate = (str)(time.localtime().tm_year) + "-"+(str)(time.localtime().tm_mon)
-        self.ui.edt_qishu.setText(strDate)  # 设置默认期数
+        # strDate = (str)(time.localtime().tm_year) + "-"+(str)(time.localtime().tm_mon)
+        # self.ui.edt_qishu.setText(strDate)  # 设置默认期数
 
         self.ui.edt_savePath.setText(os.getcwd())#设置当前程序路径
 
@@ -34,6 +31,7 @@ class  RCQ:
         self.ui.btn_confirm.clicked.connect(self.getData)#绑定确定按钮
         self.ui.listWidget.itemClicked.connect(self.on_listWidget_itemClicked)#绑定列表单击方法
         self.ui.tableWidget.itemClicked.connect(self.on_tableWidget_cellClicked)#绑定表格单击方法
+
     def msg(self):
         try:
             self.dir_path=QFileDialog.getExistingDirectory(self.ui,"选择保存路径",os.getcwd())
@@ -66,9 +64,22 @@ class  RCQ:
 
     # 从网页提取数据
     def urlTosoup(self,url):
-        response=urllib.request.urlopen(url)
-        html=response.read()#读取网页内容
-        soup=BeautifulSoup(html,'html.parser')
+        # url = "https://weread.qq.com/"
+        # 发起GET请求获取页面内容
+        response = requests.get(url)
+        # 使用BeautifulSoup解析页面内容
+        soup = BeautifulSoup(response.text, 'html.parser')
+        # 在页面中找到所有书籍的信息
+        books = soup.find_all('div', class_='ranking_block_book')
+        for book in books:
+            title = book.find('div', class_='ranking_block_book_title_text').text.strip()
+            author = book.find('a', class_='ranking_block_book_author').text.strip()
+            print('书名：', title)
+            print('作者：', author)
+
+        # response=urllib.request.urlopen(url)
+        # html=response.read()#读取网页内容
+        # soup=BeautifulSoup(html,'html.parser')
         return soup
     # 获取所有文件
     def getFiles(self):
@@ -78,9 +89,9 @@ class  RCQ:
     def bindTable(self):
         for i in range(0,len(self.list)):
             self.ui.tableWidget.insertRow(i)
-            #设置第一列的值为期数
+            #设置第一列的值为书名
             self.ui.tableWidget.setItem(i,0,QTableWidgetItem(self.lineEdit_2.text()))
-            #设置第二列的值为文件名
+            #设置第二列的值为作者
             self.ui.tableWidget.setItem(i,1,QTableWidgetItem(self.list[i]))
 
     # 将文件显示在List列表中

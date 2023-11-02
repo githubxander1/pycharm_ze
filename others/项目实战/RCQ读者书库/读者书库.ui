@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>506</width>
-    <height>549</height>
+    <height>543</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,27 +40,58 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>请选择抓取期数：</string>
+          <string>请选择分类：</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="edt_qishu">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string/>
-         </property>
+        <widget class="QComboBox" name="comboBox">
+         <item>
+          <property name="text">
+           <string>全部</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>软件学习</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>编程设计</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>计算机综合</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>人工智能</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>数据库</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>图像视频</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>理论知识</string>
+          </property>
+         </item>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>（期数范围为01--24）</string>
+          <string>(默认选中全部)</string>
          </property>
         </widget>
        </item>
@@ -134,7 +165,7 @@
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>按期数显示</string>
+     <string>按书名显示</string>
     </attribute>
     <widget class="QTableWidget" name="tableWidget">
      <property name="geometry">
@@ -153,12 +184,12 @@
      </property>
      <column>
       <property name="text">
-       <string>期数</string>
+       <string>书名</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>名称</string>
+       <string>作者</string>
       </property>
      </column>
     </widget>
