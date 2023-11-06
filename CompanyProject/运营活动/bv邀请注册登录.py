@@ -13,7 +13,7 @@ driver.get("https://bvwebtest.tostar.top/cn")
 driver.maximize_window()
 
 driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[1]/div[2]/div[3]').click()
-driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[1]/form/div[1]/div/div/input').send_keys('3@qq.com')
+driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[1]/form/div[1]/div/div/input').send_keys('2@qq.com')
 driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[1]/form/div[2]/div/div/input').send_keys('a1234567')
 driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[1]/form/div[4]/div/button/span').click()
 sleep(2)
@@ -43,7 +43,7 @@ driver.switch_to.window(driver.window_handles[-1])
 
 # 在新标签页中打开链接
 # driver.get(link.text)
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[1]/input').send_keys('1@qq.com')
+driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[1]/input').send_keys('8@qq.com')
 driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[2]/input').send_keys('a1234567')
 driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/button/span').click()
 driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/input').send_keys(1234)
