@@ -20,6 +20,7 @@ def login_email():
         # login_email('ct2@linshiyou.com','a1234567')
     else:
         # TODO: Add implementation
+        # 点击‘我的’
         d.xpath('//*[@resource-id="com.app.ct4:id/navigation_mine"]/android.widget.FrameLayout[1]').click()
         # pass
 # login_email('ct2@linshiyou.com','a1234567')
@@ -27,3 +28,6 @@ def login_email():
 def close_app():
     sleep(3)
     d.app_stop('com.app.ct4')
+
+if __name__ == '__main__':
+    login_email()
