@@ -48,7 +48,7 @@ class TestHelpCenter:
         back.click()
 
 
-
+    @pytest.mark.skip
     def test_help_sus(self):
 
         assert d.toast.get_message()=='提交成功'

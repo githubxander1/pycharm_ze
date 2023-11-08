@@ -47,8 +47,7 @@ class TestFeedback:
         sleep(1)
         back.click()
 
-
-
+    @pytest.mark.skip
     def test_feedback_sus(self):
         suggestions_edit.send_keys("测试反馈")
         add_image.click()

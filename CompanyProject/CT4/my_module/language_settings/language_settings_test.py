@@ -52,6 +52,7 @@ class TestLanguage:
         taiwan.click()
         save.click()
         assert language.get_test()=='語言'
+
     def test_unmodified(self):
         taiwan.click()
         save.click()
