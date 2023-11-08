@@ -43,18 +43,6 @@ class TestLanguage:
         sleep(1)
         back.click()
 
-    def test_dark(self):
-        dark.click()
-    def test_light(self):
-        light.click()
-    def test_system(self):
-        system.click()
-    def test_greenred(self):
-        greenred.click()
-    def test_redgreen(self):
-        redgreen.click()
-    def test_customize(self):
-        customize.click()
 
 
 

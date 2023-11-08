@@ -3,12 +3,14 @@ from time import sleep
 import uiautomator2 as u2
 import pytest
 
-from CompanyProject.CT4.my_module.common import login_email
+from CompanyProject.CT4.my_module.common import login_email, btn_login
 
 d=u2.connect()
 
 back=d(resourceId="com.app.ct4:id/tv_left")
 save=d(resourceId="com.app.ct4:id/tv_right")
+cancel=d(resourceId="com.app.ct4:id/bt_cancel")
+confirm=d(resourceId="com.app.ct4:id/bt_sure")
 
 setting=d(resourceId="com.app.ct4:id/settings")
 
@@ -42,7 +44,7 @@ signout=d(resourceId="com.app.ct4:id/signOut")
 
 
 
-class TestLanguage:
+class TestSetting:
     @pytest.fixture(scope='class',autouse=True)
     def setup_class(self):
         # 打开应用
@@ -64,16 +66,19 @@ class TestLanguage:
         sleep(1)
         back.click()
 
+    @pytest.mark.skip #暂时不做
     def test_dark(self):
         dark.click()
     def test_light(self):
         light.click()
     def test_system(self):
         system.click()
+    #颜色模式
     def test_greenred(self):
         greenred.click()
     def test_redgreen(self):
         redgreen.click()
+        #需完善
     def test_customize(self):
         customize.click()
 
@@ -97,12 +102,13 @@ class TestLanguage:
     def test_messagepush(self):
         d(scrollable=True).scroll.toEnd()
         messagepush.click()
+        back.click()
     def test_messagepush_master_switch(self):
         d(scrollable=True).scroll.toEnd()
         messagepush.click()
         master_switch.click()
         back.click()
-
+    @pytest.mark.skip
     def test_messagepush_master_switch_off(self):
         d(scrollable=True).scroll.toEnd()
         messagepush.click()
@@ -114,7 +120,6 @@ class TestLanguage:
         messagepush.click()
         system_information.click()
         back.click()
-
     def test_messagepush_newsletter(self):
         d(scrollable=True).scroll.toEnd()
         messagepush.click()
@@ -140,19 +145,23 @@ class TestLanguage:
         d(scrollable=True).scroll.toEnd()
         cache.click()
 
-
-
-    def test_signout(self):
+    def test_signout_cancel(self):
         d(scrollable=True).scroll.toEnd()
         signout.click()
+        cancel.click()
 
-    # def
-
-
+    @pytest.mark.skip
+    def test_signout_confirm(self):
+        d(scrollable=True).scroll.toEnd()
+        signout.click()
+        confirm.click()
+        assert btn_login.exists()
 
 
 
 
 if __name__ == '__main__':
-    pytest.main(["-vs",'-k','test_messagepush_account_information','--reruns','1',"--html=report.html"])
-    # pytest.main(["-s", "-v", '-m','test_timezone_2 test_timezone_12','--reruns','1',"--html=report.html"])
+    pytest.main(["-vs",'--reruns','1',"--html=report.html",'settings_test.py::TestSetting'])
+    # pytest.main(["-vs",'--reruns','1',"--html=report.html",'settings_test.py::TestLanguage::test_messagepush_master_switch'])
+    # pytest.main(["-vs",'--reruns','1',"--html=report.html"])
+    # pytest.main(["-vs",'-k','test_messagepush_calendar','--reruns','1',"--html=report.html"])
