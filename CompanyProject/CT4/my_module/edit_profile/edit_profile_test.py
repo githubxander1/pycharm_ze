@@ -3,12 +3,11 @@ import random,string
 from time import sleep
 
 import uiautomator2 as u2
-from CompanyProject.CT4.my_module.common import  login_email,close_app
+from CompanyProject.CT4.my_module.common import login_email, close_app, d
 import pytest
 import logging
 
 # d = uiautomator2.connect()
-d = u2.connect_adb_wifi('192.168.5.220:5555')
 
 avatar=d(resourceId="com.app.ct4:id/avatar")
 back=d(resourceId="com.app.ct4:id/tv_left")

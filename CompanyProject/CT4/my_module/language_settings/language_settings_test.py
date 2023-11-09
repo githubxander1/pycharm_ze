@@ -3,9 +3,7 @@ from time import sleep
 import uiautomator2 as u2
 import pytest
 
-from CompanyProject.CT4.my_module.common import login_email
-
-d=u2.connect()
+from CompanyProject.CT4.my_module.common import login_email, d
 
 back=d(resourceId="com.app.ct4:id/tv_left")
 save=d(resourceId="com.app.ct4:id/tv_right")
