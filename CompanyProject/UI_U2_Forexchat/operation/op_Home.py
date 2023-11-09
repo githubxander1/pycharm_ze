@@ -1,15 +1,22 @@
 #
 import time
 
-from CompanyProject.UI_U2_Forexchat.base.basePage import Base1,d
+# from CompanyProject.UI_U2_Forexchat.base.basePage import Base1,d
+from CompanyProject.UI_U2_Forexchat.base.basePage import d
 from CompanyProject.UI_U2_Forexchat.base.basePage1 import BasePage
 
-class Home(Base1):
+class Home():
+    contact=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
     edittext=d.xpath('//android.widget.EditText')
-    gloableSearch=d.xpath('//android.widget.ScrollView/android.widget.ImageView[1]')
-    conversation1=d.xpath('//android.widget.ScrollView/android.view.View[2]')
+    # gloableSearch=d.xpath('//android.widget.ScrollView/android.widget.ImageView[1]')
+    gloableSearch=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    # conversation1=d.xpath('//android.widget.ScrollView/android.view.View[2]')
+    conversation1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]')
     # conversation2=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]')
     cancel=d(description="取消")
+
+    def click_contact(self):
+        self.contact.click()
 
 #     # 点击进入会话聊天窗口
     def click_conversation(self):
@@ -37,9 +44,14 @@ class Home(Base1):
 if __name__ == '__main__':
     # Home().launch_app()
     # time.sleep(6)
-    # Home().click_conversation()
-    Home().search(1)
+    d.app_start('com.bv.forexchat')
+    home=Home()
+    home.click_contact()
 
-    time.sleep(3)
-    Home().closeApp()
+
+    # Home().click_conversation()
+    # Home().search(1)
+
+    # time.sleep(3)
+    # Home().closeApp()
 
