@@ -1,32 +1,25 @@
-import time
-
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+import pyautogui
 
-# 创建Chrome浏览器实例
-from selenium.webdriver.common.by import By
-
-options = Options()
-options.add_argument("--headless")  # 无头模式，不显示浏览器界面
-options.add_argument("--disable-gpu")  # 禁用GPU加速
-# driver = webdriver.Chrome(options=options)
+# 创建Chrome浏览器的WebDriver对象
 driver = webdriver.Chrome()
-# driver = webdriver.Edge(options=options)
+# driver = webdriver.Edge()
 
-# 打开页面
-driver.get("https://bvwebtest.tostar.top/")
-time.sleep(4)
+# 打开开发者工具
+pyautogui.hotkey('f12')
+
+# 等待开发者工具打开
+pyautogui.sleep(2)
+
 # 切换到手机模式
-driver.set_window_size(375, 812)  # 设置窗口大小，模拟手机屏幕尺寸
+pyautogui.hotkey('ctrl', 'shift', 'm')
 
-# 在H5页面执行操作
-# 例如，点击页面上的元素
-element = driver.find_element(By.XPATH,"//button[contains(text(), 'Click Me')]")
-element.click()
+# 打开网页
+driver.get('https://bvwebtest.tostar.top/')
 
-# 获取页面内容
-page_source = driver.page_source
-print(page_source)
-#
-# # 关闭浏览器
+# 获取当前页面的URL
+url = driver.current_url
+print(url)
+
+# 关闭浏览器
 # driver.quit()
