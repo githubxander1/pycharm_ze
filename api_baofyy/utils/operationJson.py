@@ -16,6 +16,6 @@ def readJson():
 # print(readJson())
 
 def readYaml():
-        with open(file=os.path.join(base_dir(),'config','url.yaml'),encoding="utf-8")as f:
+        with open(file=os.path.join(base_dir(),'config','url.sina.yaml'),encoding="utf-8")as f:
             return yaml.safe_load(f)
 # print(readYaml())

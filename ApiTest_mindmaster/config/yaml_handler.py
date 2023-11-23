@@ -1,6 +1,6 @@
 # import os
 #
-# import yaml
+# import sina.yaml
 #
 #
 # class YamlHandler:
@@ -16,15 +16,15 @@
 #     def read_yaml(self, encoding='utf-8'):
 #         """读取yaml数据"""
 #         with open(self.file, encoding=encoding) as f:
-#             return yaml.load(f.read(), Loader=yaml.FullLoader)
+#             return sina.yaml.load(f.read(), Loader=sina.yaml.FullLoader)
 #
 #     def write_yaml(self, data, encoding='utf-8'):
 #         """向yaml文件写入数据"""
 #         with open(self.file, encoding=encoding, mode='w') as f:
-#             return yaml.dump(data, stream=f, allow_unicode=True)
+#             return sina.yaml.dump(data, stream=f, allow_unicode=True)
 #
 #
-# yaml_data = YamlHandler(r'C:\Users\Administrator\PycharmProjects\pythonProject\test_mindmaster\config\config.yaml').read_yaml()
+# yaml_data = YamlHandler(r'C:\Users\Administrator\PycharmProjects\pythonProject\test_mindmaster\config\config.sina.yaml').read_yaml()
 # # print(yaml_data)
 import yaml
 class YamlHandler:

@@ -1,0 +1,10 @@
+test_cases:
+  - name: 测试用例1
+    value: 输入正确的值
+    expected: 返回正确的结果
+  - name: 测试用例2
+    value: 输入错误的值
+    expected: 返回错误的结果
+  - name: 测试用例3
+    value: 输入空值
+    expected: 返回错误的结果

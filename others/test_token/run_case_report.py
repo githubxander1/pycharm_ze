@@ -32,9 +32,9 @@ def run_case_report():
 if __name__ == '__main__':
     # 调用登录获取token
     token = login("host", "登录的账号", "密码")
-    # 把token写入 yaml 文件
+    # 把token写入 sina.yaml 文件
     write_yaml(token)
-    # 执行用例的时候会读取 yaml 中的token，case文件下 test_user_info.py 的
+    # 执行用例的时候会读取 sina.yaml 中的token，case文件下 test_user_info.py 的
     run_case_report()
 
 

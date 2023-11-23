@@ -1,0 +1,5 @@
+{
+  "loginNull": {"username": "","password": "","result": "请输入邮箱名"},
+  "emailFormat": {"username": "sadert","password": "asrtr","result": "您输入的邮箱名格式不正确"},
+  "loginError": {"username": "sdrtdt@sina.com","password": "aserty","result": "登录名或密码错误"}
+}

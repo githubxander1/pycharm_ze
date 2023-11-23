@@ -1,0 +1,4 @@
+username,password,期望结果
+,,请输入邮箱名
+aaa,sdf,邮箱格式不对
+fsasdf@sina.com,fsdafsa,登录名或密码错误

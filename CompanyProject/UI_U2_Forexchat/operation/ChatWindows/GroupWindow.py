@@ -144,6 +144,9 @@ class GroupWindow(Base1):
 
 if __name__ == '__main__':
     msg='xinxi'
-    GroupWindow().sendEmoji()
+    Base1().startApp()
+    time.sleep(3)
+    Home().click_conversation()
+    GroupWindow().click_groupSet()
     time.sleep(5)
-    Home().closeApp()
+    # Home().closeApp()

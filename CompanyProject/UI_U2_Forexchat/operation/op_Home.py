@@ -11,7 +11,8 @@ class Home():
     # gloableSearch=d.xpath('//android.widget.ScrollView/android.widget.ImageView[1]')
     gloableSearch=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
     # conversation1=d.xpath('//android.widget.ScrollView/android.view.View[2]')
-    conversation1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]')
+    # conversation1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]')
+    conversation1=d.xpath('//android.widget.ScrollView/android.view.View[2]')
     # conversation2=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]')
     cancel=d(description="取消")
 
@@ -46,7 +47,7 @@ if __name__ == '__main__':
     # time.sleep(6)
     d.app_start('com.bv.forexchat')
     home=Home()
-    home.click_contact()
+    home.click_conversation()
 
 
     # Home().click_conversation()

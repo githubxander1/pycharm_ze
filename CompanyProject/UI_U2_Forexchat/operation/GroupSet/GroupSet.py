@@ -42,6 +42,7 @@ class GroupSet(Base1):
 
     # 修改群介绍
     groupintroduction = d.xpath('//*[contains(@content-desc,"群介绍")]')
+    groupDescription=d(description="群介绍")
     # nameinput = d(className='android.widget.EditText')
     # complete = d(description="完成")
 
@@ -229,11 +230,13 @@ class GroupSet(Base1):
 
 
     # 编辑群介绍
-    def editgroupintroduction(self,text):
+    def editgroupDescription(self,text):
         # 点击群介绍
         time.sleep(2)
         # self.click_mygroupintroduction()
-        self.d.click(0.436, 0.809)
+        self.d.click(0.148, 0.749)
+        # self.groupDescription.click()
+        # self.groupDescription.click()
         # 输入群名称
         self.edit_mygroupnickname(text)
         # 点击完成
@@ -352,11 +355,15 @@ class GroupSet(Base1):
         d(description="管理群").click()
 
 if __name__ == '__main__':
+    Base1().startApp()
+    Home().click_conversation()
+    GroupWindow().click_groupSet()
+    time.sleep(2)
     # 群二维码
-    GroupSet().GroupQRcodesave()
+    # GroupSet().GroupQRcodesave()
     # GroupSet().GroupQRcodeshare()
     # 群介绍
-    # GroupSet().editgroupintroduction('群介绍1')
+    GroupSet().editgroupDescription('群介绍1')
     # 设置置顶
     # GroupSet().settop()
     # 消息免打扰

@@ -1,4 +1,4 @@
-#data_yaml.yaml
+#data_yaml.sina.yaml
 #使用-分割用例，则yaml读取到的数据类型为列表
 -
   model: 登录模块

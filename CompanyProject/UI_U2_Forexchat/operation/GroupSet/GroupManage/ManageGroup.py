@@ -1,9 +1,9 @@
-import pytesseract as pytesseract
+# import pytesseract as pytesseract
 from PIL import Image
-import pytesseract
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'  # 替换成你的Tesseract OCR引擎的路径
+# import pytesseract
+# pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'  # 替换成你的Tesseract OCR引擎的路径
 
-import cv2
+# import cv2
 import time
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
@@ -59,37 +59,37 @@ class ManageGroup(Base1):
         self.click_confirm()
         self.click_back()
 
-    def capture_toast_text(self):
-        # 点击按钮，触发toast提示
-        # d(text=button_text).click()
-        # text = pytesseract.image_to_string(img, lang='eng', config=tessdata_dir_config)
-
-        # 等待toast提示出现
-        time.sleep(1)  # 等待toast提示出现的时间
-        # d.implicit_wait(10)
-
-        # 获取toast提示中的文案
-        # 截图
-        screenshot_path = "./screenshot1.png"  # 截图保存的路径
-        d.screenshot(screenshot_path)  # 截取当前屏幕并保存为图片
-        # # 使用OCR识别toast提示中的文案
-        # image = Image.open(screenshot_path)  # 打开截图图片
-        # text = pytesseract.image_to_string(image)  # 使用OCR识别图片中的文案
-
-        # 使用OpenCV读取截图
-        img = cv2.imread(screenshot_path)
-        # 使用OpenCV识别图片中的文字
-        # 灰度处理
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        # 二值化
-        # 使用Tesseract OCR进行文字识别
-        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # 替换为你的tesseract安装路径
-        tessdata_dir_config = '--tessdata-dir "C:\\Program Files\\Tesseract-OCR\\tessdata"'  # 替换为你的tessdata目录所在路径
-        text = pytesseract.image_to_string(img,lang='chi_sim', config=tessdata_dir_config)
-        # 输出识别结果
-        print("识别结果：", text)
-        # 返回识别结果
-        return text
+    # def capture_toast_text(self):
+    #     # 点击按钮，触发toast提示
+    #     # d(text=button_text).click()
+    #     # text = pytesseract.image_to_string(img, lang='eng', config=tessdata_dir_config)
+    #
+    #     # 等待toast提示出现
+    #     time.sleep(1)  # 等待toast提示出现的时间
+    #     # d.implicit_wait(10)
+    #
+    #     # 获取toast提示中的文案
+    #     # 截图
+    #     screenshot_path = "./screenshot1.png"  # 截图保存的路径
+    #     d.screenshot(screenshot_path)  # 截取当前屏幕并保存为图片
+    #     # # 使用OCR识别toast提示中的文案
+    #     # image = Image.open(screenshot_path)  # 打开截图图片
+    #     # text = pytesseract.image_to_string(image)  # 使用OCR识别图片中的文案
+    #
+    #     # 使用OpenCV读取截图
+    #     img = cv2.imread(screenshot_path)
+    #     # 使用OpenCV识别图片中的文字
+    #     # 灰度处理
+    #     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    #     # 二值化
+    #     # 使用Tesseract OCR进行文字识别
+    #     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # 替换为你的tesseract安装路径
+    #     tessdata_dir_config = '--tessdata-dir "C:\\Program Files\\Tesseract-OCR\\tessdata"'  # 替换为你的tessdata目录所在路径
+    #     text = pytesseract.image_to_string(img,lang='chi_sim', config=tessdata_dir_config)
+    #     # 输出识别结果
+    #     print("识别结果：", text)
+    #     # 返回识别结果
+    #     return text
 
     def delAdmin(self):
         self.click_adminset()

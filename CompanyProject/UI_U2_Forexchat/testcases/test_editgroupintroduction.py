@@ -2,8 +2,12 @@ import unittest
 import time
 
 import logging
+
+import yaml
+
+from CompanyProject.UI_U2_Forexchat.data.load_testdata import load_data
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
-from CompanyProject.UI_U2_Forexchat.base.basePage import Base1
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupSet import GroupSet
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
@@ -12,8 +16,7 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-
-class Test_groupDescription(unittest.TestCase):
+class Test_groupNickName(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 在测试类中，setUpClass() 方法会在所有测试用例执行前自动调用一次
@@ -35,34 +38,56 @@ class Test_groupDescription(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_nickname_set_sus(self):
-        text = '群昵称-第一次'
-        GroupSet().nickname_set(text)
-        logging.info("正常用例")
+    def test_nickname_set_all(self):
+        for groupNickName in load_data()['groupNickName']:# 加载测试用例数据并迭代每个测试用例
+            with self.subTest():
+                GroupSet().nickname_set(groupNickName['text'])# 执行每个测试用例并传递相应的文本数据作为参数
+                d.screenshot('test_groupNickName.png')  # 保存截图并关闭驱动器
+                # u2.takeScreenshot('example.png')
 
-    def test_nickname_set_null(self):
-        text = ''
-        GroupSet().nickname_set(text)
-        logging.info("为空")
+    # def test_nickname_set(self, text):
+    #     GroupSet().nickname_set(text)
+    #     print(f"Group nickname set to: {text}")
+    #     logging.info("正常用例")
 
-    def test_nickname_set_900(self):
-        text = '第三方的撒发达飒飒的范德萨范德萨发打发的撒丰东股份地方撒打发问题糊涂范德萨发撒反倒是给对方和在v发放热污染费官方的手工费第三个放大是官方第三位而确认为托管人和官方依然头疼了公开课MV把对方VB小城镇VS大范围而我委屈日期为提高范德萨发的帮助下把在v在沙发上风格割发代首嘎范德萨范德萨粉我亲爱额未发生场个梵蒂冈反倒是广东省干啥放大梵蒂冈讽德诵功放大士大夫根深蒂固森岛帆高离开家票发的时刻割发代首刮痧师傅挖人转发第三个防火规范从VG发送给社团热工时费浦东平顶山牌佛是可怕的风格第三方的撒发达飒飒的范德萨范德萨发打发的撒丰东股份地方撒打发问题糊涂范德萨发撒反倒是给对方和在v发放热污染费官方的手工费第三个放大是官方第三位而确认为托管人和官方依然头疼了公开课MV把对方VB小城镇VS大范围而我委屈日期为提高范德萨发的帮助下把在v在沙发上风格割发代首嘎范德萨范德萨粉我亲爱额未发生场个梵蒂冈反倒是广东省干啥放大梵蒂冈讽德诵功放大士大夫根深蒂固森岛帆高离开家票发的时刻割发代首刮痧师傅挖人转发第三个防火规范从VG发送给社团热工时费浦东平顶山牌佛是可怕的风格第三方的撒发达飒飒的范德萨范德萨发打发的撒丰东股份地方撒打发问题糊涂范德萨发撒反倒是给对方和在v发放热污染费官方的手工费第三个放大是官方第三位而确认为托管人和官方依然头疼了公开课MV把对方VB小城镇VS大范围而我委屈日期为提高范德萨发的帮助下把在v在沙发上风格割发代首嘎范德萨范德萨粉我亲爱额未发生场个梵蒂冈反倒是广东省干啥放大梵蒂冈讽德诵功放大士大夫根深蒂固森岛帆高离开家票发的时刻割发代首刮痧师傅挖人转发第三个防火规范从VG发送给社团热工时费浦东平顶山牌佛是可怕的风格第三方的撒发达飒飒的范德萨范德萨发打发的撒丰东股份地方撒打发问题糊涂范德萨发撒反倒是给对方和在v发放热污染费官方的手工费第三个放大是官方第三位而确认为托管人和官方依然头疼了公开课MV把对方VB小城镇VS大范围而我委屈日期为提高范德萨发的帮助下把在v在沙发上风格割发代首嘎范德萨范德萨粉我亲爱额未发生场个梵蒂冈反倒是广东省干啥放大梵蒂冈讽德诵功放大士大夫根深蒂固森岛帆高离开家票发的时刻割发代首刮痧师傅挖人转发第九百'
-        GroupSet().nickname_set(text)
-        logging.info("900字符")
+    # group_nickname=d('contains(@content-desc,"我的群昵称")')
 
-    def test_nickname_set_abnormal(self):
-        text = '群昵称-(3)异常值、特殊字符：输入空白(NULL)、空格或"~!@#$%^&*()_+{}|[]:"<>?;’,./?;:’-=等可能导致系统错误的字符、禁止直接输入特殊字符时，' \
-               '尝试使用粘贴拷贝查看是否能正常提交、word中的特殊功能，通过剪贴板拷贝到输入框，分页符，分节符类似公式的上下' \
-               '等、数值的特殊符号如∑，㏒，㏑，∏，+，-等、正则表达式： n位的数字：^\d{n}$ ，\n,\r梵蒂冈'
-        GroupSet().nickname_set(text)
-        logging.info("异常值")
+    # @unittest.skip('跳过')  # 你可以在这里添加其他跳过标记，例如 @unittest.skip('system_test') 等。
+        # text = '群昵称-第一次'
+        # GroupSet().nickname_set(text)
+        # print(self.group_nickname.get_text())
+        # assert d.toast.get_message()=='编辑成功'
+        # print(d.toast.get_message())
 
-    def test_nickname_set_newline(self):
-        text = '群昵称-' \
-               '' \
-               '换行'
-        GroupSet().nickname_set(text)
-        logging.info("换行")
+        # logging.info("正常用例")
+
+    # @unittest.skip('跳过')
+    # def test_nickname_set_null(self):
+    #     text = ''
+    #     GroupSet().nickname_set(text)
+    #     logging.info("为空")
+    #
+    # @unittest.skip('跳过')
+    # def test_nickname_set_900(self):
+    #     text = '九'
+    #     GroupSet().nickname_set(text*900)
+    #     logging.info("900字符")
+    #
+    # @unittest.skip('跳过')
+    # def test_nickname_set_abnormal(self):
+    #     text = '群昵称-(3)异常值、特殊字符：输入空白(NULL)、空格或"~!@#$%^&*()_+{}|[]:"<>?;’,./?;:’-=等可能导致系统错误的字符、禁止直接输入特殊字符时，' \
+    #            '尝试使用粘贴拷贝查看是否能正常提交、word中的特殊功能，通过剪贴板拷贝到输入框，分页符，分节符类似公式的上下' \
+    #            '等、数值的特殊符号如∑，㏒，㏑，∏，+，-等、正则表达式： n位的数字：^\d{n}$ ，\n,\r梵蒂冈'
+    #     GroupSet().nickname_set(text)
+    #     logging.info("异常值")
+    #
+    # @unittest.skip('跳过')
+    # def test_nickname_set_newline(self):
+    #     text = '群昵称-' \
+    #            '' \
+    #            '换行'
+    #     GroupSet().nickname_set(text)
+    #     logging.info("换行")
 
 
 

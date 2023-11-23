@@ -32,10 +32,10 @@ from CompanyProject.fastbull.conversion_data import Synchronous_Data
 from CompanyProject.fastbull.db_handler import DBHandler
 #
 #
-# # f = open(r'D:\1test\PycharmProject\pycharm_ze\CompanyProject\fastbull\config.yaml', encoding='utf-8')
-# f = open('config.yaml', encoding='utf-8')
+# # f = open(r'D:\1test\PycharmProject\pycharm_ze\CompanyProject\fastbull\config.sina.yaml', encoding='utf-8')
+# f = open('config.sina.yaml', encoding='utf-8')
 #         #
-# yaml_data = yaml.load(f, Loader=yaml.FullLoader)  # 读取yaml
+# yaml_data = sina.yaml.load(f, Loader=sina.yaml.FullLoader)  # 读取yaml
 # db = DBHandler(host=yaml_data['database']['host'], port=yaml_data['database']['port'],
 #                user=yaml_data['database']['user'], password=yaml_data['database']['password'],
 #                charset=yaml_data['database']['charset'], database=yaml_data['database']['database'])

@@ -3,6 +3,7 @@ import time
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
+from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupSet import GroupSet
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
 
@@ -20,6 +21,7 @@ class GroupNotice(Base1):
     picture_gif=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]')
 
     publish=d(description="发布")
+    confirm=d(description="确定")
 
     usePop=d.xpath('//android.widget.ScrollView/android.widget.Switch[1]')
     setTop=d.xpath('//android.widget.ScrollView/android.widget.Switch[2]')
@@ -201,17 +203,23 @@ class GroupNotice(Base1):
 
 if __name__ == '__main__':
     # GroupNotice().create_gropNotice_textandpicture('Hello,Notice:图+文-替12112122换')
-    GroupNotice().topNotice()
+    Base1().startApp()
+    time.sleep(3)
+    Home().click_conversation()
+    GroupWindow().click_groupSet()
+    time.sleep(2)
+    GroupSet().click_groupNotice()
+    GroupNotice().create_gropNotice_text_top('dfsgfdsg ')
     # GroupNotice().deleteNotice()
     # 等待Toast消息的出现
-    timeout = 10  # 设置超时时间（秒）
-    start_time = time.time()
-    while time.time() - start_time < timeout:
-        toast_message = d.toast.get_message()
-        if toast_message is not None:
-            break
-        time.sleep(1)
-        print(toast_message)
+    # timeout = 10  # 设置超时时间（秒）
+    # start_time = time.time()
+    # while time.time() - start_time < timeout:
+    #     toast_message = d.toast.get_message()
+    #     if toast_message is not None:
+    #         break
+    #     time.sleep(1)
+    #     print(toast_message)
     # 断言Toast消息是否包含'删除成功'
     # assert '删除成功' in toast_message, "Toast消息不包含'删除成功'"
     # time.sleep(2)

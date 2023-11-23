@@ -17,7 +17,7 @@ from CompanyProject.fastbull.conversion_data import Synchronous_Data
 from CompanyProject.fastbull.db_handler import DBHandler
 
 
-# f = open(r'D:\1test\PycharmProject\pycharm_ze\CompanyProject\fastbull\config.yaml', encoding='utf-8')
+# f = open(r'D:\1test\PycharmProject\pycharm_ze\CompanyProject\fastbull\config.sina.yaml', encoding='utf-8')
 f = open('config.yaml', encoding='utf-8')
         #
 yaml_data = yaml.load(f, Loader=yaml.FullLoader)  # 读取yaml

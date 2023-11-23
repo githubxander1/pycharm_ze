@@ -5,7 +5,7 @@ import unittest, os
 current_path = os.path.dirname(os.path.realpath(__file__))  # 获取当前路径
 # 获取 token 的路径
 token_path = os.path.join(current_path, "commen")
-token_path = os.path.join(token_path, "token.yaml")
+token_path = os.path.join(token_path, "token.sina.yaml")
 
 
 class TestUserInfo(unittest.TestCase):

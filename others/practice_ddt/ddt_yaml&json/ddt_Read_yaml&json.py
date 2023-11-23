@@ -33,7 +33,7 @@ class TestDdt(unittest.TestCase):
     #     print(testdata)
 
     # 加载yaml文件
-    # @file_data('data_yaml.yaml')
+    # @file_data('data_yaml.sina.yaml')
     # def test04(self,model,title,url,method,data,check):
     #     username=data['username']
     #     password=data['password']
@@ -41,7 +41,7 @@ class TestDdt(unittest.TestCase):
     #     print(model,title,url,method,data,check)
     #     print(username,password)
 
-    # @file_data('data_yaml.yaml')
+    # @file_data('data_yaml.sina.yaml')
     # def test03(self, **testd):  # 将提取到的数据存到testd里
     #     model = testd['model']
     #     title = testd['title']
