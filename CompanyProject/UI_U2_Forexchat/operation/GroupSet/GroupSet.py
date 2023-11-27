@@ -356,14 +356,16 @@ class GroupSet(Base1):
 
 if __name__ == '__main__':
     Base1().startApp()
-    Home().click_conversation()
-    GroupWindow().click_groupSet()
-    time.sleep(2)
+    # Home().click_conversation()
+    # GroupWindow().click_groupSet()
+    # time.sleep(2)
     # 群二维码
     # GroupSet().GroupQRcodesave()
     # GroupSet().GroupQRcodeshare()
     # 群介绍
-    GroupSet().editgroupDescription('群介绍1')
+    # GroupSet().editgroupDescription('群介绍1')
+    screenshot_path = "./screenshot1.png"  # 截图保存的路径
+    d.screenshot(screenshot_path)  # 截取当前屏幕并保存为图片
     # 设置置顶
     # GroupSet().settop()
     # 消息免打扰

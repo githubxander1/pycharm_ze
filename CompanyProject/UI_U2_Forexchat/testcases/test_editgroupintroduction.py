@@ -42,8 +42,8 @@ class Test_groupNickName(unittest.TestCase):
         for groupNickName in load_data()['groupNickName']:# 加载测试用例数据并迭代每个测试用例
             with self.subTest():
                 GroupSet().nickname_set(groupNickName['text'])# 执行每个测试用例并传递相应的文本数据作为参数
+                time.sleep(2)
                 d.screenshot('test_groupNickName.png')  # 保存截图并关闭驱动器
-                # u2.takeScreenshot('example.png')
 
     # def test_nickname_set(self, text):
     #     GroupSet().nickname_set(text)

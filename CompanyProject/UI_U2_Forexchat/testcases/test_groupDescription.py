@@ -4,7 +4,7 @@ import time
 import logging
 
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
-from CompanyProject.UI_U2_Forexchat.base.basePage import Base1
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupSet import GroupSet
 from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
@@ -46,6 +46,7 @@ class Test_groupDescription(unittest.TestCase):
         for testdata in load_data()['groupDescription']:
             with self.subTest(testdata['name']):
                 GroupSet().editgroupDescription(testdata['text'])
+                d.screenshot('groupDescription.png')
 
     # def test_editgrouintroduction1_sus(self):
     #     text = '群介绍-第一次'
