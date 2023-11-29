@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from time import sleep
 
 import uiautomator2 as u2
@@ -38,6 +40,11 @@ class Base1:
         self.d.click(0.845, 0.927)
         self.d.click(0.845, 0.927)
         self.identifyCode.set_text('1234')
+
+    def take_screenshot(self,text):
+        now=datetime.now().strftime('%Y%m%d-%H%M%S')
+        filename=f'result_screenshots/group_nickname/{text}_{now}.png'
+        d.screenshot(filename)
 
 
 

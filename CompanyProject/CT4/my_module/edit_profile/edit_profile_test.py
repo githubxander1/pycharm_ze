@@ -1,4 +1,5 @@
 import random,string
+import time
 
 from time import sleep
 
@@ -97,6 +98,7 @@ class  TestProfile:
     def test_nick_name_special(self):
         nickname.send_keys('输入空白(NULL)、空或!@#$%1.0E2^&*()_+{}|[]:"<>?;’,./?;:-=∑，㏒，㏑，∏，+，')
         save.click()
+        time.sleep(3)
         d.screenshot('test_nick_name_special.png')
         # assert d.toast.get_message()=='修改成功'
 

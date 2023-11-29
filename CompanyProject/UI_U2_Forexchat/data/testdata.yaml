@@ -3,11 +3,18 @@ testdata.yaml:
 groupNickName:
   - name: 注入单引号结束语句
     text: （'）
-  - name: empty
-    text: OR 1=1
-  - name: empty
+  - name: 过大的数据
+    text: 1.79e+308，-0.12345
+  - name: SQL注入
     text: UNION SELECT * FROM user_base
-  - name: normal  
+  - name: XSS攻击脚本
+    text: <script>alert(1)</script>
+    expected: 群昵称包含不合规内容
+  - name: 恶意脚本或代码
+    text: <?php @eval($_POST['password']); ?>
+  - name: 敏感词
+    text: 做爱，妓女，婊子，海洛因，摇头丸
+  - name: 正常
     text: 群昵称-第一次  
   - name: empty
     text: ""
