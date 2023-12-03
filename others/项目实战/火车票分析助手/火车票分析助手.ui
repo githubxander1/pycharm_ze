@@ -23,22 +23,28 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>火车票分析助手</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="tab_analysis">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>10</y>
-      <width>1146</width>
-      <height>325</height>
+      <y>0</y>
+      <width>960</width>
+      <height>600</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab{width:320;height:50:}</string>
+    </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_query">
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab{width:320;height:50:}</string>
+     </property>
      <attribute name="title">
       <string>车票查询</string>
      </attribute>
@@ -46,12 +52,14 @@
       <item row="2" column="0">
        <widget class="QWidget" name="widget_query" native="true">
         <property name="styleSheet">
-         <string notr="true">
-</string>
+         <string notr="true">#widget_query{background-color:rgb(212,212,212);}</string>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="2" column="0">
-          <widget class="QWidget" name="wdt_checkBox" native="true">
+          <widget class="QWidget" name="widget_checkBox_2" native="true">
+           <property name="styleSheet">
+            <string notr="true">#widget_checkBox{background-color:rgb(212,212,212);}</string>
+           </property>
            <layout class="QGridLayout" name="gridLayout">
             <item row="1" column="0">
              <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -260,7 +268,10 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="widget_checkBox">
+     <property name="styleSheet">
+      <string notr="true">QWidget	#widget_checkBox{background-color:212,212,212;}</string>
+     </property>
      <attribute name="title">
       <string>卧铺售票分析</string>
      </attribute>
@@ -275,17 +286,12 @@
       </property>
       <column>
        <property name="text">
-        <string>新建列</string>
+        <string>车次</string>
        </property>
       </column>
       <column>
        <property name="text">
         <string>出发站</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>新建列</string>
        </property>
       </column>
       <column>
@@ -300,12 +306,12 @@
       </column>
       <column>
        <property name="text">
-        <string>历时</string>
+        <string>到达时间</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>新建列</string>
+        <string>历时</string>
        </property>
       </column>
       <column>
@@ -315,11 +321,16 @@
       </column>
       <column>
        <property name="text">
+        <string>三天内</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>五天内</string>
        </property>
       </column>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -339,7 +350,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="lineEdit_analysis_from"/>
          </item>
         </layout>
        </item>
@@ -353,12 +364,12 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="lineEdit_analysis_to"/>
          </item>
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pushButton_analysis_query">
          <property name="text">
           <string>查询</string>
          </property>
@@ -418,7 +429,7 @@
        </widget>
       </widget>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -449,7 +460,7 @@
      <x>0</x>
      <y>0</y>
      <width>960</width>
-     <height>23</height>
+     <height>27</height>
     </rect>
    </property>
   </widget>
