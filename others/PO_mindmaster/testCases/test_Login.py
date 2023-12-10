@@ -1,29 +1,25 @@
-import sys
-import time
-import unittest
+import os
 
 import pytest
-import logging
-from selenium.webdriver.common.by import By
+import sys
 
-from others.PO_mindmaster.common.getImage import SaveImage
-from others.PO_mindmaster.common.helper import Helper
-from others.PO_mindmaster.page.loginpage import LoginPage
 from others.PO_mindmaster.basepage.homeBase import HomePage
-# import Helper
+from others.PO_mindmaster.common.helper import help
+from others.PO_mindmaster.page.loginpage import LoginPage
 
 sys.path.append('../basepage')
 sys.path.append('../page')
 sys.path.append('../common')
+sys.path.append('../data')
 
-from selenium import webdriver
 
-username1='2695418206@qq.com'
-password1='mind0103@xl'
+# username1 = '2695418206@qq.com'
+# password1 = 'mind0103@xl'
 
+@pytest.mark.allure_feature('用户登录')
 class TestLogin(HomePage):
     def setUp(self):
-        pass
+        print('运行')
         # self.url='https://mm.edrawsoft.cn/files/api/user/login'
         # self.dr=webdriver.Edge()
         # self.dr.implicitly_wait(20)
@@ -31,16 +27,18 @@ class TestLogin(HomePage):
 
     def tearDown(self):
         # self.dr.quit()
-        pass
+        print('结束')
 
-    def test_login_sus(self):
+    @pytest.mark.allure_story('登录')
+    @pytest.mark.parametrize('logindata', help.readyaml('../data/login.yaml'))
+    def test_login(self, logindata):
         self.loginpage = LoginPage()
         '''登录成功'''
-        Helper().makelog('输入用户名和密码')
-        self.loginpage.openLoginPage(username1, password1)
-        time.sleep(2)
-        Helper.makelog('成功的截图')
-        SaveImage(self.dr,'login_success.png')
+        # help.makelog('输入用户名和密码')
+        self.loginpage.openLoginPage(logindata['username'], logindata['password'])
+        # time.sleep(2)
+        # Helper.makelog('成功的截图')
+        # SaveImage(self.dr, 'login_success.png')
         # assert res.json()
 
     # def test_login_usernull(self):
@@ -54,4 +52,6 @@ class TestLogin(HomePage):
 
 
 if __name__ == '__main__':
-    pytest.main()
+    pytest.main(['-vs', '--alluredir=allure-results', 'test_Login.py'])
+    os.system('allure generate ./allure-results -o ./reports --clean')
+    # os.system('allure generate ../allure-test_results -o ./reports --clean && allure')
