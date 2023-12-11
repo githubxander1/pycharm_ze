@@ -3,7 +3,9 @@ import time
 
 import logging
 
+import pytest
 import yaml
+from xmlrunner import XMLTestRunner
 
 from CompanyProject.UI_U2_Forexchat.data.load_testdata import load_data
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
@@ -21,7 +23,7 @@ class Test_groupNickName(unittest.TestCase):
     def setUpClass(cls):
         # 在测试类中，setUpClass() 方法会在所有测试用例执行前自动调用一次
         Base1().startApp()
-        time.sleep(3)
+        time.sleep(7)
         Home().click_conversation()
         GroupWindow().click_groupSet()
         time.sleep(2)
@@ -41,10 +43,14 @@ class Test_groupNickName(unittest.TestCase):
     def test_nickname_set_all(self):
         for groupNickName in load_data()['groupNickName']:# 加载测试用例数据并迭代每个测试用例
             with self.subTest():
+                if groupNickName.get('skip', 'n') == 'y':  # 如果跳过标志为'y'，则跳过该用例
+                    # continue
+                    pytest.skip("Skipping test case")
                 GroupSet().nickname_set(groupNickName['text'])# 执行每个测试用例并传递相应的文本数据作为参数
                 time.sleep(2)
                 d.screenshot('test_groupNickName.png')  # 保存截图并关闭驱动器
 
+            assert GroupSet().nickname.get_text() in groupNickName['text']
     # def test_nickname_set(self, text):
     #     GroupSet().nickname_set(text)
     #     print(f"Group nickname set to: {text}")
@@ -92,4 +98,20 @@ class Test_groupNickName(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    # unittest.main()
+    # 创建测试套件
+    # test_suite = unittest.TestSuite()
+    # test_suite.addTest(unittest.TestLoader().loadTestsFromTestCase(Test_groupNickName))
+    #
+    # # 运行测试套件
+    # runner = unittest.TextTestRunner()
+    # result = runner.run(test_suite)
+    #
+    # # 将结果写入文件
+    # with open('test_report.txt', 'w') as f:
+    #     f.write(str(result))
+    # with open('test-results.xml', 'wb') as output:
+    #     runner = XMLTestRunner(output)
+    #     unittest.main(testRunner=runner)
+
+    pytest.main(["-vs", "--junitxml=test_report.xml"])

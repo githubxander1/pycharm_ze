@@ -38,6 +38,7 @@ class GroupSet(Base1):
     # 群二维码
     QRcodesave=d(description="保存")
     QRcodeshare=d(description="分享")
+    groupManage=d(description="管理群")
 
 
     # 修改群介绍

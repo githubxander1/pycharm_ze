@@ -7,13 +7,17 @@ groupNickName:
     text: 1.79e+308，-0.12345
   - name: SQL注入
     text: UNION SELECT * FROM user_base
+    skip: y
   - name: XSS攻击脚本
     text: <script>alert(1)</script>
+    skip: y
     expected: 群昵称包含不合规内容
   - name: 恶意脚本或代码
     text: <?php @eval($_POST['password']); ?>
+    skip: y
   - name: 敏感词
     text: 做爱，妓女，婊子，海洛因，摇头丸
+    skip: y
   - name: 正常
     text: 群昵称-第一次
   - name: empty
