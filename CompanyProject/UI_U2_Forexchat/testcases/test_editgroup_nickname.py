@@ -22,11 +22,7 @@ class Test_groupNickName(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 在测试类中，setUpClass() 方法会在所有测试用例执行前自动调用一次
-        Base1().startApp()
-        time.sleep(7)
-        Home().click_conversation()
-        GroupWindow().click_groupSet()
-        time.sleep(2)
+        GroupSet().enter_groupSet()
         GroupSet().slide_down()
 
     @classmethod

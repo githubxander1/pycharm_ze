@@ -203,6 +203,13 @@ class GroupSet(Base1):
         # 模拟鼠标下拉操作
         d.swipe(start_x, start_y, end_x, end_y, duration=0.5)
 
+    def enter_groupSet(self):
+        Base1().startApp()
+        time.sleep(7)
+        Home().click_conversation()
+        GroupWindow().click_groupSet()
+        time.sleep(2)
+
     # 保存群二维码
     def GroupQRcodesave(self):
         # 进入会话

@@ -1,4 +1,5 @@
 import os
+from pprint import pprint
 
 import yaml
 
@@ -10,7 +11,7 @@ def load_data():
     file_path=os.path.join(curent_directory,'testdata.yaml')#连接文件名和当前目录，得到完整文件路径
     with open(file_path, 'r', encoding='utf-8') as file:
         data = yaml.safe_load(file)
-        # print(data)
     return data
 
-# load_data()
+# data=load_data()
+# pprint(data['groupDescription'])
