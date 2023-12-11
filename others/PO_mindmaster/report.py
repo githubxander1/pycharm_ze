@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 import os
 
 import pytest
 
 if __name__ == '__main__':
     pytest.main(['-vs', '--alluredir=../allure-results', 'testCases/test_Login.py'])
-    os.system('allure generate ../allure-results -o ./reports --clean')
+    os.system('allure generate ../allure-results -o ./reports --clean open')
     # os.system(['allure', 'generate', '../allure-results', '-o', '../reports', '--clean'], check=True)
     # subprocess.run(['allure', 'generate', '../allure-results', '-o', '../reports', '--clean'], check=True)
 
