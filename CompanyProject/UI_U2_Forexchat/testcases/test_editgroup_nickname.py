@@ -110,4 +110,7 @@ if __name__ == "__main__":
     #     runner = XMLTestRunner(output)
     #     unittest.main(testRunner=runner)
 
-    pytest.main(["-vs", "--junitxml=test_report.xml"])
+    # pytest.main(["-vs", "--junitxml=test_report.xml"])
+    pytest.main(["-vs", '--return 1','--html=report.html'])
+    pytest.main(["-vs", '--return 1','—alluredir report'])
+

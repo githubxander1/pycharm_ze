@@ -5,3 +5,7 @@ git config --global http.sslVerify false
 
 github私人令牌：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
 gitee公钥:a0b0ea03005309a1e03bf1160d1a606b
+
+localhost:8080打不开：
+cmd：services.msc
+启动Jenkins
