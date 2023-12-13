@@ -1,0 +1,6 @@
+2023-12-13 14:15:02,199-logTest-INFO-helper:输入用户名和密码
+2023-12-13 14:15:40,981-logTest-INFO-helper:成功的截图
+2023-12-13 14:24:34,023-logTest-INFO-helper:输入用户名和密码
+2023-12-13 14:25:10,458-logTest-INFO-helper:成功的截图
+2023-12-13 14:26:59,996-logTest-INFO-helper:输入用户名和密码
+2023-12-13 14:27:38,834-logTest-INFO-helper:成功的截图

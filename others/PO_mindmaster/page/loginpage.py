@@ -5,25 +5,37 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from others.PO_mindmaster.basepage.homeBase import HomePage
+from others.PO_mindmaster.basepage.baseBase import BasePage
 
 sys.path.append('../basepage')
 # from homeBase import HomePage
 
 # 分别定义该页面需要用到的元素
-class LoginPage(HomePage):
+class LoginPage(BasePage):
+
     ifr=(By.XPATH, '//*[@id="edraw-authorization--wrapper"]/iframe')
     tabCount_loc=(By.XPATH,'//*[@id="tab-account"]')
     username_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[1]/div/div/div/div[1]/input')
     password_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[2]/div/div/input')
     loginBtn_loc=(By.XPATH,'/html/body/div[1]/div[2]/div/div[2]/div[1]/div[2]/button')
+
+
     # 用户名为空
     userNull_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[1]/div/div[2]')
     passwordNull_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[2]/div/div[2]')
+
+    # account_or_password_error_loc=(By.CSS_SELECTOR,'#pane-account > div > div.el-row.is-justify-space-around.el-row--flex > form > div.el-form-item.is-error.is-required.is-no-asterisk > div > div.el-form-item__error')
+    account_or_password_error_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[2]/div/div[2]')
+
+    # def __init__(self):
+    #     super().__init__()
+        # self.dr.get(self.url)
+
     # 打开网站，切换到登录表单
     def openLoginPage(self,username,password):
-        self.dr=webdriver.Edge()
-        self.dr.get('https://mm.edrawsoft.cn/files')
+        self.dr = webdriver.Edge()
+        self.url = 'https://mm.edrawsoft.cn/files'
+        self.dr.get(self.url)
         sleep(2)
         # 切换到登录表单
         self.iframe = self.dr.find_element(By.XPATH, '//*[@id="edraw-authorization--wrapper"]/iframe')
@@ -54,6 +66,9 @@ class LoginPage(HomePage):
     def click_loginbtn(self):
         self.find_element(*self.loginBtn_loc).click()
 
+    # def click_account_or_password_error(self):
+    #     self.find_element(*self.account_or_password_error_loc).click()
+
     # 获取登录提示信息
     def get_assertText(self):
         return self.find_element(*self.loginBtn_loc).text
@@ -68,3 +83,5 @@ class LoginPage(HomePage):
         self.input_password(password)
         self.click_loginbtn()
 
+# loginpage = LoginPage()
+# loginpage.openLoginPage('2695418206@qq.com', 'your_password')

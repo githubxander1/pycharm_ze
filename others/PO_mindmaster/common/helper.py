@@ -44,12 +44,12 @@ class Helper:
         # 定义日志文件
         logFile = logging.FileHandler(self.dirname('log.txt'), 'a', encoding='utf-8')
         # 设置日志格式
-        fmt = logging.Formatter(fmt='%(asctime)s-%(name)s-%(levername)s-%(module)s:%(message)s')
+        fmt = logging.Formatter(fmt='%(asctime)s-%(name)s-%(levelname)s-%(module)s:%(message)s')
         logFile.setFormatter(fmt)
         logger1 = logging.Logger('logTest', level=logging.DEBUG)  # 定义日志
         logger1.addHandler(logFile)
         logger1.info(log_content)
-        logFile.close()
+        # logFile.close()
 
     def readyaml(self, filename):
         with open(filename, 'r', encoding='utf-8') as f:

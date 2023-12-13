@@ -7,10 +7,11 @@
 #  username: 2695418206@qq.comm
 #  password: mind0103@xl
 #
-#- name: 密码错误
-#  username: 2695418206@qq.com
-#  password: mind0103@
-- name: 密码为空
+- name: 密码错误
   username: 2695418206@qq.com
-  password:
+  password: mind0103@
+  preresult: 账号或密码错误
+#- name: 密码为空
+#  username: 2695418206@qq.com
+#  password:
 

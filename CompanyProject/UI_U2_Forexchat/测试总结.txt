@@ -1,0 +1,10 @@
+
+
+包含：
+disbandgroup = d.xpath('//*[contains(@content-desc,"解散该群")]')
+滑动：
+# 下滑到管理群
+    def slide_down(self):
+        while not d(description="管理群").exists():
+            d(scrollable=True).scroll.forward()
+            time.sleep(1)

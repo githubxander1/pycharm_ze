@@ -5,7 +5,7 @@ import yaml
 
 
 
-def load_data():
+def load_yamldata():
     script_path=os.path.abspath(__file__)#当前脚本绝对路径
     curent_directory=os.path.dirname(script_path)#获取当前目录的路径
     file_path=os.path.join(curent_directory,'testdata.yaml')#连接文件名和当前目录，得到完整文件路径
@@ -13,5 +13,5 @@ def load_data():
         data = yaml.safe_load(file)
     return data
 
-# data=load_data()
+# data=load_yamldata()
 # pprint(data['groupDescription'])
