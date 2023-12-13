@@ -7,7 +7,7 @@ from datetime import datetime
 
 import pytest
 
-from CompanyProject.UI_U2_Forexchat.common.common import take_screenshot
+from CompanyProject.UI_U2_Forexchat.common.common import take_screenshot,login
 from CompanyProject.UI_U2_Forexchat.data.load_testdata import load_yamldata
 from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
@@ -20,12 +20,7 @@ logging.basicConfig(level=logging.INFO,
 
 class Test_group_nickname():
     def setup_class(cls):
-        Base1().startApp()
-        time.sleep(8)
-        Home().click_conversation()
-        GroupWindow().click_groupSet()
-        time.sleep(2)
-        GroupSet().slide_down()
+        login()
 
     def teardown_class(cls):
         Base1().closeApp()

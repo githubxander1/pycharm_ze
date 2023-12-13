@@ -1,8 +1,12 @@
 import inspect
 import os
+import time
 from datetime import datetime
 
-from CompanyProject.UI_U2_Forexchat.base.basePage import d
+from CompanyProject.UI_U2_Forexchat.base.basePage import d, Base1
+from CompanyProject.UI_U2_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
+from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupSet import GroupSet
+from CompanyProject.UI_U2_Forexchat.operation.op_Home import Home
 
 
 def take_screenshot(filename):
@@ -14,3 +18,11 @@ def take_screenshot(filename):
     # name = inspect.stack()[1][3]  # 当前方法名字
     # timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     d.screenshot(filename)
+
+def login():
+    Base1().startApp()
+    time.sleep(8)
+    Home().click_conversation()
+    GroupWindow().click_groupSet()
+    time.sleep(2)
+    GroupSet().slide_down()
