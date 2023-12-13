@@ -1,7 +1,9 @@
+import os.path
 import unittest
 import time
 
 import logging
+from datetime import datetime
 
 import pytest
 
@@ -18,14 +20,12 @@ logging.basicConfig(level=logging.INFO,
 
 class Test_group_nickname():
     def setup_class(cls):
-        # 在测试类中，setUpClass() 方法会在所有测试用例执行前自动调用一次
         Base1().startApp()
-        time.sleep(6)
+        time.sleep(8)
         Home().click_conversation()
         GroupWindow().click_groupSet()
         time.sleep(2)
         GroupSet().slide_down()
-
 
     def teardown_class(cls):
         Base1().closeApp()
@@ -37,21 +37,33 @@ class Test_group_nickname():
     def tearDown(self):
         pass
 
-    @pytest.mark.parametrize('nickname', load_yamldata()['groupNickName'])
-    def test_nickname_set(self,nickname):
-        GroupSet().nickname_set(nickname['text'])
-
+    group_nickname = load_yamldata()['groupNickName']
+    filter_data=[item for item in group_nickname if not item.get('skip','n')=='y']
+    @pytest.mark.parametrize('item', filter_data)
+    # @pytest.mark.skipif()
+    def test_nickname_set(self,item):
+        text=item['text']
+        GroupSet().nickname_set(text)
         d.implicitly_wait(10)
-        if GroupSet.disbandgroup.exists:
-            time.sleep(2)
-            if GroupSet().disbandgroup.exists:
-                take_screenshot()
-                print('截图成功')
+        time.sleep(2)
+        if GroupSet().disbandgroup.exists:
+            file_basename=os.path.basename(__file__)
+            # 去掉后缀
+            file_extension=file_basename[1]
+            basename_without_extension=os.path.splitext(file_basename)[0]
+            # 去掉前面的text_
+            file_without_prefixAndextension=basename_without_extension[5:]
+            if os.path.exists(file_without_prefixAndextension):
+                print('文件夹存在，跳过')
             else:
-                print('未截图')
-
-
-
+                os.makedirs(file_without_prefixAndextension)
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            # filename = f'./result_screenshots/{file_without_prefixAndextension}/{text}_{timestamp}.png'
+            filename = f'./result_screenshots/group_nickname/{text}_{timestamp}.png'
+            d.screenshot(filename)
+            print('截图成功')
+        else:
+            print('未截图')
 
 if __name__ == "__main__":
-    pytest.main()
+    pytest.main(['-vs'])
