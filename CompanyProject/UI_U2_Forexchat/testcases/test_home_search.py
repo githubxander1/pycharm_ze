@@ -34,6 +34,7 @@ class Test_home_search:
     @allure.feature('feature:搜索')
     @allure.title('title:搜索全部')
     def test_home_search_all(self):
+        '''描述：这是搜索全部的测试用例'''
         text='all'
         with allure.step('点击首页搜索框'):
             home_search().search_all(text)
