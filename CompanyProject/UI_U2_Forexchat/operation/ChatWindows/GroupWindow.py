@@ -8,13 +8,14 @@ class GroupWindow(Base1):
     # 返回首页
     back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
     # 输入框
-    input_msg=d(text="输入消息...")
+    input_msg=d.xpath('//android.widget.EditText')
     # 表情
     # emoji=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]')
-    emoji=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[4]')
+    emoji=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]')
     emoji1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[5]/android.view.View[1]/android.widget.ImageView[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[11]')
     # 发送
     send=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[5]')
+    send_text=d.xpath('//android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[4]')
     # 扩展
     expand=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[4]')
     # 群设置
@@ -28,7 +29,7 @@ class GroupWindow(Base1):
 
     # 转发
     selectfriend=d(description="选择好友")
-    # select_friend1=d.xpath('//*[contains(@content-desc,"A1311-马保国")]/android.widget.ImageView[1]')
+    select_friend1=d.xpath('//*[contains(@content-desc,"A1311-马保国")]/android.widget.ImageView[1]')
     # select_friend1=d(description="A1311-马保国~的VBB回发废话话费发发广告病好爸爸gvv加")
     slelct_group1=d(description="1313群主")
     selectgroup=d(description="选择群聊")
@@ -50,9 +51,15 @@ class GroupWindow(Base1):
 
     def click_back(self):
         self.back.click()
+    def click_send_text(self):
+        # self.send_text.click()
+        self.d.click(0.92, 0.941)
 
     def click_input_msg(self):
         self.input_msg.click()
+
+    def input_input_msg(self,text):
+        self.input_msg.set_text(text)
 
     def click_selectfriend(self):
         self.selectfriend.click()
@@ -134,8 +141,14 @@ class GroupWindow(Base1):
         # Home().click_conversation()
         self.groupSet.click()
 
+    def sendText(self,text):
+        self.click_input_msg()
+        time.sleep(2)
+        self.input_input_msg(text)
+        time.sleep(4)
+        self.click_send_text()
+
     def sendEmoji(self):
-        Home().click_conversation()
         self.click_emoji()
         time.sleep(3)
         self.chooseEmoji()
@@ -147,6 +160,7 @@ if __name__ == '__main__':
     Base1().startApp()
     time.sleep(3)
     Home().click_conversation()
-    GroupWindow().click_groupSet()
+    GroupWindow().sendText('发送文字')
+    # GroupWindow().click_groupSet()
     time.sleep(5)
     # Home().closeApp()

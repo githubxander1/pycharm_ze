@@ -8,3 +8,30 @@ disbandgroup = d.xpath('//*[contains(@content-desc,"解散该群")]')
         while not d(description="管理群").exists():
             d(scrollable=True).scroll.forward()
             time.sleep(1)
+
+重试
+def editGroupAvatar_view(self):
+        max_retry = 3  # 最多重试3次
+        retry_count = 0  # 重试计数器
+        while retry_count < max_retry:
+            print(f"重试第 {retry_count} 次")
+            try:
+                # ManageGroup().manage_groups()
+                ManageGroup().click_editGroupProfile()
+                self.click_avatar()
+                self.click_viewavatar()
+                sleep(2)
+                self.click_viewback()
+                # self.d.click(0.072, 0.044)
+                sleep(1)
+                self.click_back()
+                print('运行结束')
+            except Exception as e:
+                sleep(3)
+                print(f"程序运行出现异常：{e}")
+                # 关闭App
+                Base1().closeApp()
+                # 重新运行程序
+                Base1().startApp()
+            else:
+                break

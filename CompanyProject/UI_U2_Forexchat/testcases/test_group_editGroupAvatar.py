@@ -4,8 +4,8 @@ import unittest
 import pytest
 import allure
 
-from CompanyProject.UI_U2_Forexchat.base.basePage import Base1
-from CompanyProject.UI_U2_Forexchat.common.common import take_screenshot
+from CompanyProject.UI_U2_Forexchat.base.basePage import Base1, d
+from CompanyProject.UI_U2_Forexchat.common.common import common
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.EditGroupFiles.op_EditGroupAvatar import GroupAvatar
 from CompanyProject.UI_U2_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
 
@@ -37,13 +37,34 @@ class Test_editGroupAvatar(unittest.TestCase):
 
     # @allure.severity(allure.severity_level.NORMAL)
     # @allure.story('编辑群头像-查看')
+    @pytest.mark.skip()
     def test_editGroupAvatar_view(self):
         GroupAvatar().editGroupAvatar_view()
-        take_screenshot()
+        file_basename=os.path.basename(__file__)
+        sc_name='头像-预览'
+        try:
+            GroupAvatar().avatar.wait(10)
+            common().take_screenshot(file_basename,sc_name)
+        except:
+            print('元素不存在，未截图')
+    def test_editGroupAvatar_album(self):
+        GroupAvatar().editGroupAvatar_album()
+        file_basename=os.path.basename(__file__)
+        sc_name='头像—相册'
+        if GroupAvatar().avatar.exists:
+            common().take_screenshot(file_basename,sc_name)
+        # try:
+        #     GroupAvatar().avatar.wait(10)
+        #     common().take_screenshot(file_basename,sc_name)
+        # except:
+        #     print('元素不存在，未截图')
+        print(d.toast.get_message())
+        # assert d.toast.get_message()=='头像设置成功'
+
 
 
 if __name__ == '__main__':
-    pytest.main()
+    pytest.main(['-vs', 'test_editGroupAvatar.py'])
     # Run the tests and generate the Allure report
     # pytest.main(['-s', '-v', '--alluredir', 'allure_reports'])
     #

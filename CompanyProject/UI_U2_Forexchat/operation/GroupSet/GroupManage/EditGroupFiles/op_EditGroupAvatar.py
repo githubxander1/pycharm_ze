@@ -45,47 +45,57 @@ class GroupAvatar(Base1):
     #     self.avatar1.click()
 
     # 编辑群头像成功
-    def editGroupAvatar_set_sus(self):
+    def editGroupAvatar_album(self):
         # ManageGroup().manage_groups()
-        ManageGroup().click_editGroupProfile()
+        # ManageGroup().click_editGroupProfile()
         self.click_avatar()
         self.click_selectfromalbum()
         sleep(2)
         self.click_avatar1()
         self.click_comfirm()
-        sleep(1)
-        self.click_back1()
+        # sleep(1)
+        # self.click_back1()
         # d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.widget.ImageView[2]').click()
 
     def editGroupAvatar_view(self):
-        max_retry = 3  # 最多重试3次
-        retry_count = 0  # 重试计数器
-        while retry_count < max_retry:
-            print(f"重试第 {retry_count} 次")
-            try:
-                # ManageGroup().manage_groups()
-                ManageGroup().click_editGroupProfile()
-                self.click_avatar()
-                self.click_viewavatar()
-                sleep(2)
-                self.click_viewback()
-                # self.d.click(0.072, 0.044)
-                sleep(1)
-                self.click_back()
-                print('运行结束')
-            except Exception as e:
-                sleep(3)
-                print(f"程序运行出现异常：{e}")
-                # 关闭App
-                Base1().closeApp()
-                # 重新运行程序
-                Base1().startApp()
-            else:
-                break
+        # ManageGroup().click_editGroupProfile()
+        self.click_avatar()
+        self.click_viewavatar()
+        sleep(2)
+        self.click_viewback()
+        # self.d.click(0.072, 0.044)
+        # sleep(1)
+        # self.click_back()
+        # print('运行结束')
+    # def editGroupAvatar_view(self):
+    #     max_retry = 3  # 最多重试3次
+    #     retry_count = 0  # 重试计数器
+    #     while retry_count < max_retry:
+    #         print(f"重试第 {retry_count} 次")
+    #         try:
+    #             # ManageGroup().manage_groups()
+    #             ManageGroup().click_editGroupProfile()
+    #             self.click_avatar()
+    #             self.click_viewavatar()
+    #             sleep(2)
+    #             self.click_viewback()
+    #             # self.d.click(0.072, 0.044)
+    #             sleep(1)
+    #             self.click_back()
+    #             print('运行结束')
+    #         except Exception as e:
+    #             sleep(3)
+    #             print(f"程序运行出现异常：{e}")
+    #             # 关闭App
+    #             Base1().closeApp()
+    #             # 重新运行程序
+    #             Base1().startApp()
+    #         else:
+    #             break
 
 
 #
-if __name__ == '__main__':
-    GroupAvatar().editGroupAvatar_set_sus()
-    time.sleep(3)
-    GroupAvatar().editGroupAvatar_view()
+# if __name__ == '__main__':
+#     GroupAvatar().editGroupAvatar_set_sus()
+    # time.sleep(3)
+    # GroupAvatar().editGroupAvatar_view()
