@@ -1,0 +1,41 @@
+import time
+
+from CompanyProject.APP_Forexchat.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
+from CompanyProject.APP_Forexchat.base.basePage import Base1, d
+
+
+class GroupTransfer(Base1):
+    transferGroup = d(description="转让群")
+    # newAdmin=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/'
+    #                  'android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/'
+    #                  'android.widget.ImageView[1]')
+    newAdmin=0.101, 0.256
+    # d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
+    cancel=d(description="取消")
+    sure=d(description="确定")
+
+    def click_transferGroup(self):
+        self.transferGroup.click()
+
+    def click_newAdmin(self):
+        self.d.click(0.101, 0.256)
+
+    def click_cancel(self):
+        self.cancel.click()
+
+    def click_sure(self):
+        self.sure.click()
+
+    # 转让群
+    def group_transfer(self):
+        ManageGroup().manage_groups()
+        self.click_transferGroup()
+        self.click_newAdmin()
+        time.sleep(2)
+        # 取消
+        self.click_cancel()
+
+
+#
+if __name__ == '__main__':
+    GroupTransfer().group_transfer()
