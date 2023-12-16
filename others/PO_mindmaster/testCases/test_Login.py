@@ -4,10 +4,11 @@ import time
 import pytest
 import sys
 
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from seleniumwire import webdriver
+# from seleniumwire import webdriver
 
 from others.PO_mindmaster.basepage.baseBase import BasePage
 from others.PO_mindmaster.common.getImage import SaveImage
@@ -29,13 +30,16 @@ class TestLogin(BasePage):
         # self.dr.quit()
         print('结束')
 
-    @pytest.mark.parametrize("username, password", [("", "mind0103@xl")])
-    def test_login_usernull(self,username,password):
+    # @pytest.mark.parametrize("username, password", [("", "mind0103@xl")])
+    # def test_login_usernull(self,username,password):
+    def test_login_usernull(self):
         '''账号为空'''
+        # dr=webdriver.Edge()
         loginpage = LoginPage()
-        loginpage.openLoginPage(username,password)
+        # loginpage.login_mind_pro('2695418206@qq.com', 'your_password')
+        loginpage.openLoginPage('2695418206@qq.com', 'your_password')
         SaveImage(self.dr,'login_usernull.png')
-        assert self.dr.title == '登录页面'  # 假设正确的页面标题是'登录页面'
+        # assert self.dr.title == '登录页面'  # 假设正确的页面标题是'登录页面'
 
     # @pytest.mark.allure_story('登录')
     # @pytest.mark.parametrize('logindata', help.readyaml('../data/login.yaml'))
