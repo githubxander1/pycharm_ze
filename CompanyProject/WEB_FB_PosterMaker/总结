@@ -1,0 +1,11 @@
+
+
+1.文件上传
+2.检查是否有弹窗
+ # try:
+        #     alert = d.switch_to.alert  # 尝试切换到弹窗
+        #     print(alert.text)  # 打印弹窗文本
+        # except :
+        #     print("No alert present.")  # 如果不存在弹窗，则打印此消息
+        # finally:
+        #     d.quit()  # 确保在完成后关闭浏览器
