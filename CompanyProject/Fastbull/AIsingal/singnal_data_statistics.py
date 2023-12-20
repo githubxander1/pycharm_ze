@@ -12,12 +12,12 @@ import yaml
 # from .base import calculate_average, time_format, get_time_day
 # from .conversion_data import Synchronous_Data
 # from .db_handler import DBHandler
-from CompanyProject.fastbull.base import get_time_day, calculate_average
-from CompanyProject.fastbull.conversion_data import Synchronous_Data
-from CompanyProject.fastbull.db_handler import DBHandler
+from CompanyProject.Fastbull.base import get_time_day, calculate_average
+from CompanyProject.Fastbull.conversion_data import Synchronous_Data
+from CompanyProject.Fastbull.AIsingal.db_handler import DBHandler
 
 
-# f = open(r'D:\1test\PycharmProject\pycharm_ze\CompanyProject\fastbull\config.sina.yaml', encoding='utf-8')
+# f = open(r'D:\1test\PycharmProject\pycharm_ze\CompanyProject\Fastbull\config.sina.yaml', encoding='utf-8')
 f = open('config.yaml', encoding='utf-8')
         #
 yaml_data = yaml.load(f, Loader=yaml.FullLoader)  # 读取yaml

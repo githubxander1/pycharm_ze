@@ -3,7 +3,7 @@ import json
 from pymongo import MongoClient
 
 # 创建MongoDB连接
-client = MongoClient("mongodb://fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_macro_data_test?authSource=admin")
+client = MongoClient("mongodb://Fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_macro_data_test?authSource=admin")
 
 # 访问数据库和集合
 db = client.fastbull_macro_data_test

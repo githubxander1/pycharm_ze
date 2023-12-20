@@ -10,7 +10,7 @@ import pymongo
 def get_mongo_data(type,table_name, cb:list):#cb:list,要删除的列因为涉及到文档和表的转换
 
     if type == "test":
-        client = pymongo.MongoClient('mongodb://fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_macro_data_test?authSource=admin')#测试
+        client = pymongo.MongoClient('mongodb://Fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_macro_data_test?authSource=admin')#测试
         db = client['fastbull_macro_data_test']
     else:
         client = pymongo.MongoClient('mongodb://fastbull_macro_data_preprod_user:QSKzvWi8gCvfZ4z*@192.168.7.105:27017/fastbull_macro_data_preprod?authSource=admin')#预发布

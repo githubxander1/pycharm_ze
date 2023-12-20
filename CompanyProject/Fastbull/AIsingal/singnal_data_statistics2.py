@@ -6,11 +6,10 @@
 import datetime
 import time
 from typing import List
-import pandas as pd
 import yaml
 from pymongo import MongoClient
 
-client = MongoClient("mongodb://fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_macro_data_test?authSource=admin")
+client = MongoClient("mongodb://Fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_macro_data_test?authSource=admin")
 # 访问数据库和集合
 db = client.fastbull_macro_data_test
 collection = db.strategy_signal
@@ -27,12 +26,12 @@ collection = db.strategy_signal
 # from .base import calculate_average, time_format, get_time_day
 # from .conversion_data import Synchronous_Data
 # from .db_handler import DBHandler
-from CompanyProject.fastbull.base import get_time_day, calculate_average
-from CompanyProject.fastbull.conversion_data import Synchronous_Data
-from CompanyProject.fastbull.db_handler import DBHandler
+from CompanyProject.Fastbull.conversion_data import Synchronous_Data
+
+
 #
 #
-# # f = open(r'D:\1test\PycharmProject\pycharm_ze\CompanyProject\fastbull\config.sina.yaml', encoding='utf-8')
+# # f = open(r'D:\1test\PycharmProject\pycharm_ze\CompanyProject\Fastbull\config.sina.yaml', encoding='utf-8')
 # f = open('config.sina.yaml', encoding='utf-8')
 #         #
 # yaml_data = sina.yaml.load(f, Loader=sina.yaml.FullLoader)  # 读取yaml

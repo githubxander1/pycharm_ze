@@ -3,6 +3,7 @@ import time
 
 import allure
 import pytest
+from pytest_assume.plugin import assume
 
 from CompanyProject.APP_Forexchat.base.basePage import Base1, d
 from CompanyProject.APP_Forexchat.common.common import common
@@ -45,7 +46,8 @@ class Test_home_search:
             screen=common().take_screenshot(file_basename, text)
             print(f'截图路径：{screen}')
             allure.attach(f'{screen}',name='截图',attachment_type=allure.attachment_type.PNG)
-        # pytest.assume(x==y)
+        with assume: assert 1 == 1
+        with assume: assert 2 == 3
 
     # @pytest.mark.skip()
     @pytest.mark.run(order=2)

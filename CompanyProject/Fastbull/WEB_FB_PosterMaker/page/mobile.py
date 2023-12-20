@@ -1,12 +1,9 @@
 import time
 
-from selenium.webdriver import Keys
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.common.by import By
 from seleniumwire import webdriver
 
-from CompanyProject.WEB_FB_PosterMaker.base import Base
+from CompanyProject.Fastbull.WEB_FB_PosterMaker.base import Base
 
 
 class Mobile(Base):

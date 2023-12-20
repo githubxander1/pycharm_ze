@@ -1,10 +1,7 @@
-
-
-import pandas as pd
 from sqlalchemy import create_engine
 
 # from .mongodata_change import get_mongo_data
-from CompanyProject.fastbull.mongodata_change import get_mongo_data
+from CompanyProject.Fastbull.AIsingal.mongodata_change import get_mongo_data
 
 
 def Synchronous_Data(type):
