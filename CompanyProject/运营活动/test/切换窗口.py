@@ -32,4 +32,4 @@ wd.switch_to.window(handles[1])
 # element=wd.find_element_by_id('kw')
 # element.send_keys(Keys.CONTROL, 'v')
 # 复制
-# wd.find_element_by_xpath("//input[@id='su']").click()
+# wd.find_element(By.XPATH,"//input[@id='su']").click()

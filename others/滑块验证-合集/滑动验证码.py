@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 from selenium import webdriver
@@ -25,41 +26,41 @@ def get_image():
     driver.maximize_window()
     time.sleep(2) #睡眠两秒
 
-    driver.find_element_by_xpath('/html/body/div/div[2]/div/div[1]/div/div[1]/div[2]').click()
+    driver.find_element(By.XPATH,'/html/body/div/div[2]/div/div[1]/div/div[1]/div[2]').click()
 
     time.sleep(1)
 
     driver.switch_to.frame('login_frame')
-    # driver.find_element_by_xpath('//*[@id="switcher_plogin"]').click()
+    # driver.find_element(By.XPATH,'//*[@id="switcher_plogin"]').click()
 
     #输入账号密码
-    input=driver.find_element_by_xpath('//*[@id="u"]')#定位QQ账号框
+    input=driver.find_element(By.XPATH,'//*[@id="u"]')#定位QQ账号框
     time.sleep(1)
     input.send_keys("2695418206@qq.com") #搜索框输入内容
 
-    input=driver.find_element_by_xpath('//*[@id="p"]')#定位QQ密码框
+    input=driver.find_element(By.XPATH,'//*[@id="p"]')#定位QQ密码框
     input.send_keys("txj9713@xl") #搜索框输入内容
     print('账号密码输入完成。')
     #这里停顿一下，不然不会显示滑动验证，应该是检测自动化工具的手段。（反爬）
     time.sleep(1)
-    driver.find_element_by_xpath('//*[@id="login_button"]').click()
+    driver.find_element(By.XPATH,'//*[@id="login_button"]').click()
 
     #注意我们这里又需要跳到验证码的子框（又一个嵌套）
     time.sleep(1)
     driver.switch_to.frame('tcaptcha_iframe')
     #webdriver的定位方法和浏览器xpath不一样，不能直接定位到标签的属性.
     #需要首先定位到webelement，之后get到属性!!!!!!!
-    bk = driver.find_element_by_xpath('//*[@id="slideBg"]').get_attribute('src')
+    bk = driver.find_element(By.XPATH,'//*[@id="slideBg"]').get_attribute('src')
     print(bk)
     #获取背景和滑块地址，下载到本地。
-    key = driver.find_element_by_xpath('//*[@id="slideBlock"]').get_attribute('src')
+    key = driver.find_element(By.XPATH,'//*[@id="slideBlock"]').get_attribute('src')
     print(bk)
 
     download_img(bk,filename= 'bk')
     download_img(key,filename= 'key')
 
     #锁定滑块
-    slider = driver.find_element_by_xpath('//*[@id="tcaptcha_drag_thumb"]')
+    slider = driver.find_element(By.XPATH,'//*[@id="tcaptcha_drag_thumb"]')
     #获取应滑动距离
     dis = get_distance()
     print(dis)

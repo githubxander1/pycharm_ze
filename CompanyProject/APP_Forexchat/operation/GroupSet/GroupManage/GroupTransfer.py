@@ -10,7 +10,7 @@ class GroupTransfer(Base1):
     #                  'android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/'
     #                  'android.widget.ImageView[1]')
     newAdmin=0.101, 0.256
-    # d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
+    # d.find_element(By.XPATH,'//li[contains(string(),"{}")]'.format(number)).click()
     cancel=d(description="取消")
     sure=d(description="确定")
 

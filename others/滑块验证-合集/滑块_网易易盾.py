@@ -4,22 +4,23 @@ import time
 import cv2
 import numpy as np
 from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome()
 driver.get('https://dun.163.com/trial/sense')
 
 # 点击进入滑块界面
-driver.find_element_by_xpath('/html/body/main/div[1]/div/div[2]/div[2]/ul/li[2]').click()
+driver.find_element(By.XPATH,'/html/body/main/div[1]/div/div[2]/div[2]/ul/li[2]').click()
 time.sleep(1)
 # 点击完成验证
-driver.find_element_by_xpath(
+driver.find_element(By.XPATH,
     '/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[1]/span').click()
 time.sleep(3)
 
 while True:
     # 获取两张图片
-    url_s = driver.find_element_by_class_name('yidun_jigsaw').get_attribute('src')
-    url_b = driver.find_element_by_class_name('yidun_bg-img').get_attribute('src')
+    url_s = driver.find_element(By.CLASS_NAME,'yidun_jigsaw').get_attribute('src')
+    url_b = driver.find_element(By.CLASS_NAME,'yidun_bg-img').get_attribute('src')
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36'
     }
@@ -60,7 +61,7 @@ while True:
     print("y:", y, "x:", x)
 
     # 定位到滑块
-    ele = driver.find_element_by_xpath(
+    ele = driver.find_element(By.XPATH,
         '/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')
 
     # 实例化对象
@@ -71,7 +72,7 @@ while True:
     time.sleep(1)
     # 定位到验证成功
     time.sleep(1)
-    text = driver.find_element_by_xpath(
+    text = driver.find_element(By.XPATH,
         '/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[2]/span[2]').text
     if text == "验证成功":
         break

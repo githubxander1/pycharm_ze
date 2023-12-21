@@ -51,10 +51,10 @@ def main3():
     (By.XPATH, '//div[contains(@class,"region-select")]//input')))
   number = "+852"
   # 输入区号
-  d.find_element_by_xpath('//div[contains(@class,"region-select")]//input').send_keys(number)
+  d.find_element(By.XPATH,'//div[contains(@class,"region-select")]//input').send_keys(number)
   time.sleep(1)
   # 选择区号
-  d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
+  d.find_element(By.XPATH,'//li[contains(string(),"{}")]'.format(number)).click()
   time.sleep(1)
   d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111110')
   d.find_element_by_css_selector(
@@ -62,15 +62,15 @@ def main3():
 
   time.sleep(2)
   # 定位滑块元素
-  iframe = d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
+  iframe = d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
   d.switch_to.frame(iframe)
 
   # 获取滑块背景的大小
-  span_background = d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]')
+  span_background = d.find_element(By.XPATH,'//*[@id="app"]/main/div/div/div[2]')
   span_background_size = span_background.size
   print('滑块背景大小:',span_background_size)
   # 获取滑块的大小
-  button = d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]/i')
+  button = d.find_element(By.XPATH,'//*[@id="app"]/main/div/div/div[2]/i')
   button_size = button.size
   print('滑块大小:',button_size)
   # 拖动操作：drag_and_drop_by_offset
@@ -83,7 +83,7 @@ def main3():
   tracks = get_track(span_width - button_width)
   print(tracks)
 
-  source = d.find_element_by_xpath('//*[@id="app"]/main/div/div/div[2]/i')
+  source = d.find_element(By.XPATH,'//*[@id="app"]/main/div/div/div[2]/i')
   ActionChains(d).click_and_hold(on_element=source).perform()
   move_offset = 0
   for x in tracks:
@@ -99,22 +99,22 @@ def main3():
   print('滑动结束.')
   time.sleep(2)
 
-  d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/form/div/div[3]/div/div/div/input').send_keys(1234)
+  d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/form/div/div[3]/div/div/div/input').send_keys(1234)
   time.sleep(2)
-  d.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div/div/form/p[1]/button').click()
+  d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/form/p[1]/button').click()
   time.sleep(2)
 main3()
 
 # 跳过引导层
-d.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/a[1]/span').click()
+d.find_element(By.XPATH,'/html/body/div[2]/div/div/div[1]/div/a[1]/span').click()
 # 跳过感兴趣语言
-d.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/button[1]/span').click()
+d.find_element(By.XPATH,'/html/body/div[2]/div/div[2]/div/button[1]/span').click()
 
 # 移动到邀请icon上
-icon=d.find_element_by_xpath('//*[@id="app"]/div[5]/ul/li[1]/div/span/span/div/img')
+icon=d.find_element(By.XPATH,'//*[@id="app"]/div[5]/ul/li[1]/div/span/span/div/img')
 ActionChains(d).move_to_element(icon).perform()
 time.sleep(4)
 # d.find_element_by_css_selector('#el-popover-6913 > div.activity-popover > div').click()
 # 复制完整xpath
-d.find_element_by_xpath('/html/body/div[4]/div[1]/div').click()
+d.find_element(By.XPATH,'/html/body/div[4]/div[1]/div').click()
 # d.find_element_by_id('邀请好友').click()

@@ -44,7 +44,7 @@ class LoginPage(BasePage):
         self.dr.switch_to.frame(self.iframe)
         time.sleep(3)
         # 点击账密登录
-        # d.find_element_by_xpath('//li[contains(string(),"{}")]'.format(number)).click()
+        # d.find_element(By.XPATH,'//li[contains(string(),"{}")]'.format(number)).click()
         # self.dr.locator(By.XPATH, '{}'.format(self.tabCount_loc)).click()
         self.click(self.locator(self.tabCount_loc))
         self.send_keys(self.locator(self.username_loc),username)
