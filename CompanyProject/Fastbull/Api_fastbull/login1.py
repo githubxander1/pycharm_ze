@@ -9,7 +9,6 @@ def login():
     headers = {
         "appType": '1',
         "langId" : '1',
-        "password": "5D93CEB70E2BF5DAA84EC3D0CD2C731A",
         "accept": "application/json;charset=UTF-8",
         "Content-Type": "application/json"
     }
