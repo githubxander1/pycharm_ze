@@ -16,7 +16,13 @@ class ApiKey:
         return requests.post(url,data=data,**keywords)
 
     @allure.step('获取返回结果值')
-    def get_text(self,data,key):
-        json_data=json.loads(data)
-        value=jsonpath.jsonpath(json_data,'$..{0}'.format(key))
-        return value
+    def get_text(self, data):
+        try:
+            # 使用f-string格式化key，更加简洁
+            json_data = json.loads(data)
+            # 使用format()方法进行字符串格式化
+            value = json_data['bodyMessage']
+            return value
+        except json.JSONDecodeError:
+            # 如果数据格式不正确，捕获JSONDecodeError异常
+            raise ValueError(f"Provided data is not in a correct JSON format: {data}")

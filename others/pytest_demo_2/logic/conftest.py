@@ -33,7 +33,7 @@ def token_fix():
         # post请求
         res = ak.post(url=url, json=userInfo)
         # 获取token
-        token = ak.get_text(res.text, 'token')
+        token = ak.get_text(res.text, '1')
         # 验证代码，验证token只生成一次
         token_random = random()
         return ak, token, res, token_random

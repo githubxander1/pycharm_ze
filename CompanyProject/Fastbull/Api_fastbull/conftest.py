@@ -1,4 +1,5 @@
 import json
+from pprint import pprint
 from random import random
 
 import allure
@@ -24,13 +25,13 @@ def token_fix():
         res = ak.post(url, headers=headers, data=json.dumps({"requestData": request_data}))
 
         # 检查响应状态码和内容
-        # if res.status_code == 200:
-        #     print("登录成功")
-        #     print("返回内容:", res.json())
-        # else:
-        #     print("Request failed with status code:", res.status_code)
+        if res.status_code == 200:
+            print("登录成功")
+            print("返回内容:", res.json())
+        else:
+            pprint("Request failed with status code:", res.status_code)
 
-        token = ak.get_text(res.text,'rcToken')
+        token = ak.get_text(res)
         print(token)
         # 验证token只生成一次
         token_random=random()
