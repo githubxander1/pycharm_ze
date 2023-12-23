@@ -24,11 +24,3 @@ def test_add_friend():
 
     assert message == '该用户已经是您的好友了'
 
-    # try:
-    #     response_data = response.json()
-    #     # 根据实际返回数据结构进行断言和验证
-    #     assert 'key' in response_data and isinstance(response_data['key'], str), "返回数据中未找到预期的键或类型不正确"
-    # except json.JSONDecodeError:
-    #     assert False, "返回的数据不是有效的JSON格式"
-    #
-    # print(f"请求成功，返回数据：{response.json()}")

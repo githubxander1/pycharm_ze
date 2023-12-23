@@ -50,13 +50,8 @@ def test_search_user_info_list():
 
     response = requests.get(url, headers=headers, params=params)
 
-    assert response.status_code == 200, f"请求失败，状态码为：{response.status_code}"
+    message = response.json()['message']
+    print(response.text)
 
-    try:
-        response_data = response.json()
-        # 根据实际返回数据结构进行断言和验证
-        assert 'key' in response_data and isinstance(response_data['key'], str), "返回数据中未找到预期的键或类型不正确"
-    except json.JSONDecodeError:
-        assert False, "返回的数据不是有效的JSON格式"
+    assert message == '操作成功'
 
-    print(f"请求成功，返回数据：{response.json()}")
