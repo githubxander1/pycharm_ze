@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"skipped","Mon Dec 18 19:50:59 CST 2023","Mon Dec 18 19:51:19 CST 2023","20151","testcases","test_home_search","Test_home_search","","","title:搜索全部","描述：这是搜索全部的测试用例"
+"broken","Mon Dec 18 19:51:41 CST 2023","Mon Dec 18 19:52:01 CST 2023","20192","testcases","test_home_search","Test_home_search","","","title:搜索好友",""
+"skipped","Mon Dec 18 19:50:53 CST 2023","Mon Dec 18 19:50:53 CST 2023","0","testcases","test_home_search","Test_home_search","","","title:搜索聊天记录",""
+"skipped","Mon Dec 18 19:50:52 CST 2023","Mon Dec 18 19:50:52 CST 2023","0","testcases","test_home_search","Test_home_search","","","title:搜索群聊",""
