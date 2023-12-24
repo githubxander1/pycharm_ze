@@ -1,18 +1,29 @@
+
+#-
+#  email: 2695418206@qq.com
+#  pw: f2d8ddfc169a0ee6f8b0ecd924b1d300
+#  from: web
+#  product: master-online
+#-
+#  email: 695418206@qq.com
+#  from: web
+#  product: master-online
+#  pw: f2d8ddfc169a0ee6f8b0ecd924b1d300
 -
   user:
-    username: admin
-    password: '123456'
-  msg: success
+    email: 2695418206@qq.com
+    pw: f2d8ddfc169a0ee6f8b0ecd924b1d300
+  msg: ''
   title: 输入正确账号、密码，登录成功
 -
   user:
-    username: admin1
-    password: '1234561'
-  msg: 用户名或密码错误
-  title: 输入错误账号1、密码1，登录失败
+    email: 269541820@qq.com
+    pw: f2d8ddfc169a0ee6f8b0ecd924b1d300
+  msg: Account or password error.
+  title: 输入错误账号，登录失败
 -
   user:
-    username: admin2
-    password: '1234562'
-  msg: 用户名或密码错误
-  title: 输入错误账号2、密码2，登录失败
+    email: 2695418206@qq.com
+    pw: f2d8ddfc169a0ee6f8b0ecd924b1d30
+  msg: Account or password error.
+  title: 输入错误密码2，登录失败

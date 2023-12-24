@@ -4,7 +4,7 @@
 '''
 
 # 地址
-URL = 'https://testfbapi.tostar.top/fastbull-user-service'
+URL =  'https://userapi.edrawsoft.cn'
 
 # 端口
 # PORT = '5000'

@@ -19,4 +19,4 @@ for item in data:
         "link":item.get('href'),
         'ID':re.findall('\d+',item.get('href'))
     }
-print(result)
+# print(result)
