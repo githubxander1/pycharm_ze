@@ -4,7 +4,7 @@
 '''
 
 # 地址
-URL = 'http://39.98.138.157:'
+URL = 'https://testfbapi.tostar.top/fastbull-user-service'
 
 # 端口
-PORT = '5000'
+# PORT = '5000'
