@@ -15,7 +15,11 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     print('failed:', len([i for i in terminalreporter.stats.get('failed', []) if i.when != 'teardown']))
     print('error:', len([i for i in terminalreporter.stats.get('error', []) if i.when != 'teardown']))
     print('skipped:', len([i for i in terminalreporter.stats.get('skipped', []) if i.when != 'teardown']))
-    print('成功率：%.2f' % (len(terminalreporter.stats.get('passed', []))/terminalreporter._numcollected*100)+'%')
+    if terminalreporter._numcollected > 0:
+        success_rate = len(terminalreporter.stats.get('passed', [])) / terminalreporter._numcollected * 100
+        print('成功率：%.2f%%' % success_rate)
+    else:
+        print('没有执行任何测试用例')
 
     # terminalreporter._sessionstarttime 会话开始时间
     duration = time.time() - terminalreporter._sessionstarttime

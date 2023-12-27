@@ -19,7 +19,7 @@ class GroupWindow(Base1):
     # 扩展
     expand=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[4]')
     # 群设置
-    groupSet=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]')
+    groupSet=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.widget.ImageView[3]')
     # 相册
     amble=d(description="相册")
     # 名片
@@ -92,13 +92,12 @@ class GroupWindow(Base1):
         self.click_send_comfirm()
 
 
-    # d_text(msg):
-    #     GroupWindow().conversation.
+    # def send_text(self,msg):
     #     # 点击输入框
     #     GroupWindow().input_msg.send_keys(msg)
     #     # 点击发送按钮
     #     d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[6]').click()
-    #     # send.click()
+        # send.click()
     #
     # # 发送emoji表情
     # def send_emoji(self):

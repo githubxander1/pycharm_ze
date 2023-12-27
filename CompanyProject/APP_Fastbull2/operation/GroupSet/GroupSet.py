@@ -1,6 +1,8 @@
 import logging
 import time
 
+import allure
+
 from CompanyProject.APP_Fastbull2.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.APP_Fastbull2.base.basePage import Base1, d
 from CompanyProject.APP_Fastbull2.operation.common import Common
@@ -82,30 +84,35 @@ class GroupSet(Base1):
 
     back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
 
-
+    @allure.step('点击我的群昵称')
     def click_mygroupnickname(self):
         self.nickname.click()
 
     # 群成员
+    @allure.step('点击群成员')
     def click_groupmembers(self):
         self.groupmembers.click()
 
+    @allure.step('点击群成员更多')
     def click_groupmemberMore(self):
         self.groupmemberMore.click()
 
+    @allure.step('点击群成员添加')
     def click_groupmemberAdd(self):
         self.groupmemberAdd.click()
 
+    @allure.step('点击群成员删除')
     def click_groupmemberDel(self):
         self.groupmemberDel.click()
 
     # def click_member1(self):
     #     self.member1.click()
 
+    @allure.step('点击群成员删除')
     def click_memberdel(self):
         self.memberdel.click()
 
-
+    @allure.step('点击群成员添加')
     def groupmembersadd(self):
         # 进入会话
         # Home().click_conversation()
@@ -117,6 +124,7 @@ class GroupSet(Base1):
         self.click_groupmemberMore()
         self.click_groupmemberAdd()
 
+    @allure.step('点击群成员删除')
     def groupmembersdel(self):
         self.click_groupmembers()
         self.click_groupmemberMore()
@@ -131,64 +139,87 @@ class GroupSet(Base1):
         time.sleep(1)
         self.click_confirm()
 
+    @allure.step('点击我的群介绍')
     def click_mygroupintroduction(self):
         self.groupintroduction.click()
 
+    @allure.step('点击保存')
     def click_save(self):
         self.QRcodesave.click()
 
+    @allure.step('点击分享')
     def click_share(self):
         self.QRcodeshare.click()
 
+    @allure.step('点击解散群')
     def click_disbandgroup(self):
         self.disbandgroup.click()
 
+    @allure.step('点击取消')
     def click_cancel(self):
         self.cancel.click()
 
+    @allure.step('点击确定')
     def click_confirm(self):
         self.confirm.click()
 
+    @allure.step('点击举报')
     def click_report(self):
         self.report.click()
 
+    @allure.step('点击色情')
     def click_sexual(self):
         self.sexual.click()
 
+    @allure.step('点击欺诈')
     def click_fraud(self):
         self.fraud.click()
+
+    @allure.step('点击广告')
     def click_ads(self):
         self.ads.click()
+
+    @allure.step('点击政治敏感')
     def click_politics(self):
         self.politics.click()
+
+    @allure.step('点击散播谣言')
     def click_rumor(self):
         self.rumor.click()
 
+    @allure.step('点击其他')
     def click_others(self):
         self.others.click()
 
+    @allure.step('点击提交')
     def click_submit(self):
         self.submit.click()
 
+    @allure.step('点击返回')
     def click_back(self):
         self.back.click()
 
+    @allure.step('点击聊天记录漫游')
     def click_chathistoryroaming(self):
         self.chatHistoryroaming.click()
 
+    @allure.step('输入群昵称')
     def edit_mygroupnickname(self,text):
         self.nameinput.set_text(text)
 
+    @allure.step('点击完成')
     def click_complete(self):
         self.complete.click()
 
     # 下滑到管理群
+    @allure.step('下滑到管理群')
     def slide_down(self):
         while not d(description="管理群").exists():
             d(scrollable=True).scroll.forward()
             time.sleep(1)
         # d(description="管理群").click()
 
+    @allure.step('上滑到管理群')
     def slide_up(self):
         # 获取设备屏幕尺寸
         width, height = d.window_size()
@@ -203,6 +234,7 @@ class GroupSet(Base1):
         # 模拟鼠标下拉操作
         d.swipe(start_x, start_y, end_x, end_y, duration=0.5)
 
+    @allure.step('进入群设置')
     def enter_groupSet(self):
         Base1().startApp()
         time.sleep(7)
@@ -211,6 +243,7 @@ class GroupSet(Base1):
         time.sleep(2)
 
     # 保存群二维码
+    @allure.step('保存群二维码')
     def GroupQRcodesave(self):
         # 进入会话
         # Home().click_conversation()
@@ -224,6 +257,7 @@ class GroupSet(Base1):
         # self.click_share()
 
     # 分享群二维码
+    @allure.step('分享群二维码')
     def GroupQRcodeshare(self):
         # 进入会话
         # Home().click_conversation()
@@ -238,6 +272,7 @@ class GroupSet(Base1):
 
 
     # 编辑群介绍
+    @allure.step('编辑群介绍')
     def editgroupDescription(self,text):
         # 点击群介绍
         time.sleep(2)
@@ -251,6 +286,7 @@ class GroupSet(Base1):
         self.click_complete()
 
     # 编辑群昵称
+    @allure.step('编辑群昵称')
     def nickname_set(self, text):
         # 进入会话
         # Home().click_conversation()
@@ -269,6 +305,7 @@ class GroupSet(Base1):
 
 
     # 聊天记录漫游
+    @allure.step('聊天记录漫游')
     def chathistoryroaming(self):
         # 进入会话
         # Home().click_conversation()
@@ -287,6 +324,7 @@ class GroupSet(Base1):
         # self.d.swipe(0.505, 0.177,0.483, 0.85)
 
     # 举报
+    @allure.step('举报')
     def Report(self):
         # 进入会话
         # Home().click_conversation()
@@ -301,6 +339,7 @@ class GroupSet(Base1):
         self.click_submit()
 
     # 解散群
+    @allure.step('解散群')
     def disbandGroup(self):
         Base1().startApp()
         # 进入会话
@@ -315,6 +354,7 @@ class GroupSet(Base1):
         self.click_cancel()
 
     # 显示群昵称
+    @allure.step('显示群昵称')
     def shownicknames(self):
         # 进入会话
         Home().click_conversation()
@@ -325,6 +365,7 @@ class GroupSet(Base1):
         self.d.click(0.875, 0.456)
 
     # 设置置顶
+    @allure.step('设置置顶')
     def settop(self):
         # 下滑
         self.slide_down()
@@ -339,6 +380,7 @@ class GroupSet(Base1):
         # GroupWindow().click_groupSet()
 
     # 设置消息免打扰
+    @allure.step('设置消息免打扰')
     def notdisturb(self):
         # 下滑
         self.slide_down()
@@ -349,6 +391,7 @@ class GroupSet(Base1):
         self.click_back()
         time.sleep(3)
 
+    @allure.step('点击管理群')
     def click_managegroup(self):
         # time.sleep(5)
         # # 进入会话

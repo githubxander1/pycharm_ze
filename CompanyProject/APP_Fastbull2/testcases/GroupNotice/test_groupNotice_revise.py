@@ -3,11 +3,14 @@ import time
 
 import logging
 
+import pytest
+
 import HTMLTestRunner
 
 from CompanyProject.APP_Fastbull2.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.APP_Fastbull2.base.basePage import Base1
-from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupManage.GroupNotice.GroupNotice import GroupNotice
+# from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupNotice import GroupNotice
+from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupNotice.GroupNotice import GroupNotice
 from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupSet import GroupSet
 from CompanyProject.APP_Fastbull2.operation.op_Home import Home
 # 设置日志格式
@@ -27,7 +30,7 @@ class Test_GroupNotice(unittest.TestCase):
         time.sleep(1)
         GroupSet().click_groupNotice()
         # 点击创建
-        GroupNotice().click_create()
+        # GroupNotice().click_create()
 
     @classmethod
     def tearDownClass(cls):
@@ -50,24 +53,25 @@ class Test_GroupNotice(unittest.TestCase):
         logging.info("1正常用例")
 
 if __name__ == '__main__':
-    loader=unittest.TestLoader()
-    suite=loader.loadTestsFromTestCase(Test_GroupNotice)
-
-    # runner=unittest.TextTestRunner()
-    # runner.run(suite)
-
-    # 创建测试套件
-    # suite = unittest.TestSuite()
-    # suite.addTest(unittest.makeSuite(TestUIAutomation))
-
-    # 指定测试报告生成路径
-    report_path = 'test_report.html'
-
-    # 运行测试套件并生成测试报告
-    with open(report_path, 'wb') as report_file:
-        runner = HTMLTestRunner.HTMLTestRunner(
-            stream=report_file,
-            title='UI Automation Test Report',
-            description='Test results:'
-        )
-        runner.run(suite)
+    pytest.main([__file__,"--capture=tee-sys"])
+    # loader=unittest.TestLoader()
+    # suite=loader.loadTestsFromTestCase(Test_GroupNotice)
+    #
+    # # runner=unittest.TextTestRunner()
+    # # runner.run(suite)
+    #
+    # # 创建测试套件
+    # # suite = unittest.TestSuite()
+    # # suite.addTest(unittest.makeSuite(TestUIAutomation))
+    #
+    # # 指定测试报告生成路径
+    # report_path = 'test_report.html'
+    #
+    # # 运行测试套件并生成测试报告
+    # with open(report_path, 'wb') as report_file:
+    #     runner = HTMLTestRunner.HTMLTestRunner(
+    #         stream=report_file,
+    #         title='UI Automation Test Report',
+    #         description='Test results:'
+    #     )
+    #     runner.run(suite)

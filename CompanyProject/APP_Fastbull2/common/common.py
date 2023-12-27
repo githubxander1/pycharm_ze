@@ -8,7 +8,7 @@ from CompanyProject.APP_Fastbull2.operation.ChatWindows.GroupWindow import Group
 from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupSet import GroupSet
 from CompanyProject.APP_Fastbull2.operation.op_Home import Home
 
-class common:
+class Common:
     def take_screenshot(self,file_basename,sc_name):
         basename_without_extension = os.path.splitext(file_basename)[0]
         file_without_prefixAndextension = basename_without_extension[5:]  # 去掉前面的text_

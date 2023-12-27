@@ -3,7 +3,7 @@ import pytest
 import logging
 from CompanyProject.APP_Fastbull2.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.APP_Fastbull2.base.basePage import Base1, d
-from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupManage.GroupAlbum import GroupAlbum
+from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupAlbum.GroupAlbum import GroupAlbum
 from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupSet import GroupSet
 from CompanyProject.APP_Fastbull2.operation.op_Home import Home
 
@@ -11,7 +11,7 @@ from CompanyProject.APP_Fastbull2.operation.op_Home import Home
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-class Test_groupDescription():
+class Test_groupAlbum():
 
     @pytest.fixture(autouse=True)
     def setup(self):
@@ -34,7 +34,7 @@ class Test_groupDescription():
     #     logging.info("创建新相册成功")
         # assert groupAlbum.creatNewalbum.exists
     def test_create_new_album_namewithsensitive(setup):
-        GroupAlbum().createnewalbum('name_description', 'de')
+        GroupAlbum().createnewalbum('name3', 'de')
         logging.info("含敏感词")
         # 等待toast出现并获取提示内容
         toast = d.toast.get_message(wait=True)

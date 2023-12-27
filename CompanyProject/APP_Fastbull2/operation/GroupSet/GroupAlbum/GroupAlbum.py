@@ -3,10 +3,10 @@ import time
 
 # from faker import Faker
 
-from CompanyProject.APP_Forexchat.operation.ChatWindows.GroupWindow import GroupWindow
-from CompanyProject.APP_Forexchat.base.basePage import Base1,d
-from CompanyProject.APP_Forexchat.operation.GroupSet.GroupSet import GroupSet
-from CompanyProject.APP_Forexchat.operation.op_Home import Home
+from CompanyProject.APP_Fastbull2.operation.ChatWindows.GroupWindow import GroupWindow
+from CompanyProject.APP_Fastbull2.base.basePage import Base1,d
+from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupSet import GroupSet
+from CompanyProject.APP_Fastbull2.operation.op_Home import Home
 
 # 设置日志格式
 logging.basicConfig(level=logging.INFO,
@@ -68,12 +68,12 @@ class GroupAlbum(Base1):
 
     creatNewalbum=d(description="新建相册")
     # imputalbumname=d.xpath('//android.widget.FrameLayout[3]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[1]')
-    inputalbumname=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[1]')
+    # inputalbumname=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[1]')
+    inputalbumname=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[1]')
     # imputalbumdescription=d.xpath('//android.widget.FrameLayout[3]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
     # imputalbumdescription=d.xpath('//android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
     # imputalbumdescription=d.xpath('//android.widget.FrameLayout[4]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
-    inputalbumdescription=d.xpath(
-        '//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
+    inputalbumdescription=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
     inputalbumdescription2=d.xpath(
         '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.EditText[2]')
     create=d(description="新建")
@@ -102,47 +102,58 @@ class GroupAlbum(Base1):
     def click_back(self):
         self.back.click()
 
+    # def createnewalbum(self,name,description):
+    #     max_retry = 3  # 最多重试3次
+    #     retry_count = 0  # 重试计数器
+    #     while retry_count < max_retry:
+    #         print(f"重试第 {retry_count} 次")
+    #         try:
+    #             # Home().startApp()
+    #             # time.sleep(5)
+    #             # Home().click_conversation()
+    #             # logging.info("进入对话列表")
+    #             # GroupWindow().click_groupSet()
+    #             # logging.info("点击群设置")
+    #             # GroupSet().click_groupAlbum()
+    #             # logging.info("进入群相册")
+    #
+    #             self.click_createnewalbum()
+    #             logging.info("点击创建新相册")
+    #             time.sleep(2)
+    #             self.input_albumname(name)
+    #             logging.info("输入相册名")
+    #             time.sleep(3)
+    #             self.input_albumdescription(description)
+    #             logging.info("输入描述")
+    #             self.click_create()
+    #
+    #             # # 等待toast出现并获取提示内容
+    #             # toast_message = self.wait_for_toast()
+    #             # print(toast_message)
+    #
+    #         except Exception as e:
+    #             time.sleep(3)
+    #             print(f"程序运行出现异常：{e}")
+    #             # 关闭App
+    #             Base1().closeApp()
+    #             # 重新运行程序
+    #             Base1().startApp()
+    #         else:
+    #             break
+    #
+    #     # 断言toast的提示内容
+    #     # assert "Expected Toast Message" in toast
     def createnewalbum(self,name,description):
-        max_retry = 3  # 最多重试3次
-        retry_count = 0  # 重试计数器
-        while retry_count < max_retry:
-            print(f"重试第 {retry_count} 次")
-            try:
-                # Home().startApp()
-                # time.sleep(5)
-                # Home().click_conversation()
-                # logging.info("进入对话列表")
-                # GroupWindow().click_groupSet()
-                # logging.info("点击群设置")
-                # GroupSet().click_groupAlbum()
-                # logging.info("进入群相册")
+        self.click_createnewalbum()
+        logging.info("点击创建新相册")
+        time.sleep(2)
+        self.input_albumname(name)
+        logging.info("输入相册名")
+        time.sleep(3)
+        self.input_albumdescription(description)
+        logging.info("输入描述")
+        self.click_create()
 
-                self.click_createnewalbum()
-                logging.info("点击创建新相册")
-                time.sleep(2)
-                self.input_albumname(name)
-                logging.info("输入相册名")
-                time.sleep(3)
-                self.input_albumdescription(description)
-                logging.info("输入描述")
-                self.click_create()
-
-                # # 等待toast出现并获取提示内容
-                # toast_message = self.wait_for_toast()
-                # print(toast_message)
-
-            except Exception as e:
-                time.sleep(3)
-                print(f"程序运行出现异常：{e}")
-                # 关闭App
-                Base1().closeApp()
-                # 重新运行程序
-                Base1().startApp()
-            else:
-                break
-
-        # 断言toast的提示内容
-        # assert "Expected Toast Message" in toast
 
     editalbum=d(description="编辑")
     edit_upload=d(description="上传")
