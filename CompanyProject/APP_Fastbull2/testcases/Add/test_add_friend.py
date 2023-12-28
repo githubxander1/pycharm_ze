@@ -34,7 +34,7 @@ class Test_add_friend:
         with allure.step('step：点击取消'):
             pass
 
-    @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=1)
     @allure.severity('critical')
     @allure.feature('feature:添加好友')
     @allure.story('story:添加好友')
@@ -57,7 +57,7 @@ class Test_add_friend:
         # with assume: assert 2 == 3
 
     # @pytest.mark.skip()
-    @pytest.mark.run(order=2)
+    # @pytest.mark.run(order=2)
     @allure.title('手机号')
     def test_phone(self):
         text = '13111111111'

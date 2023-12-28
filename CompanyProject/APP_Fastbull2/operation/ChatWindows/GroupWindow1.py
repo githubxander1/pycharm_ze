@@ -1,6 +1,6 @@
 import time
 
-from CompanyProject.APP_Fastbull2.base.basePage1 import BasePage
+from CompanyProject.APP_Fastbull2.others.basePage1 import BasePage
 from CompanyProject.APP_Fastbull2.operation.op_Home import Home
 
 

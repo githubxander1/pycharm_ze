@@ -12,7 +12,7 @@ class Logger(object):
         self.logger.setLevel(logging.DEBUG)# 设置日志的记录等级
         # 3设置日志输出渠道
         # 3.1创建一个handler，用于写入日志文件
-        self.fh=logging.FileHandler('log.log',mode='a',encoding='utf-8')
+        self.fh=logging.FileHandler('../common/log.log', mode='a', encoding='utf-8')
         # 3.2设置日志的记录等级
         self.fh.setLevel(logging.DEBUG)
         # 3.3定义handler的输出格式

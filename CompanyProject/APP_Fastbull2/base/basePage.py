@@ -13,6 +13,8 @@ class Base1:
     phoneOremail=d(description="​邮​箱​/​F​X​I​D​/​手​机​号​")
     phone=d.xpath('//android.widget.EditText')
     identifyCode=d.xpath('//android.widget.EditText')
+
+    chat=d.xpath('//*[@resource-id="com.bv.fastbull:id/mainTabBar"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.ImageView[1]')
     def __init__(self):
     #     # self.d = u2.connect_adb_wifi('192.168.31.19')
     #     # self.d = u2.connect_adb_wifi('192.168.31.19:5555')
@@ -30,6 +32,8 @@ class Base1:
 
     def startApp(self):
         self.d.app_start('com.bv.fastbull')
+        self.chat.click()
+
 
     def closeApp(self):
         self.d.app_stop('com.bv.fastbull')

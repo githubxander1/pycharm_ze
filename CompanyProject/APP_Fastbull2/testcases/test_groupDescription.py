@@ -11,7 +11,7 @@ from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupSet import GroupSet
 from CompanyProject.APP_Fastbull2.operation.op_Home import Home
 
 # 设置日志格式
-from CompanyProject.APP_Fastbull2.data.load_testdata import load_data
+from CompanyProject.APP_Fastbull2.data.load_testdata import load_yamldata
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -40,7 +40,7 @@ class Test_groupDescription(unittest.TestCase):
     #     with open('testdata.yaml','r', encoding='utf-8') as file:
     #         data=yaml.safe_load(file)
     #     return  data['groupDescription']
-    @pytest.mark.parametrize('testdata', load_data()['groupDescription'])
+    @pytest.mark.parametrize('testdata', load_yamldata()['groupDescription'])
     def test_groupDescription(self,testdata):
         with self.subTest():
             GroupSet().editgroupDescription(testdata['text'])

@@ -9,7 +9,7 @@ from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupManage.ForbidFriendAdd
 from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupManage.ManageGroup import ManageGroup
 
 
-class Test_editGroupName(Base1):
+class Test_editGroupName:
     name='编辑群名称'
 
     def setUpClass(cls):

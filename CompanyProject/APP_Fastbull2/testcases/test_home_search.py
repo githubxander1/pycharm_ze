@@ -5,9 +5,9 @@ import allure
 import pytest
 from pytest_assume.plugin import assume
 
-from CompanyProject.APP_Fastbull2.base.basePage import Base1, d
+from CompanyProject.APP_Fastbull2.base.basePage import Base1
 from CompanyProject.APP_Fastbull2.common.common import Common
-from CompanyProject.APP_Fastbull2.common.logger import Logger
+from CompanyProject.APP_Fastbull2.others.logger import Logger
 from CompanyProject.APP_Fastbull2.operation.home.home_search import home_search
 
 @allure.epic('epic:测试首页全局搜索')

@@ -3,7 +3,7 @@ import time
 
 # from CompanyProject.APP_Fastbull2.base.basePage import Base1,d
 from CompanyProject.APP_Fastbull2.base.basePage import d
-from CompanyProject.APP_Fastbull2.base.basePage1 import BasePage
+
 
 class Home():
     contact=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')

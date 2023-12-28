@@ -12,8 +12,8 @@ from CompanyProject.APP_Fastbull2.operation.directory.add_friend import Add_frie
 from CompanyProject.APP_Fastbull2.operation.home.home_search import home_search
 
 
-@allure.epic('epic:测试首页全局搜索')
-@allure.feature('feature:搜索')
+@allure.epic('epic:首页-‘+’-创建群聊')
+@allure.feature('feature:创建群聊')
 class Test_creat_group:
     def setup_class(self):
         with allure.step('step：打开应用'):
@@ -36,10 +36,10 @@ class Test_creat_group:
         with allure.step('step：点击取消'):
             pass
 
-    @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=1)
     @allure.severity('critical')
-    @allure.feature('feature:添加好友')
-    @allure.story('story:添加好友')
+    @allure.feature('feature:创建群聊')
+    @allure.story('story:创建群聊')
     @allure.title('title:用户昵称')
     # @pytest.mark.xfail(reason='功能未实现')  #用例在运行时如果失败了，不会被报告为错误，而是会被报告为预期失败（xfailed）。如果预期失败的用例意外地通过了，那么它会被报告为意外通过（xpassed）。
     def test_nickname(self):

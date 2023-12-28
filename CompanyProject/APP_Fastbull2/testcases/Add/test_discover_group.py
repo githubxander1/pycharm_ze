@@ -36,7 +36,7 @@ class Test_discover_group:
         with allure.step('step：点击取消'):
             pass
 
-    @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=1)
     @allure.severity('critical')
     @allure.feature('feature:添加好友')
     @allure.story('story:添加好友')

@@ -17,11 +17,9 @@ class Add_friend(Base1):
     email_tab=d.xpath('//*[contains(@content-desc,"邮箱")]')
 
     search=d.xpath('//android.widget.EditText')
+    @allure.step("输入内容")
     def seatch_friend(self,text):
         self.search.set_text(text)
-
-
-
 
     @allure.step("点击用户昵称")
     def click_nickname_tab(self):
@@ -53,20 +51,21 @@ class Add_friend(Base1):
         self.add_friend.click()
 
     create_group_chat=d(description="创建群聊")
+    @allure.step("点击创建群聊")
     def click_creat_group_chat(self):
         self.create_group_chat.click()
 
     discovery_group_chat=d(description="发现群聊")
+    @allure.step("点击发现群聊")
     def click_discovery_group_chat(self):
         self.discovery_group_chat.click()
 
-
-
     disturbe_group_chat=d(description="免打扰群聊")
+    @allure.step("点击免打扰群聊")
     def click_disturbe_group_chat(self):
         self.disturbe_group_chat.click()
 
-    @allure.step("点击首页的添加好友")
+    @allure.step("点击首页的+")
     def click_add_home(self):
         self.add_home.click()
 
