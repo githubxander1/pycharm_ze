@@ -1,6 +1,8 @@
 import time
 import pytest
 import logging
+
+from CompanyProject.APP_Fastbull2.common.logger import create_logger
 from CompanyProject.APP_Fastbull2.operation.ChatWindows.GroupWindow import GroupWindow
 from CompanyProject.APP_Fastbull2.base.basePage import Base1, d
 from CompanyProject.APP_Fastbull2.operation.GroupSet.GroupAlbum.GroupAlbum import GroupAlbum
@@ -12,10 +14,12 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 class Test_groupAlbum():
-
+    def __init__(self):
+        self.logger = create_logger(__name__)
     @pytest.fixture(autouse=True)
     def setup(self):
         Base1().startApp()
+        self.logger.info("App启动")
         logging.info("App启动成功")
         time.sleep(5)
         Home().click_conversation()
@@ -34,6 +38,7 @@ class Test_groupAlbum():
     #     logging.info("创建新相册成功")
         # assert groupAlbum.creatNewalbum.exists
     def test_create_new_album_namewithsensitive(setup):
+        self.logger.info("创建新相册成功")
         GroupAlbum().createnewalbum('name3', 'de')
         logging.info("含敏感词")
         # 等待toast出现并获取提示内容

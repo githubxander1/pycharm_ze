@@ -12,7 +12,7 @@ class Add_friend(Base1):
 
     add_friend_top=d(description="添加好友")
     nickname_tab=d.xpath('//*[contains(@content-desc,"用户昵称")]')
-    fxid_tab=d.xpath('//*[contains(@content-desc,"FXID")]')
+    fxid_tab=d.xpath('//*[contains(@content-desc,"ID")]')
     phone=d.xpath('//*[contains(@content-desc,"电话号码")]')
     email_tab=d.xpath('//*[contains(@content-desc,"邮箱")]')
 
@@ -49,6 +49,10 @@ class Add_friend(Base1):
     @allure.step("点击添加好友")
     def click_add_friend(self):
         self.add_friend.click()
+
+    add_btn=d(description="添加")
+    def click_add_btn(self):
+        self.add_btn.click()
 
     create_group_chat=d(description="创建群聊")
     @allure.step("点击创建群聊")

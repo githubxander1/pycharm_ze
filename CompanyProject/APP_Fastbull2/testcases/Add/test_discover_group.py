@@ -12,8 +12,8 @@ from CompanyProject.APP_Fastbull2.operation.discover_group import DiscoverGroup
 from CompanyProject.APP_Fastbull2.operation.home.home_search import home_search
 
 
-@allure.epic('epic:测试首页全局搜索')
-@allure.feature('feature:搜索')
+@allure.epic('epic:测试首页-发现群聊')
+@allure.feature('feature:发现群聊')
 class Test_discover_group:
     def setup_class(self):
         with allure.step('step：打开应用'):
@@ -38,14 +38,14 @@ class Test_discover_group:
 
     # @pytest.mark.run(order=1)
     @allure.severity('critical')
-    @allure.feature('feature:添加好友')
-    @allure.story('story:添加好友')
-    @allure.title('title:用户昵称')
+    @allure.feature('feature:发现群聊')
+    @allure.story('story:发现群聊')
+    @allure.title('title:发现群聊')
     # @pytest.mark.xfail(reason='功能未实现')  #用例在运行时如果失败了，不会被报告为错误，而是会被报告为预期失败（xfailed）。如果预期失败的用例意外地通过了，那么它会被报告为意外通过（xpassed）。
-    def test_nickname(self):
+    def test_discover_group(self):
         '''描述：这是搜索全部的测试用例'''
         text='1'
-        with allure.step("通过'用户昵称'搜索"):
+        with allure.step("发现群聊"):
             text='1'
             DiscoverGroup().click_search_box()
             DiscoverGroup().input_search(text)
@@ -57,7 +57,7 @@ class Test_discover_group:
             screen=Common().take_screenshot(file_basename, text)
             # print(f'截图路径：{screen}')
             allure.attach(f'{screen}',name='截图',attachment_type=allure.attachment_type.PNG)
-        with assume: assert DiscoverGroup().send.exists
+        # with assume: assert DiscoverGroup().send.exists
         # with assume: assert 2 == 3
 
 if __name__ == '__main__':

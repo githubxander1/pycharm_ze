@@ -47,7 +47,7 @@ class Test_add_friend:
             text='1316-测试'
             Add_friend().click_nickname_tab()
             Add_friend().send_edit_text(text)
-
+        with assume: assert Add_friend().add_btn.exists
         file_basename = os.path.basename(__file__)
         with allure.step('截图'):
             screen=Common().take_screenshot(file_basename, text)
@@ -60,21 +60,25 @@ class Test_add_friend:
     # @pytest.mark.run(order=2)
     @allure.title('手机号')
     def test_phone(self):
-        text = '13111111111'
+        text = '13111111116'
         with allure.step("通过'手机号'搜索"):
             Add_friend().click_phone()
             Add_friend().send_edit_text(text)
-
+        with assume: assert Add_friend().add_btn.exists
         file_basename = os.path.basename(__file__)
         Common().take_screenshot(file_basename, text)
 
     # @pytest.mark.skip()
     @allure.title('title:FXID')
     def test_fxid(self):
-        text = '5809513'
+        text = '5374128'
         with allure.step("通过'FXID'搜索"):
             Add_friend().click_fxid_tab()
             Add_friend().send_edit_text(text)
+            Add_friend().click_add_btn()
+
+
+        with assume: assert Add_friend().add_btn.exists
         file_basename = os.path.basename(__file__)
         Common().take_screenshot(file_basename, text)
 
@@ -85,6 +89,7 @@ class Test_add_friend:
         with allure.step("通过'Email'搜索"):
             Add_friend().click_email_tab()
             Add_friend().send_edit_text(text)
+        with assume: assert Add_friend().add_btn.exists
         file_basename = os.path.basename(__file__)
         Common().take_screenshot(file_basename, text)
 

@@ -1,3 +1,4 @@
+import time
 from datetime import datetime
 
 from time import sleep
@@ -10,9 +11,22 @@ import uiautomator2 as u2
 d = u2.connect()
 print(d.info)
 class Base1:
-    phoneOremail=d(description="​邮​箱​/​F​X​I​D​/​手​机​号​")
-    phone=d.xpath('//android.widget.EditText')
-    identifyCode=d.xpath('//android.widget.EditText')
+
+    head=d.xpath('//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    def click_head(self):
+        self.head.click()
+    tologin=d(resourceId="com.bv.fastbull:id/tv_mine_top_welcome")
+    def click_tologin(self):
+        self.tologin.click()
+    phoneOremail=d.xpath('//*[@resource-id="com.bv.fastbull:id/ll_btn"]/android.widget.RelativeLayout[1]')
+    get_code=d(resourceId="com.bv.fastbull:id/tv_get_code")
+    def click_get_code(self):
+        self.get_code.click()
+    phone=d(resourceId="com.bv.fastbull:id/et_mine_edit_phone_number")
+    identifyCode=d(resourceId="com.bv.fastbull:id/et_code")
+    login=d(resourceId="com.bv.fastbull:id/tv_sign")
+    def click_login(self):
+        self.login.click()
 
     chat=d.xpath('//*[@resource-id="com.bv.fastbull:id/mainTabBar"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.ImageView[1]')
     def __init__(self):
@@ -39,12 +53,19 @@ class Base1:
         self.d.app_stop('com.bv.fastbull')
 
     def login_phone(self):
+        self.startApp()
+        time.sleep(4)
+        self.click_head()
+        self.click_tologin()
+
         self.phoneOremail.click()
         self.phone.set_text('13111111114')
+        self.click_get_code()
         sleep(2)
-        self.d.click(0.845, 0.927)
-        self.d.click(0.845, 0.927)
+        # self.d.click(0.845, 0.927)
+        # self.d.click(0.845, 0.927)
         self.identifyCode.set_text('1234')
+
 
     def take_screenshot(self,text):
         now=datetime.now().strftime('%Y%m%d-%H%M%S')
@@ -56,6 +77,7 @@ class Base1:
 
 
 # base=Base1()
+# base.login_phone()
 # # screenshot_path = "./screenshot1.png"  # 截图保存的路径
 # # d.screenshot(screenshot_path)# base.login_phone()
 # base.startApp()

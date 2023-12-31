@@ -42,10 +42,10 @@ class Test_creat_group:
     @allure.story('story:创建群聊')
     @allure.title('title:用户昵称')
     # @pytest.mark.xfail(reason='功能未实现')  #用例在运行时如果失败了，不会被报告为错误，而是会被报告为预期失败（xfailed）。如果预期失败的用例意外地通过了，那么它会被报告为意外通过（xpassed）。
-    def test_nickname(self):
+    def test_creat_group(self):
         '''描述：这是搜索全部的测试用例'''
         text='1'
-        with allure.step("通过'用户昵称'搜索"):
+        with allure.step("创建群聊"):
             text='创建群聊'
             Create_group_chat().Create_group_chat()
 
