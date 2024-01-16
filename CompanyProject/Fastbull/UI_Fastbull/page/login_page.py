@@ -14,9 +14,12 @@ from CompanyProject.Fastbull.WEB_FB_PosterMaker.base import Base
 
 
 class Login(Base):
-    url='https://testfb.tostar.top/cn/login?next=/cn'
+    # url='https://testfb.tostar.top/cn/login?next=/cn'
+    url='https://beta.fastbull.com/cn/'
 
     inputPhoneText=(By.ID,'inputPhoneText')
+    spand=(By.XPATH,'//*[@id="app"]/div/header/div/i[2]')
+
     def input_phone(self,phone):
         self.d.find_element(*self.inputPhoneText).send_keys(phone)
 

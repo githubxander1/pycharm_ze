@@ -53,7 +53,7 @@ class Home(Base):
         self.d.find_element(*self.friend1).click()
     def friend_chat(self,msg):
         self.click_cookie_accept_bt()
-        self.click_share_close()
+        # self.click_share_close()
         self.switch_to_chat_iframe()
         self.click_friend()
         self.click_friend1()
@@ -64,7 +64,7 @@ class Home(Base):
 if __name__ == '__main__':
     d = webdriver.Chrome()
     login = Login(d)
-    login.login_email('7@qq.com', 'a1234567')
+    login.login_email('forex1@linshiyou.com', 'a1234567')
     # time.sleep(10)
     friendchat=Home(d)
     friendchat.friend_chat('test')

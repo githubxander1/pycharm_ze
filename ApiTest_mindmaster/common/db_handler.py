@@ -26,9 +26,9 @@ class DBHandler:
 
 
 if __name__ == "__main__":
-    db = DBHandler(host='127.0.0.1', port=3306,
-                   user='ITester', password='123456',
-                   database='ITester', charset='utf8')
-    sql = 'select * from user limit 1;'
+    db = DBHandler(host='192.168.7.84', port=3306,
+                   user='fxchat_user', password='123456',
+                   database='fxchat_test', charset='utf8')
+    sql = 'select * from user_base limit 1;'
     data = db.query(sql)
     print(data)
