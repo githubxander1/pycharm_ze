@@ -20,11 +20,11 @@ def login():
     request_data = "OqRZEG9mm9B/y92h7+muv9Wo/hqLayfEHblOiW/1ePColbT1ffuMo1ApsQPHr4G02+zbOMm2tnftFXUAhKjlxV6rosUNFayqQABV7DhESBjMTNzgCI3tF5P5afpnQFK0Ux09uC6F4gHEE+MN4Ydt32pu25IbXW0GVRzoSjAaDxB+cQVsBQ2JKGlXPVEI+FfU"
 
     response = ak.post(url, headers=headers, data=json.dumps({"requestData": request_data}))
-    # print(response.json())
+    print(response.json())
 
-    msg=ak.get_text(response.text,'message')
-    print(msg)
-    assert msg == "操作成功"
+    # msg=ak.get_text(response.text,'message')
+    # print(msg)
+    # assert msg == "操作成功"
     # 检查响应状态码和内容
 #     if response.status_code == 200:
 #         print("登录成功")

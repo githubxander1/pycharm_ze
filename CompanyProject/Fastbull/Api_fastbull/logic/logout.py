@@ -24,7 +24,7 @@ headers = {
     "sec-fetch-site": "same-site",
     "sign": "1C6E1B73B0DB6465E34BB7C1338B03E9",  # 这个签名可能需要根据参数和密钥计算得出
     "timestamp": str(int(time.time())),  # 使用当前时间戳替换
-    "uid": "204830",  # 用户ID应该由实际登录后的信息提供
+    "uid": "205050",   #8@qq.com 用户ID应该由实际登录后的信息提供
     "x-http-method-override": "put"
 }
 

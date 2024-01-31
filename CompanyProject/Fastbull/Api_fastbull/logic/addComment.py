@@ -1,34 +1,32 @@
+import base64
+
 import requests
-import hashlib
 import time
-import random
 
-def generate_nonce():
-    return ''.join(['%02X' % random.randint(0, 255) for i in range(4)])
 
-def generate_sign(uid, btoken, timestamp, nonce):
-    raw_str = f"{uid}{btoken}{timestamp}{nonce}"
-    sign = hashlib.md5(raw_str.encode('utf-8')).hexdigest().upper()
-    return sign
+from CompanyProject.Fastbull.Api_fastbull.logic.common import generate_btoken, generate_sign_login, generate_token, \
+    get_identity, generate_nonce
 
-# 填写真实值
+
 uid = "205050" #8@qq.com
 btoken = "881c64f16359dc75180efa784ad047db"
 client_type = "4"
+client_version="latest"
+device_no = "51cee82782f69741d228946af2d2cda3"
+uuid="2a3cd0189ea31b1d5f177b66df8705f8"
 vip = "0"  # 根据实际情况填写会员状态
 timestamp = str(int(time.time()))[:10]  # 获取当前时间戳
 nonce = generate_nonce()
 
-sign = generate_sign(uid, btoken, timestamp, nonce)
 
 headers = {
     "accept": "*/*",
     "accept-language": "zh-CN,zh;q=0.9,en-GB;q=0.8,en;q=0.7,en-US;q=0.6",
     "beta": "true",
-    "btoken": btoken,
+    "btoken": generate_btoken(client_type, client_version, uuid,device_no),
     "cache-control": "no-cache",
     "client-type": client_type,
-    "clientversion": "latest",
+    "clientversion": client_version,
     "content-type": "application/json",
     "deviceid": "2a3cd0189ea31b1d5f177b66df8705f8",  # 根据实际情况填写设备ID
     "deviceno": "2a3cd0189ea31b1d5f177b66df8705f8",  # 根据实际情况填写设备号
@@ -42,13 +40,13 @@ headers = {
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-site",
-    "sign": sign,
+    "sign": generate_sign_login(uid, generate_token(get_identity()), timestamp, nonce),
     "timestamp": timestamp,
     "uid": uid
 }
 
 body = {
-    "comment": "nice1",
+    "comment": "评论111",
     "imageInfoModel": [],
     "postId": "3707814_1",#新闻id：对当今世界的资产泡沫要敬而远之
     "type": 1
@@ -59,3 +57,5 @@ response = requests.post("https://testfbapi.tostar.top/fastbull-news-service/api
 
 print(response.status_code)
 print(response.json())
+# comment_id=response.json()['bodyMessage']['Id']
+# print(comment_id)
