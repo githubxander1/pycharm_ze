@@ -12,10 +12,22 @@ import requests
 DEVELOPMENT_KEY = "c0iOcX2p1v782YUY"
 DEVELOPMENT_IV = "Bai1unC1ub1sBest"
 
-uid = "205050" #8@qq.com
-# uid = "204830" #7@qq.com
-uuid="22fe60c8ab2abcf803c386d8edd4353f"
-deviceNo = "51cee82782f69741d228946af2d2cda3"
+common_data = {
+    'uid' : '205050',#8@qq.com
+    # uid = "204830" #7@qq.com
+    'uuid' : "22fe60c8ab2abcf803c386d8edd4353f",
+    'deviceNo' : "51cee82782f69741d228946af2d2cda3",
+    'client_type' : "4",
+    'client_version':"latest",
+    'device_no' : "51cee82782f69741d228946af2d2cda3",
+    # 'uuid':"2a3cd0189ea31b1d5f177b66df8705f8"
+    'postId':'3707814_1'
+}
+# print(common_data['uid'])
+# uid = "205050" #8@qq.com
+# # uid = "204830" #7@qq.com
+# uuid="22fe60c8ab2abcf803c386d8edd4353f"
+# deviceNo = "51cee82782f69741d228946af2d2cda3"
 
 timestamp = str(int(time.time() * 1000) // 100)
 # 定义生成nonce方法

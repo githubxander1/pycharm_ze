@@ -7,7 +7,12 @@ from CompanyProject.Fastbull.Api_fastbull.logic.common import generate_sign_logi
     generate_nonce, generate_token
 
 
-def post_like_operate():
+def post_like_operate(postId,like_type):
+    """点赞操作
+    1.postId:被点赞的帖子id
+    2.like_type:1:点赞 2:取消点赞
+
+    """
     url = "https://testfbapi.tostar.top/fastbull-news-service/api/postLikeOperate"
 
     uid = "205050"  # 8@qq.com
@@ -50,8 +55,8 @@ def post_like_operate():
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"
     }
     data = {
-        "postId": "65b8ac8a7816370007c9c6cf",
-        "operate": 1    #点赞
+        "postId": postId,
+        "operate": like_type    #点赞
         # "operate": 0 #取消点赞
     }
     response = requests.post(url, headers=headers, data=json.dumps(data))

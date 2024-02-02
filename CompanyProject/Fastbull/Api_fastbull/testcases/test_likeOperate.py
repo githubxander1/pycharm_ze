@@ -5,7 +5,7 @@ import json
 
 from CompanyProject.Fastbull.Api_fastbull.logic.common import generate_sign_login, get_identity, generate_btoken, \
     generate_nonce, generate_token
-from CompanyProject.Fastbull.Api_fastbull.logic.postLikeOperate import post_like_operate
+from CompanyProject.Fastbull.Api_fastbull.logic.like import post_like_operate
 
 
 class TestPostLikeOperate:
