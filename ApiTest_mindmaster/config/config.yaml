@@ -1,4 +1,6 @@
 
+base:
+  base_url:https://mindapi.edrawsoft.cn
 
 email: "2695418206@qq.com"
 from: "web"
@@ -8,4 +10,7 @@ pw: "f2d8ddfc169a0ee6f8b0ecd924b1d300"
 logger:
   name: ITester
   level: DEBUG
+  filename: ITester.log
+  file: os.path.join(os.path.dirname(__file__), 'logger.log')
+#  level: INFO
   format: '%(filename)s-%(lineno)d-%(asctime)s-%(levelname)s-%(message)s'

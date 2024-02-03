@@ -8,7 +8,8 @@ class RequestsHandler:
         try:
             # 返回json结果
             return result.json()
+            # return result
         except Exception:
-            return 'not json'
+            return result
     def close_session(self):
         self.session.close()

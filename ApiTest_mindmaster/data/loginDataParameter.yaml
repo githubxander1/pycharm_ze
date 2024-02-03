@@ -1,17 +1,17 @@
 -
 #  成功
-  actual_result: success
   case_id: 1
+  model_name: 登录
   case_title: login_suss
+  url: https://userapi.edrawsoft.cn/api/user/login
+  method: post
   data: {"email": "2695418206@qq.com",
          "from": "web",
          "product":"master-online",
          "pw": "f2d8ddfc169a0ee6f8b0ecd924b1d300"}
   expected_result: success
-  method: post
-  model_name: 登录
+  actual_result: success
   test_result: Pass
-  url: https://userapi.edrawsoft.cn/api/user/login
 
 -
 #  用户名错误

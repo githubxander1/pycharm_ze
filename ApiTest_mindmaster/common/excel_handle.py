@@ -32,8 +32,8 @@ class ExcelHandler:
             for cell in row:
                 row_data.append(cell.value)
                 # 通过zip函数将两个列表合并成字典
-                data_dict = dict(zip(self.get_header(sheet_name),row_data))
-            data.append(data_dict)
+                self.data_dict = dict(zip(self.get_header(sheet_name),row_data))
+            data.append(self.data_dict)
         return data
     @staticmethod
     # 使用静态方法的主要优点是可以在不创建类实例的情况下调用该方法，从而提高代码的灵活性和可重用性。
@@ -47,9 +47,9 @@ class ExcelHandler:
 
 
 
-# if __name__ == "__main__":
-# 以下为测试代码
-    # excel = ExcelHandler('../data/openpyxl_mindmaster2.xlsx')
-    # data = excel.read_excel('login')
-    # excel.write_excel('../data/openpyxl_mindmaster2.xlsx', 'login',4, 9, 200)
-    # pprint(data)
+if __name__ == "__main__":
+    # 以下为测试代码
+    excel = ExcelHandler('../data/openpyxl_mindmaster2.xlsx')
+    data = excel.read_excel('login')
+#     # excel.write_excel('../data/openpyxl_mindmaster2.xlsx', 'login',4, 9, 200)
+    pprint(data)

@@ -12,7 +12,7 @@ from ApiTest_mindmaster.common.requests_handler import RequestsHandler
 @ddt.ddt
 class TestLogin(unittest.TestCase):
     # 读取excel中的数据
-    excel = ExcelHandler('../data/openpyxl_mindmaster2.xlsx')
+    excel = ExcelHandler('../../data/openpyxl_mindmaster2.xlsx')
     case_data = excel.read_excel('login')
     print(case_data)
     def setUp(self):

@@ -4,7 +4,6 @@ from HTMLTestRunner import HTMLTestRunner
 # 导入测试模块
 
 # 创建测试套件
-from ApiTest_mindmaster.test_cases.test_login_ddt import TestLogin
 
 suite = unittest.TestSuite()
 

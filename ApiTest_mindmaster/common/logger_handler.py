@@ -1,6 +1,6 @@
 import logging
 # from common.yaml_handler import yaml_data
-from ApiTest_mindmaster.config.yaml_handler import yaml_data
+# from ApiTest_mindmaster.config.yaml_handler import yaml_data
 
 
 class LoggerHandler(logging.Logger):
@@ -9,8 +9,7 @@ class LoggerHandler(logging.Logger):
                  name='root',
                  level='DEBUG',
                  file=None,
-                 format=None
-                 ):
+                 format=None):
         # 设置收集器
         super().__init__(name)
         # 设置收集器级别
@@ -29,7 +28,7 @@ class LoggerHandler(logging.Logger):
         stream_handler.setFormatter(fmt)
         self.addHandler(stream_handler)
 # 从yaml配置文件中读取logging相关配置
-logger = LoggerHandler(name=yaml_data['logger']['name'],
-                       level=yaml_data['logger']['level'],
-                       file='../log/log.txt',
-                       format=yaml_data['logger']['format'])
+# logger = LoggerHandler(name=yaml_data['logger']['name'],
+#                        level=yaml_data['logger']['level'],
+#                        # file='../log/log.txt',
+#                        format=yaml_data['logger']['format'])

@@ -1,5 +1,0 @@
-logger_handler.py-35-2023-05-07 19:14:35,650-DEBUG-自定义的debug日志
-logger_handler.py-36-2023-05-07 19:14:35,653-INFO-自定义的info日志
-logger_handler.py-37-2023-05-07 19:14:35,653-WARNING-自定义的warning日志
-logger_handler.py-38-2023-05-07 19:14:35,653-ERROR-自定义的error日志
-logger_handler.py-39-2023-05-07 19:14:35,654-CRITICAL-自定义的critical日志
