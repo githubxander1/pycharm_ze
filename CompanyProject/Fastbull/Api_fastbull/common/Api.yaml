@@ -1,0 +1,35 @@
+login:
+  url: https://testfbapi.tostar.top/fastbull-user-service/api/postLoginByAccount
+  method: POST
+  body:
+    requestData: OqRZEG9mm9B/y92h7+muvwcxB8yVV/QwIWGPo5b44f6kMu6+64Nx3ZHpA/BbJRO7RKBB48RGqfRNBe+fehjZmu2L1wAKO884B1+7MKqDorE99P4QKtg9NrlPjtthAoaWXozHS7SJEboLxvkw0R5DK3jpe1JcPK05mOYHmHPkNps6laBE5o5z9cr5yv1aNiap
+
+logout:
+  url: https://testfbapi.tostar.top/fastbull-user-service/api/putLogout
+  method: PUT
+  body: {}
+
+delete_comment:
+  url: https://testfbapi.tostar.top/fastbull-news-service/api/deleteComment
+  method: post
+  body: {}
+add_comment:
+  url: https://testfbapi.tostar.top/fastbull-news-service/api/postComment
+  method: post
+  body:  {
+            "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]1",
+            "imageInfoModel": [
+                {
+                    "high": 226,
+                    "url": "https://img.fastbull.com/test/image/2024/02/3E6104A2BE7844E4923B6886D6F2D6A8",
+                    "width": 448
+                }
+            ],
+            "postId": "3707814_1",
+            "type": 1
+        }
+
+get_comment_list:
+  url: https://testfbapi.tostar.top/fastbull-news-service/api/getCommentPage?r=0.27805524689164374&pageIndex=1&pageSize=100&sortType=1
+  method: get
+  body: {}

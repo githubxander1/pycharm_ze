@@ -1,19 +1,27 @@
 from bson import ObjectId
 from pymongo import MongoClient
 
+from CompanyProject.Fastbull.Api_fastbull.common.mongoDB_handler import MongoDBHandler
+
+client = MongoDBHandler(
+    host = '192.168.7.72',
+    port = 27017,
+    username = 'fastbull',
+    password = 'IOE*2EW#OIWddOPcDWE')
+    # da_name = 'fastbull_universal_test')
 # MongoDB连接信息
 # uri = "mongodb://fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_universal_test?authSource=admin&authMechanism=SCRAM-SHA-1"
 # 创建MongoDB客户端实例
 # client = MongoClient(uri)
 # MongoDB连接参数
-host = '192.168.7.72'
-port = 27017
-username = 'fastbull'
-password = 'IOE*2EW#OIWddOPcDWE'
-
-# 创建MongoDB客户端实例并连接到admin数据库进行身份验证
-client = MongoClient(host, port)
-client.admin.authenticate(username, password, mechanism='SCRAM-SHA-1')
+# host = '192.168.7.72'
+# port = 27017
+# username = 'fastbull'
+# password = 'IOE*2EW#OIWddOPcDWE'
+#
+# # 创建MongoDB客户端实例并连接到admin数据库进行身份验证
+# client = MongoClient(host, port)
+# client.admin.authenticate(username, password, mechanism='SCRAM-SHA-1')
 
 # 连接到数据库
 # db = client['fastbull_universal_test']
@@ -36,7 +44,7 @@ client.admin.authenticate(username, password, mechanism='SCRAM-SHA-1')
 # for document in all_documents:
 #     print(document)
 # 连接到目标数据库和集合
-db = client['fastbull_news_test']
+db = client.select_database('fastbull_news_test')
 collection = db['comment_info']
 
 # 删除指定ID的文档

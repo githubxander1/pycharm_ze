@@ -17,7 +17,7 @@ class TestAddComment:
     @allure.title("文字+表情+图片")
     def test_add_comment(self):
         self.body = {
-            "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]1",
+            "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]111",
             "imageInfoModel": [
                 {
                     "high": 226,
@@ -25,7 +25,7 @@ class TestAddComment:
                     "width": 448
                 }
             ],
-            "postId": "3707814_1",
+            "postId": "4279312_1",#对当今世界的资产泡沫要敬而远之
             "type": 1
         }
         try:

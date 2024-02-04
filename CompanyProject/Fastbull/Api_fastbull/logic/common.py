@@ -33,6 +33,35 @@ timestamp = str(int(time.time() * 1000) // 100)
 # 定义生成nonce方法
 def generate_nonce():
     return ''.join([random.choice('0123456789ABCDEF') for _ in range(8)])
+def headers1(nonce):
+    headers = {
+        "accept": "*/*",
+        "accept-language": "zh-CN,zh;q=0.9,en-GB;q=0.8,en;q=0.7,en-US;q=0.6",
+        "beta": "true",
+        "btoken": generate_btoken(common_data["client_type"], common_data["client_version"], common_data['uuid'],
+                                  common_data['device_no']),
+        "cache-control": "no-cache",
+        "client-type": common_data["client_type"],
+        "clientversion": common_data["client_version"],
+        "content-type": "application/json",
+        "deviceid": "2a3cd0189ea31b1d5f177b66df8705f8",  # 根据实际情况填写设备ID
+        "deviceno": "2a3cd0189ea31b1d5f177b66df8705f8",  # 根据实际情况填写设备号
+        "langid": "1",
+        "nonce": nonce,
+        "pragma": "no-cache",
+        # 下面是浏览器相关头信息，如果在非浏览器环境下可以不设置
+        "sec-ch-ua": '"Not_A Brand";v="8", "Chromium";v="120", "Microsoft Edge";v="120"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": '"Windows"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-site",
+        "sign": generate_sign_login(common_data['uid'], generate_token(get_identity()), timestamp, nonce),
+        "timestamp": timestamp,
+        "uid": common_data['uid']
+        # "uid": '205050'
+    }
+    return headers
 
 def generate_token(identity):
     key_test = 'c0iOcX2p1v782YUY'
@@ -94,4 +123,4 @@ def get_identity():
     extracted_identity = match_result.group(1)
     # print(extracted_identity)
     return extracted_identity
-# print(get_identity())
+print(get_identity())
