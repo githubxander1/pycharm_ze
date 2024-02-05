@@ -2,7 +2,7 @@ import re
 
 from CompanyProject.Fastbull.Api_fastbull.common.requests_handler import RequestsHandler
 from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
-from CompanyProject.Fastbull.Api_fastbull.logic.common import headers1, generate_nonce
+from CompanyProject.Fastbull.Api_fastbull.logic.conftest import headers1, generate_nonce
 
 req=RequestsHandler()
 yamlhandler=YamlHandler('../common/Api.yaml')
@@ -45,4 +45,4 @@ def logout():
     response_json = response.json()
     assert response_json['message'] == '操作成功'
     print(response_json)
-logout()
+# logout()

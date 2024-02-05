@@ -1,22 +1,30 @@
 import base64
 import json
 
+import allure
 import requests
 import time
 
 from numpy.ma import count
 
+from ApiTest_mindmaster.common.logger_handler import LoggerHandler
 from CompanyProject.Fastbull.Api_fastbull.common.requests_handler import RequestsHandler
 from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
-from CompanyProject.Fastbull.Api_fastbull.logic.common import generate_btoken, generate_sign_login, generate_token, \
+from CompanyProject.Fastbull.Api_fastbull.logic.conftest import generate_btoken, generate_sign_login, generate_token, \
     get_identity, generate_nonce, timestamp, common_data,headers1
 
 nonce = generate_nonce()
 req=RequestsHandler()
 yamlhandler=YamlHandler('../common/Api.yaml')
+filename=os.path.basename(__file__).split('.')[0]
+logger=LoggerHandler(name='ask',level='DEBUG',file=f'../log/{filename}_log.log',format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
 def add_comment(content):
     headers=headers1(nonce)
     data=yamlhandler.read_yaml()['add_comment']
+    function_name = add_comment.__qualname__
+    logger.warning(f'{function_name}请求头：{headers}')
+    allure.step(f'{function_name}请求头：{headers}')
     url = data['url']
     method = data['method']
 
@@ -25,7 +33,7 @@ def add_comment(content):
     assert response.status_code == 200, f"登录请求失败，状态码为：{response.status_code}"
 
     response=response.json()
-    print(response)
+    # print(response)
     # assert json.loads(response['subCode']) == 1000000 #业务状态
     comment_id = json.loads(response['bodyMessage'])['id']
     # print(comment_id)
@@ -62,13 +70,13 @@ def delete_comment(post_id):
     data = yamlhandler.read_yaml()['delete_comment']
     url = data['url']+f'?postId={post_id}'
     method = data['method']
-    print(url)
-    print(method)
 
     response = req.visit(method, url, headers=headers, json=post_id)
     response_json=response.json()
-    assert response_json['subCode'] == 1000000, f"删除失败，状态码为：{response_json['subCode']}"
-    print(response)
+    return response_json
+    # assert response['message'] == "操作成功"
+    # print(response)
+    # print(response_json)
 
 def get_comment_list(postId):
     headers2 = headers1(nonce)
@@ -100,12 +108,12 @@ def get_comment_list(postId):
     data = yamlhandler.read_yaml()['get_comment_list']
     url = data['url'] + f'&postId={postId}'
     method = data['method']
-    print(url)
-    print(method)
+    # print(url)
+    # print(method)
 
     response = req.visit(method, url, headers=headers, params=postId)
     response_json = response.json()
-    print(response_json)
+    # print(response_json)
     # body_message = json.loads(response_json['bodyMessage'])
     # # print(body_message)
     # # message=json.loads(response_json['message'])

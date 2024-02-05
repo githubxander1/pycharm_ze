@@ -46,5 +46,5 @@ def close_app():
     d.app_stop('com.app.ct4')
 
 if __name__ == '__main__':
-    # pytest.main(["-s", "common.py"])
+    # pytest.main(["-s", "conftest.py"])
     login_email()

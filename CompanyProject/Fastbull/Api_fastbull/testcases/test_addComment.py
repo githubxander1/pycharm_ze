@@ -17,7 +17,7 @@ class TestAddComment:
     @allure.title("文字+表情+图片")
     def test_add_comment(self):
         self.body = {
-            "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]111",
+            "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]112",
             "imageInfoModel": [
                 {
                     "high": 226,
@@ -39,13 +39,13 @@ class TestAddComment:
             # 处理异常
             print(f"异常信息: {e}")
             return e
-        finally:
-            # 清理评论
-            # if hasattr(self, 'comment_id'):
-            time.sleep(3)
-            print(self.comment_id)
-            de=delete_comment(self.comment_id)
-            print(de['message'])
+        # finally:
+        #     # 清理评论
+        #     # if hasattr(self, 'comment_id'):
+        #     time.sleep(3)
+        #     print(self.comment_id)
+        #     de=delete_comment(self.comment_id)
+        #     print(de['message'])
             # print('删除成功')
 
 if __name__ == '__main__':

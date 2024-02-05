@@ -1,0 +1,7 @@
+logger:
+  name: ITester
+  level: DEBUG
+  filename: ITester.log
+  file: os.path.join(os.path.dirname(__file__), 'logger.log')
+#  level: INFO
+  format: '%(filename)s-%(lineno)d-%(asctime)s-%(levelname)s-%(message)s'

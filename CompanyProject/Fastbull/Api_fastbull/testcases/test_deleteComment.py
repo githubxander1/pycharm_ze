@@ -5,7 +5,7 @@ import time
 import pytest
 
 from CompanyProject.Fastbull.Api_fastbull.logic.comment import add_comment, delete_comment, get_comment_list
-from CompanyProject.Fastbull.Api_fastbull.logic.common import common_data
+from CompanyProject.Fastbull.Api_fastbull.logic.conftest import common_data
 
 
 class TestDeleteComment:
@@ -27,7 +27,7 @@ class TestDeleteComment:
         # for id in ids:
         #     self.response=delete_comment(id)
         #     time.sleep(random.randint(1,3))
-        self.comment_id='65bb6e6335df7d0007cf63f3'
+        self.comment_id='65c04e29f5523e000783b4cb'
         self.response=delete_comment(self.comment_id)
         assert self.response['message']=='操作成功'
         print(self.response)

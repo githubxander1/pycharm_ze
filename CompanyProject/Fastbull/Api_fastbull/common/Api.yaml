@@ -33,3 +33,34 @@ get_comment_list:
   url: https://testfbapi.tostar.top/fastbull-news-service/api/getCommentPage?r=0.27805524689164374&pageIndex=1&pageSize=100&sortType=1
   method: get
   body: {}
+
+addAsk:
+  url: https://testfbapi.tostar.top/fastbull-universal-service/api/postAddAsk
+  method: post
+  data : {
+        "askContent": "美元趋势如何11111",
+        "askImage": "https://img.fastbull.com/test/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
+        }
+deleteAsk:
+  url: https://testfbapi.tostar.top/fastbull-universal-service/api/deleteAskReply
+  method: post
+  data : {
+        "id": id,
+        "type": 1
+        }
+post_like:
+  url: https://testfbapi.tostar.top/fastbull-news-service/api/postLikeOperate
+  method: post
+  data : {
+        "postId": postId,
+        "operate": 1    #点赞
+        # "operate": 0 #取消点赞
+          }
+get_expert_ask_reply_page:
+  url: https://testfbapi.tostar.top/fastbull-universal-service/api/getExpertAskReplyPage
+  method: get
+  data : {
+        "postId": postId,
+        "operate": 1    #点赞
+        # "operate": 0 #取消点赞
+          }

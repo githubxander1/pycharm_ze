@@ -5,9 +5,17 @@ import random
 import re
 import string
 import time
+
+import pytest
 from Crypto.Cipher import AES
 import requests
 
+from CompanyProject.Fastbull.Api_fastbull.common.requests_handler import RequestsHandler
+from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
+
+# nonce = generate_nonce()
+req=RequestsHandler()
+yamlhandler=YamlHandler('../common/Api.yaml')
 # 公共常量
 DEVELOPMENT_KEY = "c0iOcX2p1v782YUY"
 DEVELOPMENT_IV = "Bai1unC1ub1sBest"
@@ -30,6 +38,13 @@ common_data = {
 # deviceNo = "51cee82782f69741d228946af2d2cda3"
 
 timestamp = str(int(time.time() * 1000) // 100)
+def pytest_collection_modifyitems(items):
+    """
+    测试用例收集完成时，将收集到的item的name和nodeid的中文显示在控制台上
+    """
+    for item in items:
+        item.name = item.name.encode("utf-8").decode("unicode_escape")
+        item._nodeid = item.nodeid.encode("utf-8").decode("unicode_escape")
 # 定义生成nonce方法
 def generate_nonce():
     return ''.join([random.choice('0123456789ABCDEF') for _ in range(8)])
@@ -82,7 +97,7 @@ def generate_sign_notLogin():
     # 计算签名
     sign_data = deviceNo + uri + timestamp + nonce
     sign_notLogin = hashlib.md5(sign_data.encode('utf-8')).hexdigest().upper()
-    print(f'sign：{sign_notLogin}')  # C828E14487F0DE9A4E4322F0A7D80AB8
+    # print(f'sign：{sign_notLogin}')  # C828E14487F0DE9A4E4322F0A7D80AB8
     return sign_notLogin
 
 def generate_sign_login(uid, token, timestamp, nonce):
@@ -101,26 +116,47 @@ def generate_btoken(client_type, client_version, uuid, device_no):
     b_token = hashlib.md5(b_token_data.encode()).hexdigest()
     return b_token
 
-def get_identity():
-    url = "https://testfbapi.tostar.top/fastbull-user-service/api/postLoginByAccount"
-    # 请求体数据
-    data = {
-        # "requestData": "OqRZEG9mm9B/y92h7+muv9Wo/hqLayfEHblOiW/1ePColbT1ffuMo1ApsQPHr4G02+zbOMm2tnftFXUAhKjlxV6rosUNFayqQABV7DhESBjMTNzgCI3tF5P5afpnQFK0Ux09uC6F4gHEE+MN4Ydt32pu25IbXW0GVRzoSjAaDxB+cQVsBQ2JKGlXPVEI+FfU",
-        # 8@qq.com
-        "requestData": "OqRZEG9mm9B/y92h7+muvwcxB8yVV/QwIWGPo5b44f6kMu6+64Nx3ZHpA/BbJRO7RKBB48RGqfRNBe+fehjZmu2L1wAKO884B1+7MKqDorE99P4QKtg9NrlPjtthAoaWXozHS7SJEboLxvkw0R5DK3jpe1JcPK05mOYHmHPkNps6laBE5o5z9cr5yv1aNiap",
-    }
-    response = requests.post(url, json=data)
+def login():
+    data=yamlhandler.read_yaml()['login']
+    url = data['url']
+    method = data['method']
+    body = data['body']
 
-    # 验证响应状态码
+    response = req.visit(method, url, json=body)
+
     assert response.status_code == 200, f"登录请求失败，状态码为：{response.status_code}"
 
-    # 检查并打印返回的JSON数据（假设API返回的是JSON格式）
     response_json = response.json()
-    # print(response_json)
+    return response_json
+# @pytest.fixture(scope='session')
+def get_identity():
+    response_json=login()
     body_message_str = response_json['bodyMessage']
     # 使用正则表达式提取 identity 字段的值
     match_result = re.search(r'"identity":"([^"]+)"', body_message_str)
     extracted_identity = match_result.group(1)
     # print(extracted_identity)
     return extracted_identity
-print(get_identity())
+# def get_identity():
+#     url = "https://testfbapi.tostar.top/fastbull-user-service/api/postLoginByAccount"
+#     # 请求体数据
+#     data = {
+#         # "requestData": "OqRZEG9mm9B/y92h7+muv9Wo/hqLayfEHblOiW/1ePColbT1ffuMo1ApsQPHr4G02+zbOMm2tnftFXUAhKjlxV6rosUNFayqQABV7DhESBjMTNzgCI3tF5P5afpnQFK0Ux09uC6F4gHEE+MN4Ydt32pu25IbXW0GVRzoSjAaDxB+cQVsBQ2JKGlXPVEI+FfU",
+#         # 8@qq.com
+#         "requestData": "OqRZEG9mm9B/y92h7+muvwcxB8yVV/QwIWGPo5b44f6kMu6+64Nx3ZHpA/BbJRO7RKBB48RGqfRNBe+fehjZmu2L1wAKO884B1+7MKqDorE99P4QKtg9NrlPjtthAoaWXozHS7SJEboLxvkw0R5DK3jpe1JcPK05mOYHmHPkNps6laBE5o5z9cr5yv1aNiap",
+#     }
+#     response = requests.post(url, json=data)
+#
+#     # 验证响应状态码
+#     assert response.status_code == 200, f"登录请求失败，状态码为：{response.status_code}"
+#
+#     # 检查并打印返回的JSON数据（假设API返回的是JSON格式）
+#     response_json = response.json()
+#     # print(response_json)
+#     body_message_str = response_json['bodyMessage']
+#     # 使用正则表达式提取 identity 字段的值
+#     match_result = re.search(r'"identity":"([^"]+)"', body_message_str)
+#     extracted_identity = match_result.group(1)
+#     # print(extracted_identity)
+#     return extracted_identity
+# print(get_identity())

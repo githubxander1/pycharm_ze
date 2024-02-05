@@ -34,5 +34,5 @@ class MongoDBHandler:
         return collection.delete_one(filter_dict)
 
 # 使用示例
-handler = MongoDBHandler(db_name='my_database')
-handler.insert_one('users', {'username': 'test_user', 'password': 'test_password'})
+# handler = MongoDBHandler(db_name='my_database')
+# handler.insert_one('users', {'username': 'test_user', 'password': 'test_password'})
