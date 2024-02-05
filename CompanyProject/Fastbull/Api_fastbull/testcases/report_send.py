@@ -4,15 +4,15 @@ from email.mime.text import MIMEText
 import requests
 
 report_url = 'http://127.0.0.1:63342/pycharmProject0/CompanyProject/Fastbull/Api_fastbull/testcases/report_allure/index.html?_ijt=6ulaqrl15v9s761mk7bk5f7alk&_ij_reload=RELOAD_ON_SAVE'  # 你的报告网页URL
-def Dingtalk():
+def Dingtalk(report_url,keyword):
     webhook_url = 'https://oapi.dingtalk.com/robot/send?access_token=ad751f38f241c5088b291765818cfe294c2887198b93655e0e20b1605a8cd6a2'
-    # report_url = 'http://your_server/allure_report_html/index.html'  # 你的报告网页URL
 
+    # 确保"link.text"或者"link.title"中包含关键词
     message = {
         "msgtype": "link",
         "link": {
-            "text": "自动化测试报告",
-            "title": "最新测试报告",
+            "text": f"{keyword}自动化测试报告",  # 在文本部分添加关键词
+            "title": f"{keyword}: 最新测试报告",  # 或者在标题部分添加关键词
             "picUrl": "",
             "messageUrl": report_url,
         }
@@ -43,4 +43,5 @@ def Email():
     text = msg.as_string()
     server.sendmail(sender_email, receiver_email, text)
     server.quit()
-Email()
+# Email()
+Dingtalk(report_url,'fastbull')
