@@ -43,29 +43,43 @@ def addAsk(askContent):
         "timestamp": timestamp,
         "uid": common_data['uid']
     }
-    logger.warning(f'{function_name}请求头：{headers}')
-    allure.step(f'{function_name}请求头：{headers}')
     data = yamlhandler.read_yaml()['addAsk']
-    logger.warning(f'{function_name}请求体：{data}')
-    allure.step(f'{function_name}请求体：{data}')
     url = data['url']
     method = data['method']
 
     response = req.visit(method, url, headers=headers, json=askContent)
-    logger.warning(f'{function_name}响应体：{response}')
+
+    bodyMessage = response['bodyMessage']
+    bodyMessage1 = json.loads(bodyMessage)
+    id = bodyMessage1['id']
+    print(id)
+    allure.step(f'{function_name}请求头：{headers}')
+    allure.step(f'{function_name}请求体：{data}')
     allure.attach(body=response, name='响应体', attachment_type=allure.attachment_type.JSON)
-    return response
+    logger.warning(f'{function_name}请求头：{headers}')
+    logger.warning(f'{function_name}请求体：{data}')
+    logger.warning(f'{function_name}响应体：{response}')
+
+    return response,id
 
     # assert response.status_code == 200, f"登录请求失败，状态码为：{response.status_code}"
 
     # response = response.json()
+# def get_addAsk_id(data):
+#     function_name = get_addAsk_id.__qualname__
+#     # r=json.loads(addAsk(data))
+#     bodyMessage=addAsk(data)['bodyMessage']
+#     bodyMessage1=json.loads(bodyMessage)
+#     # print(r)
+#     id=bodyMessage1['id']
+#     print(id)
 
 data = {
-        "askContent": "美元趋势如何11111",
+        "askContent": "美元趋势如何",
         "askImage": "https://img.fastbull.com/test/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
         }
-# addAsk(data)
-
+addAsk(data)
+# print(get_addAsk_id(data))
 def deleteAsk(body):
     headers = {
         "accept": "*/*",
@@ -125,14 +139,16 @@ def get_expert_ask_reply_page(pagesize):
         "accept": "*/*",
         "accept-language": "zh-CN,zh;q=0.9,en-GB;q=0.8,en;q=0.7,en-US;q=0.6",
         "beta": "true",
-        "btoken": "cf0cabf8f9cefab23b3c4ef6c4f9a395",
+        "btoken": generate_btoken(common_data["client_type"], common_data["client_version"], common_data['uuid'],
+                                  common_data['device_no']),
         "cache-control": "no-cache",
         "client-type": "4",
         "clientversion": "latest",
+        "content-type": "application/json",
         "deviceid": "51cee82782f69741d228946af2d2cda3",
         "deviceno": "51cee82782f69741d228946af2d2cda3",
         "langid": "1",
-        "nonce": "62RM0Isf",
+        "nonce": nonce,
         "pragma": "no-cache",
         "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
         "sec-ch-ua-mobile": "?0",
@@ -140,17 +156,34 @@ def get_expert_ask_reply_page(pagesize):
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-site",
-        "sign": "88E5CCAD1F2D5A2CF8566FDA1C999195",
-        "timestamp": "1706780569",
+        "sign": generate_sign_login(common_data['uid'], generate_token(get_identity()), timestamp, nonce),
+        "timestamp": timestamp,
         "uid": common_data['uid']
     }
     data = yamlhandler.read_yaml()['get_expert_ask_reply_page']
     # url = data['url']+f'?r=0.2840183065749913&pageSize={pagesize}&timestamp={timestamp}'
-    url = data['url']+f'?r=0.2840183065749913&pageSize={pagesize}&timestamp=1706780569357'
+    url = data['url']+f'?r=0.2840183065749914&pageSize={pagesize}&startTime={timestamp}'
     # ?r=0.2840183065749913&pageSize={pagesize}&timestamp=1706780569357
     method = data['method']
     response = req.visit(method, url, headers=headers)
+    return response
 
     # response = response.json()
-    print(response)
-# print(get_expert_ask_reply_page(10))
+    # print(response)
+def get_ask_ids():
+    res=get_expert_ask_reply_page(100)
+    bodyMessage=json.loads(res['bodyMessage'])
+    # print(bodyMessage)
+    ids=[]
+    for item in bodyMessage['pageDatas']:
+        ids.append(item['ask']['id'])
+        # for reply in item['replyList']:
+        #     ids.append(reply['id'])
+
+    # ids=res1['pageDatas']['ask']['id']
+    print(ids)
+    return ids
+
+get_ask_ids()
+
+# print(get_expert_ask_reply_page(100))

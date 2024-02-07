@@ -116,6 +116,7 @@ def generate_btoken(client_type, client_version, uuid, device_no):
     b_token = hashlib.md5(b_token_data.encode()).hexdigest()
     return b_token
 
+@pytest.fixture(scope='session')
 def login():
     data=yamlhandler.read_yaml()['login']
     url = data['url']

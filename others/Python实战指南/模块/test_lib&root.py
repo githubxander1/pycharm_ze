@@ -19,7 +19,7 @@
 
 from  mylib import *
 import mylib
-# from others.Python实战指南.模块 import mylib
+# from z_others.Python实战指南.模块 import mylib
 from .mylib import test_fun_a
 from .mylib import test_fun_b
 

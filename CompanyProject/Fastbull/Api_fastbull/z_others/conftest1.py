@@ -1,13 +1,11 @@
 import json
-from pprint import pprint
 from random import random
 
 import allure
 import pytest
-import requests
 
-from CompanyProject.Fastbull.Api_fastbull.api_key import ApiKey
-from CompanyProject.Fastbull.Api_fastbull.config import *
+from CompanyProject.Fastbull.Api_fastbull.z_others.api_key import ApiKey
+
 
 def pytest_collection_modifyitems(items):
     """

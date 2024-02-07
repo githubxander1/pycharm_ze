@@ -20,15 +20,17 @@ class TestDeleteAsk:
         # pass
         print('测试结束')
 
-    @pytest.mark.parametrize('dalete_data',yamlhandler.read_yaml()['deleteAsk'])
-    def test_delete_ask(self,dalete_data):
-        body=dalete_data['body']
+    @allure.feature("提问-接口")
+    @allure.story("删除提问")
+    @pytest.mark.parametrize('delete_data',yamlhandler.read_yaml()['deleteAsk'],ids=lambda delete_data: delete_data['name'])
+    def test_delete_ask(self,delete_data):
+        body=delete_data['body']
 
         # 将请求体转换为字符串并附加到Allure报告
         # body_str = json.dumps(body, indent=4)
         # allure.attach(body_str, name='请求体', attachment_type=allure.attachment_type.JSON)
 
-        name=dalete_data['name']
+        name=delete_data['name']
         with allure.step('用例标题：' + name):
             response=deleteAsk(body)
         # print(response)
@@ -44,4 +46,5 @@ class TestDeleteAsk:
 if __name__ == '__main__':
     # pytest.main(['-s', '--alluredir=../allure-results', 'test_addComment.py'])
     pytest.main(['-s', '--alluredir=../allure-results', __file__])
-    os.system('allure generate ../allure-results -o open ../allure-results/report/html  ')
+    os.system('allure generate ../allure-results -o open ../allure-results/report/  ')
+    os.system('allure open ../allure-results/report/html/index.html')

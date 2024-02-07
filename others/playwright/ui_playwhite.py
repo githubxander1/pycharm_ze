@@ -2,11 +2,16 @@ import playwright
 # 异步模式
 import asyncio
 from playwright.async_api import async_playwright
+from playwright.sync_api import sync_playwright
+
 
 async def run(playwright):
     # 创建一个浏览器实例
     chromium = playwright.chromium
     browser = await chromium.launch()
+    context = await browser.new_context()
+    page = await context.new_page()
+    await page.goto("https://testfb.tostar.top/cn/")
     # browser = await chromium.launch(channel="msedge")
     # page=await browser.new_page()
     # await page.goto("https://www.baidu.com")
@@ -21,4 +26,7 @@ async def run(playwright):
 async def main():
     async with async_playwright() as playwright:
         await run(playwright)
-asyncio.run(main())
+# asyncio.run(main())
+
+with sync_playwright() as playwrigh:
+    brower = playwright.chromium.lunch()

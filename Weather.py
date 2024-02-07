@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'D:\1document\1test\pycharm_ze\others\项目实战\test\Weather.ui'
+# Form implementation generated from reading ui file 'D:\1document\1test\pycharm_ze\z_others\项目实战\test\Weather.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
