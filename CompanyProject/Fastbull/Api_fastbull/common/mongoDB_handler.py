@@ -51,11 +51,16 @@ client = MongoDBHandler(
 # 列出数据库以确认连接
 print(client.list_databases())
 
-# 从mongo_quotes_ask_reply集合中删除mld=1288的数据
-result = client.delete_document(collection_name='mongo_quotes_ask_reply', filter_query={'mld': 1288})
-
-# 打印删除的结果
-# print(result.deleted_count, "条数据已删除，过滤条件为", result.filter)
-
-# 操作完成后关闭连接
+# 检查数据是否存在
+exists = client.db['mongo_quotes_ask_reply'].find_one({'mld': 1288})
+if exists:
+    # 删除数据
+    result = client.delete_document('mongo_quotes_ask_reply', {'mld': 1288})
+    if result.deleted_count == 1:
+        print("数据已删除")
+    else:
+        print("数据不存在")
+else:
+    print("数据不存在")
+# 关闭连接
 client.close()
