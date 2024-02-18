@@ -1,5 +1,6 @@
 import base64
 import json
+import os
 
 import allure
 import requests
@@ -33,12 +34,26 @@ def add_comment(content):
     assert response.status_code == 200, f"登录请求失败，状态码为：{response.status_code}"
 
     response=response.json()
-    # print(response)
+    print(response)
     # assert json.loads(response['subCode']) == 1000000 #业务状态
     comment_id = json.loads(response['bodyMessage'])['id']
-    # print(comment_id)
+    print(comment_id)
     return response,comment_id
 
+body = {
+            "comment": "2国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]112",
+            "imageInfoModel": [
+                {
+                    "high": 226,
+                    "url": "https://img.fastbull.com/test/image/2024/02/3E6104A2BE7844E4923B6886D6F2D6A8",
+                    "width": 448
+                }
+            ],
+            # "postId": "4279312_1",#对当今世界的资产泡沫要敬而远之
+            "postId": "3707814_1",#对当今世界的资产泡沫要敬而远之
+            "type": 1
+        }
+add_comment(body)
 
 def delete_comment(post_id):
     headers2 = headers1(nonce)
@@ -113,7 +128,7 @@ def get_comment_list(postId):
 
     response = req.visit(method, url, headers=headers, params=postId)
     response_json = response.json()
-    # print(response_json)
+    print(response_json)
     # body_message = json.loads(response_json['bodyMessage'])
     # # print(body_message)
     # # message=json.loads(response_json['message'])

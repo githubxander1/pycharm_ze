@@ -45,8 +45,7 @@ deleteAsk:
   url: https://testfbapi.tostar.top/fastbull-universal-service/api/deleteAskReply
   method: post
   data : {
-        "id": id,
-        "type": 1
+        "id": id
         }
 post_like:
   url: https://testfbapi.tostar.top/fastbull-news-service/api/postLikeOperate

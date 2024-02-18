@@ -75,10 +75,10 @@ def addAsk(askContent):
 #     print(id)
 
 data = {
-        "askContent": "美元趋势如何",
+        "askContent": "日元趋势如何",
         "askImage": "https://img.fastbull.com/test/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
         }
-addAsk(data)
+# addAsk(data)
 # print(get_addAsk_id(data))
 def deleteAsk(body):
     headers = {
@@ -130,9 +130,12 @@ def deleteAsk(body):
     # assert response.status_code == 200, f"登录请求失败，状态码为：{response.status_code}"
     #
     # response = response.json()
-    # print(response)
+    print(response)
     return response
-# deleteAsk('1201')
+body= {
+              "id": 1288,
+            }
+# deleteAsk(body)
 
 def get_expert_ask_reply_page(pagesize):
     headers = {

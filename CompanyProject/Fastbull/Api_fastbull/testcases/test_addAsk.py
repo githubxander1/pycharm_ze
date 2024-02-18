@@ -4,6 +4,7 @@ import os
 import allure
 import pytest
 from ApiTest_mindmaster.common.logger_handler import LoggerHandler
+from CompanyProject.Fastbull.Api_fastbull.common.mongoDB_handler import MongoDBHandler
 from CompanyProject.Fastbull.Api_fastbull.logic.ask import addAsk, deleteAsk, get_expert_ask_reply_page, get_ask_ids
 
 from ApiTest_mindmaster.common.yaml_handler import YamlHandler
@@ -14,11 +15,25 @@ logger=LoggerHandler(name='root',level='WARNING',file=f'../log/{filename}_log.lo
 
 class TestAddAsk:
     # def __init__(self):
-    added_ask_id = None
+    # added_ask_id = None
     def setup(self):
-        pass
+        self.client = MongoDBHandler(
+            host='192.168.7.72',
+            port=27017,
+            username='fastbull',
+            password='IOE*2EW#OIWddOPcDWE',
+            db_name='fastbull_universal_test')
     def teardown(self):
         print(f'要删除的id: {self.added_ask_id}')
+        filter_query = {"mId": self.added_ask_id}
+        result = self.client.delete_document('mongo_quotes_ask_reply', filter_query)
+        if result.deleted_count == 1:
+            print("数据已删除")
+            logger.warning(f"删除ask_id={self.added_ask_id}响应内容：{result}")
+            allure.attach(json.dumps(result), name='删除ask_id={self.added_ask_id}响应内容')
+            self.client.close()
+        else:
+            print("数据不存在")
         # pass
         # if self.added_ask_id is not None:
         # delete_response = deleteAsk(self.added_ask_id)
