@@ -8,8 +8,8 @@ import time as t
 # from page.login import headers
 # from utils.operationJson import readJson
 # from utils.operationJson import readYaml
-from api_baofyy.page.login import headers
-from api_baofyy.utils.operationJson import readYaml
+from others.api_baofyy.page.login import headers
+from others.api_baofyy.utils.operationJson import readYaml
 
 
 class LoginTest(unittest.TestCase):

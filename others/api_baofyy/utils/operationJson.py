@@ -7,7 +7,7 @@ import os.path
 import json
 import yaml
 
-from api_baofyy.common.public import base_dir
+from others.api_baofyy.common.public import base_dir
 
 
 def readJson():

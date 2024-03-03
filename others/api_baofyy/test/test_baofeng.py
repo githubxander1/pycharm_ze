@@ -2,16 +2,14 @@
 # -*- coding:utf-8 -*-
 # author:张红
 
-import time as t
-import json
 # from utils.operationJson import readJson
 # from test.test_login import LoginTest
 # from page.baofeng import *
 import unittest
 
-from api_baofyy.page.baofeng import addProduct, delProduct, modifyProduct, queryProduct
-from api_baofyy.test.test_login import LoginTest
-from api_baofyy.utils.operationJson import readJson
+from others.api_baofyy.page.baofeng import addProduct, delProduct, modifyProduct, queryProduct
+from others.api_baofyy.test.test_login import LoginTest
+from others.api_baofyy.utils.operationJson import readJson
 
 
 class Fengbao(LoginTest):
