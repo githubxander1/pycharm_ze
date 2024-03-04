@@ -37,7 +37,7 @@ def add_comment(content):
     print(response)
     # assert json.loads(response['subCode']) == 1000000 #业务状态
     comment_id = json.loads(response['bodyMessage'])['id']
-    print(comment_id)
+    # print(f'评论id:{comment_id}')
     return response,comment_id
 
 body = {
@@ -53,7 +53,7 @@ body = {
             "postId": "3707814_1",#对当今世界的资产泡沫要敬而远之
             "type": 1
         }
-add_comment(body)
+# add_comment(body)
 
 def delete_comment(post_id):
     headers2 = headers1(nonce)
@@ -142,18 +142,18 @@ def get_comment_list(postId):
     # assert response.status_code == 200  # 或您期望的其他状态码
     # return comment_ids
 
-body = {
-            "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]3",
-            "imageInfoModel": [
-                {
-                    "high": 226,
-                    "url": "https://img.fastbull.com/test/image/2024/02/3E6104A2BE7844E4923B6886D6F2D6A8",
-                    "width": 448
-                }
-            ],
-            "postId": "3707814_1",
-            "type": 1
-        }
+# body = {
+#             "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]3",
+#             "imageInfoModel": [
+#                 {
+#                     "high": 226,
+#                     "url": "https://img.fastbull.com/test/image/2024/02/3E6104A2BE7844E4923B6886D6F2D6A8",
+#                     "width": 448
+#                 }
+#             ],
+#             "postId": "3707814_1",
+#             "type": 1
+#         }
 # get_comment_list('3707814_1')
 # for id in get_comment_list(common_data["uid"], '3707814_1'):
 #     delete_comment(common_data["uid"], id)
