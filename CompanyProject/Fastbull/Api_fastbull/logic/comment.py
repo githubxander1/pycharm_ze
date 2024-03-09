@@ -50,7 +50,8 @@ body = {
                 }
             ],
             # "postId": "4279312_1",#对当今世界的资产泡沫要敬而远之
-            "postId": "3707814_1",#对当今世界的资产泡沫要敬而远之
+            # "postId": "3707814_1",#对当今世界的资产泡沫要敬而远之
+            "postId": "15392710_1",#对当今世界的资产泡沫要敬而远之
             "type": 1
         }
 # add_comment(body)
@@ -154,8 +155,8 @@ def get_comment_list(postId):
 #             "postId": "3707814_1",
 #             "type": 1
 #         }
-# get_comment_list('3707814_1')
+get_comment_list('15392710_1')
 # for id in get_comment_list(common_data["uid"], '3707814_1'):
 #     delete_comment(common_data["uid"], id)
 # print(add_comment(body))
-# print(delete_comment('65bf53327346b40007947c6a'))
+print(delete_comment('65e6f1cb6f916c000788f763'))

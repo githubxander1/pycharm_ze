@@ -1,0 +1,8 @@
+创建：scrapy startproject 项目名字，这个写终端里，你终端的位置就是建立的位置
+scrapy startproject tutorial
+cd tutorial
+tree /f .
+
+scrapy genspider quotes quotes.toscrape.com
+
+https://baike.baidu.com/

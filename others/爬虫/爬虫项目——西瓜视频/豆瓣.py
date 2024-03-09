@@ -2,12 +2,12 @@ import time
 
 import requests
 from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
-ua=UserAgent()
+# from fake_useragent import UserAgent
+# ua=UserAgent()
 
 headers={
-    # 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
-    'User-Agent':ua.random
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    # 'User-Agent':ua.random
 }
 # print(headers)
 def get_movie_info(url):

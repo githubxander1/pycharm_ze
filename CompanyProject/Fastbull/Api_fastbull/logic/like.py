@@ -1,8 +1,10 @@
+import os
+
 import allure
 
 from ApiTest_mindmaster.common.logger_handler import LoggerHandler
 from ApiTest_mindmaster.common.requests_handler import RequestsHandler
-from CompanyProject.Fastbull.Api_fastbull.logic.comment import nonce
+# from CompanyProject.Fastbull.Api_fastbull.logic.comment import nonce
 from CompanyProject.Fastbull.Api_fastbull.logic.conftest import generate_sign_login, get_identity, generate_btoken, \
     generate_nonce, generate_token, timestamp, common_data
 from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
