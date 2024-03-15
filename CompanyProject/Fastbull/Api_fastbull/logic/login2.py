@@ -5,7 +5,7 @@ from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
 from CompanyProject.Fastbull.Api_fastbull.logic.conftest import headers1, generate_nonce
 
 req=RequestsHandler()
-yamlhandler=YamlHandler('../common/Api.yaml')
+yamlhandler=YamlHandler('../data/Api.yaml')
 nonce = generate_nonce()
 def login():
     data=yamlhandler.read_yaml()['login']

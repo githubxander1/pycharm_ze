@@ -15,7 +15,7 @@ from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
 
 # nonce = generate_nonce()
 req=RequestsHandler()
-yamlhandler=YamlHandler('../common/Api.yaml')
+yamlhandler=YamlHandler('../data/Api.yaml')
 # 公共常量
 DEVELOPMENT_KEY = "c0iOcX2p1v782YUY"
 DEVELOPMENT_IV = "Bai1unC1ub1sBest"

@@ -114,7 +114,7 @@ def send_notifications():
 
 if __name__ == '__main__':
     # 从命令行参数获取配置信息
-    test_script = 'test_deleteAsk.py'
+    test_script = 'test_addAsk.py'
 
     allure_results_dir = './result'
     allure_report_dir = './report_allure/'

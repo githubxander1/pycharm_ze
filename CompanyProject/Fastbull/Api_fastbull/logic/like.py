@@ -11,7 +11,7 @@ from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
 
 nonce = generate_nonce()
 req=RequestsHandler()
-yamlhandler=YamlHandler('../common/Api.yaml')
+yamlhandler=YamlHandler('../data/Api.yaml')
 filename=os.path.basename(__file__).split('.')[0]
 logger=LoggerHandler(name='ask',level='DEBUG',file=f'../log/{filename}_log.log',format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
@@ -61,9 +61,13 @@ def post_like_operate(postId,like_type):
     }
 
     response = req.visit(method, url, headers=headers, json=body)
-    response_json = response['message']
+    return response
+    # print(response)
+    # response_json = response['message']
     # print(response_json)
-    assert response_json == '操作成功'
+    # assert response_json == '操作成功'
 
     # print(response_json)
-# post_like_operate('65ba072cc1034b00073da295',0)
+
+if __name__ == '__main__':
+    print(post_like_operate("65e97c763625610007405a0d",1))

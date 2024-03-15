@@ -13,7 +13,7 @@ from CompanyProject.Fastbull.Api_fastbull.logic.conftest import generate_sign_lo
 from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
 nonce = generate_nonce()
 req=RequestsHandler()
-yamlhandler=YamlHandler('../common/Api.yaml')
+yamlhandler=YamlHandler('../data/Api.yaml')
 filename=os.path.basename(__file__).split('.')[0]
 logger=LoggerHandler(name='ask',level='DEBUG',file=f'../log/{filename}_log.log',format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 

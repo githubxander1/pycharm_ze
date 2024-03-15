@@ -12,7 +12,7 @@ from CompanyProject.Fastbull.Api_fastbull.common.yaml_handler import YamlHandler
 
 nonce = generate_nonce()
 req=RequestsHandler()
-yamlhandler=YamlHandler('../common/Api.yaml')
+yamlhandler=YamlHandler('../data/Api.yaml')
 filename=os.path.basename(__file__).split('.')[0]
 logger=LoggerHandler(name='ask',level='DEBUG',file=f'../log/{filename}_log.log',format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
@@ -52,7 +52,7 @@ def addAsk(askContent):
     bodyMessage = response['bodyMessage']
     bodyMessage1 = json.loads(bodyMessage)
     id = bodyMessage1['id']
-    print(id)
+    # print(id)
     allure.step(f'{function_name}请求头：{headers}')
     allure.step(f'{function_name}请求体：{data}')
     allure.attach(body=response, name='响应体', attachment_type=allure.attachment_type.JSON)
@@ -62,23 +62,12 @@ def addAsk(askContent):
 
     return response,id
 
-    # assert response.status_code == 200, f"登录请求失败，状态码为：{response.status_code}"
-
-    # response = response.json()
-# def get_addAsk_id(data):
-#     function_name = get_addAsk_id.__qualname__
-#     # r=json.loads(addAsk(data))
-#     bodyMessage=addAsk(data)['bodyMessage']
-#     bodyMessage1=json.loads(bodyMessage)
-#     # print(r)
-#     id=bodyMessage1['id']
-#     print(id)
 
 data = {
         "askContent": "日元趋势如何",
         "askImage": "https://img.fastbull.com/test/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
         }
-# addAsk(data)
+# print(addAsk(data))
 # print(get_addAsk_id(data))
 def deleteAsk(body):
     headers = {
@@ -130,12 +119,12 @@ def deleteAsk(body):
     # assert response.status_code == 200, f"登录请求失败，状态码为：{response.status_code}"
     #
     # response = response.json()
-    print(response)
+    # print(response)
     return response
 body= {
-              "id": 1288,
+        "id": 1649,
             }
-# deleteAsk(body)
+# print(deleteAsk(body))
 
 def get_expert_ask_reply_page(pagesize):
     headers = {

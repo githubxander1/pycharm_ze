@@ -62,6 +62,8 @@ class TestAddAsk:
 
             # 断言响应结果
             assert response[0]['message'] == '操作成功'
+            logger.warning('断言响应结果成功')
+
             self.added_ask_id = response[1]
             db_check=self.client.find_documents('mongo_quotes_ask_reply', query={"mId": self.added_ask_id})
             logger.warning(f"数据库查询结果：{db_check}")
@@ -70,7 +72,7 @@ class TestAddAsk:
             logger.warning('断言数据库查询结果')
 
             assert self.added_ask_id in get_ask_ids()
-            logger.warning('断言新增是否成功')
+            logger.warning('断言新增是否成功：在列表中')
 
             # 打印测试结束信息
             logger.info(f"测试结束")
@@ -81,11 +83,6 @@ class TestAddAsk:
             return e
 
 if __name__ == '__main__':
-    # pytest.main(['-s', '--alluredir=../allure-results', 'test_addComment.py'])
-    # pytest.main(['-s', '--alluredir=../allure-results', __file__])
-    # os.system('allure generate ../allure-results -o open ../allure-results/report/html --clean ')
-
-    # pytest.main(['test_addAsk','-vs', '--alluredir', './result', '--clean-alluredir'])
     pytest.main([__file__,'-vs', '--alluredir', './result', '--clean-alluredir'])
     os.system('allure generate ./result/ -o ./report_allure/ --clean')
     os.system('allure serve result')

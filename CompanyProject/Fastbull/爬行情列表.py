@@ -11,7 +11,8 @@ for quotation in quotation_list:
     # tubiao = quotation.xpath('//*[@class="ltr_ar_dir openchart-btn"]/text()')
     title_name = quotation.xpath('.//a/text()')
     for title in title_name:
-        print(title)
+        pass
+        # print(title)
     # sub_title = quotation.xpath('.//h2[@class="sub-title"]/text()')
     # one_ellipsis = quotation.xpath('.//span[@class="one_ellipsis"]/text()')
     # lastest_price_denkuan_risecolor = quotation.xpath('.//span[contains(@class,"lastest-price")]/text()')
@@ -34,5 +35,3 @@ for quotation in quotation_list:
 
 # 最后打印总数
 print(f"\n共抓取到 {count} 条记录")
-    # print(title)
-    # print(sub_title)

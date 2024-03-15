@@ -13,6 +13,7 @@ delete_comment:
   url: https://testfbapi.tostar.top/fastbull-news-service/api/deleteComment
   method: post
   body: {}
+
 add_comment:
   url: https://testfbapi.tostar.top/fastbull-news-service/api/postComment
   method: post
@@ -47,6 +48,7 @@ deleteAsk:
   data : {
         "id": id
         }
+
 post_like:
   url: https://testfbapi.tostar.top/fastbull-news-service/api/postLikeOperate
   method: post
@@ -63,3 +65,28 @@ get_expert_ask_reply_page:
         "operate": 1    #点赞
         # "operate": 0 #取消点赞
           }
+
+add_favour:
+#  url: https://testfbapi.tostar.top/fastbull-user-service/api/postAddFavour?favourType=1&refId=16419046_1
+  url: https://testfbapi.tostar.top/fastbull-user-service/api/postAddFavour?
+  method: post
+  data : {
+        "refId": refId,
+        "favourType": favourType
+        }
+delete_favour:
+#  url: https://testfbapi.tostar.top/fastbull-user-service/api/postAddFavour?favourType=1&refId=16419046_1
+  url: https://testfbapi.tostar.top/fastbull-user-service/api/deleteFavour?
+  method: delete
+  data : {
+        "refId": refId,
+        "favourType": favourType
+        }
+get_favour_list:
+#  url: https://testfbapi.tostar.top/fastbull-user-service/api/postAddFavour?favourType=1&refId=16419046_1
+  url: https://testfbapi.tostar.top/fastbull-user-service/api/getFavourList?favourType=1&pageIndex=1&pageSize=20
+  method: get
+  data : {
+        "refId": refId,
+        "favourType": favourType
+        }

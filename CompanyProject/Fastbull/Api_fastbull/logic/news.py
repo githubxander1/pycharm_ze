@@ -26,6 +26,7 @@ client_type = "4"  # 对应web客户端
 def get_news():
     # 构建请求头
     headers = {
+        "langid": "1",
         "deviceNo": deviceNo,
         "timestamp": timestamp,
         "nonce": nonce,
@@ -45,3 +46,4 @@ def get_news():
     # 解析并打印响应内容（假设返回的是JSON格式）
     response_json = response.json()
     print("响应数据：", response_json)
+get_news()

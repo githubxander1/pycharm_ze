@@ -1,0 +1,66 @@
+
+框架目录：
+├─common
+│  └─__pycache__
+├─data
+├─log
+├─logic
+│  ├─.pytest_cache
+│  │  └─v
+│  │      └─cache
+│  ├─chat
+│  └─__pycache__
+├─testcases
+│  ├─.pytest_cache
+│  │  └─v
+│  │      └─cache
+│  ├─report_allure
+│  │  ├─data
+│  │  │  ├─attachments
+│  │  │  └─test-cases
+│  │  ├─export
+│  │  ├─history
+│  │  ├─plugin
+│  │  │  ├─behaviors
+│  │  │  ├─packages
+│  │  │  └─screen-diff
+│  │  └─widgets
+│  ├─result
+│  ├─test_chat
+│  └─__pycache__
+└─__pycache__
+common：存放各种工具（yaml,logger,数据库，请求封装）
+data：存放测试数据
+logic：封装各种业务逻辑
+testcases：存放测试用例
+log：存放log
+report：存放报告
+
+读取yaml：
+三种数据结构
+1.字面量：（普通的值：数字、字符串、布尔）
+             key: value
+2.对象：Map(属性和值)  键值对（字典）
+ 第一种写法：
+        user:
+          userName: 王晓明
+          userAge: 20
+          userSex: 男
+
+第二种写法（行内写法）：
+        user: {userName: 王晓明,userAge: 20,userSex: 男}
+
+
+3.数组、集合（list、set）yaml语法中数组与集合的表现形式是一样的。
+
+    用-表示数组中的一个元素
+                       studentArray
+                             -student1
+                             -student2
+                             -student3
+    第二种写法（行内写法）:
+                 studentArray: [student1,student2,student3]
+
+原文链接：https://blog.csdn.net/hejian_0534/article/details/100577740
+
+uil:yaml里写固定的，logic文件里补充动态参数
