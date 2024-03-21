@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AOE/.idea/OpenAOE.iml" filepath="$PROJECT_DIR$/../AOE/.idea/OpenAOE.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PycharmProject.iml" filepath="$PROJECT_DIR$/.idea/PycharmProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/../myblog/.idea/myblog.iml" filepath="$PROJECT_DIR$/../myblog/.idea/myblog.iml" />
       <module fileurl="file://$PROJECT_DIR$/test1/.idea/personal-website.iml" filepath="$PROJECT_DIR$/test1/.idea/personal-website.iml" />

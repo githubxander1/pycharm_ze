@@ -1,8 +1,9 @@
+import execjs
 import requests
 import base64
 import json
 import time
-import execjs
+# import execjs
 
 # 假设这里的 payload 和 sig 是经过处理后得到的base64编码字符串
 payload_b64_encoded = "eyJwYXlsb2FkIjoiTGI3c3V0QjplMHN5MXRNQyVRJz0kRGJSQVFXcyRqYnhsOUMySSIsInNpZyI6IkNFODBFNkMxQzRDRTc3QjFFOTE3NzMwMjAyNzU5MDQiLCJ2IjoxfQ=="
@@ -41,7 +42,7 @@ response = requests.post(url, headers=headers, json=data)
 
 if response.status_code == 200:
     result = response.json()
-    print(result)
+    # print(result)
     # 处理返回的结果
 else:
     print(f"请求失败，状态码：{response.status_code}")
@@ -49,5 +50,17 @@ else:
 data=result['d']
 print(data)
 
-cxt = execjs.compile(open('犀牛数据.js', 'r', encoding='utf-8').read()).call('main', data)
-print(cxt)
+try:
+    js_source = open('犀牛数据.js', 'r', encoding='utf-8').read()
+    cxt = execjs.compile(js_source)
+    result = cxt.call('main', data)
+except FileNotFoundError:
+    print("找不到文件：犀牛数据.js")
+except Exception as e:
+    print(f"执行JavaScript代码时发生错误: {e}")
+else:
+    if result is not None:
+        pass
+        # 对result进行处理
+    else:
+        print("JavaScript函数main未返回有效结果")

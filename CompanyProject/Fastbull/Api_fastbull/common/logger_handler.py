@@ -5,11 +5,7 @@ import logging
 
 class LoggerHandler(logging.Logger):
     # 继承Logger类
-    def __init__(self,
-                 name='root',
-                 level='DEBUG',
-                 file=None,
-                 format=None):
+    def __init__(self,name='root',level='DEBUG',file=None,format=None):
         # 设置收集器
         super().__init__(name)
         # 设置收集器级别
