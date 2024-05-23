@@ -1,6 +1,6 @@
 import pytest
 import requests
-from byhy.test_api.lib.libapi import APIMgr, host
+from others.byhy.test_api.lib import APIMgr, host
 
 
 class TestAddMedicine():

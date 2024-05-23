@@ -35,26 +35,26 @@ for item in prices:
     items.append(item['Close'])
     # print(close_price)
 # 打印所有提取出的 Close 价格
-for close_price in items:
+# for close_price in items:
     # close_prices.append(close_price)
-    print(close_price)
+    # print(close_price)
 
 # 创建DataFrame
 df = pd.DataFrame(prices)
 
 # 计算指标
-def rsi(close, period=14):
-    delta = close.diff()
-    gain = delta.where(delta > 0, 0)
-    loss = -delta.where(delta < 0, 0)
-    avg_gain = gain.rolling(window=period).mean()
-    avg_loss = loss.rolling(window=period).mean()
-    rs = avg_gain / avg_loss
-    rsi = 100 - (100 / (1 + rs))
-    print(avg_gain)
-    print(avg_loss)
-    print(rs)
-    return rsi
+# def rsi(close, period=14):
+#     delta = close.diff()
+#     gain = delta.where(delta > 0, 0)
+#     loss = -delta.where(delta < 0, 0)
+#     avg_gain = gain.rolling(window=period).mean()
+#     avg_loss = loss.rolling(window=period).mean()
+#     rs = avg_gain / avg_loss
+#     rsi = 100 - (100 / (1 + rs))
+#     print(avg_gain)
+#     print(avg_loss)
+#     print(rs)
+#     return rsi
 
 def stoch(close, low, high, k_period=14, d_period=3):
     lowest_low = low.rolling(window=k_period).min()
@@ -62,8 +62,17 @@ def stoch(close, low, high, k_period=14, d_period=3):
     rsv = ((close - lowest_low) / (highest_high - lowest_low)) * 100
     k = rsv.rolling(window=d_period).mean()
     d = k.rolling(window=d_period).mean()
+    print(f'最高价：{highest_high}')
+    print(f'最低价：{lowest_low}')
+    print(f'RSV：{rsv}')
+
     return k, d
 
+k, d = stoch(df['Close'], df['Low'], df['High'])
+print(k,d)
+df['stoch_k'] = k
+df['stoch_d'] = d
+# print(df['stoch_k'] = k)
 def macd(close, fast_period=12, slow_period=26, signal_period=9):
     fast_ema = close.ewm(span=fast_period, adjust=False).mean()
     slow_ema = close.ewm(span=slow_period, adjust=False).mean()
@@ -155,16 +164,6 @@ df['roc'] = roc(df['Close'])
 df['HHV_14'] = df['High'].rolling(window=14).max()
 df['LLV_14'] = df['Low'].rolling(window=14).min()
 
-# 计算K值
-df['K'] = ((df['Close'] - df['LLV_14']) / (df['HHV_14'] - df['LLV_14'])) * 100
-
-# 计算D值，这里假设使用3期简单移动平均
-df['D'] = df['K'].rolling(window=3).mean()
-
-# 移除计算过程中产生的NaN（在窗口期内无法计算）
-df = df.dropna(subset=['K', 'D'])
-
-print(df[["K", "D"]])
 # 显示结果
-print(df.to_string(index=False))
+# print(df.to_string(index=False))
 

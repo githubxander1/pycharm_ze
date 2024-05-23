@@ -1,4 +1,4 @@
-from byhy.test_api.lib.libapi import APIMgr
+from others.byhy.test_api.lib import APIMgr
 
 import unittest
 import pytest
