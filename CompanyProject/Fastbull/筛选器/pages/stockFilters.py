@@ -25,7 +25,10 @@ async def login():
         # product = page.get_by_text("产品", exact=True)
         product = page.get_by_role("link", name="产品").first
         await product.hover()
-        await product.get_by_role("listitem").filter(has_text="筛选器").click()
+        await page.wait_for_timeout(3000)
+        stock_filter = await page.wait_for_selector('text=筛选器')
+        await stock_filter.click()
+        # await product.get_by_role("listitem").filter(has_text="筛选器").click()
         await page.wait_for_timeout(3000)
         # product = page.locator('//*[@id="__layout"]/div/div[2]/div[1]/div[1]/div[2]/div[2]/div/a')
         # stockFilters = page.locator('//*[@id="__layout"]/div/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div/div[1]/a[3]/span/span/text()')
