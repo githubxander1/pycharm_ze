@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 r = redis.Redis(host='3.71.83.141', port=6379, password='L7lfDSe#OIEWQ*R', db=1, socket_timeout=5)
 
 # 获取最近15条数据的分数（假设是Unix时间戳）和成员
-data = r.zrevrange('8100_AUDUSD_M15', start=1, end=14, withscores=True)
+data = r.zrevrange('8100_AUDUSD_D1', start=1, end=14, withscores=True)
 # 定义转换函数，将时间戳转换为东八区的具体时间
 def timestamp_to_eastern_timezone(timestamp):
     utc_time = datetime.utcfromtimestamp(timestamp)

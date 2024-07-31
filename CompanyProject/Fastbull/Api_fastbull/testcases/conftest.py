@@ -1,3 +1,4 @@
+# 这是一个特殊的pytest模块，可以放置在任意目录下，用于定义fixture、钩子函数、共享的测试配置和初始化代码。它可以被pytest自动发现并使用。
 import base64
 import json
 import hashlib

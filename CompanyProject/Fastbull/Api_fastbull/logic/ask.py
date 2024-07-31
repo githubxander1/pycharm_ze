@@ -70,6 +70,7 @@ data = {
 # print(addAsk(data))
 # print(get_addAsk_id(data))
 def deleteAsk(body):
+    function_name = addAsk.__qualname__
     headers = {
         "accept": "*/*",
         "accept-language": "zh-CN,zh;q=0.9,en-GB;q=0.8,en;q=0.7,en-US;q=0.6",
@@ -94,12 +95,13 @@ def deleteAsk(body):
         "timestamp": "1706750312",
         "uid": common_data['uid']
     }
-    function_name = addAsk.__qualname__
     logger.warning(f'{function_name}请求头：{headers}')
     allure.step(f'{function_name}请求头：{headers}')
+
     data = yamlhandler.read_yaml()['deleteAsk']
     logger.warning(f'{function_name}请求体：{data}')
     allure.step(f'{function_name}请求体：{data}')
+
     url = data['url']
     method = data['method']
 
@@ -122,7 +124,7 @@ def deleteAsk(body):
     # print(response)
     return response
 body= {
-        "id": 1649,
+        "id": 1928,
             }
 # print(deleteAsk(body))
 

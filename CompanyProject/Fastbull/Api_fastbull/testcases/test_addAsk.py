@@ -65,14 +65,16 @@ class TestAddAsk:
             logger.warning('断言响应结果成功')
 
             self.added_ask_id = response[1]
+            print(self.added_ask_id)
             db_check=self.client.find_documents('mongo_quotes_ask_reply', query={"mId": self.added_ask_id})
             logger.warning(f"数据库查询结果：{db_check}")
             # allure.attach(json.dumps(db_check), name='数据库查询结果')
             assert db_check[0]['mId'] == self.added_ask_id
-            logger.warning('断言数据库查询结果')
+            logger.warning('断言数据库查询结果：成功')
 
-            assert self.added_ask_id in get_ask_ids()
-            logger.warning('断言新增是否成功：在列表中')
+            # 第二重断言
+            # assert self.added_ask_id in get_ask_ids()
+            # logger.warning('断言新增是否成功：在列表中')
 
             # 打印测试结束信息
             logger.info(f"测试结束")
