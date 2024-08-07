@@ -34,7 +34,8 @@ def write_to_word(doc, items):
             doc.add_paragraph(item[1])
 
 if __name__ == "__main__":
-    directory = r'D:\1test\PycharmProject\CompanyProject\Fastbull\Api_fastbull'
+    # 要导出的文件夹路径
+    directory = r'D:\1test\PycharmProject\CompanyProject\Fastbull\筛选器\PO_stockFilters'
     items = read_files_in_dir(directory)
 
     # 创建Word文档
@@ -44,9 +45,11 @@ if __name__ == "__main__":
     write_to_word(doc, items)
 
     # 保存Word文档
-    doc.save('output.docx')
+    name = os.path.basename(directory)
+    doc.save(name+'.docx')
+    file_path = os.path.join(r'D:\1test\PycharmProject\CompanyProject\Fastbull\UI_Fastbull\others', name+'.docx')
 
-    print("Word文档已创建.")
+    print(f"Word文档已创建,路径：{file_path}")
 # def generate_pdf(html_content, output_file):
 #     """ 将HTML内容转换为PDF """
 #     options = {
