@@ -1,7 +1,7 @@
 # from mylib import *
 #
-# r1=add(1,3)
-# r2=sub(3,1)
+# r1=add(实例25_批量生成PPT版荣誉证书,3)
+# r2=sub(3,实例25_批量生成PPT版荣誉证书)
 # r3=mul(2,3)
 # r4=div(3,2)
 #

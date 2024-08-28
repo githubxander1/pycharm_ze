@@ -1,6 +1,6 @@
 -
 #  成功
-  case_id: 1
+  case_id: 实例25_批量生成PPT版荣誉证书
   model_name: 登录
   case_title: login_suss
   url: https://userapi.edrawsoft.cn/api/user/login
@@ -16,7 +16,7 @@
 -
 #  用户名错误
   actual_result: success
-  case_id: 1
+  case_id: 实例25_批量生成PPT版荣誉证书
   case_title: login_suss
   data: {"email": "695418206@qq.com",
          "from": "web",

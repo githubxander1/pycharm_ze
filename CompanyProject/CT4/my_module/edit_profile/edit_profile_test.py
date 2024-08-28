@@ -20,7 +20,7 @@ save=d(resourceId="com.app.ct4:id/tv_right")
 pic_back=d(resourceId="com.app.ct4:id/ps_iv_left_back")
 pic_cancel=d(resourceId="com.app.ct4:id/ps_tv_cancel")
 pic_camera=d(resourceId="com.app.ct4:id/tvCamera")
-pic_p1=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[2]/android.widget.TextView[1]')
+pic_p1=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[2]/android.widget.TextView[实例25_批量生成PPT版荣誉证书]')
 pic_confirm=d(resourceId="com.app.ct4:id/ps_tv_complete")
 
 setting=d(resourceId="com.app.ct4:id/settings")
@@ -96,7 +96,7 @@ class  TestProfile:
         assert d.toast.get_message()=='修改成功'
 
     def test_nick_name_special(self):
-        nickname.send_keys('输入空白(NULL)、空或!@#$%1.0E2^&*()_+{}|[]:"<>?;’,./?;:-=∑，㏒，㏑，∏，+，')
+        nickname.send_keys('输入空白(NULL)、空或!@#$%实例25_批量生成PPT版荣誉证书.0E2^&*()_+{}|[]:"<>?;’,./?;:-=∑，㏒，㏑，∏，+，')
         save.click()
         time.sleep(3)
         d.screenshot('test_nick_name_special.png')

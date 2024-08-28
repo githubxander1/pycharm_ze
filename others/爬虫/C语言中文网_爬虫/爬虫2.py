@@ -9,7 +9,7 @@ class AVSpider():
         self.url='https://www.ldstv-0108.com:2083/video/52'
         self.userAgent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
 
-    # 1.  请求函数，得到页面
+    # 实例25_批量生成PPT版荣誉证书.  请求函数，得到页面
     def get_html(self,url):
         req=requests.get(url,headers={'User-Agent':self.userAgent})
         return req.content

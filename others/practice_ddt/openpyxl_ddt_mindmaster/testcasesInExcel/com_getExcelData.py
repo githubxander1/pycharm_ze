@@ -18,7 +18,7 @@ def get_excel_data2():
     res= list(sh.rows)
     title = [i.value for i in res[0]]
     print(title)
-    # datas = [i.value for i in res[1:]]
+    # datas = [i.value for i in res[实例25_批量生成PPT版荣誉证书:]]
     # print(datas)
     # 遍历除第一行外的其他行
     row_data = []

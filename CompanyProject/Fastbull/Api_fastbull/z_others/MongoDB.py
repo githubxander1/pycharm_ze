@@ -10,7 +10,7 @@ client = MongoDBHandler(
     password = 'IOE*2EW#OIWddOPcDWE')
     # da_name = 'fastbull_universal_test')
 # MongoDB连接信息
-# uri = "mongodb://fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_universal_test?authSource=admin&authMechanism=SCRAM-SHA-1"
+# uri = "mongodb://fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_universal_test?authSource=admin&authMechanism=SCRAM-SHA-实例25_批量生成PPT版荣誉证书"
 # 创建MongoDB客户端实例
 # client = MongoClient(uri)
 # MongoDB连接参数
@@ -21,7 +21,7 @@ client = MongoDBHandler(
 #
 # # 创建MongoDB客户端实例并连接到admin数据库进行身份验证
 # client = MongoClient(host, port)
-# client.admin.authenticate(username, password, mechanism='SCRAM-SHA-1')
+# client.admin.authenticate(username, password, mechanism='SCRAM-SHA-实例25_批量生成PPT版荣誉证书')
 
 # 连接到数据库
 # db = client['fastbull_universal_test']

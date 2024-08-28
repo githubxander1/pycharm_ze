@@ -35,7 +35,7 @@ data={
 # print(sourse)
 # html=etree.HTML(sourse)
 # data_list=html.xpath('//div[@class="cell"]')
-# # data_list=html.xpath('//*[@id="main"]/div[3]/div/div[2]/div/div/div[2]/div[1]/div[2]/div/div/div[3]/table/tbody/tr[2]/td[1]/div')
+# # data_list=html.xpath('//*[@id="main"]/div[3]/div/div[2]/div/div/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[3]/table/tbody/tr[2]/td[实例25_批量生成PPT版荣誉证书]/div')
 # # print(data_list)
 # for data in data_list:
 #     da=data_list.xpath('./@href')[0]

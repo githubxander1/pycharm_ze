@@ -12,9 +12,9 @@ setting=d(resourceId="com.app.ct4:id/settings")
 account_security=d(resourceId="com.app.ct4:id/accountSecurity")
 
 
-email_set=d.xpath('//*[@resource-id="com.app.ct4:id/emailAddress"]/android.view.ViewGroup[1]/android.widget.TextView[2]')
+email_set=d.xpath('//*[@resource-id="com.app.ct4:id/emailAddress"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.widget.TextView[2]')
 twitter=d(resourceId="com.app.ct4:id/status", text="Untie")
-google=d.xpath('//*[@resource-id="com.app.ct4:id/qq"]/android.view.ViewGroup[1]/android.widget.TextView[2]')
+google=d.xpath('//*[@resource-id="com.app.ct4:id/qq"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.widget.TextView[2]')
 
 auto_login=d(resourceId="com.app.ct4:id/autoLogin")
 privacy_protection=d(resourceId="com.app.ct4:id/privacyProtection")
@@ -53,4 +53,4 @@ class TestEmail:
 
 
 if __name__ == '__main__':
-    pytest.main(["-vs", '--reruns', '1', "--html=report.html", 'settings_login_password_test.py::TestEmail'])
+    pytest.main(["-vs", '--reruns', '实例25_批量生成PPT版荣誉证书', "--html=report.html", 'settings_login_password_test.py::TestEmail'])

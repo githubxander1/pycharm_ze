@@ -12,7 +12,7 @@ headers = {
 # 'User-Agent':'{}'.format(ua)}
 # 'User-Agent':f'{ua}'}
 'User-Agent':'%s'% ua}
-# # 1、创建请求对象，包装ua信息
+# # 实例25_批量生成PPT版荣誉证书、创建请求对象，包装ua信息
 res=request.Request(url,headers=headers)
 response=request.urlopen(res)
 html=response.read().decode('utf-8')

@@ -34,7 +34,7 @@ def add_comment(content):
         "content-type": "application/json",
         "deviceid": "51cee82782f69741d228946af2d2cda3",
         "deviceno": "51cee82782f69741d228946af2d2cda3",
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "nonce": nonce,
         "pragma": "no-cache",
         "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
@@ -82,7 +82,7 @@ def delete_comment(post_id):
         "content-type": "application/json",
         "deviceid": "51cee82782f69741d228946af2d2cda3",
         "deviceno": "51cee82782f69741d228946af2d2cda3",
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "nonce": nonce,
         "pragma": "no-cache",
         "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
@@ -121,7 +121,7 @@ def get_comment_list(postId):
         "content-type": "application/json",
         "deviceid": "51cee82782f69741d228946af2d2cda3",
         "deviceno": "51cee82782f69741d228946af2d2cda3",
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "nonce": nonce,
         "pragma": "no-cache",
         "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
@@ -168,7 +168,7 @@ def get_comment_list(postId):
 #                 }
 #             ],
 #             "postId": "3707814_1",
-#             "type": 1
+#             "type": 实例25_批量生成PPT版荣誉证书
 #         }
 
 # for id in get_comment_list(common_data["uid"], '3707814_1'):

@@ -51,7 +51,7 @@ class Fengbao(LoginTest):
         addProduct(name=readJson()['name'], product_type=readJson()['product_type'], version=readJson()['version'], master=readJson()['master'], description=readJson()['description'])
         r = modifyProduct(name=readJson()['name'], product_type=readJson()['product_type'], version=readJson()['modifyversion'], master=readJson()['master'], description=readJson()['description'])
         delProduct()
-        self.assertEqual(r.json()['version'], '1.0.1')
+        self.assertEqual(r.json()['version'], '实例25_批量生成PPT版荣誉证书.0.实例25_批量生成PPT版荣誉证书')
         self.assertEqual(r.status_code, 200)
 
 

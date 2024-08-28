@@ -20,8 +20,8 @@ data = response.read().decode('utf-8')
 
 # 方法2
 agentList = [
-    "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50",
-    "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50",
+    "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.实例25_批量生成PPT版荣誉证书 Safari/534.50",
+    "Mozilla/5.0 (Windows; U; Windows NT 6.实例25_批量生成PPT版荣誉证书; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.实例25_批量生成PPT版荣誉证书 Safari/534.50",
     "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0",
 ]
 agentStr = random.choice(agentList)  # 随机拿一个

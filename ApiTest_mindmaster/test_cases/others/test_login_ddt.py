@@ -44,7 +44,7 @@ class TestLogin(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main(__file__)
 
-# 1.excel里面字符串要用双引号
+# 实例25_批量生成PPT版荣誉证书.excel里面字符串要用双引号
 # 2.ddt(*data):* 表示对 case_data1 进行序列解包，将其作为独立的参数进行传递。也就是说，如果 case_data1 是一个列表或元组，这两种写法的效果一样。但是，如果 case_data1 是一个字典，则不能使用 @data(case_data1,) 这种写法。
         # 如果强制使用，会出现以下错误：TypeError: 'dict' object is not iterable
         # ddt(data,)表示将 case_data1 作为一个单独的元素放入元组中，并将该元组作为参数传递给装饰器,

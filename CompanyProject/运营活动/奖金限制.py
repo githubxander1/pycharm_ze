@@ -6,7 +6,7 @@ import pandas as pd
 import decimal
 
 url='https://qrpromotionapitest.tostar.top/manager/activity/test?activityId=180&uid=17141'
-headers={'swagger':'1',
+headers={'swagger':'实例25_批量生成PPT版荣誉证书',
          'token':'0a4b697b631e4de6ab32692f8acd0cd0'}
 
 r=requests.get(url,headers=headers)
@@ -50,7 +50,7 @@ jie1_jiang_z=round(jie1_jiang*money_sum,2)
 print(f'阶梯1：人数占比：{jie1_ren},共{jie1_ren_z}人；奖金占比：{jie1_jiang},共{jie1_jiang_z}')
 
 # print(f'阶梯1用户数：{area1}')
-# money_area=money_sum * decimal.Decimal('0.1')
+# money_area=money_sum * decimal.Decimal('0.实例25_批量生成PPT版荣誉证书')
 # print(f'阶梯1:{area1}个用户领取{money_area}奖金')
 # print(f'阶梯1:10%的用户{area1}，领取10%的奖金{money_area}')
 # percent = count / total * 100
@@ -63,8 +63,8 @@ print(f'阶梯1：人数占比：{jie1_ren},共{jie1_ren_z}人；奖金占比：
 # thresholds = []
 # for i in range(n):
 #     threshold = {}
-#     threshold['people'] = int(input("请输入第{}阶梯人数：".format(i+1)))
-#     threshold['reward'] = float(input("请输入第{}阶梯奖金：".format(i+1)))
+#     threshold['people'] = int(input("请输入第{}阶梯人数：".format(i+实例25_批量生成PPT版荣誉证书)))
+#     threshold['reward'] = float(input("请输入第{}阶梯奖金：".format(i+实例25_批量生成PPT版荣誉证书)))
 #     thresholds.append(threshold)
 #
 # a = []
@@ -76,7 +76,7 @@ print(f'阶梯1：人数占比：{jie1_ren},共{jie1_ren_z}人；奖金占比：
 # n_input = int(input("请输入要计算的阶梯数："))
 # a_sum = sum(a[0:n_input])
 # b_sum = sum(b[0:n_input])
-# result_people = a[n_input-1] * total_people
+# result_people = a[n_input-实例25_批量生成PPT版荣誉证书] * total_people
 # result_reward = b_sum * money_sum
 #
 # print("阶梯{}，{}人，{}奖金".format(n_input, result_people, result_reward))
@@ -87,17 +87,17 @@ print(f'阶梯1：人数占比：{jie1_ren},共{jie1_ren_z}人；奖金占比：
 # step_list = []
 #
 # for i in range(n):
-#     step_num = i + 1
+#     step_num = i + 实例25_批量生成PPT版荣誉证书
 #     x = int(input("请输入第{}个阶梯的人数x{}：".format(step_num, step_num)))
 #     y = float(input("请输入第{}个阶梯的奖金y{}：".format(step_num, step_num)))
 #     step_list.append((x, y))
 #
 # # 计算第N个阶梯的A和B
-# x_n = step_list[n-1][0]
+# x_n = step_list[n-实例25_批量生成PPT版荣誉证书][0]
 # print(f'第n阶段的x：{x_n}')
-# y_n = step_list[n-1][1]
+# y_n = step_list[n-实例25_批量生成PPT版荣誉证书][实例25_批量生成PPT版荣誉证书]
 # sum_x = sum([i[0] for i in step_list])
-# sum_y = sum([i[1] for i in step_list])
+# sum_y = sum([i[实例25_批量生成PPT版荣誉证书] for i in step_list])
 # a_n = x_n / sum_x
 # print(f'第n阶段的a：{a_n}')
 # b_n = y_n / sum_y
@@ -116,7 +116,7 @@ print(f'阶梯1：人数占比：{jie1_ren},共{jie1_ren_z}人；奖金占比：
 #         bonus_in_ladder = round(total_bonus * percentage_of_bonus)
 #         accumulated_people += people_in_ladder
 #         accumulated_bonus += bonus_in_ladder
-#         print(f"阶梯{i+1}：{people_in_ladder}人，{bonus_in_ladder}奖金")
+#         print(f"阶梯{i+实例25_批量生成PPT版荣誉证书}：{people_in_ladder}人，{bonus_in_ladder}奖金")
 #     remaining_people = total_people - accumulated_people
 #     remaining_bonus = total_bonus - accumulated_bonus
 #     print(f"其余：{remaining_people}人，{remaining_bonus}奖金")
@@ -125,6 +125,6 @@ print(f'阶梯1：人数占比：{jie1_ren},共{jie1_ren_z}人；奖金占比：
 # n = 2
 # total_bonus = 200
 # total_people = 18
-# ladder_list = [(1, 1), (4, 4)]
+# ladder_list = [(实例25_批量生成PPT版荣誉证书, 实例25_批量生成PPT版荣誉证书), (4, 4)]
 # print_ladder(n, total_bonus, total_people, ladder_list)
 

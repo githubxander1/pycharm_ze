@@ -3,7 +3,7 @@ from pprint import pprint
 
 import uiautomator2 as u2
 
-d=u2.connect('127.0.0.1:21503')
+d=u2.connect('127.0.0.实例25_批量生成PPT版荣誉证书:21503')
 # d=u2.connect('192.168.43.15')
 pprint(d.info)
 
@@ -25,7 +25,7 @@ def createGroupChat():
 
 # 进入群聊设置
 def group_set():
-    d.xpath('//*[@resource-id="com.tencent.mobileqq:id/recent_chat_list"]/android.widget.LinearLayout[1]').click()
+    d.xpath('//*[@resource-id="com.tencent.mobileqq:id/recent_chat_list"]/android.widget.LinearLayout[实例25_批量生成PPT版荣誉证书]').click()
     d(resourceId="com.tencent.mobileqq:id/ivTitleBtnRightImage").click()
 
 # 点击管理群

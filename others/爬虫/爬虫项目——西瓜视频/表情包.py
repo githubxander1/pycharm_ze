@@ -22,7 +22,7 @@ html1=etree.HTML(source)
 # imgs=html('.lazyload-wrapper a img').items()
 # for img in imgs:
 #     img=img.attr('src')
-#     name=img.split('/')[-1]
+#     name=img.split('/')[-实例25_批量生成PPT版荣誉证书]
 #     img_data=requests.get(img).content
 #     with open(name,'wb') as f:
 #         f.write(img_data)

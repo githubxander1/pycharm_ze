@@ -8,7 +8,7 @@ def test_add_friend():
     headers = {
         "accept": "application/json",
         "Accept-Language": "zh-CN",
-        "swagger": "1",
+        "swagger": "实例25_批量生成PPT版荣誉证书",
         "Content-Type": "application/json"
     }
 

@@ -17,17 +17,17 @@ class LoginPage(BasePage):
 
     ifr=(By.XPATH, '//*[@id="edraw-authorization--wrapper"]/iframe')
     tabCount_loc=(By.XPATH,'//*[@id="tab-account"]')
-    username_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[1]/div/div/div/div[1]/input')
-    password_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[2]/div/div/input')
-    loginBtn_loc=(By.XPATH,'/html/body/div[1]/div[2]/div/div[2]/div[1]/div[2]/button')
+    username_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[实例25_批量生成PPT版荣誉证书]/form/div[实例25_批量生成PPT版荣誉证书]/div/div/div/div[实例25_批量生成PPT版荣誉证书]/input')
+    password_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[实例25_批量生成PPT版荣誉证书]/form/div[2]/div/div/input')
+    loginBtn_loc=(By.XPATH,'/html/body/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/button')
 
 
     # 用户名为空
-    userNull_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[1]/div/div[2]')
-    passwordNull_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[2]/div/div[2]')
+    userNull_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[实例25_批量生成PPT版荣誉证书]/form/div[实例25_批量生成PPT版荣誉证书]/div/div[2]')
+    passwordNull_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[实例25_批量生成PPT版荣誉证书]/form/div[2]/div/div[2]')
 
     # account_or_password_error_loc=(By.CSS_SELECTOR,'#pane-account > div > div.el-row.is-justify-space-around.el-row--flex > form > div.el-form-item.is-error.is-required.is-no-asterisk > div > div.el-form-item__error')
-    account_or_password_error_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[1]/form/div[2]/div/div[2]')
+    account_or_password_error_loc=(By.XPATH,'//*[@id="pane-account"]/div/div[实例25_批量生成PPT版荣誉证书]/form/div[2]/div/div[2]')
 
     # def __init__(self):
     #     super().__init__()

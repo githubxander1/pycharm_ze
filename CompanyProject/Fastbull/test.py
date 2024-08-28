@@ -10,14 +10,14 @@ d.get('https://www.geetest.com/adaptive-captcha-demo')
 
 
 # 点击进入滑块界面
-d.find_element(By.XPATH,'//*[@id="gt-showZh-mobile"]/div/section/div/div[2]/div[1]/div[2]/div[3]/div[3]').click()
+d.find_element(By.XPATH,'//*[@id="gt-showZh-mobile"]/div/section/div/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[3]/div[3]').click()
 time.sleep(1)
-d.find_element(By.XPATH,'//*[@id="captcha"]/div[2]/div[1]/div[1]').click()
+d.find_element(By.XPATH,'//*[@id="captcha"]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]').click()
 
 while True:
 # 获取验证码图片
-    img_bj=d.find_element(By.XPATH,'//*[@id="captcha"]/div[2]/div[1]/div[4]/div[1]/div[2]/div/div/div[1]/div[2]')
-    img_hk=d.find_element(By.XPATH,'//*[@id="captcha"]/div[2]/div[1]/div[4]/div[1]/div[2]/div/div/div[1]/div[1]/div[1]')
+    img_bj=d.find_element(By.XPATH,'//*[@id="captcha"]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[4]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[实例25_批量生成PPT版荣誉证书]/div[2]')
+    img_hk=d.find_element(By.XPATH,'//*[@id="captcha"]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[4]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]')
     # 获取原图下载地址
     src_bj=img_bj.get_attribute('src')
     src_hk=img_hk.get_attribute('src')
@@ -58,7 +58,7 @@ while True:
 
     # 定位到滑块
     ele = d.find_element(By.XPATH,
-                              '/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')
+                              '/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')
     # 开始拖动滑块
     action = ActionChains(d)
     action.click_and_hold(img_hk).perform()

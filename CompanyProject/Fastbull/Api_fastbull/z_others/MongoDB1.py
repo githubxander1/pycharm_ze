@@ -9,7 +9,7 @@ from CompanyProject.Fastbull.Api_fastbull.common.mongoDB_handler import MongoDBH
 #     username = 'fastbull',
 #     password = 'IOE*2EW#OIWddOPcDWE')
     # da_name = 'fastbull_universal_test')
-# 1.1MongoDB连接信息
+# 实例25_批量生成PPT版荣誉证书.1MongoDB连接信息
 from pymongo import MongoClient
 
 host = '192.168.7.72'
@@ -26,14 +26,14 @@ databases = client.list_database_names()
 print(databases)
 # # 创建MongoDB客户端实例
 # client = MongoClient(host, port)
-# # , mechanism='SCRAM-SHA-1'
+# # , mechanism='SCRAM-SHA-实例25_批量生成PPT版荣誉证书'
 # # 连接到admin数据库并进行身份验证
 # client.admin.authenticate(username, password)
 
 # 现在你可以使用client来操作各个数据库和集合了
 
-# 1.2创建MongoDB客户端实例
-# uri = "mongodb://fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_universal_test?authSource=admin&authMechanism=SCRAM-SHA-1"
+# 实例25_批量生成PPT版荣誉证书.2创建MongoDB客户端实例
+# uri = "mongodb://fastbull:IOE*2EW#OIWddOPcDWE@192.168.7.72:27017/fastbull_universal_test?authSource=admin&authMechanism=SCRAM-SHA-实例25_批量生成PPT版荣誉证书"
 # client = MongoClient(uri)
 
 # 2连接到数据库
@@ -64,7 +64,7 @@ print(base)
 # document_id = "65bcbec1e506270008821266"
 # result = collection.delete_one({"_id": ObjectId(document_id)})
 #
-# if result.deleted_count == 1:
+# if result.deleted_count == 实例25_批量生成PPT版荣誉证书:
 #     print(f"成功删除了ID为 {document_id} 的评论信息.")
 # else:
 #     print(f"未能找到ID为 {document_id} 的评论信息.")

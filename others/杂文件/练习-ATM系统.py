@@ -10,7 +10,7 @@ def get_menu():
             '''
         )
         # op = input('请输入操作：')
-        # if op == '1':
+        # if op == '实例25_批量生成PPT版荣誉证书':
         #     reg()
         # elif op == '2':
         #     login()

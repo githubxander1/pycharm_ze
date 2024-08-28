@@ -25,16 +25,16 @@ custommode=d(resourceId="com.app.ct4:id/chartCustomMode")
 chartsetting=d(resourceId="com.app.ct4:id/chartSetting")
 
 timezone=d(resourceId="com.app.ct4:id/timeZone")
-utc2=d.xpath('//*[@resource-id="com.app.ct4:id/recyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.CheckBox[1]')
-utc12=d.xpath('//*[@resource-id="com.app.ct4:id/recyclerView"]/android.view.ViewGroup[15]/android.view.ViewGroup[1]/android.widget.CheckBox[1]')
+utc2=d.xpath('//*[@resource-id="com.app.ct4:id/recyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.widget.CheckBox[实例25_批量生成PPT版荣誉证书]')
+utc12=d.xpath('//*[@resource-id="com.app.ct4:id/recyclerView"]/android.view.ViewGroup[15]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.widget.CheckBox[实例25_批量生成PPT版荣誉证书]')
 
 messagepush=d(resourceId="com.app.ct4:id/messagePush")
-master_switch=d.xpath('//*[@resource-id="com.app.ct4:id/systemNotification"]/android.view.ViewGroup[1]/android.view.View[1]')
-system_information=d.xpath('//*[@resource-id="com.app.ct4:id/systemInformation"]/android.view.ViewGroup[1]/android.view.View[1]')
-newsletter=d.xpath('//*[@resource-id="com.app.ct4:id/newsletter"]/android.view.ViewGroup[1]/android.view.View[1]')
-calendar=d.xpath('//*[@resource-id="com.app.ct4:id/pushCalendar"]/android.view.ViewGroup[1]/android.view.View[1]')
-account_information=d.xpath('//*[@resource-id="com.app.ct4:id/pushAccountInfo"]/android.view.ViewGroup[1]/android.view.View[1]')
-early_warning_reminder=d.xpath('//*[@resource-id="com.app.ct4:id/pushWarning"]/android.view.ViewGroup[1]/android.view.View[1]')
+master_switch=d.xpath('//*[@resource-id="com.app.ct4:id/systemNotification"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
+system_information=d.xpath('//*[@resource-id="com.app.ct4:id/systemInformation"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
+newsletter=d.xpath('//*[@resource-id="com.app.ct4:id/newsletter"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
+calendar=d.xpath('//*[@resource-id="com.app.ct4:id/pushCalendar"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
+account_information=d.xpath('//*[@resource-id="com.app.ct4:id/pushAccountInfo"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
+early_warning_reminder=d.xpath('//*[@resource-id="com.app.ct4:id/pushWarning"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
 
 cache=d(text="Clear cache")
 
@@ -159,7 +159,7 @@ class TestSetting:
 
 
 if __name__ == '__main__':
-    pytest.main(["-vs",'--reruns','1',"--html=report.html",'settings_test.py::TestSetting'])
-    # pytest.main(["-vs",'--reruns','1',"--html=report.html",'settings_test.py::TestLanguage::test_messagepush_master_switch'])
-    # pytest.main(["-vs",'--reruns','1',"--html=report.html"])
-    # pytest.main(["-vs",'-k','test_messagepush_calendar','--reruns','1',"--html=report.html"])
+    pytest.main(["-vs",'--reruns','实例25_批量生成PPT版荣誉证书',"--html=report.html",'settings_test.py::TestSetting'])
+    # pytest.main(["-vs",'--reruns','实例25_批量生成PPT版荣誉证书',"--html=report.html",'settings_test.py::TestLanguage::test_messagepush_master_switch'])
+    # pytest.main(["-vs",'--reruns','实例25_批量生成PPT版荣誉证书',"--html=report.html"])
+    # pytest.main(["-vs",'-k','test_messagepush_calendar','--reruns','实例25_批量生成PPT版荣誉证书',"--html=report.html"])

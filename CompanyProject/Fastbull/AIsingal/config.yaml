@@ -3,7 +3,7 @@
 #logger file
 
 database:
-  host: '192.168.1.58'
+  host: '192.168.实例25_批量生成PPT版荣誉证书.58'
   port: 3306
   user: 'root'
   password: '123456w'

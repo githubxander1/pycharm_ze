@@ -26,7 +26,7 @@ def get_image():
     driver.maximize_window()
     time.sleep(2) #睡眠两秒
 
-    driver.find_element(By.XPATH,'/html/body/div/div[2]/div/div[1]/div/div[1]/div[2]').click()
+    driver.find_element(By.XPATH,'/html/body/div/div[2]/div/div[实例25_批量生成PPT版荣誉证书]/div/div[实例25_批量生成PPT版荣誉证书]/div[2]').click()
 
     time.sleep(1)
 

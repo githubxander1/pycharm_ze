@@ -20,7 +20,7 @@ login()
 #               json={
 #                     "action":"add_customer",
 #                     "data":{
-#                         "name":'1',
+#                         "name":'实例25_批量生成PPT版荣誉证书',
 #                         "phonenumber":'123',
 #                         "address":'1234'
 #                     }

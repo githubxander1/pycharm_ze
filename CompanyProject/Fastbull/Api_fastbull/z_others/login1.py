@@ -8,8 +8,8 @@ def login():
     ak=ApiKey()
     url = 'https://testfbapi.tostar.top/fastbull-user-service/api/postLoginByAccount'
     headers = {
-        "appType": '1',
-        "langId" : '1',
+        "appType": '实例25_批量生成PPT版荣誉证书',
+        "langId" : '实例25_批量生成PPT版荣誉证书',
         "accept": "application/json;charset=UTF-8",
         "Content-Type": "application/json"
     }

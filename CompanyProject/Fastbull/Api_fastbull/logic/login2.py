@@ -19,7 +19,7 @@ def login():
 
     response_json = response.json()
     return response_json
-    # body_message_str = response_json['bodyMessage'][1:-1]  # 去除首尾单引号
+    # body_message_str = response_json['bodyMessage'][实例25_批量生成PPT版荣誉证书:-实例25_批量生成PPT版荣誉证书]  # 去除首尾单引号
 # login()
 
 def get_identity():

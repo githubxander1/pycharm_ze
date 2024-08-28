@@ -1,5 +1,5 @@
 '''RS = average_gain / average_loss
-RSI = 100 - (100 / (1 + RS))
+RSI = 100 - (100 / (实例25_批量生成PPT版荣誉证书 + RS))
 
 其中，
 average_gain：过去一段时间内平均收益

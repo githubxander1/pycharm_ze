@@ -12,9 +12,9 @@ setting=d(resourceId="com.app.ct4:id/settings")
 account_security=d(resourceId="com.app.ct4:id/accountSecurity")
 
 privacy_protection=d(resourceId="com.app.ct4:id/privacyProtection")
-asset_protection=d.xpath('//*[@resource-id="com.app.ct4:id/blurPageSwitch"]/android.view.ViewGroup[1]/android.view.View[1]')
-turnOn_faceID_recognition=d.xpath('//*[@resource-id="com.app.ct4:id/faceRecognitionSwitch"]/android.view.ViewGroup[1]/android.view.View[1]')
-turnOn_gesture_password=d.xpath('//*[@resource-id="com.app.ct4:id/gestureRecognitionSwitch"]/android.view.ViewGroup[1]/android.view.View[1]')
+asset_protection=d.xpath('//*[@resource-id="com.app.ct4:id/blurPageSwitch"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
+turnOn_faceID_recognition=d.xpath('//*[@resource-id="com.app.ct4:id/faceRecognitionSwitch"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
+turnOn_gesture_password=d.xpath('//*[@resource-id="com.app.ct4:id/gestureRecognitionSwitch"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
 background_hold_time=d(resourceId="com.app.ct4:id/backgroundHoldTime")
 
 modify_gesture_password=d(resourceId="com.app.ct4:id/modifyGesturePassword")
@@ -95,4 +95,4 @@ class TestAssertPrivacy:
 
 
 if __name__ == '__main__':
-    pytest.main(["-vs", '--reruns', '1', "--html=report.html", 'settings_login_password_test.py::TestAssertPrivacy'])
+    pytest.main(["-vs", '--reruns', '实例25_批量生成PPT版荣誉证书', "--html=report.html", 'settings_login_password_test.py::TestAssertPrivacy'])

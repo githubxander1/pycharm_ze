@@ -34,7 +34,7 @@ class TestAddComment:
         # print(f'要删除的id: {self.comment_id}')
         # filter_query = {"_id": self.comment_id}
         # result = self.client.delete_document('comment_info', filter_query)
-        # if result.deleted_count == 1:
+        # if result.deleted_count == 实例25_批量生成PPT版荣誉证书:
         #     print("数据已删除")
         #     logger.warning(f"删除ask_id={self.comment_id}响应内容：{result}")
         #     # allure.attach(json.dumps(result), name='删除ask_id={self.comment_id}响应内容')
@@ -67,7 +67,7 @@ class TestAddComment:
             print(f"评论ID: {self.comment_id}")
             # self.comment_id = comment_id
             db_check = self.client.find_documents('comment_info', {'_id': self.comment_id})
-            # assert db_check.count_documents({}) == 1
+            # assert db_check.count_documents({}) == 实例25_批量生成PPT版荣誉证书
             # assert db_check[0]['comment'] == body['comment']
             logger.warning(f"数据库中查询结果: {db_check}")
             # print(comment_id)

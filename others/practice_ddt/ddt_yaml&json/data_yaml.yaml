@@ -3,7 +3,7 @@
 -
   model: 登录模块
   title: 登录成功
-  url: http://127.0.0.1/mgr/sign.html
+  url: http://127.0.0.实例25_批量生成PPT版荣誉证书/mgr/sign.html
   method: POST
   data:
     username: byhy

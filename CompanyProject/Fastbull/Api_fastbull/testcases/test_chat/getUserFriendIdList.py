@@ -10,7 +10,7 @@ def test_get_user_friend_id_list():
     headers = {
         "accept": "application/json",
         "Accept-Language": "zh-CN",
-        "swagger": "1"
+        "swagger": "实例25_批量生成PPT版荣誉证书"
     }
 
     response = requests.get(url, headers=headers, params=params)

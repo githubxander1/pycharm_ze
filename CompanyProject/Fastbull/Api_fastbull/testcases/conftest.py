@@ -61,7 +61,7 @@ def headers1(nonce):
         "content-type": "application/json",
         "deviceid": "2a3cd0189ea31b1d5f177b66df8705f8",  # 根据实际情况填写设备ID
         "deviceno": "2a3cd0189ea31b1d5f177b66df8705f8",  # 根据实际情况填写设备号
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "nonce": nonce,
         "pragma": "no-cache",
         # 下面是浏览器相关头信息，如果在非浏览器环境下可以不设置
@@ -157,7 +157,7 @@ def get_identity():
 #     body_message_str = response_json['bodyMessage']
 #     # 使用正则表达式提取 identity 字段的值
 #     match_result = re.search(r'"identity":"([^"]+)"', body_message_str)
-#     extracted_identity = match_result.group(1)
+#     extracted_identity = match_result.group(实例25_批量生成PPT版荣誉证书)
 #     # print(extracted_identity)
 #     return extracted_identity
 # print(get_identity())

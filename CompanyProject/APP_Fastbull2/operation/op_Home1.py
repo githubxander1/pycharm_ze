@@ -4,9 +4,9 @@ from CompanyProject.APP_Fastbull2.others.basePage1 import BasePage
 
 class Home(BasePage):
     edittext={'xpath':'//android.widget.EditText'}
-    search={'xpath':'//android.widget.ScrollView/android.widget.ImageView[1]'}
+    search={'xpath':'//android.widget.ScrollView/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]'}
     conversation1={'xpath':'//android.widget.ScrollView/android.view.View[3]'}
-    # conversation2={'xpath':'//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]'}
+    # conversation2={'xpath':'//*[@resource-id="android:id/content"]/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[2]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[2]'}
     cancel={'description':"取消"}
 
 #     # 点击进入会话聊天窗口
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     Home().launch_app()
     # 搜索
     # Home().click_search()
-    # Home().send_text(1)
+    # Home().send_text(实例25_批量生成PPT版荣誉证书)
     # 点击会话
     time.sleep(10)
     Home().click_conversation()

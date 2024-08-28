@@ -6,7 +6,7 @@ class TestSignIn(unittest.TestCase):
     def setUp(self):
         self.url = 'http://127.0.0.1:8047/api/mgr/signin'
 
-    # 1. 正确的用户名和密码，能够成功登录。
+    # 实例25_批量生成PPT版荣誉证书. 正确的用户名和密码，能够成功登录。
     def test_signin_success(self):
         data ={
             'username':'byhy',

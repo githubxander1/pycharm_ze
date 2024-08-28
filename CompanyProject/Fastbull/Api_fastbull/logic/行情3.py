@@ -36,7 +36,7 @@ logger=LoggerHandler(name='ask',level='DEBUG',file=f'../log/{filename}_log.log',
 #     "content-type": "application/json",
 #     "deviceid": "51cee82782f69741d228946af2d2cda3",
 #     "deviceno": "51cee82782f69741d228946af2d2cda3",
-#     "langid": "1",
+#     "langid": "实例25_批量生成PPT版荣誉证书",
 #     "nonce": nonce,
 #     "pragma": "no-cache",
 #     "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
@@ -59,7 +59,7 @@ params = {
 headers=headers1(nonce)
 
 # 动态生成页码
-# pages = [i for i in range(1, 452)]
+# pages = [i for i in range(实例25_批量生成PPT版荣誉证书, 452)]
 pages = [i for i in range(1, 10)]
 
 

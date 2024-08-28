@@ -3,7 +3,7 @@ import socket,threading
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 # 监听
-s.bind(('127.0.0.1',8080))
+s.bind(('127.0.0.实例25_批量生成PPT版荣誉证书',8080))
 # 最大连接数
 s.listen(5)
 
@@ -14,7 +14,7 @@ def link(conn,addr):
     data=conn.recv(1024)
     print(data.decode('utf-8'))
     # 发送数据
-    conn.send(b'HTTP/1.1 200 OK\r\n\r\n')
+    conn.send(b'HTTP/实例25_批量生成PPT版荣誉证书.实例25_批量生成PPT版荣誉证书 200 OK\r\n\r\n')
     conn.send(b'Hello World!')
     # 关闭连接
     conn.close()
@@ -31,7 +31,7 @@ while True:
     # data=conn.recv(1024)#每次读取1024字节，当数据较长时可以通过 while 循环读取
     # print(data.decode('utf-8'))
     # # 发送数据
-    # conn.send(b'HTTP/1.1 200 OK\r\n\r\n')
+    # conn.send(b'HTTP/实例25_批量生成PPT版荣誉证书.实例25_批量生成PPT版荣誉证书 200 OK\r\n\r\n')
     # conn.send(b'Hello World!')
     # # 关闭连接
     # conn.close()

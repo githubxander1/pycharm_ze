@@ -18,7 +18,7 @@ add_comment:
   url: https://testfbapi.tostar.top/fastbull-news-service/api/postComment
   method: post
   body:  {
-            "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]1",
+            "comment": "国际油价重挫4%！沙特“服软”降价，原油将重启跌势？[憨笑]实例25_批量生成PPT版荣誉证书",
             "imageInfoModel": [
                 {
                     "high": 226,
@@ -27,11 +27,11 @@ add_comment:
                 }
             ],
             "postId": "3707814_1",
-            "type": 1
+            "type": 实例25_批量生成PPT版荣誉证书
         }
 
 get_comment_list:
-  url: https://testfbapi.tostar.top/fastbull-news-service/api/getCommentPage?r=0.27805524689164374&pageIndex=1&pageSize=100&sortType=1
+  url: https://testfbapi.tostar.top/fastbull-news-service/api/getCommentPage?r=0.27805524689164374&pageIndex=实例25_批量生成PPT版荣誉证书&pageSize=100&sortType=实例25_批量生成PPT版荣誉证书
   method: get
   body: {}
 
@@ -54,7 +54,7 @@ post_like:
   method: post
   data : {
         "postId": postId,
-        "operate": 1    #点赞
+        "operate": 实例25_批量生成PPT版荣誉证书    #点赞
         # "operate": 0 #取消点赞
           }
 get_expert_ask_reply_page:
@@ -62,7 +62,7 @@ get_expert_ask_reply_page:
   method: get
   data : {
         "postId": postId,
-        "operate": 1    #点赞
+        "operate": 实例25_批量生成PPT版荣誉证书    #点赞
         # "operate": 0 #取消点赞
           }
 
@@ -84,7 +84,7 @@ delete_favour:
         }
 get_favour_list:
 #  url: https://testfbapi.tostar.top/fastbull-user-service/api/postAddFavour?favourType=1&refId=16419046_1
-  url: https://testfbapi.tostar.top/fastbull-user-service/api/getFavourList?favourType=1&pageIndex=1&pageSize=20
+  url: https://testfbapi.tostar.top/fastbull-user-service/api/getFavourList?favourType=实例25_批量生成PPT版荣誉证书&pageIndex=实例25_批量生成PPT版荣誉证书&pageSize=20
   method: get
   data : {
         "refId": refId,

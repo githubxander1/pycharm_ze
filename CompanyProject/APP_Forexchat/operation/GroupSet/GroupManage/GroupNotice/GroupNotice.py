@@ -16,14 +16,14 @@ class GroupNotice(Base1):
     createNoticeImmediately=d(description="立即创建")
     createNotice=d(description="创建")
     editNotice=d.xpath('//android.widget.EditText')
-    addPicture=d.xpath('//android.widget.ScrollView/android.view.View[1]')
-    picture1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]')
-    picture_gif=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]')
+    addPicture=d.xpath('//android.widget.ScrollView/android.view.View[实例25_批量生成PPT版荣誉证书]')
+    picture1=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[2]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
+    picture_gif=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[2]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]')
 
     publish=d(description="发布")
     confirm=d(description="确定")
 
-    usePop=d.xpath('//android.widget.ScrollView/android.widget.Switch[1]')
+    usePop=d.xpath('//android.widget.ScrollView/android.widget.Switch[实例25_批量生成PPT版荣誉证书]')
     setTop=d.xpath('//android.widget.ScrollView/android.widget.Switch[2]')
     forNewComers=d.xpath('//android.widget.ScrollView/android.widget.Switch[3]')
 
@@ -59,12 +59,12 @@ class GroupNotice(Base1):
     #     NewComers = d.xpath('//*[@content-desc[contains(., "新人必看")]]')
     #     while not NewComers.exists():
     #         d(scrollable=True).scroll.forward()
-    #         time.sleep(1)
+    #         time.sleep(实例25_批量生成PPT版荣誉证书)
     #     self.forNewComers.click()
     # def click_forNewComers(self):
     #     while not d.xpath('//android.widget.ScrollView/android.widget.Switch[3]').exists:
     #         d(scrollable=True).scroll.forward()
-    #         time.sleep(1)
+    #         time.sleep(实例25_批量生成PPT版荣誉证书)
     #     d.xpath('//android.widget.ScrollView/android.widget.Switch[3]').click()
 
     def click_forNewComers(self):
@@ -218,7 +218,7 @@ if __name__ == '__main__':
     #     toast_message = d.toast.get_message()
     #     if toast_message is not None:
     #         break
-    #     time.sleep(1)
+    #     time.sleep(实例25_批量生成PPT版荣誉证书)
     #     print(toast_message)
     # 断言Toast消息是否包含'删除成功'
     # assert '删除成功' in toast_message, "Toast消息不包含'删除成功'"

@@ -45,7 +45,7 @@ class Test_group_nickname():
         if GroupSet().disbandgroup.exists:
             file_basename=os.path.basename(__file__)
             # 去掉后缀
-            # file_extension=file_basename[1]
+            # file_extension=file_basename[实例25_批量生成PPT版荣誉证书]
             # basename_without_extension=os.path.splitext(file_basename)[0]
             #
             # file_without_prefixAndextension=basename_without_extension[5:]# 去掉前面的text_

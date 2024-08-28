@@ -22,7 +22,7 @@ class Base1:
     #     # self.d = u2.connect_adb_wifi('192.168.31.19:5555')
     #     # self.d = u2.connect_adb_wifi('192.168.31.117:5555')
     #     # self.d = u2.connect_usb('22addc6f0403')
-    #     # self.d = u2.connect('127.0.0.1:21503')
+    #     # self.d = u2.connect('127.0.0.实例25_批量生成PPT版荣誉证书:21503')
     #     # print(self.d.info())
     #     self.d.app_start('com.bv.forexchat')
     #     self.d.implicitly_wait(10)

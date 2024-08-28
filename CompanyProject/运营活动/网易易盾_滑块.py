@@ -11,13 +11,13 @@ driver.implicitly_wait(10)
 driver.get("https://dun.163.com/trial/sense")
 
 wait = WebDriverWait(driver, 10)
-driver.find_element(By.XPATH,'/html/body/main/div[1]/div/div[2]/div[2]/ul/li[2]').click()
-# driver.find_element(By.XPATH,'(By.XPATH,"/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[1]/span")').click()
-anquan=wait.until(EC.presence_of_element_located((By.XPATH,"/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[1]/span")))
+driver.find_element(By.XPATH,'/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/ul/li[2]').click()
+# driver.find_element(By.XPATH,'(By.XPATH,"/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/span")').click()
+anquan=wait.until(EC.presence_of_element_located((By.XPATH,"/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/span")))
 anquan.click()
 
 # 切换到安全验证弹窗的iframe
-slider_iframe=driver.find_element(By.XPATH,'/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[2]/iframe')
+slider_iframe=driver.find_element(By.XPATH,'/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[2]/iframe')
 driver.switch_to.frame(slider_iframe)
 
 # 启用selenium-wire的请求捕获功能
@@ -25,7 +25,7 @@ driver.switch_to.frame(slider_iframe)
 # driver.request_interceptor = lambda request: request  # 捕获所有请求
 
 # 定位滑块
-slider = wait.until(EC.presence_of_element_located((By.XPATH,'/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')))
+slider = wait.until(EC.presence_of_element_located((By.XPATH,'/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')))
 slider_width = slider.size['width']
 
 # # 模拟拖动滑块

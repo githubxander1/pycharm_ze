@@ -1,7 +1,7 @@
-# 1题目：有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
-# for i in range(1,5):
-#     for j in range(1,5):
-#         for k in range(1,5):
+# 1题目：有四个数字：实例25_批量生成PPT版荣誉证书、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
+# for i in range(实例25_批量生成PPT版荣誉证书,5):
+#     for j in range(实例25_批量生成PPT版荣誉证书,5):
+#         for k in range(实例25_批量生成PPT版荣誉证书,5):
 #             if (i != j) and (i != j) and (j != k):
 #                 print(i,j,k)
 # 企业发放的奖金根据利润提成。
@@ -23,9 +23,9 @@
 #     if 40 < i < 60:
 #         jiang=(i-40)*3%
 #     if 60 < i < 100:
-#         jiang=(i-60)*1.5%
+#         jiang=(i-60)*实例25_批量生成PPT版荣誉证书.5%
 #     if i > 100:
-#         jiang=(i-100)*1%
+#         jiang=(i-100)*实例25_批量生成PPT版荣誉证书%
 
 # 题目：一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？
 
@@ -49,9 +49,9 @@
 # 题目：斐波那契数列
 
 # 题目：输出 9*9 乘法口诀表。
-# for i in range(1,10):
+# for i in range(实例25_批量生成PPT版荣誉证书,10):
 #     print()
-#     for j in range(1,i+1):
+#     for j in range(实例25_批量生成PPT版荣誉证书,i+实例25_批量生成PPT版荣誉证书):
 #         print()
 
 # input1=input('请输入:')
@@ -70,7 +70,7 @@
 #     print('无法使用int函数转换')
 # else:
 #     input1=int(input0)
-#     if input1 %2 == 1:
+#     if input1 %2 == 实例25_批量生成PPT版荣誉证书:
 #         print(input1*2)
 #     elif input1 %4 ==0:
 #         print(input1/4)
@@ -78,7 +78,7 @@
 #         print(input1-20)
 #     else:
 # print(input1)
-# lst	= [1, 3, 5, 2, 7, 9]
+# lst	= [实例25_批量生成PPT版荣誉证书, 3, 5, 2, 7, 9]
 # for	index in range(len(lst)):
 #     print(lst[index])
 
@@ -93,7 +93,7 @@
 # for key,value in dic.items():
 #     print(key,value)
 
-# lst=[1,3,5,2,7,9,10]
+# lst=[实例25_批量生成PPT版荣誉证书,3,5,2,7,9,10]
 # for i in lst:
 #     if i %2 ==0:
 #         print(i)
@@ -101,7 +101,7 @@
 # 寻找最大值
 # max_1value=lst[0]
 # for i in lst:
-#     if i %2 ==1:
+#     if i %2 ==实例25_批量生成PPT版荣誉证书:
 #         max_1value == i
 # 寻找最小值
 # min_1value=lst[0]
@@ -117,8 +117,8 @@
 # print(min_0value)
 import random
 # 寻找组合
-# lst1 = [3, 6, 1, 8, 1, 9, 2]
-# lst2 = [3, 1, 2, 6, 4, 8, 7]
+# lst1 = [3, 6, 实例25_批量生成PPT版荣誉证书, 8, 实例25_批量生成PPT版荣誉证书, 9, 2]
+# lst2 = [3, 实例25_批量生成PPT版荣誉证书, 2, 6, 4, 8, 7]
 
 # for i in lst1:
 #     for j in lst2:
@@ -210,17 +210,17 @@ import random
 
 # 冒泡排序
 # def pop_sort(lst):
-#     for i in range(len(lst)-1, 1, -1):
+#     for i in range(len(lst)-实例25_批量生成PPT版荣誉证书, 实例25_批量生成PPT版荣誉证书, -实例25_批量生成PPT版荣誉证书):
 #         move_max(lst,i)
 #
 # def move_max(lst,max_index):
 #     for i in range(max_index):
-#         if lst[i] > lst[i+1]:
-#             lst[i],lst[i+1] = lst[i+1],lst[1]
+#         if lst[i] > lst[i+实例25_批量生成PPT版荣誉证书]:
+#             lst[i],lst[i+实例25_批量生成PPT版荣誉证书] = lst[i+实例25_批量生成PPT版荣誉证书],lst[实例25_批量生成PPT版荣誉证书]
 #
 # if __name__ == '__main__':
-#     lst=[1,6,3,8,0,3]
-#     move_max(lst,len(lst)-1)
+#     lst=[实例25_批量生成PPT版荣誉证书,6,3,8,0,3]
+#     move_max(lst,len(lst)-实例25_批量生成PPT版荣誉证书)
 #     pop_sort(lst)
 #     print(lst)
 
@@ -243,7 +243,7 @@ import random
 #     return max_value,min_value
 #
 # if __name__ == '__main__':
-#     lst=[23,1,34,3232,3,434,2,4]
+#     lst=[23,实例25_批量生成PPT版荣誉证书,34,3232,3,434,2,4]
 #     max_value,min_value=find_max_min(lst)
 #     print(max_value,min_value)
 
@@ -265,7 +265,7 @@ import random
 # 比较一个列表里相邻两个数的大小
 # def find_max(lst):
 #     for item,index in enumberate(lst):
-#         if item > lst[index+1]:
+#         if item > lst[index+实例25_批量生成PPT版荣誉证书]:
 #             return item
 #
 # if __name__=='__main__':
@@ -273,7 +273,7 @@ import random
 #     max_value=find_max(lst)
 #     print(max_value)
 
-# lst1=[1,2,3,4]
+# lst1=[实例25_批量生成PPT版荣誉证书,2,3,4]
 # lst2=['a','s','d']
 # lst=[]
 # for item2 in lst2:
@@ -284,11 +284,11 @@ import random
 #
 # print(lst)
 
-# 0,1,2,3,4
-# 1,2,3,4,5
+# 0,实例25_批量生成PPT版荣誉证书,2,3,4
+# 实例25_批量生成PPT版荣誉证书,2,3,4,5
 #
 # def find_lost(lst,index):
-#     lst=range(1,n)
+#     lst=range(实例25_批量生成PPT版荣誉证书,n)
 #     lst1=[]
 #     for i,index in lst1:
 #         if index != n:

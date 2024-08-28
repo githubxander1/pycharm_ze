@@ -3,7 +3,7 @@ from time import sleep
 
 import uiautomator2 as u2
 #
-# d=u2.connect('127.0.0.1:21503')#模拟器
+# d=u2.connect('127.0.0.实例25_批量生成PPT版荣誉证书:21503')#模拟器
 d=u2.connect()#模拟器
 # d = u2.connect_adb_wifi('192.168.5.220:5555')#手机
 d.app_start('com.app.ct4')

@@ -4,14 +4,14 @@ import requests
 url='https://forexwaytestwebpcapi.tostar.top/api/login/loginByEmailAndPass'
 headers={
     # "accept": "*/*",
-    # "clientType": "1",
+    # "clientType": "实例25_批量生成PPT版荣誉证书",
     # "locale": "zh_CN",
-    "swagger": '1' ,
+    "swagger": '实例25_批量生成PPT版荣誉证书' ,
     # "uid": '16792',
     # "Content-Type": "application/json"
 }
 data={
-    "email": "1@qq.com",
+    "email": "实例25_批量生成PPT版荣誉证书@qq.com",
     "password": "5690dddfa28ae085d23518a035707282"
 }
 response = requests.post(url=url, headers=headers, json=data)
@@ -40,7 +40,7 @@ print(response.status_code)  # prints the response status code, e.g. 200 or 404
 # }
 #
 # data = {
-#     'email': '1@qq.com',
+#     'email': '实例25_批量生成PPT版荣誉证书@qq.com',
 #     'password': '5690dddfa28ae085d23518a035707282'
 # }
 #

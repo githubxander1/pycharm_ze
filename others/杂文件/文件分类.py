@@ -16,11 +16,11 @@ def files_select():
                 file.append(fullname)
     return file
 # file = yuan
-# path = f'C:\\Users\\Administrator\\Desktop\\1\\{type}'
+# path = f'C:\\Users\\Administrator\\Desktop\\实例25_批量生成PPT版荣誉证书\\{type}'
 # shutil.copyfile(file, path)
 
 # for list in lists:
-#     type = list.split('.')[-1]
+#     type = list.split('.')[-实例25_批量生成PPT版荣誉证书]
 # print(list)
 # if not os.path.exists(f'C:/Users/Administrator/Downloads/{type}'):
 #     os.mkdir(f'C:/Users/Administrator/Downloads/{type}')

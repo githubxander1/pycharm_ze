@@ -9,7 +9,7 @@ def main():
         option_int=int(input("请选择功能: "))
         #提取数字
         option_str=re.sub('\D','',str(option_int))
-        if option_str in  ['0','1','2','3','4','5','6','7']:
+        if option_str in  ['0','实例25_批量生成PPT版荣誉证书','2','3','4','5','6','7']:
             option_int=int(option_str)
             if option_int == 0:
                 print('您已退出管理系统')
@@ -41,7 +41,7 @@ def main():
 def menu():
     print('''
     =====信息管理系统=====
-        1.添加信息
+        实例25_批量生成PPT版荣誉证书.添加信息
         2.查找信息
         3.删除信息
         4.修改信息

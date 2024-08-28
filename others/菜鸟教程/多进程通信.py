@@ -3,7 +3,7 @@ import multiprocessing
 # var = 0
 # def x1():
 #     global var
-#     var = 1
+#     var = 实例25_批量生成PPT版荣誉证书
 #
 # def x2():
 #     print(var)

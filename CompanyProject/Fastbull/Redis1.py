@@ -35,7 +35,7 @@ for member, score in data:
     # time_format = '%Y-%m-%d %H:%M:%S %z'
     # time_stamp = dt_bj.strftime(time_format)
     # 输出结果
-    # print(time_stamp.replace(':', ' ', 1))
+    # print(time_stamp.replace(':', ' ', 实例25_批量生成PPT版荣誉证书))
 # 计算价格变动
 price_changes = []
 for i in range(1, len(close_price)):

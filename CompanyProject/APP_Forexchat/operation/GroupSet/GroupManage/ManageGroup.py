@@ -20,7 +20,7 @@ class ManageGroup(Base1):
     confirm1 = d(description="确认")
     confirm = d.xpath('//*[contains(@content-desc,"确定(")]')
     # confirm = d(description="确定")
-    back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    back=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
 
     def click_back(self):
         self.back.click()
@@ -65,7 +65,7 @@ class ManageGroup(Base1):
     #     # text = pytesseract.image_to_string(img, lang='eng', config=tessdata_dir_config)
     #
     #     # 等待toast提示出现
-    #     time.sleep(1)  # 等待toast提示出现的时间
+    #     time.sleep(实例25_批量生成PPT版荣誉证书)  # 等待toast提示出现的时间
     #     # d.implicit_wait(10)
     #
     #     # 获取toast提示中的文案

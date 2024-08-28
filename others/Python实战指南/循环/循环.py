@@ -1,14 +1,14 @@
 # result=[]
-# for a in range(1,10):
-#     for b in range(1,10):
-#         for c in range(1,10):
+# for a in range(实例25_批量生成PPT版荣誉证书,10):
+#     for b in range(实例25_批量生成PPT版荣誉证书,10):
+#         for c in range(实例25_批量生成PPT版荣誉证书,10):
 #             if a != b and a != c and b != c:
 #                 # result.append(a*100+b*10+c)
 #                 result.append(str(a)+str(b)+str(c))
 #
 # c=0
 # for n in result:
-#     c+=1
+#     c+=实例25_批量生成PPT版荣誉证书
 #     print(n,end=' ')
 #
 #     if (c % 8) ==0:

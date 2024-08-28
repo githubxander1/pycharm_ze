@@ -61,4 +61,4 @@ class TestPhone:
 
 
 if __name__ == '__main__':
-    pytest.main(["-vs", '--reruns', '1', "--html=report.html", 'settings_login_password_test.py::TestPhone'])
+    pytest.main(["-vs", '--reruns', '实例25_批量生成PPT版荣誉证书', "--html=report.html", 'settings_login_password_test.py::TestPhone'])

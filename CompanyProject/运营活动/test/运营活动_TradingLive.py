@@ -13,7 +13,7 @@ d=webdriver.Edge()
 d.get('https://tradinglive-testwebpc.tostar.top/cn/login')
 # d.maximize_window()
 
-# d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/div[1]/span[2]').click()
+# d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[实例25_批量生成PPT版荣誉证书]/span[2]').click()
 WebDriverWait(driver=d, timeout=30, ignored_exceptions=None).until(EC.presence_of_all_elements_located(
     (By.XPATH, '//div[contains(@class,"region-select")]//input')))
 number = "+852"
@@ -30,7 +30,7 @@ d.find_element_by_css_selector(
 
 # time.sleep(2)
 # #切换到弹窗
-# iframe = d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
+# iframe = d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/form/div[实例25_批量生成PPT版荣誉证书]/div[2]/iframe')
 # d.switch_to.frame(iframe)
 # # 定位滑块元素
 # # 获取滑块及滑块背景图元素
@@ -63,38 +63,38 @@ d.find_element_by_css_selector(
 # d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111111')
 #
 # d.find_element_by_css_selector('input').click()
-# d.find_element(By.XPATH,'/html/body/div[2]/div[1]/div[1]/ul/li[3]/span[1]').click()
+# d.find_element(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/ul/li[3]/span[实例25_批量生成PPT版荣誉证书]').click()
 # d.find_element_by_css_selector('[placeholder="请输入手机号"]').send_keys('91111111')
 # select1=d.find_element_by_css_selector('#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.region-layer.isolate.text-left.el-col.el-col-8 > div > div.el-input.el-input--suffix')
 # Select(select1).select_by_visible_text('香港')
-# d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/div[1]/span[2]').click()
+# d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[实例25_批量生成PPT版荣誉证书]/span[2]').click()
 # d.find_element_by_css_selector('#app > div.container-layer.app-view.bg > div.container_content > div > div > div.type_list.isolate > span.login_type.email').click()
 
 # 邮箱登录
-# d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/div[2]/form/div[1]/div/div/div/div/input').send_keys('1@qq.com')
-# d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/div[2]/form/div[2]/div/div/div/div/input').send_keys('a1234567')
-# d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/div[2]/form/div[4]/button/span').click()
+# d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[2]/form/div[实例25_批量生成PPT版荣誉证书]/div/div/div/div/input').send_keys('实例25_批量生成PPT版荣誉证书@qq.com')
+# d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[2]/form/div[2]/div/div/div/div/input').send_keys('a1234567')
+# d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[2]/form/div[4]/button/span').click()
 
 
 
 
 # # 第一种打开方式
-# d.find_element(By.XPATH,'/html/body/div[2]/div[1]/div[7]/div[5]').click()
+# d.find_element(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[7]/div[5]').click()
 # d.find_element_by_id('inputMailText').send_keys('99@qq.com')
 # d.find_element_by_id('inputMailPwd').send_keys('a1234567')
 # d.find_element_by_id('mailBtn').click()
-# d.find_element(By.XPATH,'/html/body/div[2]/div[1]/div[7]/div[5]').click()
+# d.find_element(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[7]/div[5]').click()
 # # d.close()
 # # 第二种打开方式
-# # active=d.find_element(By.XPATH,'/html/body/div[2]/div[1]/div[7]/div[5]')
+# # active=d.find_element(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[7]/div[5]')
 # # ActionChains(d).move_to_element(active).perform()
-# # d.find_element(By.XPATH,'/html/body/div[2]/div[1]/div[7]/div[5]/div/div[3]').click()
+# # d.find_element(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[7]/div[5]/div/div[3]').click()
 # # d.find_element_by_id('inputMailText').send_keys('101@qq.com')
 # # d.find_element_by_id('inputMailPwd').send_keys('a1234567')
 # # d.find_element_by_id('mailBtn').click()
-# # active=d.find_element(By.XPATH,'/html/body/div[2]/div[1]/div[7]/div[5]')
+# # active=d.find_element(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[7]/div[5]')
 # # ActionChains(d).move_to_element(active).perform()
-# # d.find_element(By.XPATH,'/html/body/div[2]/div[1]/div[7]/div[5]/div/div[3]').click()
+# # d.find_element(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[7]/div[5]/div/div[3]').click()
 #
 # d.switch_to.frame(d.find_element_by_id('popup-active-iframe'))
 # # 点击复制按钮
@@ -110,4 +110,4 @@ d.find_element_by_css_selector(
 # # 获取当前窗口句柄集合(列表类型)
 # handles = d.window_handles
 # print(handles)
-# d.switch_to.window(handles[1])
+# d.switch_to.window(handles[实例25_批量生成PPT版荣誉证书])

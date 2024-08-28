@@ -22,7 +22,7 @@ time.sleep(1)
 browser.find_element(By.XPATH,'//li[contains(string(),"{}")]'.format(number)).click()
 time.sleep(1)
 
-# area_code_btn = browser.find_element_by_css_selector("#app > div > div.login-container > div > div.form-container > div.form-content > form > div.form-items > div:nth-child(1) > div.el-select > div")
+# area_code_btn = browser.find_element_by_css_selector("#app > div > div.login-container > div > div.form-container > div.form-content > form > div.form-items > div:nth-child(实例25_批量生成PPT版荣誉证书) > div.el-select > div")
 # area_code_btn.click()
 # hk_option = browser.find_element(By.XPATH,'//li/span[text()="香港"]')
 # hk_option.click()
@@ -37,7 +37,7 @@ phone_input.send_keys("91111110")
 browser.find_element_by_css_selector(
 '#app > div.container-layer.app-view.bg > div.container_content > div > div > form > div.phone-verification-component > form > div > div.el-col.el-col-10 > button > span').click()
 # 定位滑块元素
-iframe = browser.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
+iframe = browser.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/form/div[实例25_批量生成PPT版荣誉证书]/div[2]/iframe')
 
 browser.switch_to.frame(iframe)
 

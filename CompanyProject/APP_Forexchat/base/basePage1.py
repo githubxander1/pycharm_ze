@@ -3,7 +3,7 @@ import time
 import uiautomator2 as u2
 
 class BasePage:
-    def __init__(self, device_url='127.0.0.1:21503',package_name='com.bv.forexchat'):
+    def __init__(self, device_url='127.0.0.实例25_批量生成PPT版荣誉证书:21503',package_name='com.bv.forexchat'):
         self.d = u2.connect(device_url)
         self.package_name = package_name
         self.d.implicitly_wait(10)
@@ -50,7 +50,7 @@ class BasePage:
 # if __name__ == '__main__':
 #     BasePage().launch_app()
 # 使用示例
-# base_page = BasePage('127.0.0.1:21503', 'com.bv.forexchat')
+# base_page = BasePage('127.0.0.实例25_批量生成PPT版荣誉证书:21503', 'com.bv.forexchat')
 # base_page.launch_app()
 # time.sleep(3)
 # # 执行其他操作

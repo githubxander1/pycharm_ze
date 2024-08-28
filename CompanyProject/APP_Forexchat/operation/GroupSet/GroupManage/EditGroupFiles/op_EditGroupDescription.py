@@ -21,7 +21,7 @@ class GroupDescription(Base1):
     # 完成
     # complete = d.xpath('//*[@content-desc="完成"]')
 
-    cancel = d.xpath('//*[contains(@content-desc,"编辑群介绍")]/android.widget.imageview[1]')
+    cancel = d.xpath('//*[contains(@content-desc,"编辑群介绍")]/android.widget.imageview[实例25_批量生成PPT版荣誉证书]')
     complete = d(description="完成")
 
     def click_complete(self):

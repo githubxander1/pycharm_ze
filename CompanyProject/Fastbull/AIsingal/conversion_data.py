@@ -11,7 +11,7 @@ def Synchronous_Data(type):
         # 通过修改参数，配置成你自己的 MySQL 连接信息
         db_username = 'root'
         db_password = '123456w'
-        db_hostname = '192.168.1.58'
+        db_hostname = '192.168.实例25_批量生成PPT版荣誉证书.58'
         db_database = 'test_db'
         connection_string = f"mysql+pymysql://{db_username}:{db_password}@{db_hostname}/{db_database}"
         return create_engine(connection_string)

@@ -1,7 +1,7 @@
 import socket
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-s.bind(('127.0.0.1',8080))
+s.bind(('127.0.0.实例25_批量生成PPT版荣誉证书',8080))
 
 # 循环 每次有新的连接触发
 while  True:

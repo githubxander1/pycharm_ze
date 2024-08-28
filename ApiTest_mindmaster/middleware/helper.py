@@ -56,9 +56,9 @@ def token():
 # print(token())
 # def generate_mobile():
 #     """生成随机手机号"""
-#     phone = "1" + random.choice(["3","5","7","8","9"])
+#     phone = "实例25_批量生成PPT版荣誉证书" + random.choice(["3","5","7","8","9"])
 #     for i in range(0,9):
-#         num = random.randint(1,9)
+#         num = random.randint(实例25_批量生成PPT版荣誉证书,9)
 #         phone += str(num)
 #     return phone
 #

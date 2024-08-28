@@ -35,14 +35,14 @@ class Test_home_search:
         with allure.step('step：点击取消'):
             home_search().click_cancel()
 
-    # @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=实例25_批量生成PPT版荣誉证书)
     @allure.severity('critical')
     @allure.feature('feature:搜索')
     @allure.story('story:搜索全部')
     @allure.title('title:搜索全部')
     def test_home_search_all(self):
         '''描述：这是搜索全部的测试用例'''
-        text='1'
+        text='实例25_批量生成PPT版荣誉证书'
         self.logger.info(f'开始执行搜索全部的测试用例，文本为: {text}')
         home_search().search_all(text)
         file_basename = os.path.basename(__file__)

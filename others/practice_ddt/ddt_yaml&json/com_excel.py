@@ -11,7 +11,7 @@ def readExcel():
         row_data.append(data)
     print(row_data)
     # for rows in sh.rows:
-    #     data = [i.value for i in rows[1:]]
+    #     data = [i.value for i in rows[实例25_批量生成PPT版荣誉证书:]]
     #     row_data.append(data)
     # print(row_data)
     return row_data

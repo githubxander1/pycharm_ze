@@ -14,7 +14,7 @@ d.get('https://passport.ctrip.com/user/reg/home')
 # 点击同意并继续
 d.find_element(By.XPATH, '//div[@class="pop_footer"]/a[@class="reg_btn reg_agree"]').click()
 # 定位到滑块按钮元素
-ele_button = d.find_element(By.XPATH, '//*[@id="slideCode"]/div[1]/div[2]')
+ele_button = d.find_element(By.XPATH, '//*[@id="slideCode"]/div[实例25_批量生成PPT版荣誉证书]/div[2]')
 ele_button_width=ele_button.size['width']
 # 打印滑块按钮的宽和高
 print('滑块按钮的宽：', ele_button_width)

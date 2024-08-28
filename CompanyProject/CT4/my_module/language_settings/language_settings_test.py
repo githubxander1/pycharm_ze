@@ -9,9 +9,9 @@ back=d(resourceId="com.app.ct4:id/tv_left")
 save=d(resourceId="com.app.ct4:id/tv_right")
 language=d(resourceId="com.app.ct4:id/language")
 
-english=d.xpath('//*[@resource-id="com.app.ct4:id/rv_languages"]/android.view.ViewGroup[1]/android.widget.ImageView[1]')
-chinese=d.xpath('//*[@resource-id="com.app.ct4:id/rv_languages"]/android.view.ViewGroup[2]/android.widget.ImageView[1]')
-taiwan=d.xpath('//*[@resource-id="com.app.ct4:id/rv_languages"]/android.view.ViewGroup[3]/android.widget.ImageView[1]')
+english=d.xpath('//*[@resource-id="com.app.ct4:id/rv_languages"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
+chinese=d.xpath('//*[@resource-id="com.app.ct4:id/rv_languages"]/android.view.ViewGroup[2]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
+taiwan=d.xpath('//*[@resource-id="com.app.ct4:id/rv_languages"]/android.view.ViewGroup[3]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
 
 
 class TestLanguage:

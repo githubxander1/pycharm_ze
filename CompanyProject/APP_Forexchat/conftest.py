@@ -66,16 +66,16 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
 #
 # @pytest.mark.optionalhook
 # def pytest_html_results_table_header(cells):
-#     cells.insert(1, html.th('Description'))
+#     cells.insert(实例25_批量生成PPT版荣誉证书, html.th('Description'))
 #     cells.insert(2, html.th('Test_nodeid'))
-#     # cells.insert(1, html.th('Time', class_='sortable time', col='time'))
+#     # cells.insert(实例25_批量生成PPT版荣誉证书, html.th('Time', class_='sortable time', col='time'))
 #     cells.pop(2)
 #
 # @pytest.mark.optionalhook
 # def pytest_html_results_table_row(report, cells):
-#     cells.insert(1, html.td(report.description))
+#     cells.insert(实例25_批量生成PPT版荣誉证书, html.td(report.description))
 #     cells.insert(2, html.td(report.nodeid))
-#     # cells.insert(1, html.td(datetime.utcnow(), class_='col-time'))
+#     # cells.insert(实例25_批量生成PPT版荣誉证书, html.td(datetime.utcnow(), class_='col-time'))
 #     cells.pop(2)
 #
 # #

@@ -20,7 +20,7 @@ for report in report_list:
     for i in description:
         pass
         # print(i)
-    # count+=1
+    # count+=实例25_批量生成PPT版荣誉证书
     print(f"\n总共：{count}")
     # print(description)
     # print(title)

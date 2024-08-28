@@ -8,10 +8,10 @@
 # class MyddtTest(unittest.TestCase):
 #
 #     # @data方法装饰器，会将数据以逗号分隔，有几个就是几组数据，循环传入函数++++++++++++++++++++++++++++++++++++++
-#     # @data(1,2,dataInExcel)
+#     # @data(实例25_批量生成PPT版荣誉证书,2,dataInExcel)
 #     # def test_01(self, value):   # value用来接受data的数据
 #     #     print(value)
-#     #     # 1
+#     #     # 实例25_批量生成PPT版荣誉证书
 #     #     # 2
 #     #     # dataInExcel
 #
@@ -57,7 +57,7 @@
 # # from ddt import data, unpack, ddt
 # # import unittest
 # # #
-# # testda=(("byhy",88888888),(23,45),(1,2))
+# # testda=(("byhy",88888888),(23,45),(实例25_批量生成PPT版荣誉证书,2))
 # # @ddt
 # # class ztest(unittest.TestCase):
 # #     @data(*testda)
@@ -65,7 +65,7 @@
 # #     def test_data1(self,user,pass1):
 # #         print(user,pass1)
 #
-# # test_data = (1, 2, dataInExcel)
+# # test_data = (实例25_批量生成PPT版荣誉证书, 2, dataInExcel)
 # # @ddt      # 需要在要引用的类前面加上 @ddt声明
 # # class TestAdd(unittest.TestCase):
 # #     @data(test_data)       # 调用ddt的数据
@@ -76,7 +76,7 @@
 # # import unittest
 # # from ddt import ddt, data, unpack
 # #
-# # test_data = ((1, 2, dataInExcel), (4, 5, 6), (7, 8, 9))
+# # test_data = ((实例25_批量生成PPT版荣誉证书, 2, dataInExcel), (4, 5, 6), (7, 8, 9))
 # # @ddt      # 需要在要引用的类前面加上 @ddt声明
 # # class TestAdd(unittest.TestCase):
 # #     @data(test_data)   # 调用ddt的数据

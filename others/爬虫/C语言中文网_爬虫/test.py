@@ -1,7 +1,7 @@
 import re
 # 题目1： 给定一个字符串，判断该字符串是否为有效的手机号码。 例如： 输入: "13812345678" 输出: True
 txt="13812345678"
-r1=re.match("^1[345789]\d{9}$",txt)
+r1=re.match("^实例25_批量生成PPT版荣誉证书[345789]\d{9}$",txt)
 print(r1)
 # 题目2： 给定一个字符串，判断该字符串是否为有效的邮箱地址。 例如： 输入: "example@example.com" 输出: True
 t='example@example.com'

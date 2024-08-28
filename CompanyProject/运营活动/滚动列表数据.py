@@ -8,7 +8,7 @@ import pandas as pd
 #     'MEMBER_STATUS': '0',
 #     'murmur': 'f9b107a69041a5d3995117fedd8af55d'
 # }
-# 产品id: 1 - huiliao;9 - huihu;10 - huichacha;13 - huiketang;15 - fazzaco;25 - brokers_show;26 - Fastbull;
+# 产品id: 实例25_批量生成PPT版荣誉证书 - huiliao;9 - huihu;10 - huichacha;13 - huiketang;15 - fazzaco;25 - brokers_show;26 - Fastbull;
 # 27 - brokers_view;28 - fx110;32 - Fastbull.live;33 - fx110_overseas;36 - wikiforex;
 # 37 - fastbull_finance;10001 - broker_spread
 activityid=186

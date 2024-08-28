@@ -34,7 +34,7 @@ class Test_add_friend:
         with allure.step('step：点击取消'):
             pass
 
-    # @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=实例25_批量生成PPT版荣誉证书)
     @allure.severity('critical')
     @allure.feature('feature:添加好友')
     @allure.story('story:添加好友')
@@ -42,7 +42,7 @@ class Test_add_friend:
     # @pytest.mark.xfail(reason='功能未实现')  #用例在运行时如果失败了，不会被报告为错误，而是会被报告为预期失败（xfailed）。如果预期失败的用例意外地通过了，那么它会被报告为意外通过（xpassed）。
     def test_nickname(self):
         '''描述：这是搜索全部的测试用例'''
-        text='1'
+        text='实例25_批量生成PPT版荣誉证书'
         with allure.step("通过'用户昵称'搜索"):
             text='1316-测试'
             Add_friend().click_nickname_tab()
@@ -85,7 +85,7 @@ class Test_add_friend:
     # @pytest.mark.skip()
     @allure.title('title:Email')
     def test_email(self):
-        text = '1@qq.com'
+        text = '实例25_批量生成PPT版荣誉证书@qq.com'
         with allure.step("通过'Email'搜索"):
             Add_friend().click_email_tab()
             Add_friend().send_edit_text(text)

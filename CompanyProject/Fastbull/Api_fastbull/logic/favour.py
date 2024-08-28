@@ -33,7 +33,7 @@ def add_favour(refId,favourType):
         "content-type": "application/json",
         "deviceid": "51cee82782f69741d228946af2d2cda3",
         "deviceno": "51cee82782f69741d228946af2d2cda3",
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "nonce": nonce,
         "pragma": "no-cache",
         "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
@@ -62,7 +62,7 @@ def add_favour(refId,favourType):
     # except ImportError:
     #     # Python 2
     #     import httplib as http_client
-    # http_client.HTTPConnection.debuglevel = 1
+    # http_client.HTTPConnection.debuglevel = 实例25_批量生成PPT版荣誉证书
     #
     # # You must initialize logging, otherwise you'll not see debug output.
     # logging.basicConfig()
@@ -89,7 +89,7 @@ def delete_favour(refId,favourType):
         "content-type": "application/json",
         "deviceid": "51cee82782f69741d228946af2d2cda3",
         "deviceno": "51cee82782f69741d228946af2d2cda3",
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "nonce": nonce,
         "pragma": "no-cache",
         "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
@@ -118,7 +118,7 @@ def delete_favour(refId,favourType):
     # except ImportError:
     #     # Python 2
     #     import httplib as http_client
-    # http_client.HTTPConnection.debuglevel = 1
+    # http_client.HTTPConnection.debuglevel = 实例25_批量生成PPT版荣誉证书
     #
     # # You must initialize logging, otherwise you'll not see debug output.
     # logging.basicConfig()
@@ -145,7 +145,7 @@ def get_favour_list():
         "content-type": "application/json",
         "deviceid": "51cee82782f69741d228946af2d2cda3",
         "deviceno": "51cee82782f69741d228946af2d2cda3",
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "nonce": nonce,
         "pragma": "no-cache",
         "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
@@ -182,7 +182,7 @@ def get_favour_list():
 
 
 if __name__ == '__main__':
-    # add_favour('16419046_1','1')
-    # delete_favour('16419046_1','1')
+    # add_favour('16419046_1','实例25_批量生成PPT版荣誉证书')
+    # delete_favour('16419046_1','实例25_批量生成PPT版荣誉证书')
     time.sleep(2)
     get_favour_list()

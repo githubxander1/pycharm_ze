@@ -14,10 +14,10 @@ suggestions_edit=d(resourceId="com.app.ct4:id/suggestionsEdit")
 
 add_image=d(resourceId="com.app.ct4:id/addIcon")
 camera=d(resourceId="com.app.ct4:id/tvCamera")
-select_picture1=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[2]/android.widget.TextView[1]')
-select_picture2=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[3]/android.widget.TextView[1]')
-select_picture3=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[4]/android.widget.TextView[1]')
-select_picture4=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[5]/android.widget.TextView[1]')
+select_picture1=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[2]/android.widget.TextView[实例25_批量生成PPT版荣誉证书]')
+select_picture2=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[3]/android.widget.TextView[实例25_批量生成PPT版荣誉证书]')
+select_picture3=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[4]/android.widget.TextView[实例25_批量生成PPT版荣誉证书]')
+select_picture4=d.xpath('//*[@resource-id="com.app.ct4:id/recycler"]/android.widget.RelativeLayout[5]/android.widget.TextView[实例25_批量生成PPT版荣誉证书]')
 select_confirm=d(resourceId="com.app.ct4:id/ps_tv_complete")
 select_cancel=d(resourceId="com.app.ct4:id/ps_tv_cancel")
 select_preview=d(resourceId="com.app.ct4:id/ps_tv_preview")
@@ -65,4 +65,4 @@ class TestFeedback:
 
 
 if __name__ == '__main__':
-    pytest.main(["-vs", '--reruns', '1', "--html=report.html", 'feedback_test.py::TestFeedback'])
+    pytest.main(["-vs", '--reruns', '实例25_批量生成PPT版荣誉证书', "--html=report.html", 'feedback_test.py::TestFeedback'])

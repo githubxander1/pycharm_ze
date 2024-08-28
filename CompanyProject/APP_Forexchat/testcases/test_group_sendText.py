@@ -11,7 +11,7 @@ class test_sendText(BasePage):
     name='发送文本'
 
     def setup(self):
-        self.d = u2.connect('127.0.0.1:21503')
+        self.d = u2.connect('127.0.0.实例25_批量生成PPT版荣誉证书:21503')
         self.d.app_start('com.sy.fxchat')
 
     def teardown(self):

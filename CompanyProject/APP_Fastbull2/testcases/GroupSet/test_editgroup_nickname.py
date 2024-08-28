@@ -62,7 +62,7 @@ class Test_groupNickName(unittest.TestCase):
     # def take_screenshot(self):
     #     # print(os.path.dirname(__file__))#当前文件所在目录
     #     directory=os.getcwd()
-    #     name=inspect.stack()[1][3]#当前方法名字
+    #     name=inspect.stack()[实例25_批量生成PPT版荣誉证书][3]#当前方法名字
     #     timestamp=datetime.now().strftime('%Y%m%d_%H%M%S')
     #     filename=f'./result_screenshots/{directory}/{name}_{timestamp}.png'
     #     d.screenshot(filename)
@@ -164,8 +164,8 @@ if __name__ == "__main__":
     #     unittest.main(testRunner=runner)
 
     # pytest.main(["-vs", "--junitxml=test_report.xml"])
-    # pytest.main(["-vs", '--return 1','--html=report.html'])
-    # pytest.main(["-vs", '--return 1','—alluredir report'])
+    # pytest.main(["-vs", '--return 实例25_批量生成PPT版荣誉证书','--html=report.html'])
+    # pytest.main(["-vs", '--return 实例25_批量生成PPT版荣誉证书','—alluredir report'])
     pytest.main(['-s', '--alluredir=../allure-results', 'test_editgroup_nickname.py'])
     os.system('allure generate ../allure-results -o open ../allure-results/report/html --clean ')
 

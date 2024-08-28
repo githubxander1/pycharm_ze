@@ -12,10 +12,10 @@ driver.implicitly_wait(10)
 driver.get("https://bvwebtest.tostar.top/cn")
 driver.maximize_window()
 
-driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[1]/div[2]/div[3]').click()
-driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[1]/form/div[1]/div/div/input').send_keys('2@qq.com')
-driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[1]/form/div[2]/div/div/input').send_keys('a1234567')
-driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[1]/form/div[4]/div/button/span').click()
+driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[3]').click()
+driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[2]/div[实例25_批量生成PPT版荣誉证书]/form/div[实例25_批量生成PPT版荣誉证书]/div/div/input').send_keys('2@qq.com')
+driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[2]/div[实例25_批量生成PPT版荣誉证书]/form/div[2]/div/div/input').send_keys('a1234567')
+driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/div[2]/div[实例25_批量生成PPT版荣誉证书]/form/div[4]/div/button/span').click()
 sleep(2)
 
 
@@ -28,11 +28,11 @@ sleep(2)
 iframe=driver.find_element(By.XPATH,'//*[@id="__layout"]/div/div[3]/div[2]/div/iframe')
 driver.switch_to.frame(iframe)
 sleep(2)
-# driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[1]/div').click()
+# driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div').click()
 # 点击复制
 # driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[2]/div[2]').click()
-# link=driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[2]/div[1]/span').text
-# link=driver.find_element(By.XPATH,'/html/body/div[1]/div/div/div/div[2]/div[2]/div[1]/span').text
+# link=driver.find_element(By.XPATH,'//*[@id="invitation"]/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/span').text
+# link=driver.find_element(By.XPATH,'/html/body/div[实例25_批量生成PPT版荣誉证书]/div/div/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/span').text
 link='https://bvwebtestevent.tostar.top/en/share/244?ump=3768_1qqcomTHB'
 # print(link)
 # 执行JavaScript脚本，在当前标签页外打开新标签页
@@ -43,10 +43,10 @@ driver.switch_to.window(driver.window_handles[-1])
 
 # 在新标签页中打开链接
 # driver.get(link.text)
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[1]/input').send_keys('8@qq.com')
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[2]/input').send_keys('a1234567')
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/button/span').click()
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/input').send_keys(1234)
+driver.find_element(By.XPATH,'//*[@id="share"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/input').send_keys('8@qq.com')
+driver.find_element(By.XPATH,'//*[@id="share"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[2]/input').send_keys('a1234567')
+driver.find_element(By.XPATH,'//*[@id="share"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[3]/button/span').click()
+driver.find_element(By.XPATH,'//*[@id="share"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[3]/input').send_keys(1234)
 
 # # 安全验证弹窗
 wait = WebDriverWait(driver, 10)
@@ -73,9 +73,9 @@ sleep(3)
 
 # 切换回默认的frame
 driver.switch_to.default_content()
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/input').clear()
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/div[3]/input').send_keys('1234')
-driver.find_element(By.XPATH,'//*[@id="share"]/div[1]/div[2]/button').click()
+driver.find_element(By.XPATH,'//*[@id="share"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[3]/input').clear()
+driver.find_element(By.XPATH,'//*[@id="share"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[3]/input').send_keys('1234')
+driver.find_element(By.XPATH,'//*[@id="share"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/button').click()
 
 # # 获取当前窗
 # 口句柄

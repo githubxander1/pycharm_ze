@@ -5,9 +5,9 @@ class GroupName(Base1):
     # 群名称
     name = d.xpath('//*[contains(@content-desc,"群名称")]')
     # inputgroupname = d(className="android.widget.edNittext")
-    inputgroupname = d.xpath('//*[contains(@content-desc,"编辑群名称")]/android.widget.ImageView[1]/android.widget.edNittext')
+    inputgroupname = d.xpath('//*[contains(@content-desc,"编辑群名称")]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]/android.widget.edNittext')
 
-    cancel = d.xpath('//*[contains(@content-desc,"编辑群名称")]/android.widget.imageview[1]')
+    cancel = d.xpath('//*[contains(@content-desc,"编辑群名称")]/android.widget.imageview[实例25_批量生成PPT版荣誉证书]')
     complete = d(description="完成")
     sure = d.xpath('//*[@content-desc="确定"]')
 

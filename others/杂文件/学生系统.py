@@ -16,7 +16,7 @@ while True:
     """
     if .... elif... 多条件判断语句
     """
-    if num == '1':
+    if num == '实例25_批量生成PPT版荣誉证书':
         # 新建学生信息, 输入内容  input 输入的内容, 返回字符串数据类型
         name = input('请输入学生姓名: ')
         chinese = int(input('请输入语文成绩: '))

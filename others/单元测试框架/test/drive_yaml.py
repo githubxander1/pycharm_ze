@@ -22,7 +22,7 @@ class sinaTest(unittest.TestCase):
         self.driver.find_element(By.ID,'freepassword').send_keys(readYaml()['loginNull']['password'])
         self.driver.find_element(By.CLASS_NAME,'loginBtn').click()
         t.sleep(3)
-        divText=self.driver.find_element(By.XPATH,'/html/body/div[3]/div/div[2]/div/div/div[4]/div[1]/div[1]/div[1]/span[1]')
+        divText=self.driver.find_element(By.XPATH,'/html/body/div[3]/div/div[2]/div/div/div[4]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/span[实例25_批量生成PPT版荣誉证书]')
         self.assertEqual(divText.text,readYaml()['loginNull']['result'])
 
     def test_sina_email_format(self):
@@ -31,7 +31,7 @@ class sinaTest(unittest.TestCase):
         self.driver.find_element(By.ID,'freepassword').send_keys(readYaml()['emailFormat']['password'])
         self.driver.find_element(By.CLASS_NAME,'loginBtn').click()
         t.sleep(3)
-        divText=self.driver.find_element(By.XPATH,'/html/body/div[3]/div/div[2]/div/div/div[4]/div[1]/div[1]/div[1]/span[1]')
+        divText=self.driver.find_element(By.XPATH,'/html/body/div[3]/div/div[2]/div/div/div[4]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/span[实例25_批量生成PPT版荣誉证书]')
         self.assertEqual(divText.text,readYaml()['emailFormat']['result'])
 
     def test_sina_username_error(self):
@@ -40,7 +40,7 @@ class sinaTest(unittest.TestCase):
         self.driver.find_element(By.ID,'freepassword').send_keys(readYaml()['loginError']['password'])
         self.driver.find_element(By.CLASS_NAME,'loginBtn').click()
         t.sleep(3)
-        divText=self.driver.find_element(By.XPATH,'/html/body/div[3]/div/div[2]/div/div/div[4]/div[1]/div[1]/div[1]/span[1]')
+        divText=self.driver.find_element(By.XPATH,'/html/body/div[3]/div/div[2]/div/div/div[4]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/span[实例25_批量生成PPT版荣誉证书]')
         self.assertEqual(divText.text,readYaml()['loginError']['result'])
 
 if __name__ == '__main__':

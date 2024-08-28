@@ -26,13 +26,13 @@ class TestDeleteComment:
         #      '65bb344335df7d0007cf6299', '65bb339535df7d0007cf6298']
         # for id in ids:
         #     self.response=delete_comment(id)
-        #     time.sleep(random.randint(1,3))
+        #     time.sleep(random.randint(实例25_批量生成PPT版荣誉证书,3))
         self.comment_id='65c04e29f5523e000783b4cb'
         self.response=delete_comment(self.comment_id)
         assert self.response['message']=='操作成功'
         print(self.response)
         # get_comment_list('3707814_1')
-        # self.comment_id=self.response[-1]
+        # self.comment_id=self.response[-实例25_批量生成PPT版荣誉证书]
         # print(self.comment_id)
 
 if __name__ == '__main__':

@@ -9,16 +9,16 @@ from CompanyProject.Fastbull.WEB_FB_PosterMaker.base import Base
 class Mobile(Base):
     url='https://testfb-promotion-test.tostar.top/cn'
 
-    # close_jump=(By.XPATH,'//*[@id="app"]/div[1]/div[3]/span/svg')
+    # close_jump=(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[3]/span/svg')
     close_jump=(By.CSS_SELECTOR,'#app > div.header > div.locale-lang > span > svg')
     def click_close_jump(self):
         self.d.find_element(*self.close_jump).click()
 
-    select_company=(By.XPATH,'//*[@id="app"]/div[2]/div/div[1]/div[1]/div/div/div[1]/div/div[1]/div/div/div/div[1]/div[2]/div/input')
-    create=(By.XPATH,'//*[@id="app"]/div[2]/div/div[1]/div[1]/div/div/div[1]/div/div[1]/div/div/div/div[1]/p/span[2]')
-    template1=(By.XPATH,'//*[@id="app"]/div[2]/div/div[1]/div[1]/div/div/div[1]/div/div[1]/div/div/div/div[2]/div[2]/ul/li[6]')
-    tomorrow=(By.XPATH,'//*[@id="app"]/div[2]/div/div[1]/div[1]/div/div/div[1]/div/div[1]/div/div/div/div[3]/div[2]/ul/li[2]')
-    # download=(By.XPATH,'//*[@id="app"]/div[1]/div[2]/ul[2]/li[2]/button')
+    select_company=(By.XPATH,'//*[@id="app"]/div[2]/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div/div[实例25_批量生成PPT版荣誉证书]/div/div[实例25_批量生成PPT版荣誉证书]/div/div/div/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/input')
+    create=(By.XPATH,'//*[@id="app"]/div[2]/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div/div[实例25_批量生成PPT版荣誉证书]/div/div[实例25_批量生成PPT版荣誉证书]/div/div/div/div[实例25_批量生成PPT版荣誉证书]/p/span[2]')
+    template1=(By.XPATH,'//*[@id="app"]/div[2]/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div/div[实例25_批量生成PPT版荣誉证书]/div/div[实例25_批量生成PPT版荣誉证书]/div/div/div/div[2]/div[2]/ul/li[6]')
+    tomorrow=(By.XPATH,'//*[@id="app"]/div[2]/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div/div[实例25_批量生成PPT版荣誉证书]/div/div[实例25_批量生成PPT版荣誉证书]/div/div/div/div[3]/div[2]/ul/li[2]')
+    # download=(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/ul[2]/li[2]/button')
     download=(By.CSS_SELECTOR,'#app > div.header > div.tool-top > ul.right > li:nth-child(2) > button > span')
 
     warning_confirm=(By.CSS_SELECTOR,'body > div.el-message-box__wrapper > div > div.el-message-box__btns > button > span')
@@ -61,7 +61,7 @@ class Mobile(Base):
 
     # 创建
     def click_create(self):
-        # self.d.find_element(By.XPATH,'//*[@id="app"]/div[2]/div/div[1]/div[1]/div/div/div[1]/div/div[1]/div/div/div/div[1]/p/span[2]').click()
+        # self.d.find_element(By.XPATH,'//*[@id="app"]/div[2]/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div/div[实例25_批量生成PPT版荣誉证书]/div/div[实例25_批量生成PPT版荣誉证书]/div/div/div/div[实例25_批量生成PPT版荣誉证书]/p/span[2]').click()
         self.d.find_element(*self.create).click()
 
     # 选择模板

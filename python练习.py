@@ -28,7 +28,7 @@
 # else:
 #     print("E")
 
-# lst=[1,2,3]
+# lst=[实例25_批量生成PPT版荣誉证书,2,3]
 # sum=0
 # for i in lst:
 #     sum+=sum
@@ -36,19 +36,19 @@
 # str='hello'
 # for cha in str:
 #     print(ord(cha))
-# i=1
+# i=实例25_批量生成PPT版荣誉证书
 # while i <= 10:
 #     if i % 2 == 0:
 #         print(i)
-#     i += 1
-# i=1
+#     i += 实例25_批量生成PPT版荣誉证书
+# i=实例25_批量生成PPT版荣誉证书
 # sum=0
 # while i <= 100:
-#     i +=1
+#     i +=实例25_批量生成PPT版荣誉证书
 #     sum+=i
 # print(sum)
 # 编写一个程序，找出列表中的最大值并输出。
-# lst=[1,2,3,4]
+# lst=[实例25_批量生成PPT版荣誉证书,2,3,4]
 # max=lst[0]
 # for i in lst:
 #     if i > max:
@@ -78,7 +78,7 @@
 # 编写一个程序，创建一个包含10个整数的列表，要求将列表中的偶数提取出来并存放在一个新的列表中
 # def num_is_hui(num: int):
 #     num = input()
-#     if num == num[::-1]:
+#     if num == num[::-实例25_批量生成PPT版荣誉证书]:
 #         return True
 #     else:
 #         return False
@@ -122,31 +122,31 @@
 #         break
 #
 # print('使用enumerate()函数迭代')
-# mylist=[1,2,3,4,5]
+# mylist=[实例25_批量生成PPT版荣誉证书,2,3,4,5]
 # for i,j in enumerate(mylist):
 #     print(i,j)
 #
 # print('使用zip()函数迭代')
-# mylist=[1,2,3,4,5]
+# mylist=[实例25_批量生成PPT版荣誉证书,2,3,4,5]
 # mylist2=['a','b','c','d','e']
 # for i,j in zip(mylist,mylist2):
 #     print(i,j)
 #
 # print('使用reversed()函数迭代')
-# mylist=[1,2,3,4,5]
+# mylist=[实例25_批量生成PPT版荣誉证书,2,3,4,5]
 # for i in reversed(mylist):
 #     print(i)
 #
 # print('使用sorted()函数迭代')
-# mylist=[1,2,3,4,5]
+# mylist=[实例25_批量生成PPT版荣誉证书,2,3,4,5]
 # for i in sorted(mylist):
 #     print(i)
 #
 # print('使用filter()函数迭代')
 # def is_odd(n):
-#     return n%2==1
+#     return n%2==实例25_批量生成PPT版荣誉证书
 #
-# mylist=[1,2,3,4,5]
+# mylist=[实例25_批量生成PPT版荣誉证书,2,3,4,5]
 # for i in filter(is_odd,mylist):
 #     print(i)
 #
@@ -154,7 +154,7 @@
 # def power(x):
 #     return x**2
 #
-# mylist=[1,2,3,4,5]
+# mylist=[实例25_批量生成PPT版荣誉证书,2,3,4,5]
 # for i in map(power,mylist):
 #     print(i)
 #
@@ -163,18 +163,18 @@
 # def add(x,y):
 #     return x+y
 #
-# mylist=[1,2,3,4,5]
+# mylist=[实例25_批量生成PPT版荣誉证书,2,3,4,5]
 # for i in reduce(add,mylist):
 #     print(i)
 #
 # print('创建迭代器')
 # class myiter:
 #     def __iter__(self):
-#         self.a=1
+#         self.a=实例25_批量生成PPT版荣誉证书
 #         return self
 #     def __next__(self):
 #         x=self.a
-#         self.a+=1
+#         self.a+=实例25_批量生成PPT版荣誉证书
 #         return x
 # myiter=iter(myiter())
 # print(next(myiter))
@@ -259,13 +259,13 @@ from pprint import pprint
 # 字符串格式化
 # 字符串 format()
 # 索引号
-# print('{0},{1},{2}'.format('a','b','c'))
+# print('{0},{实例25_批量生成PPT版荣誉证书},{2}'.format('a','b','c'))
 # # 关键字
 # print('{name},{age},{sex}'.format(name='a',age='b',sex='c'))
 # # 格式化 f
-# a=1
+# a=实例25_批量生成PPT版荣誉证书
 # b=2
-# print(f'{1},{2}')
+# print(f'{实例25_批量生成PPT版荣誉证书},{2}')
 # # 格式化字典
 # print(f'{a},{b}')
 # # 格式化列表

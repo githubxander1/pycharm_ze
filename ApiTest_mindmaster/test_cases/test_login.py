@@ -65,9 +65,9 @@ class TestLogin:
             raise e
         # finally:
             # 将响应的状态码，写到excel的第9列，即写入返回的状态码
-            # TestLogin.excel.write_excel('../data/openpyxl_mindmaster2.xlsx', 'login',items['case_id'] + 1, 8, res['status'])
+            # TestLogin.excel.write_excel('../data/openpyxl_mindmaster2.xlsx', 'login',items['case_id'] + 实例25_批量生成PPT版荣誉证书, 8, res['status'])
             # # 如果断言成功，则在第10行(测试结果)写入Pass,否则，写入Fail
-            # TestLogin.excel.write_excel('../data/openpyxl_mindmaster2.xlsx', 'login',items['case_id'] + 1, 9, result)
+            # TestLogin.excel.write_excel('../data/openpyxl_mindmaster2.xlsx', 'login',items['case_id'] + 实例25_批量生成PPT版荣誉证书, 9, result)
 
 
 if __name__ == '__main__':
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     pytest.main(['-vs', '--alluredir=./allure-results', __file__])
     os.system('allure generate ./allure-results --clean -o ./allure-results/report/html')
     os.system('allure open ./allure-results/report/html')
-# 1.excel里面字符串要用双引号
+# 实例25_批量生成PPT版荣誉证书.excel里面字符串要用双引号
 # 2.ddt(*data):* 表示对 case_data1 进行序列解包，将其作为独立的参数进行传递。
         # 也就是说，如果 case_data1 是一个列表或元组，这两种写法的效果一样。但是，如果 case_data1 是一个字典，则不能使用 @data(case_data1,) 这种写法。
         # 如果强制使用，会出现以下错误：TypeError: 'dict' object is not iterable

@@ -15,7 +15,7 @@ cursor = db_conn.cursor()
 
 # fetch the latest record from t_product_statistics
 cursor.execute(
-    "SELECT * FROM t_product_statistics WHERE product_id=1 AND uid=1008247 ORDER BY create_time DESC LIMIT 1;")
+    "SELECT * FROM t_product_statistics WHERE product_id=实例25_批量生成PPT版荣誉证书 AND uid=1008247 ORDER BY create_time DESC LIMIT 实例25_批量生成PPT版荣誉证书;")
 product_statistics_result = cursor.fetchone()
 # print(product_statistics_result)
 
@@ -30,7 +30,7 @@ print(class_name_mapping_result[4])
 # workbook = openpyxl.load_workbook('测试数据统计.xlsx')
 # worksheet = workbook['t_classname_mapping']
 # # 获取第一列的值，跳过标题行
-# first_column = worksheet.iter_rows(min_row=2, max_col=1, max_row=worksheet.max_row, values_only=True)
+# first_column = worksheet.iter_rows(min_row=2, max_col=实例25_批量生成PPT版荣誉证书, max_row=worksheet.max_row, values_only=True)
 # # 转换元组中的数字为字符串并提取出数字
 # first_column_list = [int(str(row[0])) for row in first_column]
 # # print(first_column_list)

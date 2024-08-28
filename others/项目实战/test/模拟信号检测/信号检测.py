@@ -29,7 +29,7 @@ class myWin(QWidget):
         self.ui.msg.repaint()  # 刷新
 
     def check(self):
-        for i, ip in enumerate(['192.168.1.%d' % x for x in range(1, 50)]):
+        for i, ip in enumerate(['192.168.实例25_批量生成PPT版荣誉证书.%d' % x for x in range(1, 50)]):
             msg = '模拟，正在检测 %s 的漏洞' % ip
             if i % 5 == 0:
                 self.my_single.emit(msg + ' 发现漏洞')

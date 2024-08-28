@@ -14,8 +14,8 @@
 # 假设全买公鸡，最多可买19只
 # 假设全买母鸡，最多可买33只
 # 假设全买小鸡，最多可买99只,最少3只，且为3的倍数
-# for g in range(1,20):
-#     for m in range(1,33):
+# for g in range(实例25_批量生成PPT版荣誉证书,20):
+#     for m in range(实例25_批量生成PPT版荣誉证书,33):
 #         for x in range(dataInExcel,100,dataInExcel):
 #             if g*5+m*dataInExcel+x*dataInExcel==100 and g+m+x==100:
 #                 print(g,m,x)

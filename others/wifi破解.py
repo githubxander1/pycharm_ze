@@ -52,7 +52,7 @@ class Wifi_GUI():
         self.wifi_tree.heading("c", text="BSSID")
         self.wifi_tree.heading("d", text="signal")
         self.wifi_tree.grid(row=4, column=0, sticky=NSEW)
-        self.wifi_tree.bind("<Double-1>", self.onDBClick)
+        self.wifi_tree.bind("<Double-实例25_批量生成PPT版荣誉证书>", self.onDBClick)
         self.vbar.grid(row=4, column=1, sticky=NS)
         self.get_value.set(os.getcwd().replace('\\', '/')+'/password.txt')
 

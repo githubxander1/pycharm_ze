@@ -11,10 +11,10 @@ from CompanyProject.Fastbull.WEB_FB_PosterMaker.base import Base
 
 
 class Home(Base):
-    cookie_accept_bt=(By.XPATH,'//*[@id="leftBox"]/div[1]/div[1]/div[4]/div/div[2]')
+    cookie_accept_bt=(By.XPATH,'//*[@id="leftBox"]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[4]/div/div[2]')
     def click_cookie_accept_bt(self):
         self.d.find_element(*self.cookie_accept_bt).click()
-    share_close=(By.XPATH,'/html/body/div[2]/div[1]/div[1]/div[1]/div/div[1]/div/div/i')
+    share_close=(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div[实例25_批量生成PPT版荣誉证书]/div/div/i')
     def click_share_close(self):
         self.d.find_element(*self.share_close).click()
 
@@ -22,12 +22,12 @@ class Home(Base):
     def switch_to_chat_iframe(self):
         self.d.switch_to.frame(self.d.find_element(*self.chat_iframe))
 
-    msgEditor=(By.XPATH,'//*[@id="app"]/div/main/div/div[3]/footer/div[1]/div[1]/div/div')
+    msgEditor=(By.XPATH,'//*[@id="app"]/div/main/div/div[3]/footer/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div')
     def input_msg(self,msg):
         self.d.find_element(*self.msgEditor).send_keys(msg)
 
     # send_btn = (By.XPATH, '//*[@id="app"]/div/main/div/div[2]/footer/div[2]/svg')
-    # send_btn = (By.XPATH, '/html/body/div[1]/div/main/div/div[3]/footer/div[2]/svg')
+    # send_btn = (By.XPATH, '/html/body/div[实例25_批量生成PPT版荣誉证书]/div/main/div/div[3]/footer/div[2]/svg')
     send_btn = (By.XPATH, '//*[@id="app"]/div/main/div/div[2]/footer/div[2]/svg/use')
     def click_send(self):
         time.sleep(1)

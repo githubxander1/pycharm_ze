@@ -7,7 +7,7 @@
 #     def __init__(self, file):
 #         self.file = file
 #
-#     # # 1.获取当前文件所在路径
+#     # # 实例25_批量生成PPT版荣誉证书.获取当前文件所在路径
 #     # basedir = os.path.dirname(__file__)
 #     # print("basedir:" + basedir)
 #     # # 2.将路径进行拼接

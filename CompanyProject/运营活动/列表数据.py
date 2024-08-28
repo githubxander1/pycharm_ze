@@ -18,8 +18,8 @@ df.to_excel('output正式_列表数据.xlsx', index=False)
 #
 #
 # # 划分reward列的值到不同的区间
-# bins = [-float('inf'), 1, 2, float('inf')]
-# labels = ['[0,1)', '[1,2)', '[2,+)']
+# bins = [-float('inf'), 实例25_批量生成PPT版荣誉证书, 2, float('inf')]
+# labels = ['[0,实例25_批量生成PPT版荣誉证书)', '[实例25_批量生成PPT版荣誉证书,2)', '[2,+)']
 # df['reward_interval'] = pd.cut(df['reward'], bins=bins, labels=labels)
 #
 # # 对划分后的数据进行分组统计
@@ -34,8 +34,8 @@ df.to_excel('output正式_列表数据.xlsx', index=False)
 # print(grouped)
 
 # # 划分reward列的值到不同的区间
-# bins = [0, 1, 2, float('inf')]
-# labels = ['[0,1)', '[1,2)', '[2,+)']
+# bins = [0, 实例25_批量生成PPT版荣誉证书, 2, float('inf')]
+# labels = ['[0,实例25_批量生成PPT版荣誉证书)', '[实例25_批量生成PPT版荣誉证书,2)', '[2,+)']
 # df['reward_interval'] = pd.cut(df['reward'], bins=bins, labels=labels)
 #
 # # 对划分后的数据进行分组统计

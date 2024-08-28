@@ -11,7 +11,7 @@ def application(environ, start_response):
   return [b'<h1>hi, py!</h1>']
 
 # 启动服务器 | 这个服务器负责与 wsgi 接口的 application 函数对接数据
-httpd = make_server('127.0.0.1', 8000, application)
+httpd = make_server('127.0.0.实例25_批量生成PPT版荣誉证书', 8000, application)
 
 # 监听请求
 httpd.serve_forever()

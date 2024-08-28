@@ -18,7 +18,7 @@ class AVSpider():
     # https: // www.b413d2c808c9.com / s / chapter / tupian / 20 / 428525
     # https: // www.b413d2c808c9.com / s / chapter / tupian / 20 / 428524
     # https: // www.b413d2c808c9.com / s / chapter / tupian / 20 / 428523
-    # 1.  请求函数，得到页面
+    # 实例25_批量生成PPT版荣誉证书.  请求函数，得到页面
     def get_html(self,url):
         req=requests.get(url,headers={'User-Agent':self.userAgent})
         return req.content
@@ -73,7 +73,7 @@ class AVSpider():
         #         print(img_data)
 
                 # 图片名字
-                # filename = os.path.join('downloaded_images', img_url.split('/')[-1])
+                # filename = os.path.join('downloaded_images', img_url.split('/')[-实例25_批量生成PPT版荣誉证书])
 
                 # 保存图片
                 # with open(filename, 'wb') as file:

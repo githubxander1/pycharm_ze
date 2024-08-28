@@ -4,7 +4,7 @@ import os
 import pytest
 
 if __name__ == '__main__':
-    pytest.main(['-vs','--ruturn 1' '--alluredir=../allure-results', 'test_Login.py'])
+    pytest.main(['-vs','--ruturn 实例25_批量生成PPT版荣誉证书' '--alluredir=../allure-results', 'test_Login.py'])
     os.system('allure generate ../allure-results -o ../allure-results/report/html clean')
     # os.system('allure generate ../allure-results -o ./reports --clean open')
     # os.system(['allure', 'generate', '../allure-results', '-o', '../reports', '--clean'], check=True)

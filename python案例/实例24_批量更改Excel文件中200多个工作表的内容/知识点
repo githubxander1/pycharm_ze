@@ -1,0 +1,69 @@
+openpyxl：
+
+openpyxl
+创建文件
+Workbook() ---创建 excel 文件
+Workbook.create_sheet() ---创建 excel 工作簿
+Worksheet.title ---给工作簿重命名
+ws.sheet_properties.tabColor = " " 修改标题背景
+Workbook.sheetname ---查看 excel 所有工作簿
+Workbook.copy_worksheet() ---创建工作表的副本
+获取修改数据
+    访问一个单元格
+    Worksheet[ ]
+    Worksheet.cell()
+    Worksheet.append()
+公式
+访问多个单元格
+可以使用切片访问单元格范围
+Worksheet.values ---获取单元格值
+保存文件
+打开文件
+openpyxl.load_workbook() ---读取 excel 文件
+读取工作簿数据
+
+
+os:https://blog.csdn.net/m0_71559726/article/details/130191279
+1.  绝对路径、相对路径
+
+2.  绝对路径的三种表达方式
+    （1）用单斜杠 / 来分隔文件夹。这是路径是最好表达方式。如："D: / 临时 / python试验 / pandas"
+    （2）用双反斜杠 \\ 来分隔文件夹:如："D: \\ 临时 \\ python试验 \\ pandas"
+    （3）在路径前加上字母 r :r"D: \ 临时 \ python试验 \ pandas"
+
+3.  os.getcwd()获取当前文件所在的路径
+
+4.  os.chdir()更改当前路径，更改后，默认路径为更改后的路径
+
+5.  os.path.basename() 获取路径中的最后一个文件夹名字。
+
+6.  os.path.join()
+
+7.  os.path.exists()
+
+8.  os.path.isdir()   、 os.path.isfile()
+
+9.  os.listdir()输出path路径下所有文件及文件夹，返回结果为一个列表。（不遍历下层）
+
+10.  os.walk(top, topdown=True, οnerrοr=None, followlinks=False)
+      循环遍历top路径下的所有文件，该路径下层的文件及文件夹
+
+11.  os.scandir()
+
+12.  os.stat()
+
+13.  os.mkdir()
+
+14.  os.makedirs()
+
+15.  os.rename()
+
+（1）重命名
+
+（2）移动
+
+（3）重命名并移动
+
+16.  os.remove()
+
+17.  获取桌面的路径

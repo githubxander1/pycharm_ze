@@ -25,7 +25,7 @@
 #     slider_pic = cv2.imread(slider, 0)
 #     background_pic = cv2.imread(background, 0)
 #     # 获取缺口图数组的形状 -- 缺口图的宽和高
-#     width, height = slider_pic.shape[::-1]
+#     width, height = slider_pic.shape[::-实例25_批量生成PPT版荣誉证书]
 #     # 将处理之后的图片另存
 #     slider01 = "slider01.jpg"
 #     background_01 = "background01.jpg"

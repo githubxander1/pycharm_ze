@@ -32,7 +32,7 @@ def mainmenu():
     **************************************************
                         企业编码生成系统
     **************************************************
-        1.生成6位数防伪编码
+        实例25_批量生成PPT版荣誉证书.生成6位数防伪编码
         2.生成9位系列产品数字防伪编码(213-234353)
         3.生成25位混合产品序列号(B8R23-NKLK9-9JKLL-98JLO-JHY08)
         4.生成含数据分析功能的防伪码
@@ -128,9 +128,9 @@ def scode2(schoice):
 #生成25位混合产品序列号函数,参数schoice设置输出的文件名称
 def scode3(schoice):
   #输入要生成的防伪码数量
-  incount=inputbox("1033[1;32m 请输入要生成的25位混合产品序列号数量:133[0m",1,0)
+  incount=inputbox("1033[实例25_批量生成PPT版荣誉证书;32m 请输入要生成的25位混合产品序列号数量:133[0m",1,0)
   while int(incount)==0:#如果输入非法(符号、字母或者数字e都认为是非法输入),重新输入
-     incount=inputbox("\e33[1;32m 请输入要生成的25位混合产品序列号数量:133[6m",1,0)
+     incount=inputbox("\e33[实例25_批量生成PPT版荣誉证书;32m 请输入要生成的25位混合产品序列号数量:133[6m",1,0)
   randstr.clear()   #清空保存批量防伪码信息的变量randstr
   for j in range(int(incount)):#按输入数量生成防伪码
      strone=''   #保存生成的单条防伪码,不带横线"-",循环时清空
@@ -147,14 +147,14 @@ def scode3(schoice):
 
 #生成含数据分析功能防伪编码函数,参数schoice设置输出的文件名称
 def scode4(schoice):
-    intype=inputbox("1033[1;32m 请输入数据分析编号(3位字母):133[0m",2,3)
+    intype=inputbox("1033[实例25_批量生成PPT版荣誉证书;32m 请输入数据分析编号(3位字母):133[0m",2,3)
   #验证输入是否是三个字母,所以要判断输入是否是字母和输入长度是否为3
     while not str.isalpha(intype)or len(intype)!=3:
-        intype=inputbox("1033[1;32m 请输入数据分析编号(3位字母):133[em",2,3)
-    incount =inputbox("\e33[1;32m 输入要生成的带数据分析功能的防伪码数量:133[m",1,9)
+        intype=inputbox("1033[实例25_批量生成PPT版荣誉证书;32m 请输入数据分析编号(3位字母):133[em",2,3)
+    incount =inputbox("\e33[实例25_批量生成PPT版荣誉证书;32m 输入要生成的带数据分析功能的防伪码数量:133[m",1,9)
     #验证输入是否是大于零的整数,方法是判断输入转换为整数值时是否大于零
     while int(incount) == 0:   #如果转换为整数时为零,则要求重新输入
-        incount =inputbox("l033[1;32m 请输入要生成的带数据分析功能的防伪码数量:\33[em",1,9)
+        incount =inputbox("l033[实例25_批量生成PPT版荣誉证书;32m 请输入要生成的带数据分析功能的防伪码数量:\33[em",1,9)
     ffcode(incount,intype,"",schoice) #调用ffcode()函数生成防伪码
 
 #生成含数据分析功能防伪编码函数:参数scount为要生成的防伪码数量；typestr为数据分析字符；
@@ -234,8 +234,8 @@ def scode6(schoice):
             strone = strone + random.choice(number)
         # 将三个字母按randse(变量中存储的位置僨添加到数字防伪码中,并放到sim变量中
         # sim = str(strone[0:int(randsec[0])])+ strpro + str(
-        #     strone[int(randsec[0]):int(randsec[1])]) + strtype + str(
-        #     strone[int(randsec[1]):int(randsec[2]]) + strclass + str(strone[int(randsec[2]):9])+ "\n"
+        #     strone[int(randsec[0]):int(randsec[实例25_批量生成PPT版荣誉证书])]) + strtype + str(
+        #     strone[int(randsec[实例25_批量生成PPT版荣誉证书]):int(randsec[2]]) + strclass + str(strone[int(randsec[2]):9])+ "\n"
         card.add(sim)  # 添加新生成的防伪码到集合
         # 如果添加到集合,证明生成的防伪码与原有的防伪码没有产生重复
         if len(card) > addcount:
@@ -249,15 +249,15 @@ def scode6(schoice):
 
 # 实现生成条形码批量生产的函数
 def scode7(schoice):
-    mainid = inputbox("0\033[1；32m 请输入EN13的国家代码 (3位):\33",1,0)
+    mainid = inputbox("0\033[实例25_批量生成PPT版荣誉证书；32m 请输入EN13的国家代码 (3位):\33",1,0)
     while int(mainid)< 1 or len(mainid)!= 3:# 验证输入是否为3位数字
-        mainid = inputbox("\033[1；32m请输入EN13的国家代码 (3位):\33[em", 1,0)
-    compid = inputbox('033〔1；32m 请输入企业代码 (4位):\33〔枷隽 ',1,0) # 输入企业代码
+        mainid = inputbox("\033[实例25_批量生成PPT版荣誉证书；32m请输入EN13的国家代码 (3位):\33[em", 1,0)
+    compid = inputbox('033〔实例25_批量生成PPT版荣誉证书；32m 请输入企业代码 (4位):\33〔枷隽 ',1,0) # 输入企业代码
     while int(compid)< 1 or len(compid)!= 4:# 验证输入是否为4位数字
-        compid = inputbox("\e33〔1；32m 请输入EN13的企业代码 (4位):\33tem",1,0)
-    incount = inputbox("\D3[1;32m请输入要生成的条形码数量:\33[ ",1,0)
+        compid = inputbox("\e33〔实例25_批量生成PPT版荣誉证书；32m 请输入EN13的企业代码 (4位):\33tem",1,0)
+    incount = inputbox("\D3[实例25_批量生成PPT版荣誉证书;32m请输入要生成的条形码数量:\33[ ",1,0)
     while int(incount) ==0: # 输入信息转为整数后等于ø,重新输入
-        incount = inputbox("\D3[1;32m请输入要生成的条形码数量:\33[ ", 1, 0)
+        incount = inputbox("\D3[实例25_批量生成PPT版荣誉证书;32m请输入要生成的条形码数量:\33[ ", 1, 0)
     mkdir("barcode")# 判断保存条形码的文件夹是否存在,不存在,则创建该文件夹
     for j in range(int(incount)):# 批量生成条形码
         strone =''  # 清空存储单条条形码的变量
@@ -293,9 +293,9 @@ img.save("mingri.jpg")
 #本函数生成固定的12位二维码,读者可以根据实际需要修改成按输入位数进行生成的函数
 def scode8(schoice):
    #输入要生成的二维码数量
-   incount=inputbox("1e33[1;32m 请输入要生成的12位数字二维码数量:133[0m",1,0)
+   incount=inputbox("1e33[实例25_批量生成PPT版荣誉证书;32m 请输入要生成的12位数字二维码数量:133[0m",1,0)
    while int(incount)==0:#如果输入不是大于e的数字,重新输入
-     incount=inputbox("1033[1;32m 请输入要生成的12位数字二维码数量:\33[em,1,)
+     incount=inputbox("1033[实例25_批量生成PPT版荣誉证书;32m 请输入要生成的12位数字二维码数量:\33[em,实例25_批量生成PPT版荣誉证书,)
    mkdir(qrcode")   #判断保存二维码的文件夹是否存在,不存在,则创建该文件夹
    for jin range(int(incount)):     #批量生成二维码
      strone=''    #清空存储单条二维码的变量
@@ -313,10 +313,10 @@ def scode9(schoice):
     codelist = openfile(file_path)# 调用 openfile()函数读取刚打开的抽奖文件
     codelist = codelist.split("\n")# 通过换行符把抽奖信息分割成抽奖列表
     # 要求用户输入中 (抽)奖数量
-    incount = inputbox("\e33[1；32m请输入要生成的抽奖数量:\33[ " ,1,0)
+    incount = inputbox("\e33[实例25_批量生成PPT版荣誉证书；32m请输入要生成的抽奖数量:\33[ " ,1,0)
     # 如果输入中 (抽)奖数量等于ø或超过抽奖数组数量,重新输入
     while int(incount)== 0 or len(codelist)< int(incount):
-        incount = inputbox("\D3[1;32m 请输入要生成的抽奖数量:\33[ ",1,0)
+        incount = inputbox("\D3[实例25_批量生成PPT版荣誉证书;32m 请输入要生成的抽奖数量:\33[ ",1,0)
     # 根据输入的中奖数量进行抽奖 strone = random.sample(codelist,int(incount))
     for i in range(int(incount)):
         # 将抽奖列表的中括号去掉

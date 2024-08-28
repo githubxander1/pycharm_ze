@@ -4,7 +4,7 @@ from CompanyProject.APP_Fastbull2.base.basePage import d
 
 
 class home_search:
-    searchBox_out=d.xpath('//android.widget.ScrollView/android.widget.ImageView[1]')
+    searchBox_out=d.xpath('//android.widget.ScrollView/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
     search_input=d.xpath('//android.widget.EditText')
     cancel = d(description="取消")
     find_friend=d(description="找好友")

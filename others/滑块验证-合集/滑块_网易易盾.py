@@ -10,11 +10,11 @@ driver = webdriver.Chrome()
 driver.get('https://dun.163.com/trial/sense')
 
 # 点击进入滑块界面
-driver.find_element(By.XPATH,'/html/body/main/div[1]/div/div[2]/div[2]/ul/li[2]').click()
+driver.find_element(By.XPATH,'/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/ul/li[2]').click()
 time.sleep(1)
 # 点击完成验证
 driver.find_element(By.XPATH,
-    '/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[1]/span').click()
+    '/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/span').click()
 time.sleep(3)
 
 while True:
@@ -62,7 +62,7 @@ while True:
 
     # 定位到滑块
     ele = driver.find_element(By.XPATH,
-        '/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')
+        '/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[2]/div/div/div[2]/div[2]')
 
     # 实例化对象
     action = ActionChains(driver)
@@ -73,6 +73,6 @@ while True:
     # 定位到验证成功
     time.sleep(1)
     text = driver.find_element(By.XPATH,
-        '/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[2]/span[2]').text
+        '/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[实例25_批量生成PPT版荣誉证书]/div[2]/span[2]').text
     if text == "验证成功":
         break

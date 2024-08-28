@@ -14,7 +14,7 @@ def test_update_friend_note_name():
     headers = {
         "accept": "application/json",
         "Accept-Language": "zh-CN",
-        "swagger": "1"
+        "swagger": "实例25_批量生成PPT版荣誉证书"
     }
 
     response = requests.put(url, headers=headers, params=params)

@@ -16,7 +16,7 @@ collection = db.strategy_signal
 # # 构建查询条件
 # query={
 #     "openTime": {"$gte": 1693497600000, "$lt": 1696089600000},
-#     "status": 1
+#     "status": 实例25_批量生成PPT版荣誉证书
 # }
 # # 执行查询
 # result=collection.find(query)
@@ -45,10 +45,10 @@ def get_start_end_time_week_time():
                                 FROM
                                     strategy_signal
                                 WHERE
-                                    status = 1
+                                    status = 实例25_批量生成PPT版荣誉证书
                                 ORDER BY
                                     openTime ASC
-                                    LIMIT 1
+                                    LIMIT 实例25_批量生成PPT版荣誉证书
         """, one=False)
     # 构建查询条件
     query = {
@@ -100,10 +100,10 @@ def get_start_end_time_month_time():
                             FROM
                                 strategy_signal
                             WHERE
-                                status = 1
+                                status = 实例25_批量生成PPT版荣誉证书
                             ORDER BY
                                 openTime ASC
-                                LIMIT 1
+                                LIMIT 实例25_批量生成PPT版荣誉证书
     """,one=False)
 
     # 将毫秒级时间戳转换为秒级时间戳
@@ -137,7 +137,7 @@ def get_start_end_time_month_time():
 #         timestamps.append((start_timestamp, end_timestamp))
 #
 #         # 移动到下一个月的开始
-#         current_date = next_month.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+#         current_date = next_month.replace(day=实例25_批量生成PPT版荣誉证书, hour=0, minute=0, second=0, microsecond=0)
 #     print(timestamps)
 #     return timestamps
 # def get_all_year_time(year=2023):
@@ -146,9 +146,9 @@ def get_start_end_time_month_time():
 #     # 创建一个空列表来存储每个月份的第一天的零点毫秒时间戳
 #     timestamps = []
 #     # 循环遍历12个月份
-#     for month in range(1, 13):
+#     for month in range(实例25_批量生成PPT版荣誉证书, 13):
 #         # 创建日期对象，表示每个月的第一天
-#         first_day_of_month = datetime.datetime(year, month, 1, 0, 0, 0, 0)
+#         first_day_of_month = datetime.datetime(year, month, 实例25_批量生成PPT版荣誉证书, 0, 0, 0, 0)
 #         # 获取毫秒时间戳并添加到列表中
 #         timestamp = int(first_day_of_month.timestamp()) * 1000
 #         timestamps.append(timestamp)
@@ -159,22 +159,22 @@ def get_start_end_time_month_time():
 #
 #     print("*"*80,"累计盈亏，昨日盈亏，上周总盈亏","*"*80)
 #     #累计盈亏
-#     sql1 = "select sum(b.profitLoss) from {} as a left join {} as b on a._id = b.strategyId where a.display =1 and a.status=1  "
+#     sql1 = "select sum(b.profitLoss) from {} as a left join {} as b on a._id = b.strategyId where a.display =实例25_批量生成PPT版荣誉证书 and a.status=实例25_批量生成PPT版荣誉证书  "
 #     res1 = db.query(sql1.format(table_strategy,table_strategy_signal),one=False)
 #
 #     list = get_time_day()
 #     res2 = []
 #     for i in list:#此处改动，与返回值有关
 #         sql = """
-#             SELECT sum(a.profitLoss) FROM {} AS a LEFT JOIN {} AS b ON a.strategyId = b._id WHERE a.positionType = 2 AND a.STATUS = 1 and
-#             b.display =1 AND a.closeTime >= {} AND a.closeTime < {} ORDER BY a.closeTime DESC
-#             """.format( table_strategy_signal,table_strategy,i[0], i[1])
+#             SELECT sum(a.profitLoss) FROM {} AS a LEFT JOIN {} AS b ON a.strategyId = b._id WHERE a.positionType = 2 AND a.STATUS = 实例25_批量生成PPT版荣誉证书 and
+#             b.display =实例25_批量生成PPT版荣誉证书 AND a.closeTime >= {} AND a.closeTime < {} ORDER BY a.closeTime DESC
+#             """.format( table_strategy_signal,table_strategy,i[0], i[实例25_批量生成PPT版荣誉证书])
 #         Yesterdays_profit_and_loss = db.query(sql)
 #         res2.append(Yesterdays_profit_and_loss['sum(a.profitLoss)'])
 #
 #     print(f'累计盈亏:{res1[0]["sum(b.profitLoss)"]}')
 #     print(f"昨日盈亏:{res2[0]}")
-#     print(f"上周总盈亏:{res2[1]}")
+#     print(f"上周总盈亏:{res2[实例25_批量生成PPT版荣誉证书]}")
 #     print(f"上月总盈亏:{res2[2]}")
 #
 #
@@ -182,13 +182,13 @@ def get_start_end_time_month_time():
 #     #第一部分
 #     print("*"*80,"策略数，信号量，总盈亏","*"*80)
 #     #策略数-已上架未隐藏的策略数量
-#     sql3 = "select count(*) from {} where status =1 and display =1"
+#     sql3 = "select count(*) from {} where status =实例25_批量生成PPT版荣誉证书 and display =实例25_批量生成PPT版荣誉证书"
 #     res3 = db.query(sql3.format(table_strategy), one=False)
 #     print(f'策略数:{res3[0]["count(*)"]}')
 #
 #     # 信号量-所有策略的订单数量之和。
 #     sql4 = """
-#             select count(*) from  {} where STATUS = 1
+#             select count(*) from  {} where STATUS = 实例25_批量生成PPT版荣誉证书
 #     """
 #     res4 = db.query(sql4.format(table_strategy_signal), one=False)
 #     print(f'信号量:{res4[0]["count(*)"]}')
@@ -201,23 +201,23 @@ def get_start_end_time_month_time():
 #     signalCount = []
 #     profitLossCount = []
 #     for i,value in enumerate(time1_list):
-#         print(f'第{i+1}遍历的近期表现:')
+#         print(f'第{i+实例25_批量生成PPT版荣誉证书}遍历的近期表现:')
 #         #图表 - 开仓信号数量
 #         sql_opentime_signal_count="""
-#         select count(*) from strategy_signal where openTime>={}  and openTime<= {} and status =1
+#         select count(*) from strategy_signal where openTime>={}  and openTime<= {} and status =实例25_批量生成PPT版荣誉证书
 #         """
 #         #图表 - 平仓信号数量
 #         sql_closetime_signal_count="""
-#         select count(*) from strategy_signal where closetime>={}  and closetime<= {} and status =1 and positionType =2
+#         select count(*) from strategy_signal where closetime>={}  and closetime<= {} and status =实例25_批量生成PPT版荣誉证书 and positionType =2
 #         """
 #         #图表 - 平仓盈亏点数
 #         sql_profit_signal_count = """
-#         select sum(profitLoss) from strategy_signal where closetime>={}  and closetime<= {} and status =1 and positionType =2
+#         select sum(profitLoss) from strategy_signal where closetime>={}  and closetime<= {} and status =实例25_批量生成PPT版荣誉证书 and positionType =2
 #             """
 #
-#         result1 = db.query(sql_opentime_signal_count.format(value[0],value[1]),one=False)
-#         result2 = db.query(sql_closetime_signal_count.format(value[0],value[1]), one=False)
-#         result3 = db.query(sql_profit_signal_count.format(value[0],value[1]), one=False)
+#         result1 = db.query(sql_opentime_signal_count.format(value[0],value[实例25_批量生成PPT版荣誉证书]),one=False)
+#         result2 = db.query(sql_closetime_signal_count.format(value[0],value[实例25_批量生成PPT版荣誉证书]), one=False)
+#         result3 = db.query(sql_profit_signal_count.format(value[0],value[实例25_批量生成PPT版荣誉证书]), one=False)
 #
 #         # 平均每月信号数量
 #         num1 = result1[0]["count(*)"]
@@ -229,7 +229,7 @@ def get_start_end_time_month_time():
 #         if num2 != None:
 #             profitLossCount.append(num2)
 #
-#         print('月开始时间：{},月结束时间：{}'.format(value[0], value[1]))
+#         print('月开始时间：{},月结束时间：{}'.format(value[0], value[实例25_批量生成PPT版荣誉证书]))
 #         print("月开仓信号数量:",result1[0]["count(*)"])
 #         print("月平仓信号数量:",result2[0]["count(*)"])
 #         print("月平仓盈亏点数:",result3[0]["sum(profitLoss)"])
@@ -246,23 +246,23 @@ def get_start_end_time_month_time():
 #     signalCount1 = []
 #     profitLossCount1 = []
 #     for i,value in enumerate(time1_list1):
-#         # print(f'第{i + 1}遍历的近期表现:')
+#         # print(f'第{i + 实例25_批量生成PPT版荣誉证书}遍历的近期表现:')
 #         # 图表 - 开仓信号数量
 #         sql_opentime_signal_count = """
-#             select count(*) from strategy_signal where openTime>={}  and openTime<= {} and status =1
+#             select count(*) from strategy_signal where openTime>={}  and openTime<= {} and status =实例25_批量生成PPT版荣誉证书
 #             """
 #         # 图表 - 平仓信号数量
 #         sql_closetime_signal_count = """
-#             select count(*) from strategy_signal where closetime>={}  and closetime<= {} and status =1 and positionType =2
+#             select count(*) from strategy_signal where closetime>={}  and closetime<= {} and status =实例25_批量生成PPT版荣誉证书 and positionType =2
 #             """
 #         # 图表 - 平仓盈亏点数
 #         sql_profit_signal_count = """
-#             select sum(profitLoss) from strategy_signal where closetime>={}  and closetime<= {} and status =1 and positionType =2
+#             select sum(profitLoss) from strategy_signal where closetime>={}  and closetime<= {} and status =实例25_批量生成PPT版荣誉证书 and positionType =2
 #                 """
 #
-#         result1 = db.query(sql_opentime_signal_count.format(value[0],value[1]), one=False)
-#         result2 = db.query(sql_closetime_signal_count.format(value[0],value[1]), one=False)
-#         result3 = db.query(sql_profit_signal_count.format(value[0],value[1]), one=False)
+#         result1 = db.query(sql_opentime_signal_count.format(value[0],value[实例25_批量生成PPT版荣誉证书]), one=False)
+#         result2 = db.query(sql_closetime_signal_count.format(value[0],value[实例25_批量生成PPT版荣誉证书]), one=False)
+#         result3 = db.query(sql_profit_signal_count.format(value[0],value[实例25_批量生成PPT版荣誉证书]), one=False)
 #
 #         # 平均每周信号数量
 #         num1 = result1[0]["count(*)"]
@@ -272,7 +272,7 @@ def get_start_end_time_month_time():
 #         num2 = result3[0]["sum(profitLoss)"]
 #         if num2 != None:
 #             profitLossCount1.append(num2)
-#         # print('周开始时间：{},周结束时间：{}'.format(value[0],value[1]))
+#         # print('周开始时间：{},周结束时间：{}'.format(value[0],value[实例25_批量生成PPT版荣誉证书]))
 #         # print("周开仓信号数量:", result1[0]["count(*)"])
 #         # print("周平仓信号数量:", result2[0]["count(*)"])
 #         # print("周平仓盈亏点数:", result3[0]["sum(profitLoss)"])
@@ -296,8 +296,8 @@ def get_start_end_time_month_time():
 #                 {} AS a
 #                 LEFT JOIN {} AS b ON a._id = b.strategyId
 #             WHERE
-#                 a.display = 1
-#                 AND a.STATUS = 1
+#                 a.display = 实例25_批量生成PPT版荣誉证书
+#                 AND a.STATUS = 实例25_批量生成PPT版荣誉证书
 #                 and b.symbol is not null
 #             GROUP BY
 #                 b.symbol
@@ -310,12 +310,12 @@ def get_start_end_time_month_time():
 #     print('盈亏最高的几个品种:\n',df1)
 #
 #     #dataframe删除盈亏列后转换为列表
-#     df1 = df1.drop("profit_Loss",axis=1)
+#     df1 = df1.drop("profit_Loss",axis=实例25_批量生成PPT版荣誉证书)
 #     list1: List = df1.values.tolist()#赋值的写法导致的底色
 #     flat_list = [item for sublist in list1 for item in sublist]
 #
 #
-#     # 1）信号数量-该品种的订单数量（未平仓的+已平仓的)
+#     # 实例25_批量生成PPT版荣誉证书）信号数量-该品种的订单数量（未平仓的+已平仓的)
 #     sql6_number_of_signals = """
 #             SELECT
 #                         count(*)
@@ -323,7 +323,7 @@ def get_start_end_time_month_time():
 #                         {}
 #                     WHERE
 #                         symbol = "{}"
-#                         AND STATUS = 1
+#                         AND STATUS = 实例25_批量生成PPT版荣誉证书
 #     """
 #     # 2）盈利信号数量-该品种的已平仓的订单中，盈亏点数大于零的订单数量。
 #     sql7_Number_of_profit_signals = """
@@ -333,7 +333,7 @@ def get_start_end_time_month_time():
 #                     {}
 #                 WHERE
 #                     symbol = "{}"
-#                     AND STATUS = 1
+#                     AND STATUS = 实例25_批量生成PPT版荣誉证书
 #                     AND positionType = 2
 #                     AND profitLoss >0
 #     """
@@ -345,7 +345,7 @@ def get_start_end_time_month_time():
 #                     {}
 #                 WHERE
 #                     symbol = "{}"
-#                     AND STATUS = 1
+#                     AND STATUS = 实例25_批量生成PPT版荣誉证书
 #                     AND positionType = 2
 #                     AND profitLoss <0
 #     """
@@ -357,7 +357,7 @@ def get_start_end_time_month_time():
 #                     {}
 #                 WHERE
 #                     symbol = "{}"
-#                     AND STATUS = 1
+#                     AND STATUS = 实例25_批量生成PPT版荣誉证书
 #                     AND positionType = 2
 #     """
 #     number_of_signals = []
@@ -392,10 +392,10 @@ def get_start_end_time_month_time():
 #                             {}
 #                         WHERE
 #                             symbol = "{}"
-#                             and status = 1
+#                             and status = 实例25_批量生成PPT版荣誉证书
 #                         ORDER BY
 #                             openTime ASC
-#                             LIMIT 1
+#                             LIMIT 实例25_批量生成PPT版荣誉证书
 #             """
 #         # 该品种的总订单数
 #         sql11 = """
@@ -405,7 +405,7 @@ def get_start_end_time_month_time():
 #                             {}
 #                         WHERE
 #                             symbol = "{}"
-#                             AND STATUS = 1
+#                             AND STATUS = 实例25_批量生成PPT版荣誉证书
 #         """
 #         res10 = db.query(sql10.format(table_strategy_signal,flat_list[i]))
 #         res11 = db.query(sql11.format(table_strategy_signal,flat_list[i]))
@@ -422,49 +422,49 @@ def get_start_end_time_month_time():
 #         print("all_number_order",all_number_order)
 #         print("days_difference",days_difference)
 #         monthly_average_semaphore =(all_number_order/ days_difference*30)
-#         print('第 {} 个品种:'.format(i+1))
+#         print('第 {} 个品种:'.format(i+实例25_批量生成PPT版荣誉证书))
 #         print(f"品种:{value0}\n信号数量:{value1}\n盈利信号:{value2}\n亏损信号:{value3}\n平仓盈亏:{value4}\n月平均信号量:{monthly_average_semaphore}\n")
 #
 #     # 4，第四部分-月度统计
 #     month_time_list = get_all_year_time()
-#     for i in range(len(month_time_list) - 1):
-#         print("*"*60,'第{}个月,第 {} 到 {} 个月的月度统计'.format(i+1,month_time_list[i], month_time_list[i + 1]),"*"*60)
+#     for i in range(len(month_time_list) - 实例25_批量生成PPT版荣誉证书):
+#         print("*"*60,'第{}个月,第 {} 到 {} 个月的月度统计'.format(i+实例25_批量生成PPT版荣誉证书,month_time_list[i], month_time_list[i + 实例25_批量生成PPT版荣誉证书]),"*"*60)
 #         month_star_time = month_time_list[i]
-#         month_end_time = month_time_list[i + 1]
+#         month_end_time = month_time_list[i + 实例25_批量生成PPT版荣誉证书]
 #         # 筛出盈利总点数
 #         sql19 = """
-#             select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2"   and  status=1 and profitLoss>0
+#             select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2"   and  status=实例25_批量生成PPT版荣誉证书 and profitLoss>0
 #              """
 #         sql20 = """
 #
-#         select count(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2"   and  status=1 and profitLoss>0
+#         select count(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2"   and  status=实例25_批量生成PPT版荣誉证书 and profitLoss>0
 #                   """
 #         Total_profit_points= db.query(sql19.format(table_strategy_signal,month_star_time,month_end_time), one=False)
 #         number_Total_profit_points= db.query(sql20.format(table_strategy_signal,month_star_time,month_end_time), one=False)
 #         # 筛出亏损总点数
 #         sql21 = """
-#                 select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2"  and  status=1  and  profitLoss<0
+#                 select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2"  and  status=实例25_批量生成PPT版荣誉证书  and  profitLoss<0
 #         """
 #         sql22 = """
-#                 select count(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2"  and  status=1  and  profitLoss<0
+#                 select count(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2"  and  status=实例25_批量生成PPT版荣誉证书  and  profitLoss<0
 #         """
 #         Total_loss_points = db.query(sql21.format(table_strategy_signal,month_star_time,month_end_time), one=False)
 #         number_Total_loss_points = db.query(sql22.format(table_strategy_signal,month_star_time,month_end_time), one=False)
 #         print(f"移动端h5有此数据此月\n    盈利:{Total_profit_points[0]['sum(profitLoss)']}数量:{number_Total_profit_points[0]['count(profitLoss)']}"
 #               f"    VS      亏损:{Total_loss_points[0]['sum(profitLoss)']}数量:{number_Total_loss_points[0]['count(profitLoss)']}")
 #
-#         # 1）信号量-当月内开仓的订单数量。时间暂时定位8月 8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月时间只看八月
+#         # 实例25_批量生成PPT版荣誉证书）信号量-当月内开仓的订单数量。时间暂时定位8月 8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月8月时间只看八月
 #         sql12 = """
-#                 select count(*) from {} where openTime>={} and openTime <{} and status=1
+#                 select count(*) from {} where openTime>={} and openTime <{} and status=实例25_批量生成PPT版荣誉证书
 #         """
 #         res12 = db.query(sql12.format(table_strategy_signal,month_star_time,month_end_time))
 #         print(f'信号量-当月内开仓的订单数量: {res12["count(*)"]}')
 #         #总盈亏
-#         data1 = db.query("select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = 2  and  status=1".format(table_strategy_signal,month_star_time,month_end_time), one=False)
+#         data1 = db.query("select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = 2  and  status=实例25_批量生成PPT版荣誉证书".format(table_strategy_signal,month_star_time,month_end_time), one=False)
 #         print("总盈亏: {}".format(data1[0]["sum(profitLoss)"]))
 #         #胜率
-#         Number_of_profitable_orders = db.query("select count(*) from {} where  profitLoss>0 and closeTime>={} and closetime<{} and `status`=1".format(table_strategy_signal,month_star_time,month_end_time))
-#         Total_Orders = db.query("select count(*) from {} where closeTime>={} and closetime<{} and positionType =2  and  status=1".format(table_strategy_signal,month_star_time,month_end_time))
+#         Number_of_profitable_orders = db.query("select count(*) from {} where  profitLoss>0 and closeTime>={} and closetime<{} and `status`=实例25_批量生成PPT版荣誉证书".format(table_strategy_signal,month_star_time,month_end_time))
+#         Total_Orders = db.query("select count(*) from {} where closeTime>={} and closetime<{} and positionType =2  and  status=实例25_批量生成PPT版荣誉证书".format(table_strategy_signal,month_star_time,month_end_time))
 #         # print('123123',Total_Orders["count(*)"])
 #         if Total_Orders["count(*)"] != 0:
 #             print("胜率 : {:.2f}%".format(Number_of_profitable_orders["count(*)"] / Total_Orders["count(*)"] * 100))
@@ -472,7 +472,7 @@ def get_start_end_time_month_time():
 #             print("胜率不存在")
 #
 #         #盈亏#筛选出某月时间下的已平仓的品种类别
-#         res  = db.query('select DISTINCT(symbol) from {} where closeTime>={} and closetime<{} and positionType = "2"  and  status=1'.format(table_strategy_signal,month_star_time,month_end_time),one = False)
+#         res  = db.query('select DISTINCT(symbol) from {} where closeTime>={} and closetime<{} and positionType = "2"  and  status=实例25_批量生成PPT版荣誉证书'.format(table_strategy_signal,month_star_time,month_end_time),one = False)
 #
 #         profit_loss_ratio_list = []
 #         average_profit_list = []
@@ -481,22 +481,22 @@ def get_start_end_time_month_time():
 #             symbol_name = i["symbol"]
 #             #a品种盈亏大于0的订单数
 #             sql13 = """
-#             select count(*) from {} where closeTime>={} and closetime<{} and positionType = "2" and symbol = "{}" and profitLoss>0  and  status=1
+#             select count(*) from {} where closeTime>={} and closetime<{} and positionType = "2" and symbol = "{}" and profitLoss>0  and  status=实例25_批量生成PPT版荣誉证书
 #             """
 #             max_0_order = db.query(sql13.format(table_strategy_signal,month_star_time,month_end_time,symbol_name), one=False)
 #             # a品种盈亏小于0的订单数
 #             sql14 = """
-#             select count(*) from {} where closeTime>={} and closetime<{} and positionType = "2" and symbol = "{}" and profitLoss<0  and  status=1
+#             select count(*) from {} where closeTime>={} and closetime<{} and positionType = "2" and symbol = "{}" and profitLoss<0  and  status=实例25_批量生成PPT版荣誉证书
 #             """
 #             min_0_order = db.query(sql14.format(table_strategy_signal,month_star_time,month_end_time,symbol_name), one=False)
 #             #筛出盈利总点数
 #             sql15 = """
-#             select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2" and symbol = "{}" and profitLoss>0  and  status=1
+#             select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2" and symbol = "{}" and profitLoss>0  and  status=实例25_批量生成PPT版荣誉证书
 #             """
 #             Total_Profit_Points = db.query(sql15.format(table_strategy_signal,month_star_time,month_end_time,symbol_name), one=False)
 #             #筛出亏损总点数
 #             sql16 = """
-#                     select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2" and symbol = "{}" and profitLoss<0  and  status=1
+#                     select sum(profitLoss) from {} where closeTime>={} and closetime<{} and positionType = "2" and symbol = "{}" and profitLoss<0  and  status=实例25_批量生成PPT版荣誉证书
 #             """
 #             total_points_of_loss = db.query(sql16.format(table_strategy_signal,month_star_time,month_end_time,symbol_name), one=False)
 #
@@ -550,11 +550,11 @@ def get_start_end_time_month_time():
 #         print("平均亏损:{:.2f}".format(average3))
 #
 #         # 某个时间段的所有品种数据得开仓平仓列
-#         data = db.query('select openTime,closeTime from {} where closeTime>={} and closetime<{} and positionType = "2" and status=1'.format(table_strategy_signal,month_star_time,month_end_time), one=False)
+#         data = db.query('select openTime,closeTime from {} where closeTime>={} and closetime<{} and positionType = "2" and status=实例25_批量生成PPT版荣誉证书'.format(table_strategy_signal,month_star_time,month_end_time), one=False)
 #
 #         # 某个时间段的所有品种数据个数
 #         count = db.query(
-#             'select count(*) from {} where closeTime>={} and closetime<{} and positionType = "2" and  status=1'.format(table_strategy_signal,month_star_time,month_end_time), one=False)
+#             'select count(*) from {} where closeTime>={} and closetime<{} and positionType = "2" and  status=实例25_批量生成PPT版荣誉证书'.format(table_strategy_signal,month_star_time,month_end_time), one=False)
 #         ##某个策略的所有品种数据个数
 #         count = count[0]["count(*)"]
 #         # print(data)
@@ -565,7 +565,7 @@ def get_start_end_time_month_time():
 #
 #         #3）日均信号量-当月信号量/22，四舍五入保留一位小数。
 #         sql17 = """
-#         select count(*)from {} where openTime>={} and openTime <{}  and status=1
+#         select count(*)from {} where openTime>={} and openTime <{}  and status=实例25_批量生成PPT版荣誉证书
 #         """
 #         res13 = db.query(sql17.format(table_strategy_signal,month_star_time,month_end_time), one=False)
 #         # print(res13)
@@ -579,7 +579,7 @@ def get_start_end_time_month_time():
 #                     b.strategy_Name,
 #                     a.profit_Loss
 #                 FROM
-#                     ( SELECT strategyId, sum( profitLoss ) AS profit_Loss FROM {} WHERE STATUS = 1 GROUP BY strategyId ORDER BY profit_Loss DESC ) AS a
+#                     ( SELECT strategyId, sum( profitLoss ) AS profit_Loss FROM {} WHERE STATUS = 实例25_批量生成PPT版荣誉证书 GROUP BY strategyId ORDER BY profit_Loss DESC ) AS a
 #                     LEFT JOIN {} AS b ON a.strategyId = b._id
 #                     LIMIT 5
 #         """

@@ -1,7 +1,7 @@
 # from webapi import APIMgr
 # am = APIMgr()
 # am.mgr_login('byhy','88888888')
-# am.customer_list(1,10,'')
+# am.customer_list(实例25_批量生成PPT版荣誉证书,10,'')
 import requests
 
 response = requests.post("http://127.0.0.1/api/mgr/signin",
@@ -24,7 +24,7 @@ customers_add = requests.post("http://127.0.0.1/api/mgr/customers",cookies=cooki
               json={
                     "action":"add_customer",
                     "data":{
-                        "name":'1',
+                        "name":'实例25_批量生成PPT版荣誉证书',
                         "phonenumber":'123',
                         "address":'1234'
                     }

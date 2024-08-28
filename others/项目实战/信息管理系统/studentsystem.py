@@ -45,7 +45,7 @@ def main():
 def menu():
     print('''
     ===============学生信息管理系统===========
-        1.录入学生信息
+        实例25_批量生成PPT版荣誉证书.录入学生信息
         2.查找学生信息
         3.删除学生信息
         4.修改学生信息
@@ -137,7 +137,7 @@ def search2():
         name = ''
         if os.path.exists('students.txt'):
             mode = input('按ID查询请输入1，按名字查询请输入2：')
-            if mode == '1':
+            if mode == '实例25_批量生成PPT版荣誉证书':
                 id = input('请输入学生ID：')
             elif mode == '2':
                 name = input('请输入学生姓名：')
@@ -245,18 +245,18 @@ def sort5():
             student_new.append(d)
     else:
         return
-    ascORdesc = input('请选择排序方式（0.升序 1.降序）：')
+    ascORdesc = input('请选择排序方式（0.升序 实例25_批量生成PPT版荣誉证书.降序）：')
     if ascORdesc == '0':
         ascORdescBool = False
-    elif ascORdesc == '1':
+    elif ascORdesc == '实例25_批量生成PPT版荣誉证书':
         ascORdescBool = True
     else:
         print('您的输入有误，请重新输入！')
         sort5()
-    mode = input('请选择排序模式（0.按英语成绩排序 1.按Python成绩排序 2.按C语言成绩排序）：')
+    mode = input('请选择排序模式（0.按英语成绩排序 实例25_批量生成PPT版荣誉证书.按Python成绩排序 2.按C语言成绩排序）：')
     if mode == '0':
         student_new.sort(key=lambda x: int(x['english']), reverse=ascORdescBool)
-    elif mode == '1':
+    elif mode == '实例25_批量生成PPT版荣誉证书':
         student_new.sort(key=lambda x: int(x['python']), reverse=ascORdescBool)
     elif mode == '2':
         student_new.sort(key=lambda x: int(x['c']), reverse=ascORdescBool)

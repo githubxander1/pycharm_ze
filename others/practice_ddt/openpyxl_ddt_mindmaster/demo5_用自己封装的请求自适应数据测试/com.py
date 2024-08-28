@@ -74,4 +74,4 @@ def send_request(url, data, data_type, type, **kwargs):
 
 if __name__ == '__main__':
     get_excel_data3()
-    # write_result(1, 'true')
+    # write_result(实例25_批量生成PPT版荣誉证书, 'true')

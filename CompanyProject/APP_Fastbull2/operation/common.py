@@ -9,12 +9,12 @@ from CompanyProject.APP_Fastbull2.operation.op_Home import Home
 
 class Common(Base1):
     back = d.xpath(
-        '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+        '//*[@resource-id="android:id/content"]/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
     # 输入框
     input_msg = d(text="输入消息...")
     # 转发
     selectfriend = d(description="选择好友")
-    # select_friend1=d.xpath('//*[contains(@content-desc,"A1311-马保国")]/android.widget.ImageView[1]')
+    # select_friend1=d.xpath('//*[contains(@content-desc,"A1311-马保国")]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
     select_friend1=d(description="A1311-马保国~的VBB回发废话话费发发广告病好爸爸gvv加")
     slelct_group1 = d(description="1313群主")
     selectgroup = d(description="选择群聊")
@@ -61,7 +61,7 @@ class Common(Base1):
         self.slelct_group1.click()
         # while not d(description="管理群").exists():
         #     d(scrollable=True).scroll.forward()
-        #     time.sleep(1)
+        #     time.sleep(实例25_批量生成PPT版荣誉证书)
         # d(description="管理群").click()
 
     def click_select_send(self):

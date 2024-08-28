@@ -29,14 +29,14 @@ class CrackSlider():
         # self.url = 'https://dun.163.com/trial/sense'
         # self.url = 'https://tradinglive-testwebpc.tostar.top/cn/login'
         self.wait = WebDriverWait(self.driver, 10)
-        # self.driver.find_element(By.XPATH, '/html/body/main/div[1]/div/div[2]/div[2]/ul/li[2]').click()
-        # driver.find_element(By.XPATH,'(By.XPATH,"/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[1]/span")').click()
+        # self.driver.find_element(By.XPATH, '/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/ul/li[2]').click()
+        # driver.find_element(By.XPATH,'(By.XPATH,"/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/span")').click()
         # anquan = self.wait.until(EC.presence_of_element_located((By.XPATH,
-        #                                                     "/html/body/main/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div/div[1]/div[1]/span")))
+        #                                                     "/html/body/main/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div[实例25_批量生成PPT版荣誉证书]/div/div[2]/div[3]/div/div/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/span")))
         # anquan.click()
 
         # 切换到安全验证弹窗的iframe
-        slider_iframe = self.driver.find_element(By.XPATH,'/html/body/iframe[1]')
+        slider_iframe = self.driver.find_element(By.XPATH,'/html/body/iframe[实例25_批量生成PPT版荣誉证书]')
         self.driver.switch_to.frame(slider_iframe)
 
     def get_pic(self):
@@ -91,7 +91,7 @@ def match(img_jpg_path, img_png_path):
     return value
 
 
-# 1. 打开chromedriver，试试下载图片
+# 实例25_批量生成PPT版荣誉证书. 打开chromedriver，试试下载图片
 cs = CrackSlider()
 cs.get_pic()
 # 2. 对比图片，计算距离

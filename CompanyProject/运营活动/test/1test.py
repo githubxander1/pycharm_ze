@@ -25,7 +25,7 @@ def get_track(x):
   # x = x+10
   while current < x:
     # if current < middleware:
-    #     a = random.randint(1,3)
+    #     a = random.randint(实例25_批量生成PPT版荣誉证书,3)
     # else:
     #     a = -random.randint(2,4)
     a = 4
@@ -38,7 +38,7 @@ def get_track(x):
     v = v0 + a * t
 
   # for i in range(3):
-  #     tracks.append(-1)
+  #     tracks.append(-实例25_批量生成PPT版荣誉证书)
   # for i in range(3):
   #     tracks.append(-2)
   return tracks
@@ -62,7 +62,7 @@ def main3():
 
   time.sleep(2)
   # 定位滑块元素
-  iframe = d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/div[2]/iframe')
+  iframe = d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/form/div[实例25_批量生成PPT版荣誉证书]/div[2]/iframe')
   d.switch_to.frame(iframe)
 
   # 获取滑块背景的大小
@@ -99,22 +99,22 @@ def main3():
   print('滑动结束.')
   time.sleep(2)
 
-  d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/form/div[1]/form/div/div[3]/div/div/div/input').send_keys(1234)
+  d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/form/div[实例25_批量生成PPT版荣誉证书]/form/div/div[3]/div/div/div/input').send_keys(1234)
   time.sleep(2)
-  d.find_element(By.XPATH,'//*[@id="app"]/div[1]/div[2]/div/div/form/p[1]/button').click()
+  d.find_element(By.XPATH,'//*[@id="app"]/div[实例25_批量生成PPT版荣誉证书]/div[2]/div/div/form/p[实例25_批量生成PPT版荣誉证书]/button').click()
   time.sleep(2)
 main3()
 
 # 跳过引导层
-d.find_element(By.XPATH,'/html/body/div[2]/div/div/div[1]/div/a[1]/span').click()
+d.find_element(By.XPATH,'/html/body/div[2]/div/div/div[实例25_批量生成PPT版荣誉证书]/div/a[实例25_批量生成PPT版荣誉证书]/span').click()
 # 跳过感兴趣语言
-d.find_element(By.XPATH,'/html/body/div[2]/div/div[2]/div/button[1]/span').click()
+d.find_element(By.XPATH,'/html/body/div[2]/div/div[2]/div/button[实例25_批量生成PPT版荣誉证书]/span').click()
 
 # 移动到邀请icon上
-icon=d.find_element(By.XPATH,'//*[@id="app"]/div[5]/ul/li[1]/div/span/span/div/img')
+icon=d.find_element(By.XPATH,'//*[@id="app"]/div[5]/ul/li[实例25_批量生成PPT版荣誉证书]/div/span/span/div/img')
 ActionChains(d).move_to_element(icon).perform()
 time.sleep(4)
 # d.find_element_by_css_selector('#el-popover-6913 > div.activity-popover > div').click()
 # 复制完整xpath
-d.find_element(By.XPATH,'/html/body/div[4]/div[1]/div').click()
+d.find_element(By.XPATH,'/html/body/div[4]/div[实例25_批量生成PPT版荣誉证书]/div').click()
 # d.find_element_by_id('邀请好友').click()

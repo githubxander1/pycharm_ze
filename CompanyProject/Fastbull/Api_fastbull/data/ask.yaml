@@ -21,7 +21,7 @@ addAsk:
     -
         name: sql注入
         data: {
-            "askContent": " ' OR '1'='1 ,AND SLEEP(5),AND SLEEP(5),) --",
+            "askContent": " ' OR '实例25_批量生成PPT版荣誉证书'='实例25_批量生成PPT版荣誉证书 ,AND SLEEP(5),AND SLEEP(5),) --",
             "askImage": ''
         }
 
@@ -36,7 +36,7 @@ deleteAsk:
         name: 删除一级评论
         body: {
               "id": 1279,
-              "type": 1
+              "type": 实例25_批量生成PPT版荣誉证书
             }
     -
         name: 删除二级评论

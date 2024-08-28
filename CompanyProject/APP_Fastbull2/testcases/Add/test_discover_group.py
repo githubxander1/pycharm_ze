@@ -36,7 +36,7 @@ class Test_discover_group:
         with allure.step('step：点击取消'):
             pass
 
-    # @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=实例25_批量生成PPT版荣誉证书)
     @allure.severity('critical')
     @allure.feature('feature:发现群聊')
     @allure.story('story:发现群聊')
@@ -44,9 +44,9 @@ class Test_discover_group:
     # @pytest.mark.xfail(reason='功能未实现')  #用例在运行时如果失败了，不会被报告为错误，而是会被报告为预期失败（xfailed）。如果预期失败的用例意外地通过了，那么它会被报告为意外通过（xpassed）。
     def test_discover_group(self):
         '''描述：这是搜索全部的测试用例'''
-        text='1'
+        text='实例25_批量生成PPT版荣誉证书'
         with allure.step("发现群聊"):
-            text='1'
+            text='实例25_批量生成PPT版荣誉证书'
             DiscoverGroup().click_search_box()
             DiscoverGroup().input_search(text)
             DiscoverGroup().click_join()

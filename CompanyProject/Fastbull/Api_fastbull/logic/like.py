@@ -17,8 +17,8 @@ logger=LoggerHandler(name='ask',level='DEBUG',file=f'../log/{filename}_log.log',
 
 def post_like_operate(postId,like_type):
     """点赞操作
-    1.postId:被点赞的帖子id
-    2.like_type:1:点赞 2:取消点赞
+    实例25_批量生成PPT版荣誉证书.postId:被点赞的帖子id
+    2.like_type:实例25_批量生成PPT版荣誉证书:点赞 2:取消点赞
 
     """
     function_name = post_like_operate.__qualname__
@@ -35,7 +35,7 @@ def post_like_operate(postId,like_type):
         "content-type": "application/json",
         "deviceid": "51cee82782f69741d228946af2d2cda3",
         "deviceno": "51cee82782f69741d228946af2d2cda3",
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "nonce": nonce,
         "pragma": "no-cache",
         "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",

@@ -12,13 +12,13 @@ d = u2.connect()
 print(d.info)
 class Base1:
 
-    head=d.xpath('//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]')
+    head=d.xpath('//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
     def click_head(self):
         self.head.click()
     tologin=d(resourceId="com.bv.fastbull:id/tv_mine_top_welcome")
     def click_tologin(self):
         self.tologin.click()
-    phoneOremail=d.xpath('//*[@resource-id="com.bv.fastbull:id/ll_btn"]/android.widget.RelativeLayout[1]')
+    phoneOremail=d.xpath('//*[@resource-id="com.bv.fastbull:id/ll_btn"]/android.widget.RelativeLayout[实例25_批量生成PPT版荣誉证书]')
     get_code=d(resourceId="com.bv.fastbull:id/tv_get_code")
     def click_get_code(self):
         self.get_code.click()
@@ -28,7 +28,7 @@ class Base1:
     def click_login(self):
         self.login.click()
 
-    chat=d.xpath('//*[@resource-id="com.bv.fastbull:id/mainTabBar"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.ImageView[1]')
+    chat=d.xpath('//*[@resource-id="com.bv.fastbull:id/mainTabBar"]/android.widget.LinearLayout[实例25_批量生成PPT版荣誉证书]/android.widget.LinearLayout[实例25_批量生成PPT版荣誉证书]/android.widget.LinearLayout[实例25_批量生成PPT版荣誉证书]/android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
     def __init__(self):
     #     # self.d = u2.connect_adb_wifi('192.168.31.19')
     #     # self.d = u2.connect_adb_wifi('192.168.31.19:5555')
@@ -39,7 +39,7 @@ class Base1:
     #     # self.d = u2.connect_adb_wifi('192.168.31.19:5555')
     #     # self.d = u2.connect_adb_wifi('192.168.31.117:5555')
     #     # self.d = u2.connect_usb('22addc6f0403')
-    #     # self.d = u2.connect('127.0.0.1:21503')
+    #     # self.d = u2.connect('127.0.0.实例25_批量生成PPT版荣誉证书:21503')
     #     # print(self.d.info())
     #     self.d.app_start('com.bv.forexchat')
     #     self.d.implicitly_wait(10)

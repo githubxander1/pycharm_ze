@@ -14,7 +14,7 @@ print(a,b,c,d,e,sep='->')
 print(a,b,c,d,e,sep='#')
 
 # 打印进度条
-# tasks=range(1,31)
+# tasks=range(实例25_批量生成PPT版荣誉证书,31)
 # progress_width=25
 #
 # for n in tasks:

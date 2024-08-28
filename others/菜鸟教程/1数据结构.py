@@ -1,11 +1,11 @@
 # # 1列表list[]
-#     # phones = ["1-Apple", "4-Huawei", "3-Xiaomi"]
+#     # phones = ["实例25_批量生成PPT版荣誉证书-Apple", "4-Huawei", "3-Xiaomi"]
 #     # # print(phones.index('Huawei'))
 #     # # print(phones.count('Huawei'))
 #     # # print(len(phones))
 #     # def zsgc():
 #     #         # 增：append元素，insert索引元素，extend列表
-#     #         phones.insert(1,'OPPO')
+#     #         phones.insert(实例25_批量生成PPT版荣誉证书,'OPPO')
 #     #         phones.extend(["VIVO","GOOGLE"])
 #     #         print(phones)
 #     #
@@ -16,7 +16,7 @@
 #     #         phones.remove('OPPO')
 #     #         print(phones)
 #     #
-#     #         del phones[0:1]
+#     #         del phones[0:实例25_批量生成PPT版荣誉证书]
 #     #         print(phones)
 #     #
 #     #         #改：
@@ -24,14 +24,14 @@
 #     #         print(phones)
 #     #
 #     #         #查：
-#     #         print(phones[1:3])
+#     #         print(phones[实例25_批量生成PPT版荣誉证书:3])
 #     # # zsgc()
 #     #
 #     # def fanzhuang():#reverse
 #     #     # phones.reverse()
 #     #     # print(phones)
 #     #
-#     #     phones[:-1]
+#     #     phones[:-实例25_批量生成PPT版荣誉证书]
 #     #     print(phones)
 #     # # fanzhuang()
 #     #
@@ -43,7 +43,7 @@
 #
 # # 2元组tuple()
 #     #不可变：不能增删改查
-#     # atuple=(1,3,4,5,9)
+#     # atuple=(实例25_批量生成PPT版荣誉证书,3,4,5,9)
 #     # alist=[2,7,10]
 #     # #元组和列表互转
 #     # list(atuple)

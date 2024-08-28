@@ -9,8 +9,8 @@ d.get(url)
 # 填写用户名密码
 user = '*****'
 password = '*******'
-d.find_element(By.XPATH,'//*[@id="phoneLogin"]/div[1]/div[1]/p/input').clear()
-d.find_element(By.XPATH,'//*[@id="phoneLogin"]/div[1]/div[1]/p/input').send_keys('+86')
+d.find_element(By.XPATH,'//*[@id="phoneLogin"]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/p/input').clear()
+d.find_element(By.XPATH,'//*[@id="phoneLogin"]/div[实例25_批量生成PPT版荣誉证书]/div[实例25_批量生成PPT版荣誉证书]/p/input').send_keys('+86')
 d.find_element(By.XPATH,'//*[@id="inputPhoneText"]').send_keys(13111111111)
 d.find_element(By.XPATH,'//*[@id="codeBtn"]').click()
 time.sleep(3)

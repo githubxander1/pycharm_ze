@@ -80,7 +80,7 @@ def match(img_jpg_path, img_png_path):
     return value
 
 
-# 1. 打开chromedriver，试试下载图片
+# 实例25_批量生成PPT版荣誉证书. 打开chromedriver，试试下载图片
 cs = CrackSlider()
 cs.get_pic()
 # 2. 对比图片，计算距离

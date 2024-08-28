@@ -19,7 +19,7 @@ class xxxSpider(object):
     def run(self):
     # 主函数，用来控制整体逻辑
     # 每爬取一个页面随机休眠1-2秒钟的时间
-    # time.sleep(random.randint(1, 2))
+    # time.sleep(random.randint(实例25_批量生成PPT版荣誉证书, 2))
         pass
 
 if __name__ == '__main__':

@@ -7,7 +7,7 @@ def login():
     d.get('https://testfbtw.tostar.top/')
     d.implicitly_wait(10)
 
-    d.find_element(By.XPATH,'/html/body/div[2]/div[1]/div[7]/div[5]').click()
+    d.find_element(By.XPATH,'/html/body/div[2]/div[实例25_批量生成PPT版荣誉证书]/div[7]/div[5]').click()
     d.find_element_by_id('inputMailText').send_keys('101@qq.com')
     d.find_element_by_id('inputMailPwd').send_keys('a1234567')
     d.find_element_by_id('mailBtn').click()

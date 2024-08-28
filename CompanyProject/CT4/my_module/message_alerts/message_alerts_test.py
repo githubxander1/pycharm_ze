@@ -18,7 +18,7 @@ cancel=d(resourceId="com.app.ct4:id/btn_cancel")
 add_warning=d(resourceId="com.app.ct4:id/btn_add")
 
 add_stock=d(resourceId="com.app.ct4:id/tv_add_stock")
-stock1=d.xpath('//*[@resource-id="com.app.ct4:id/rv_watchlist"]/android.view.ViewGroup[1]')
+stock1=d.xpath('//*[@resource-id="com.app.ct4:id/rv_watchlist"]/android.view.ViewGroup[实例25_批量生成PPT版荣誉证书]')
 
 spinner_warn_type=d(resourceId="com.app.ct4:id/spinner_warn_type")
 spinner_condition=d(resourceId="com.app.ct4:id/spinner_condition")
@@ -73,4 +73,4 @@ class TestAlert:
 
 
 if __name__ == '__main__':
-    pytest.main(["-vs", '--reruns', '1', "--html=report.html", 'message_alerts_test.py::TestAlert'])
+    pytest.main(["-vs", '--reruns', '实例25_批量生成PPT版荣誉证书', "--html=report.html", 'message_alerts_test.py::TestAlert'])

@@ -26,7 +26,7 @@ client_type = "4"  # 对应web客户端
 def get_news():
     # 构建请求头
     headers = {
-        "langid": "1",
+        "langid": "实例25_批量生成PPT版荣誉证书",
         "deviceNo": deviceNo,
         "timestamp": timestamp,
         "nonce": nonce,
@@ -35,7 +35,7 @@ def get_news():
     }
 
     # 构建请求URL
-    url = f"https://api.fastbull.com{uri}?r=0.668651268319846&analystPageSize=4&institutionPageSize=4&showPoint=1"
+    url = f"https://api.fastbull.com{uri}?r=0.668651268319846&analystPageSize=4&institutionPageSize=4&showPoint=实例25_批量生成PPT版荣誉证书"
 
     # 发送GET请求
     response = requests.get(url, headers=headers)

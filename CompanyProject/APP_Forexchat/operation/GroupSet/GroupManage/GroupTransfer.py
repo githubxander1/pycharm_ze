@@ -6,9 +6,9 @@ from CompanyProject.APP_Forexchat.base.basePage import Base1, d
 
 class GroupTransfer(Base1):
     transferGroup = d(description="转让群")
-    # newAdmin=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/'
-    #                  'android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/'
-    #                  'android.widget.ImageView[1]')
+    # newAdmin=d.xpath('//*[@resource-id="android:id/content"]/android.widget.FrameLayout[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/'
+    #                  'android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[实例25_批量生成PPT版荣誉证书]/android.view.View[2]/android.view.View[实例25_批量生成PPT版荣誉证书]/'
+    #                  'android.widget.ImageView[实例25_批量生成PPT版荣誉证书]')
     newAdmin=0.101, 0.256
     # d.find_element(By.XPATH,'//li[contains(string(),"{}")]'.format(number)).click()
     cancel=d(description="取消")
