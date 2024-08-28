@@ -1,0 +1,29 @@
+
+
+等待：
+playwright通过slow_mo （单位是毫秒）减慢执行速度，它的作用范围是全局的，从启动浏览器到操作元素每个动作都会有等待间隔，方便在出现问题的时候看到页面操作情况
+chromium.launch(headless=False, slow_mo=50)
+
+playwright不再支持time.sleep()，而是使用page.wait_for_timeout()来实现等待
+Playwright 在查找元素的时候具有自动等待功能
+
+元素定位：https://blog.csdn.net/qq_23827149/article/details/135333234
+page.locator(selector, **kwargs) 方法创建自定义定位器
+
+page.get_by_placeholder('请输入筛选器名称').fill('筛选器2')
+
+new_page和new_context区别
+new_context:新窗口  应用场景：适合于需要并行测试多个用户登录态、测试不同浏览器配置（如用户代理、设备仿真）或者隔离测试用例以避免数据交叉污染的情况。
+new_page:新标签页  应用场景：当你需要在同一身份验证会话或相同配置环境下打开多个页面进行操作时，比如模拟用户在不同页面之间的交互，或者同时处理多个页面的数据抓取任务。
+
+
+os：
+os.path.dirname:取目录
+os.path.basename:取文件名
+os.path.getatime(path)、os.path.getctime(path)、os.path.getmtime(path)**：分别返回文件的最后访问时间、创建时间（在某些系统上可能是最后元数据更改时间）和最后修改时间。这些时间以时间戳的形式返回，可以使用 time.ctime() 或 datetime.datetime.fromtimestamp() 等函数转换为更易读的格式13。
+**os.path.normpath(path)**：规范化路径，消除路径中的冗余分隔符和.、..组件2。
+**os.path.realpath(path)**：返回指定文件的绝对路径，同时解析符号链接和相对路径1。
+
+time和datetime：
+time模块主要用于时间的获取、表示和计算，提供了一些函数来处理时间戳、时间元组等，侧重于基本的时间操作。
+datetime模块是time模块的一个高级封装，提供了更强大的日期和时间处理能力，包括日期和时间的组合、格式化、运算等12。

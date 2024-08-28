@@ -5,80 +5,13 @@ from CompanyProject.Fastbull.Api_fastbull.logic.conftest import generate_sign_lo
     timestamp, generate_nonce
 from CompanyProject.Fastbull.Api_fastbull.testcases.conftest import common_data
 # nonce = generate_nonce()
-url='https://api.fastbull.com/fastbull-quotes-service/api/postSnapshotByIds'
-data={
-    'stockIds':[
-  "8400_USDX",
-  "8700_USSPX500",
-  "8500_XAUUSD",
-  "8700_HongKong50",
-  "8700_US30",
-  "8700_Euro50",
-  "8700_Holland25",
-  "8700_ChinaA50",
-  "8700_Swiss20",
-  "8700_Spain35",
-  "8700_Japan225",
-  "8700_UK100",
-  "8700_USNDAQ100",
-  "8100_AUDUSD",
-  "8100_EURUSD",
-  "8100_GBPUSD",
-  "8100_NZDUSD",
-  "8100_USDNGN",
-  "8100_USDAOA",
-  "8100_USDCLP",
-  "8200_EURILS",
-  "8200_KRWJPY",
-  "8200_KRWHKD",
-  "8200_KRWGBP",
-  "8200_KRWCHF",
-  "8500_XAGUSD",
-  "8600_BRENT",
-  "8600_WTI",
-  "8600_NAT.GAS",
-  "8500_XAGEUR",
-  "8500_XAUEUR",
-  "8500_XPDUSD",
-  "8800_NICKEL",
-  "8800_LEAD",
-  "4800_6E2403",
-  "4800_6B2403",
-  "4800_6J2403",
-  "4800_6A2403",
-  "4800_MET2406",
-  "4800_MET2405",
-  "4300_HP2405",
-  "4800_BTC2406",
-  "4300_PA2404",
-  "4800_BTC2403",
-  "4800_MBT2403",
-  "4800_BTC2404",
-  "7200_AAPL",
-  "7200_MSFT",
-  "7200_GOOG",
-  "7200_GOOGL",
-  "7200_IFBD",
-  "7200_RCACW",
-  "7200_OCEAW",
-  "7200_INAQW",
-  "7200_LGVCW",
-  "7200_JOAN",
-  "7200_BIVI",
-  "7200_DRMAW",
-  "6100_BTC-USDT",
-  "6100_ETH-USDT",
-  "6100_SOL-USDT",
-  "6300_BTC-USDC",
-  "6100_LEASH-USDT",
-  "6100_SWFTC-USDT",
-  "6100_XEC-USDT",
-  "6100_LSK-USDT",
-  "6100_TURBO-USDT",
-  "6100_FLOKI-USDT",
-  "6100_TAMA-USDT",
-  "6100_ZBC-USDT"
-]
+url='https://testfbapi.tostar.top/fastbull-quotes-service/api/postSnapshotByIds'
+data = {
+  "needDetail": True,
+  "stockIds": [
+    "7300_A"
+  ],
+  "isDetail": True
 }
 headers={
     "accept": "*/*",
@@ -123,5 +56,5 @@ headers={
 #     "sign": generate_sign_login(common_data['uid'], generate_token(get_identity()), timestamp, nonce),
 #     "timestamp": timestamp
 #   }
-res=requests.post(url,headers=headers,data=data).text
+res=requests.post(url,headers=headers,data=data).json()
 print(res)

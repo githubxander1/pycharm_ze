@@ -64,7 +64,7 @@ def add_comment(content):
     print(response)
     # assert json.loads(response['subCode']) == 1000000 #业务状态
     comment_id = json.loads(response['bodyMessage'])['id']
-    # print(f'评论id:{comment_id}')
+    print(f'评论id:{comment_id}')
     return response,comment_id
 
 

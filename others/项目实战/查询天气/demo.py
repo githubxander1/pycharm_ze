@@ -1,6 +1,6 @@
 import sys
 
-import Weather
+from others import Weather
 
 from PyQt5.QtWidgets import QApplication, QDialog
 

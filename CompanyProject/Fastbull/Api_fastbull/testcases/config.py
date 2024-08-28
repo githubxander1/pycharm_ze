@@ -7,7 +7,7 @@ class Config:
 class TestConfig(Config):
     """测试环境"""
     BASE_URL = 'http://192.168.1.1:8000'
-    MYSQL_HOST = "192.168.实例25_批量生成PPT版荣誉证书.实例25_批量生成PPT版荣誉证书"
+    MYSQL_HOST = "192.168.1.1"
     MYSQL_USER = "root"
     MYSQL_PASSWORD = "123456"
     MYSQL_PORT = 3306

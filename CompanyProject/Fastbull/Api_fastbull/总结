@@ -65,6 +65,7 @@ report：存放报告
 
 uil:yaml里写固定的，logic文件里补充动态参数
 
+log文件：
 logger_handler: init:name,level,format
     file_handler = logging.FileHandler(file,encoding='utf-8')
     stream_handler = logging.StreamHandler()
@@ -72,11 +73,13 @@ logger_handler: init:name,level,format
     file_handler.setFormatter(fmt)
     self.addHandler(file_handler)
 
+数据库：
 mongdb_handler: init:host,port,username,password,db
     str=
     self.client = MongoClient(connection_str)
     self.db = self.client[db_name] if db_name else None
 
+封装请求接口：
 reque_handler:
     session=requests.session()
     def visit(self, method, url, params = None, data= None, json= None, headers= None):
