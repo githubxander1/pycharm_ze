@@ -4,11 +4,12 @@ import threading
 from PIL import Image
 import pystray
 import sys
-from win32com.client import Dispatch  # 导入 win32com.client 模块
+import winreg
 
-# 图标路径
-icon_dir = r'tray_icons'
-icon_files = ['1.ico', '2.ico', '3.ico', '4.ico']
+# 获取当前脚本所在目录
+script_dir = os.path.dirname(os.path.abspath(__file__))
+icon_dir = os.path.join(script_dir, 'tray_icons')
+icon_files = ['1.ico', '2.ico']
 
 # 加载图标并检查是否存在
 icons = []
@@ -34,16 +35,18 @@ current_index = 0
 def toggle_icon(icon):
     global current_index
     current_index = (current_index + 1) % len(icons)
-    icon.icon = icons[current_index]
-    icon.update_menu()
+    icon.icon = icons[current_index]  # 设置新图标
 
 # 创建系统托盘图标
 def create_icon():
-    menu = pystray.Menu(
-        pystray.MenuItem('退出', lambda icon, item: icon.stop())
-    )
+    menu = pystray.Menu(pystray.MenuItem('退出', on_quit))
     icon = pystray.Icon("name", icons[0], menu=menu)
     return icon
+
+# 定义退出函数
+def on_quit(icon, item):
+    icon.stop()
+    sys.exit(0)
 
 # 启动系统托盘图标
 def run_icon(icon):
@@ -53,27 +56,17 @@ def run_icon(icon):
 def run_timer(icon):
     while True:
         toggle_icon(icon)
-        time.sleep(0.01)
+        time.sleep(0.3)  # 调整闪烁频率
 
-# 添加到启动项
+# 添加到开机自启动
 def add_to_startup():
-    startup_path = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-    exe_path = os.path.abspath(sys.argv[0])
-    shortcut_path = os.path.join(startup_path, "FlashingIcon.lnk")
-
-    try:
-        shell = Dispatch('WScript.Shell')
-        shortcut = shell.CreateShortCut(shortcut_path)
-        shortcut.Targetpath = exe_path
-        shortcut.WorkingDirectory = os.getcwd()
-        shortcut.save()
-        print("已添加到启动项")
-    except Exception as e:
-        print(f"添加到启动项失败：{e}")
+    path = os.path.abspath(__file__)
+    with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 0, winreg.KEY_WRITE) as key:
+        winreg.SetValueEx(key, "TrayIconApp", 0, winreg.REG_SZ, path)
 
 # 主程序入口
 if __name__ == '__main__':
+    add_to_startup()
     icon = create_icon()
     threading.Thread(target=run_icon, args=(icon,)).start()
     threading.Thread(target=run_timer, args=(icon,)).start()
-    add_to_startup()  # 在主程序入口调用 add_to_startup 函数
