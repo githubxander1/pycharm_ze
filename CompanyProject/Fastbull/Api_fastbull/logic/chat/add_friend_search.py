@@ -6,7 +6,7 @@ def test_search_user_info_list():
     url = "https://forexchat-chat-test.tostar.top/apiBase/api/UserInfo/SearchUserInfoList"
 
     headers = {
-        "authority": "forexchat-chat-test.tostar.top",
+        "authority": "forexchat-chat-flashing_icon.tostar.top",
         "accept": "application/json, text/plain, */*",
         "accept-language": "cn",
         "access": "1f37b1094a8155cb36f1ae8da0bda1fd",

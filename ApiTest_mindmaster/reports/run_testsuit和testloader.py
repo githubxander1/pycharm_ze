@@ -25,7 +25,7 @@ import unittest
 # 代码总结：
 # unittest.TestLoader().discover('用例所在目录','用例代码名称*.py')
 # 实例化套件对象
-suite=unittest.TestLoader().discover("../",'test*.py')
+suite=unittest.TestLoader().discover("../",'flashing_icon*.py')
 # 实例化执行对象，执行套件
 runner=unittest.TextTestRunner()
 runner.run(suite)

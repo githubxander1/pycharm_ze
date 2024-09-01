@@ -275,31 +275,31 @@ from pprint import pprint
 
 # 文件处理
 # 读取文件
-# f=open('test.txt','r')
+# f=open('flashing_icon.txt','r')
 # print(f.read(5))#读取前五个字符
 # print(f.readline())#读一行
 # for x in f:#遍历文件
 #     print(x)
 # f.close()
 # 追加
-# f=open('test.txt','a')
+# f=open('flashing_icon.txt','a')
 # f.write('hello world')
 # f.close()
-# f=open('test.txt','r')
+# f=open('flashing_icon.txt','r')
 # print(f.read())
 # 覆盖
-# f=open('test.txt','w')
+# f=open('flashing_icon.txt','w')
 # f.write('hello world')
 # f.close()
-# f=open('test.txt','r')
+# f=open('flashing_icon.txt','r')
 # print(f.read())
 # 创建
-# f=open('test.txt','x')
+# f=open('flashing_icon.txt','x')
 # f.close()
 # 删除
 # import os
-# if os.path.exists('test.txt'):
-#         os.remove('test.txt')
+# if os.path.exists('flashing_icon.txt'):
+#         os.remove('flashing_icon.txt')
 #         os.rmdir('testfolder')
 # else:
 #     print('文件不存在')

@@ -17,7 +17,7 @@ class TestRunner(object):
         #         os.mkdir(self.cases+'/report')
         now = time.strftime('%Y%m%d%H%M%S')
         with  open("./"+".html", 'wb') as fp:
-            suites = unittest.defaultTestLoader.discover('../test_cases',pattern='test*.py') # 测试套件- 定义测试代码目录和测试用例前缀
+            suites = unittest.defaultTestLoader.discover('../test_cases',pattern='flashing_icon*.py') # 测试套件- 定义测试代码目录和测试用例前缀
             HTMLTestRunner(title='测试标题', description='描述本次测试的大概内容', stream=fp).run(suites)
             fp.close()
 

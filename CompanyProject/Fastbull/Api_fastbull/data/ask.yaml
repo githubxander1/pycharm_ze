@@ -4,13 +4,13 @@ addAsk:
         name: 正常图文
         data: {
             "askContent": "美元趋势如何",
-            "askImage": "https://img.fastbull.com/test/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
+            "askImage": "https://img.fastbull.com/flashing_icon/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
         }
     -
         name: 纯图文
         data: {
             "askContent": "",
-            "askImage": "https://img.fastbull.com/test/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
+            "askImage": "https://img.fastbull.com/flashing_icon/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
         }
     -
         name: 纯文字

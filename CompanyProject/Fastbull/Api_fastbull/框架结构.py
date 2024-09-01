@@ -9,5 +9,5 @@ def print_directory_tree(root_dir):
         for f in files:
             print('{}{}'.format(sub_indent, f))  # 打印文件名
 
-root_dir = r'D:\1test\PycharmProject\CompanyProject\Fastbull\Api_fastbull'
+root_dir = r'D:\1flashing_icon\PycharmProject\CompanyProject\Fastbull\Api_fastbull'
 print_directory_tree(root_dir)

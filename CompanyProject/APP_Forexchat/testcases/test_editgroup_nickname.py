@@ -45,7 +45,7 @@ class Test_groupNickName(unittest.TestCase):
     #         with self.subTest():
     #             if groupNickName.get('skip', 'n') == 'y':  # 如果跳过标志为'y'，则跳过该用例
     #                 # continue
-    #                 pytest.skip("Skipping test case")
+    #                 pytest.skip("Skipping flashing_icon case")
     #             GroupSet().nickname_set(groupNickName['text'])# 执行每个测试用例并传递相应的文本数据作为参数
     #             time.sleep(2)
     #             d.screenshot('test_groupNickName.png')  # 保存截图并关闭驱动器
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     # # 将结果写入文件
     # with open('test_report.txt', 'w') as f:
     #     f.write(str(result))
-    # with open('test-results.xml', 'wb') as output:
+    # with open('flashing_icon-results.xml', 'wb') as output:
     #     runner = XMLTestRunner(output)
     #     unittest.main(testRunner=runner)
 

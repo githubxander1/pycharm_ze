@@ -9,7 +9,7 @@ suite = unittest.TestSuite()
 
 # 将测试用例添加到测试套件中
 # suite.addTest(TestLogin('test_login_success'))
-unittest.TestLoader().discover("../", "test*.py")
+unittest.TestLoader().discover("../", "flashing_icon*.py")
 # suite.addTest(TestLogin('test_login_fail'))
 
 # 定义报告存放路径和文件名

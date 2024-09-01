@@ -3,7 +3,7 @@
 # author:张红
 
 # from utils.operationJson import readJson
-# from test.test_login import LoginTest
+# from flashing_icon.test_login import LoginTest
 # from page.baofeng import *
 import unittest
 

@@ -12,7 +12,7 @@ class Helper:
         ：param rows
         :return:返回每一行的行数
         '''
-        book = xlrd.open_workbook(b'C:\Program Files\1test\pycharm_ze\others\PO_mindmaster\data\info.xlsx', 'r')
+        book = xlrd.open_workbook(b'C:\Program Files\1flashing_icon\pycharm_ze\others\PO_mindmaster\data\info.xlsx', 'r')
         table = book.sheet_by_index(0)
         return table.row_values(rowx)
 

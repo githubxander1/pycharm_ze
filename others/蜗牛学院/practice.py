@@ -27,7 +27,7 @@
 #     @staticmethod
 #     def f2():
 #         print('静态方法')
-# class test:
+# class flashing_icon:
 #     st1 = Student()#创建对象st1
 #     st2 = Student()#创建对象st2
 #     print(st1 is st2)

@@ -22,7 +22,7 @@ add_comment:
             "imageInfoModel": [
                 {
                     "high": 226,
-                    "url": "https://img.fastbull.com/test/image/2024/02/3E6104A2BE7844E4923B6886D6F2D6A8",
+                    "url": "https://img.fastbull.com/flashing_icon/image/2024/02/3E6104A2BE7844E4923B6886D6F2D6A8",
                     "width": 448
                 }
             ],
@@ -40,7 +40,7 @@ addAsk:
   method: post
   data : {
         "askContent": "美元趋势如何11111",
-        "askImage": "https://img.fastbull.com/test/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
+        "askImage": "https://img.fastbull.com/flashing_icon/image/2024/02/C0F94A3E97D149449A0BA67A93F4050E?w=3840&h=2400"
         }
 deleteAsk:
   url: https://testfbapi.tostar.top/fastbull-universal-service/api/deleteAskReply

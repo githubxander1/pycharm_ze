@@ -11,6 +11,6 @@ if not os.path.exists(report_dir):
 
 with open(report_file, "wb") as fl:
     module_path = "../"
-    discover = unittest.defaultTestLoader.discover(start_dir=module_path, pattern="test*.py")
+    discover = unittest.defaultTestLoader.discover(start_dir=module_path, pattern="flashing_icon*.py")
     runner = HTMLTestRunner(title='测试标题', description='描述本次测试的大概内容', stream=fl)
     runner.run(discover)

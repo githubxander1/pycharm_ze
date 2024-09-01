@@ -30,5 +30,5 @@ print(a,b,c,d,e,sep='#')
 #     print(f'\r{progress_str}{msg_str}',end ='')
 #
 # # 文本打印到文件
-# my_file= open('test.txt',mode='wt',encoding='utf-8')#t表示以文本形式读写文件
+# my_file= open('flashing_icon.txt',mode='wt',encoding='utf-8')#t表示以文本形式读写文件
 # print('Hello world!',file=my_file)

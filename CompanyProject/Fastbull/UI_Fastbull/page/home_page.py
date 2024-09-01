@@ -67,5 +67,5 @@ if __name__ == '__main__':
     login.login_email('forex1@linshiyou.com', 'a1234567')
     # time.sleep(10)
     friendchat=Home(d)
-    friendchat.friend_chat('test')
+    friendchat.friend_chat('flashing_icon')
 

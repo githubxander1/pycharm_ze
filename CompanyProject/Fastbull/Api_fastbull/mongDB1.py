@@ -25,7 +25,7 @@ for database in databases:
 # collection = db['your_collection_name']  # 替换your_collection_name为你实际的集合名称
 #
 # # 示例：插入一条数据
-# sample_document = {"name": "Test Document", "content": "This is a test document."}
+# sample_document = {"name": "Test Document", "content": "This is a flashing_icon document."}
 # result = collection.insert_one(sample_document)
 # print(f"Inserted document with ID: {result.inserted_id}")
 

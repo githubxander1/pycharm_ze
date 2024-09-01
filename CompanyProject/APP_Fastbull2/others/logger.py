@@ -40,4 +40,4 @@ class Logger(object):
         def debug(self,msg):
             self.logger.debug(msg)
 
-logger=Logger('test')
+logger=Logger('flashing_icon')

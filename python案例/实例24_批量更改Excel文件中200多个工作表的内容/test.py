@@ -49,7 +49,7 @@ def write_data_to_sheet(ws,data):
     '''
     for row in data:
         ws.append(row)
-wb1 = Workbook('test.xlsx')
+wb1 = Workbook('flashing_icon.xlsx')
 wb= load_workbook('test.xlsx')
 print(wb.sheetnames)
 ws = wb['Sheet']

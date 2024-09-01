@@ -571,13 +571,13 @@ def check_singnal_data_statistics(table_strategy,table_strategy_signal):
 
 if __name__ == '__main__':
     # 切换环境
-    # environment = 'test'
-    environment = 'test'
+    # environment = 'flashing_icon'
+    environment = 'flashing_icon'
 
-    if environment == 'test':
+    if environment == 'flashing_icon':
         table_strategy = 'strategy'
         table_strategy_signal = 'strategy_signal'
-        Synchronous_Data("test")
+        Synchronous_Data("flashing_icon")
         check_singnal_data_statistics(table_strategy,table_strategy_signal)
     else:
         table_strategy_pre = 'strategy_pre'

@@ -21,7 +21,7 @@ def Synchronous_Data(type):
 
     df1 = get_mongo_data(type,"strategy_signal",[])
 
-    if type == "test":
+    if type == "flashing_icon":
         table_name = 'strategy'  # 替换为实际的表名
         table_name1 = 'strategy_signal'  # 替换为实际的表名
     else:
@@ -32,4 +32,4 @@ def Synchronous_Data(type):
     print('数据同步成功')
 if __name__ == '__main__':
     # Synchronous_Data("pre")
-    Synchronous_Data("test")
+    Synchronous_Data("flashing_icon")

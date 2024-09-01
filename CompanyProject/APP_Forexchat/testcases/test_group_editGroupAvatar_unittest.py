@@ -49,7 +49,7 @@ if __name__ == "__main__":
             title='Test Report',
             description=''
         )
-        # Run the tests and generate the test report
+        # Run the tests and generate the flashing_icon report
         print('kais')
         runner.run(unittest.makeSuite(Test_editGroupAvatar))
         print('jies')

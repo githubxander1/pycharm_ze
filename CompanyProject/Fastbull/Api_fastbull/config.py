@@ -29,6 +29,6 @@ class UatConfig(Config):
 
 # 环境关系映射，方便切换多环境配置
 env = {
-    "test": TestConfig,
+    "flashing_icon": TestConfig,
     "uat": UatConfig
 }
