@@ -1,0 +1,9 @@
+[FileInfo]
+LegalTrademarks=Developed by Your Company Name
+ProductName=Status Bar Notification
+ProductVersion=1.0.0
+CompanyName=Your Company Name
+FileDescription=Status Bar Notification Application
+InternalName=Status Bar Notification
+OriginalFilename=status_bar_notification.exe
+LegalCopyright=© 2023 Your Company Name. All rights reserved.
