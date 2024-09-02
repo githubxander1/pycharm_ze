@@ -10,4 +10,5 @@ localhost:8080打不开：
 cmd：services.msc
 启动Jenkins
 
-11
+pip安装失败：
+用具体的pip路径安装：D:\Application\Python311\python.exe -m pip install pyinstaller
