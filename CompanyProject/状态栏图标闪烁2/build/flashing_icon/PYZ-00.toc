@@ -1,2 +1,0 @@
-('D:\\1document\\1test\\PycharmProject_github\\others\\项目实战\\状态栏图标闪烁2\\build\\flashing_icon\\PYZ-00.pyz',
- [])

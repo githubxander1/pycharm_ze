@@ -4,7 +4,7 @@ import os
 import allure
 import requests
 
-from ApiTest_mindmaster.common.requests_handler import RequestsHandler
+from others.ApiTest_mindmaster.common.requests_handler import RequestsHandler
 from CompanyProject.Fastbull.Api_fastbull.common.logger_handler import LoggerHandler
 from CompanyProject.Fastbull.Api_fastbull.logic.conftest import common_data, generate_nonce, timestamp, generate_btoken, \
     generate_sign_login, generate_token, get_identity

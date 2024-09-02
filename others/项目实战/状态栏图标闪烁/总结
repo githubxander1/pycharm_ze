@@ -1,0 +1,88 @@
+1主程序：
+
+
+
+2打包
+
+    1.安装pyinstaller
+    2.打包命令：
+         .spec 文件并添加了 datas 项：
+        a = Analysis(['flashing_icon.py'],
+             pathex=['D:/1test/PycharmProject/flashing_icon'],
+             binaries=[],
+             datas=[('D:/1test/PycharmProject/flashing_icon/tray_icons', 'tray_icons')],
+             hiddenimports=[],
+             hookspath=[],
+             runtime_hooks=[],
+             excludes=[],
+             win_no_prefer_redirects=False,
+             win_private_assemblies=False,
+             cipher=block_cipher,
+
+        假设你的工作目录是 D:/1test/PycharmProject/flashing_icon/：
+        pyinstaller --onefile --add-data "D:/1test/PycharmProject/flashing_icon/tray_icons;tray_icons" --windowed flashing_icon.py
+        （解释命令参数
+            --onefile: 将所有依赖项打包成一个单独的可执行文件。
+            --add-data 'tray_icons;tray_icons': 将 tray_icons 文件夹添加到生成的可执行文件中。
+            --windowed: 使生成的可执行文件在运行时不显示命令行窗口）
+
+    3.验证生成的可执行文件：
+        cd dist
+        flashing_icon.exe
+
+    4.如果有问题，调试：
+        1打印路径确认：
+            print(f"当前脚本所在目录: {script_dir}")
+            print(f"图标文件夹路径: {icon_dir}")
+        2检查 pyinstaller 版本：
+               pip install --upgrade pyinstaller
+        3检查文件路径，相对路径或绝对路径
+
+
+遇到的问题:
+当你使用 PyInstaller 并指定 --onefile 选项时，PyInstaller 会尝试尽可能地将所有内容打包到一个单独的可执行文件中。然而，datas 参数在 --onefile 模式下可能不会按预期工作，因为所有内容都被打包进了单个文件，而不是在文件夹结构中。
+
+为了确保你的图标文件被正确打包，你可以尝试以下步骤：
+
+确保 .spec 文件中的 datas 参数正确设置。确保你添加的路径是正确的，并且文件确实存在于这些路径中。
+
+手动编辑 .spec 文件。在 datas 参数中，你需要指定源文件的绝对路径和目标路径。例如：
+
+python
+a = Analysis(['flashing_icon.py'],
+             pathex=['.'],
+             binaries=[],
+             datas=[(os.path.join(script_dir, 'tray_icons', '1.ico'), 'tray_icons'),
+                    (os.path.join(script_dir, 'tray_icons', '2.ico'), 'tray_icons')],
+
+
+运行 PyInstaller 时不使用 --onefile 选项。如果你不需要将所有内容打包到一个文件中，可以尝试不使用 --onefile 选项。这将允许 datas 参数正常工作，因为文件将被复制到输出目录中而不是被打包进单个可执行文件。
+
+bash
+pyinstaller flashing_icon.spec
+
+
+
+使用 --add-data 选项：
+
+bash
+pyinstaller --onefile --add-data "path/to/data;./data" your_script.py
+
+
+在 .spec 文件中指定：
+
+python
+a = Analysis(['your_script.py'],
+            pathex=['.'],
+            binaries=[],
+            datas=[('path/to/data', './data')],
+            hiddenimports=[],
+
+(当使用 .spec 文件来打包 Python 应用程序时，你不需要在命令行中指定 --onefile、--windowed 或 --add-data 等选项，因为这些设置已经在 .spec 文件中定义好了。你只需使用 pyinstaller 命令并指定 .spec 文件作为参数。
+
+以下是使用 .spec 文件进行打包的基本命令格式：
+
+bash
+pyinstaller your_script.spec)
+
+
