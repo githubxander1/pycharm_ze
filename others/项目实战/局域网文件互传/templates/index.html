@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文件上传与管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>上传文件</h1>
+    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" id="upload-form">
+        <input type="file" name="file">
+        <br><br>
+        <textarea name="text" rows="4" cols="50" placeholder="输入文本内容"></textarea><br><br>
+        <input type="submit" value="上传文件">
+    </form>
+    <div id="upload-result" class="upload-result"></div>
+    <div class="files-list" id="files-list">
+        <ul id="file-list">
+        </ul>
+        <p class="no-files" id="no-files">暂无文件</p>
+    </div>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+
+            const formData = new FormData(event.target);
+            fetch('{{ url_for("upload_file") }}', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('upload-result').textContent = '文件上传成功';
+                    updateFileList();
+                } else {
+                    document.getElementById('upload-result').textContent = '文件上传失败';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('upload-result').textContent = '文件上传失败';
+            });
+        });
+
+        function updateFileList() {
+            fetch('{{ url_for("get_files") }}')
+                .then(response => response.json())
+                .then(data => {
+                    const fileList = document.getElementById('file-list');
+                    const noFiles = document.getElementById('no-files');
+                    fileList.innerHTML = '';
+                    noFiles.style.display = 'none';
+
+                    if (data.files.length === 0) {
+                        noFiles.style.display = 'block';
+                    } else {
+                        data.files.forEach(file => {
+                            const listItem = document.createElement('li');
+                            const link = document.createElement('a');
+                            link.href = '{{ url_for("uploaded_file", filename="") }}'.replace('""', file);
+                            link.textContent = file;
+                            const viewLink = document.createElement('a');
+                            viewLink.href = '{{ url_for("view_file", filename="") }}'.replace('""', file);
+                            viewLink.textContent = '查看详情';
+                            viewLink.style.marginLeft = '10px';
+                            const deleteButton = document.createElement('button');
+                            deleteButton.textContent = '删除';
+                            deleteButton.onclick = () => deleteFile(file);
+
+                            listItem.appendChild(link);
+                            listItem.appendChild(viewLink);
+                            listItem.appendChild(deleteButton);
+                            fileList.appendChild(listItem);
+                        });
+                    }
+                });
+        }
+
+        function deleteFile(filename) {
+            if (confirm("确定要删除此文件吗？")) {
+                fetch('{{ url_for("delete_file", filename="") }}'.replace('""', filename), { method: 'DELETE' })
+                    .then(response => response.text())
+                    .then(data => {
+                        if (data === '删除成功') {
+                            updateFileList();
+                        } else {
+                            alert(data);
+                        }
+                    });
+            }
+        }
+
+        // 初始化文件列表
+        updateFileList();
+
+        // 每隔 2 秒更新一次文件列表
+        setInterval(updateFileList, 2000);
+    </script>
+</body>
+</html>

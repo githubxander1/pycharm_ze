@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>查看文件</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>文件内容</h1>
+    {% if content|length > 100 %}
+        <p>文件内容过长，以下是部分内容：</p>
+        <pre>{{ content[:100] + '...' }}</pre>
+    {% else %}
+        <pre>{{ content }}</pre>
+    {% endif %}
+    <a href="{{ url_for('index') }}">返回</a>
+</body>
+</html>
