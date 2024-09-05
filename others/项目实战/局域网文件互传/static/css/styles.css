@@ -6,9 +6,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* 调整为更靠近顶部 */
     min-height: 100vh;
-    padding-top: 20px; /* 减少上内边距 */
+    padding-top: 50px;
 }
 
 h1 {
@@ -16,22 +15,42 @@ h1 {
     color: #333;
 }
 
-form {
+.upload-forms {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
 }
 
-input[type="file"] {
-    margin-bottom: 20px;
-    font-size: 1.2em;
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
 }
 
-input[type="submit"] {
+.upload-form input[type="file"],
+.upload-form textarea {
+    margin-bottom: 10px;
     font-size: 1.2em;
-    padding: 10px 20px;
+    padding: 5px;
+}
+
+.upload-form input[type="submit"] {
+    font-size: 1.2em;
+    padding: 3px 3px 3px 3px;
     cursor: pointer;
+}
+
+.upload-result {
+    font-size: 1.2em;
+    color: green;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
 }
 
 .files-list {
@@ -60,6 +79,10 @@ input[type="submit"] {
 .files-list a {
     color: blue;
     text-decoration: none;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .files-list button {

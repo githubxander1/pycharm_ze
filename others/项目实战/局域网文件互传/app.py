@@ -57,7 +57,7 @@ def delete_file(filename):
         os.remove(file_path)
         return jsonify({'success': True})
     else:
-        return jsonify({'success': False})
+        return jsonify({'success': False, 'message': 'File not found'})
 
 # 查看文件内容
 @app.route('/view/<filename>')
@@ -76,4 +76,4 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
