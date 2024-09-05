@@ -1,74 +1,101 @@
 import pandas as pd
+from datetime import datetime, timedelta
 
-# 读取Excel文件
-file_path = '考勤表.xlsx'
-df = pd.read_excel(file_path)
+# 初始化 DataFrame 时指定列的数据类型
+data = {
+    '姓名': ['肖泽华', '肖泽华', '肖泽华', '肖泽华', '范德萨'],
+    '日期': ['24-08-01 星期四', '24-08-02 星期五', '24-08-03 星期六', '24-08-02 星期五', '24-08-16 星期五'],
+    '上班1打卡时间': ['08:20', '08:40', '08:30', '08:30', '08:53'],
+    '下班1打卡时间': ['18:55', '18:10', '20:00', '21:00', '次日 00:03'],
+    '工作时长': ['0'] * 5,  # 初始化为字符串，确保长度一致
+    '加班时间': ['0'] * 5,  # 初始化为字符串，确保长度一致
+    '餐补次数': [0] * 5,
+    '交补次数': [0] * 5
+}
 
-# 定义一个函数来处理日期和时间
-def process_datetime(time_str, date_str, is_next_day):
-    if pd.isnull(time_str) or pd.isnull(date_str):
-        return pd.NaT
+df = pd.DataFrame(data)
 
-    # 将日期字符串转换为日期对象
-    date_obj = pd.to_datetime(date_str, format='%d-%m-%y')
+# 定义一个函数来计算工作时长和加班时间
+def calculate_time(row):
+    # 解析日期
+    date_str = row['日期'].split()[0]
+    date = datetime.strptime(date_str, '%y-%m-%d')
 
-    if is_next_day:
-        # 处理次日情况，即加班到第二天
-        time_part = time_str.replace('次日', '')
-        # 将次日的时间转换为timedelta
-        time_delta = pd.to_timedelta(time_part)
-        # 计算加班到第二天的时间
-        next_day_time = date_obj + pd.Timedelta(days=1) + time_delta
+    # 解析上班打卡时间
+    start_punch_str = row['上班1打卡时间']
+    start_punch = datetime.strptime(f'{date_str} {start_punch_str}', '%y-%m-%d %H:%M')
+
+    # 解析下班打卡时间
+    end_punch_str = row['下班1打卡时间']
+    if '次日' in end_punch_str:
+        next_day_str = (date + timedelta(days=1)).strftime('%Y-%m-%d')
+        end_punch = datetime.strptime(f'{next_day_str} {end_punch_str.split(" ")[1]}', '%Y-%m-%d %H:%M')
     else:
-        # 处理正常打卡时间
-        time_delta = pd.to_timedelta(time_str)
-        next_day_time = date_obj + time_delta
+        end_punch = datetime.strptime(f'{date_str} {end_punch_str}', '%y-%m-%d %H:%M')
 
-    return next_day_time
+    # 计算上午工作时长
+    morning_start = datetime.strptime(f'{date_str} 08:30', '%y-%m-%d %H:%M')
+    morning_end = datetime.strptime(f'{date_str} 12:00', '%y-%m-%d %H:%M')
+    morning_duration = min(morning_end, end_punch) - max(morning_start, start_punch)
+    morning_hours = morning_duration.total_seconds() / 3600
+    morning_duration_formatted = f"{int(morning_hours)}:{int((morning_hours % 1) * 60):02d}"
 
-# 定义一个函数来解析日期和星期
-def parse_date_and_weekday(date_str):
-    # 拆分日期和星期
-    if pd.notnull(date_str) and '星期' in date_str:
-        date_part, weekday_part = date_str.split('星期')
-        return date_part.strip(), weekday_part.strip()
-    return date_str, None
+    # 计算下午开始时间
+    afternoon_start = datetime.strptime(f'{date_str} 13:30', '%y-%m-%d %H:%M')
 
-# 预处理日期列
-df['日期'], df['星期'] = zip(*df['日期'].apply(parse_date_and_weekday))
+    # 计算满足8小时的工作时长,下午还需要工作时长
+    x_hours_to_eight = timedelta(hours=(8 - morning_hours))
+    can_punch_out_time = afternoon_start + x_hours_to_eight
 
-# 应用函数处理上班和下班时间
-df['上班1打卡时间'] = df.apply(lambda row: process_datetime(row['上班1打卡时间'], row['日期'], False), axis=1)
-df['下班1打卡时间'] = df.apply(lambda row: process_datetime(row['下班1打卡时间'], row['日期'], '次日' in row['下班1打卡时间']), axis=1)
+    # 计算下午实际工作时长
+    afternoon_duration = end_punch - afternoon_start
+    afternoon_hours = afternoon_duration.total_seconds() / 3600
+    afternoon_duration_formatted = f"{int(afternoon_hours)}:{int((afternoon_hours % 1) * 60):02d}"
+    print('下午工作时长:', afternoon_hours)
 
-# 定义一个函数来计算工作时长和加班时长
-def calculate_hours(row):
-    if pd.isnull(row['上班1打卡时间']) or pd.isnull(row['下班1打卡时间']):
-        return 0, 0, 0  # 如果时间数据无效，返回0
+    # 调试输出
+    print(f"可以打下班卡的时间: {can_punch_out_time.strftime('%Y-%m-%d %H:%M')}")
 
-    # 计算工作时长（小时）
-    work_duration = (row['下班1打卡时间'] - row['上班1打卡时间']).total_seconds() / 3600
-    work_duration_hours = round(work_duration)
+    # 判断实际下班打卡时间是否晚于19:00
+    late_evening = datetime.strptime(f'{date_str} 19:00', '%y-%m-%d %H:%M')
 
-    # 检查是否是周末
-    if '六' in row['星期'] or '日' in row['星期']:
-        # 周末加班，减去1.5小时午休
-        adjusted_duration = max(work_duration_hours - 1.5, 0)
-    else:
-        # 工作日加班，减去1小时晚餐时间
-        adjusted_duration = max(work_duration_hours - 1, 0)
+    # 计算加班时间
+    overtime = max(timedelta(), end_punch - can_punch_out_time)
+    overtime_hours = overtime.total_seconds() / 3600
+    overtime_hours_formatted = f"{int(overtime_hours)}:{int((overtime_hours % 1) * 60):02d}"
 
-    # 计算餐补和交补
-    meal_subsidy = 1 if adjusted_duration >= 10 else 0
-    transport_subsidy = 1 if adjusted_duration >= 11 else 0
+    # 如果加班时间超过50分钟，则调整下班时间
+    if end_punch > late_evening and overtime_hours >= 0.8333:  # 50分钟 = 0.8333小时
+        adjusted_can_punch_out_time = can_punch_out_time + timedelta(hours=1)
+        overtime = max(timedelta(), end_punch - adjusted_can_punch_out_time)
+        overtime_hours = overtime.total_seconds() / 3600
+        overtime_hours_formatted = f"{int(overtime_hours)}:{int((overtime_hours % 1) * 60):02d}"
 
-    return adjusted_duration, meal_subsidy, transport_subsidy
+    # 计算总工作时长
+    total_work_duration = morning_duration + x_hours_to_eight + timedelta(seconds=overtime.total_seconds())
+    total_work_duration_hours = total_work_duration.total_seconds() / 3600
+    total_work_duration_formatted = f"{int(total_work_duration_hours)}:{int((total_work_duration_hours % 1) * 60):02d}"
 
-# 应用函数计算工作时长和补贴
-df[['加班时长', '工作小时大于等于10h，餐补1次', '工作小时大于等于11h，交补1次']] = df.apply(calculate_hours, axis=1, result_type='expand')
+    print('总工作时长:', total_work_duration_hours)
 
-# 保存结果到新的Excel文件
-output_path = '考勤表_计算结果.xlsx'
-df.to_excel(output_path, index=False)
+    # 根据工作时长计算餐补和交补
+    meal_subsidy = 1 if total_work_duration_hours >= 10 else 0
+    transport_subsidy = 1 if total_work_duration_hours >= 11 else 0
 
-print("计算完成，结果已保存到", output_path)
+    return total_work_duration_formatted, overtime_hours_formatted, meal_subsidy, transport_subsidy, can_punch_out_time
+
+# 应用函数到每一行
+for i, row in df.iterrows():
+    work_duration, overtime_hours_formatted, meal_subsidy, transport_subsidy, can_punch_out_time = calculate_time(row)
+    if work_duration is not None:
+        df.at[i, '工作时长'] = work_duration
+        df.at[i, '加班时间'] = overtime_hours_formatted
+        df.at[i, '餐补次数'] = meal_subsidy
+        df.at[i, '交补次数'] = transport_subsidy
+        # df.at[i, '可打下班卡时间'] = can_punch_out_time.strftime('%Y-%m-%d %H:%M')
+
+# 导出结果到新的 Excel 文件
+df.to_excel('考勤结果.xlsx', index=False)
+
+# 打印结果
+print(df)
