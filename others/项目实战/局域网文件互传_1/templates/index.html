@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传与管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</head>
+<body>
+    <h1>上传文件</h1>
+    <div class="upload-forms">
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" id="file-form" class="upload-form">
+            <input type="file" name="file">
+            <input type="submit" value="上传文件" class="upload-button">
+        </form>
+        <form action="{{ url_for('upload_text') }}" method="post" id="text-form" class="upload-form">
+            <textarea name="text" rows="4" cols="50" placeholder="输入文本内容"></textarea>
+            <input type="submit" value="上传文本" class="upload-button">
+        </form>
+    </div>
+    <div id="upload-result" class="upload-result"></div>
+    <div class="files-list" id="files-list">
+        <ul id="file-list">
+        </ul>
+        <p class="no-files" id="no-files">暂无文件</p>
+    </div>
+</body>
+</html>

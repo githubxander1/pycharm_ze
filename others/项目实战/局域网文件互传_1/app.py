@@ -23,23 +23,22 @@ def upload_file():
     file = request.files.get('file')
     if file:
         filename = secure_filename(file.filename)
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        file.save(file_path)
-        return jsonify({'success': True, 'filename': filename})
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        return jsonify({'success': True, 'filename': filename, 'type': 'file'})
     else:
-        return jsonify({'success': False, 'message': 'No file part'})
+        return jsonify({'success': False})
 
+# 处理上传文本
 @app.route('/upload_text', methods=['POST'])
 def upload_text():
     text = request.form.get('text')
     if text:
-        filename = "uploaded_text_{}.txt".format(len(os.listdir(app.config['UPLOAD_FOLDER'])) + 1)
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        with open(file_path, 'w') as f:
+        filename = f"uploaded_text_{len(os.listdir(app.config['UPLOAD_FOLDER'])) + 1}.txt"
+        with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'w') as f:
             f.write(text)
-        return jsonify({'success': True, 'filename': filename})
+        return jsonify({'success': True, 'filename': filename, 'type': 'text'})
     else:
-        return jsonify({'success': False, 'message': 'No text provided'})
+        return jsonify({'success': False})
 
 # 获取已上传文件列表
 @app.route('/get_files')

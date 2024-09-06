@@ -50,15 +50,7 @@ def calculate_work_and_overtime_v3(start_work, end_work, date):
         work_minutes -= (dinner_end - dinner_start)
 
     # 计算加班时长
-        # 计算加班时长
-    date_obj = pd.to_datetime(date, format='%y-%m-%d')
-    is_weekend = date_obj.weekday() >= 5  # 5 表示周六，6 表示周日
-
-    if is_weekend:
-        overtime_minutes = work_minutes
-    else:
-        overtime_minutes = max(0, work_minutes - (normal_work_end - normal_work_start))
-
+    overtime_minutes = max(0, work_minutes - (normal_work_end - normal_work_start))
     overtime_hours = round(overtime_minutes / 60)
 
     # 工作时长和加班时长
@@ -66,25 +58,14 @@ def calculate_work_and_overtime_v3(start_work, end_work, date):
     return round(work_hours, 1), overtime_hours
 
 # 读取'考勤表.xlsx'文件
-# file_path = '考勤表.xlsx'
-# file_path_result = '考勤表1.xlsx'
-# df = pd.read_excel(file_path)
-
-df = {
-    '姓名': ['肖泽华', '肖泽华', '肖泽华', '肖泽华', '范德萨', '范德萨', '范德萨', '范德萨', '范德萨', '范德萨'],
-    '日期': ['24-08-01 星期四', '24-08-02 星期五', '24-08-03 星期六', '24-08-02 星期五', '24-08-16 星期五',
-             '24-08-17 星期六', '24-08-18 星期日', '24-08-19 星期一', '24-08-20 星期二', '24-08-21 星期三'],
-    '考勤状态': ['早到', '正常', '弹性', '迟到', '早退', '上半天', '下半天', '上下晚餐补', '上下晚餐交补', '上到第二天'],
-    '上班1打卡时间': ['08:20', '08:30', '09:00', '09:40', '08:30', '08:30', '13:30', '08:30', '08:30', '08:53'],
-    '下班1打卡时间': ['18:30', '18:00', '18:10', '19:10', '17:50', '12:00', '18:00', '20:00', '21:00', '次日 00:03'],
-}
+file_path = '考勤表.xlsx'
+file_path_result = '考勤表1.xlsx'
+df = pd.read_excel(file_path)
 
 # 应用更新后的函数计算工作时长和加班时长
-# df['工作时长'], df['加班时长'] = zip(*df.apply(lambda row: calculate_work_and_overtime_v3(row['上班1打卡时间'], row['下班1打卡时间'], row['日期']), axis=1))
-df[['工作时长', '加班时长']] = df.apply(lambda row: calculate_work_and_overtime_v3(row['上班1打卡时间'], row['下班1打卡时间'], row['日期']), axis=1, result_type='expand')
+df['工作时长'], df['加班时长'] = zip(*df.apply(lambda row: calculate_work_and_overtime_v3(row['上班1打卡时间'], row['下班1打卡时间'], row['日期']), axis=1))
 
 # 重新计算餐补次数和交补次数
 df['餐补次数'] = (df['工作时长'] > 9).astype(int)
 df['交补次数'] = (df['工作时长'] > 10).astype(int)
-# df.to_excel(file_path_result, index=False)
-print(df)
+df.to_excel(file_path_result, index=False)

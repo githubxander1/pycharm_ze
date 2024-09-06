@@ -1,18 +1,22 @@
 import pandas as pd
 from datetime import datetime, timedelta
 
-# 读取 Excel 文件并指定列的数据类型
-dtype_dict = {
-    '姓名': str,
-    '日期': str,
-    '上班1打卡时间': str,
-    '下班1打卡时间': str,
-    '工作时长': str,
-    '加班时间': str,
-    '餐补次数': int,
-    '交补次数': int
+# 初始化 DataFrame 时指定列的数据类型
+data = {
+    '姓名': ['肖泽华', '肖泽华', '肖泽华', '肖泽华', '范德萨', '范德萨', '范德萨', '范德萨', '范德萨', '范德萨', '范德萨'],
+    '日期': ['24-08-01 星期四', '24-08-02 星期五', '24-08-03 星期六', '24-08-02 星期五', '24-08-16 星期五'],
+    '考勤状态': ['早到', '正常', '弹性', '迟到', '早退','上半天', '下半天', '上下晚餐补','上下晚餐交补','上到第二天'],
+    '上班1打卡时间': ['08:20','08:30', '08:40', '09:40', '08:30','08:30','13:30','08:30', '08:30','08:53'],
+    '下班1打卡时间': ['18:30','18:00', '18:10', '19:10', '17:50','12:00','18:00','20:00', '21:00','次日 00:03'],
+    '工作时长': ['0'] * 10,  # 初始化为字符串，确保长度一致
+    '加班时间': ['0'] * 10,  # 初始化为字符串，确保长度一致
+    '餐补次数': [0] * 10,
+    '交补次数': [0] * 10
 }
-df = pd.read_excel('考勤表.xlsx', dtype=dtype_dict)
+午休时间：12:0-13:30
+晚餐时间：18:00-19:00
+
+df = pd.DataFrame(data)
 
 # 定义一个函数来计算工作时长和加班时间
 def calculate_time(row):
@@ -89,9 +93,9 @@ for i, row in df.iterrows():
     if work_duration is not None:
         df.at[i, '工作时长'] = work_duration
         df.at[i, '加班时间'] = overtime_hours_formatted
-        df.at[i, 12] = meal_subsidy  # 填入第13列
-        df.at[i, 13] = transport_subsidy  # 填入第14列
-        df.at[i, '可打下班卡时间'] = can_punch_out_time.strftime('%Y-%m-%d %H:%M')
+        df.at[i, '餐补次数'] = meal_subsidy
+        df.at[i, '交补次数'] = transport_subsidy
+        # df.at[i, '可打下班卡时间'] = can_punch_out_time.strftime('%Y-%m-%d %H:%M')
 
 # 导出结果到新的 Excel 文件
 df.to_excel('考勤结果.xlsx', index=False)
